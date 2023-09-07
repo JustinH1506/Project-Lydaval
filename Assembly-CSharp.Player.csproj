@@ -266,9 +266,6 @@
     <Reference Include="Unity.Collections.LowLevel.ILSupport">
       <HintPath>Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections.LowLevel.ILSupport\Unity.Collections.LowLevel.ILSupport.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-      <HintPath>Library\PackageCache\com.unity.visualscripting@1.9.0\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
-    </Reference>
     <Reference Include="netstandard">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.8f1\Editor\Data\NetStandard\ref\2.1.0\netstandard.dll</HintPath>
     </Reference>
@@ -649,10 +646,6 @@
       <Project>{3941E8C0-ECF8-4D37-15E0-7734F13A30E8}</Project>
       <Name>FMODUnityResonance.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.VisualScripting.Flow.Player.csproj">
-      <Project>{4F14AB73-83F8-9383-37A5-F00F77472495}</Project>
-      <Name>Unity.VisualScripting.Flow.Player</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Core.ShaderLibrary.Player.csproj">
       <Project>{FCFFB44D-4039-9CDD-EEF0-25B56E8138E4}</Project>
       <Name>Unity.RenderPipelines.Core.ShaderLibrary.Player</Name>
@@ -688,10 +681,6 @@
     <ProjectReference Include="Unity.Burst.Player.csproj">
       <Project>{07C688D4-DCCB-9588-9C28-C39FE2BE8CFA}</Project>
       <Name>Unity.Burst.Player</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.VisualScripting.Core.Player.csproj">
-      <Project>{9E6809E9-08D9-3072-FD40-F3908BBACC8D}</Project>
-      <Name>Unity.VisualScripting.Core.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.Animation.Runtime.Player.csproj">
       <Project>{53136D56-E95F-459C-26F9-73514CC8FD98}</Project>
@@ -736,10 +725,6 @@
     <ProjectReference Include="Unity.RenderPipelines.Universal.Shaders.Player.csproj">
       <Project>{FC169A65-CA79-E274-B747-A17D393E8AA7}</Project>
       <Name>Unity.RenderPipelines.Universal.Shaders.Player</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.VisualScripting.State.Player.csproj">
-      <Project>{9C457E79-F376-1E74-3298-F4FD108B8E64}</Project>
-      <Name>Unity.VisualScripting.State.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Cinemachine.Player.csproj">
       <Project>{21470CBE-4DA4-1981-3131-1C07D8DB7DE4}</Project>
