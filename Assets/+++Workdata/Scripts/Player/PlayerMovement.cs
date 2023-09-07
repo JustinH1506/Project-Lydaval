@@ -6,7 +6,7 @@ using UnityEngine.Tilemaps;
 
 public class PlayerMovement : MonoBehaviour
 {
-    #region
+    #region Tilemaps
 
     [SerializeField] private Tilemap groundTilemap;
 
@@ -51,17 +51,23 @@ public class PlayerMovement : MonoBehaviour
         playerController.Disable();
     }
 
+    /// <summary> Using the input and giving context and the Movement Value </summary>
     void Start()
     {
         playerController.Player.Movement.performed += ctx => Move(ctx.ReadValue<Vector2>());
     }
 
+    /// <summary> If Moveable moving to another tile</summary>
+ 
     public void Move(Vector2 direction)
     {
         if(CanMove(direction))
             transform.position += (Vector3)direction;
     }
 
+    /// <summary> Making teh gridposition to the groundTilemap to World Cell + the dircetion in Vector 3. 
+    /// asking if groundTilemap does not have a Tile or collisionTilemap has a tile return false. else return true.
+    /// </summary>
     public bool CanMove(Vector2 direction)
     {
         Vector3Int gridPosition = groundTilemap.WorldToCell(transform.position + (Vector3)direction);
