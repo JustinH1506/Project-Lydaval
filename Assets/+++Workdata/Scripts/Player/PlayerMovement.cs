@@ -2,20 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Tilemaps;
 
 public class PlayerMovement : MonoBehaviour
 {
-    #region Variables
+    #region
 
-    [SerializeField] float moveSpeed;
+    [SerializeField] private Tilemap groundTilemap;
 
-    private float inputX, inputY;
+    [SerializeField] private Tilemap collisionTilemap;
 
-    #endregion 
+    #endregion
 
     #region Scripts
 
-    PlayerController playerController;
+    private PlayerController playerController;
 
     #endregion
 
@@ -43,27 +44,30 @@ public class PlayerMovement : MonoBehaviour
     private void OnEnable()
     {
         playerController.Enable();
-
-        playerController.Player.Move.performed += Movement;
-        playerController.Player.Move.canceled += Movement;
     }
 
     private void OnDisable()
     {
         playerController.Disable();
-
-        playerController.Player.Move.performed -= Movement;
-        playerController.Player.Move.canceled -= Movement;
     }
 
-    private void FixedUpdate()
+    void Start()
     {
-        rb.velocity = new Vector2(inputX * moveSpeed, inputY * moveSpeed);  
+        playerController.Player.Movement.performed += ctx => Move(ctx.ReadValue<Vector2>());
     }
 
-    public void Movement(InputAction.CallbackContext context)
+    public void Move(Vector2 direction)
     {
-        inputX = context.ReadValue<Vector2>().x;
-        inputY = context.ReadValue<Vector2>().y;
+        if(CanMove(direction))
+            transform.position += (Vector3)direction;
+    }
+
+    public bool CanMove(Vector2 direction)
+    {
+        Vector3Int gridPosition = groundTilemap.WorldToCell(transform.position + (Vector3)direction);
+
+        if (!groundTilemap.HasTile(gridPosition) || collisionTilemap.HasTile(gridPosition))
+            return false;
+        return true;
     }
 }

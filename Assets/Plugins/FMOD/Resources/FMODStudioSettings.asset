@@ -484,8 +484,8 @@ MonoBehaviour:
   switchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: ../../Fmod/Workspace/Pitch_Sounds_2en_Semester/Pitch_Sounds_2en_Semester.fspro
-  sourceBankPath: ../../Fmod/Workspace/Pitch_Sounds_2en_Semester/Build
+  sourceProjectPath: ../../../Fmod/Workspace/3rd_Semester_Project_Lydaval/3rd_Semester_Project_Lydaval.fspro
+  sourceBankPath: ../../../Fmod/Workspace/3rd_Semester_Project_Lydaval/Build
   sourceBankPathUnformatted: 
   BankRefreshCooldown: 5
   ShowBankRefreshWindow: 1
@@ -506,8 +506,10 @@ MonoBehaviour:
   VirtualChannelSettings: []
   RealChannelSettings: []
   Plugins: []
-  MasterBanks: []
-  Banks: []
+  MasterBanks:
+  - Master
+  Banks:
+  - Background
   BanksToLoad: []
   LiveUpdatePort: 9264
   EnableMemoryTracking: 0
@@ -523,17 +525,17 @@ MonoBehaviour:
   HideSetupWizard: 1
   LastEventReferenceScanVersion: 131603
   Platforms:
-  - {fileID: -4512089113894831484}
-  - {fileID: 2594995026131714188}
-  - {fileID: -7877592253683042515}
-  - {fileID: 2070026821917333797}
-  - {fileID: -3038060467466849095}
-  - {fileID: -5277974973531431700}
-  - {fileID: 2125307215136194199}
-  - {fileID: 6175303542593726663}
-  - {fileID: -6518388616124693477}
-  - {fileID: -6767428520809701337}
   - {fileID: -8553414944357263410}
+  - {fileID: -7877592253683042515}
+  - {fileID: -6767428520809701337}
+  - {fileID: -6518388616124693477}
+  - {fileID: -5277974973531431700}
+  - {fileID: -4512089113894831484}
+  - {fileID: -3038060467466849095}
+  - {fileID: 2070026821917333797}
+  - {fileID: 2125307215136194199}
+  - {fileID: 2594995026131714188}
+  - {fileID: 6175303542593726663}
   MigratedPlatforms: 0500000012000000060000000b000000080000000a000000090000000c000000150000000200000001000000
 --- !u!114 &2070026821917333797
 MonoBehaviour:
@@ -733,15 +735,15 @@ MonoBehaviour:
     HasValue: 0
   displaySortOrder: 0
   childIdentifiers:
+  - fd7c55dab0fce234b8c25f6ffca523c1
   - 46fbfdf3fc43db0458918377fd40293e
-  - 2fea114e74ecf3c4f920e1d5cc1c4c40
-  - 52eb9df5db46521439908db3a29a1bbb
+  - e7a046c753c3c3d4aacc91f6597f310d
+  - c88d16e5272a4e241b0ef0ac2e53b73d
   - b7716510a1f36934c87976f3a81dbf3d
+  - 52eb9df5db46521439908db3a29a1bbb
+  - 2fea114e74ecf3c4f920e1d5cc1c4c40
   - 2c5177b11d81d824dbb064f9ac8527da
   - 0f8eb3f400726694eb47beb1a9f94ce8
-  - c88d16e5272a4e241b0ef0ac2e53b73d
-  - e7a046c753c3c3d4aacc91f6597f310d
-  - fd7c55dab0fce234b8c25f6ffca523c1
   codecChannels:
     Value: []
     HasValue: 0
