@@ -23,6 +23,9 @@ public class BattleSystem : MonoBehaviour
 
     Stats enemyStats;
 
+    public BattleHud playerHud;
+    public BattleHud enemyHud;
+
     public BattleState state;
     
     void Start()
@@ -36,12 +39,10 @@ public class BattleSystem : MonoBehaviour
         GameObject playerGO = Instantiate(playerPrefab, playerBattleStation);
         playerStats = playerGO.GetComponent<Stats>();
 
-        playerName.text = playerStats.unitName;
-
-
         GameObject enemyGO = Instantiate(enemyPrefab, enemyBattleStation);
         enemyStats = enemyGO.GetComponent<Stats>();
 
-        enemyName.text = enemyStats.unitName;   
+        playerHud.SetHud(playerStats);
+        enemyHud.SetHud(enemyStats);
     }
 }

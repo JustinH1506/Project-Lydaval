@@ -62,6 +62,7 @@
     <Compile Include="Assets\+++Workdata\Scripts\Combat\Stats.cs" />
     <Compile Include="Assets\+++Workdata\Scripts\Combat\BattleSystem.cs" />
     <Compile Include="Assets\+++Workdata\Scripts\Player\PlayerMovement.cs" />
+    <Compile Include="Assets\+++Workdata\Scripts\Combat\BattleHud.cs" />
     <Compile Include="Assets\+++Workdata\Scripts\Managers\GameManager.cs" />
   </ItemGroup>
   <ItemGroup>
