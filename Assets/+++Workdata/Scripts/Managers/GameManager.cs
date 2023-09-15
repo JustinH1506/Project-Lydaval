@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    #region Instance
+    public static GameManager Instance { get; private set; }
+    #endregion
 
-
-    public static GameManager Instance { get; private set; }    
-
+    #region Methods
+    /// <summary>
+    /// Sets this to an instance and 
+    /// </summary>
     public void Awake()
     {
         if(Instance != null)
@@ -19,4 +23,5 @@ public class GameManager : MonoBehaviour
             Instance = this;
         }
     }
+    #endregion
 }

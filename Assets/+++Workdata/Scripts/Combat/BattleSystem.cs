@@ -42,12 +42,62 @@ public class BattleSystem : MonoBehaviour
 
     #endregion
 
+    #region Methods
+    /// <summary> Set Battle State to START and Start Couroutine SetUpBattle </summary>
     void Start()
     {
         state = BattleState.START;
         StartCoroutine(SetUpBattle());
     }
 
+
+
+    /// <summary> If the Battle state is WON ... . 
+    /// else if it´s LOST ... .
+    /// </summary>
+    public void EndBattle()
+    {
+        if (state == BattleState.WON)
+        {
+
+        }
+        else if (state == BattleState.LOST)
+        {
+
+        }
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    public void PlayerTurn()
+    {
+
+    }
+
+    /// <summary> Returns if state is not PLAYERTURN. Start PlayerAttack Couroutine. </summary>
+    public void OnAttackButton()
+    {
+        if (state != BattleState.PLAYERTURN)
+            return;
+
+        StartCoroutine(PlayerAttack());
+    }
+
+    /// <summary>
+    /// Returns if state is not PLAYERTURN. Starts PlayerHeal Courotine.
+    /// </summary>
+    public void OnHealButton()
+    {
+        if (state != BattleState.PLAYERTURN)
+            return;
+
+        StartCoroutine(PlayerHeal());
+    }
+    #endregion
+
+    #region IEnumerator
+    /// <summary> Instantiate player and enemy prefab and spawning them to the Battlestations. Get the Stats  </summary>
     IEnumerator SetUpBattle()
     {
         GameObject playerGO = Instantiate(playerPrefab, playerBattleStation);
@@ -65,15 +115,18 @@ public class BattleSystem : MonoBehaviour
         PlayerTurn();
     }
 
+    /// <summary> Making bool isDead to the Take Damage Method from enemyStats. Set The enemyHud Hp.
+    /// Wait for 0.05 seconds. If isDead is true the Battle is Won and the Battle Ends´else the Enemy´s Turn starts.
+    /// </summary>
     IEnumerator PlayerAttack()
     {
         bool isDead = enemyStats.TakeDamage(playerStats.damage);
 
         enemyHud.SetHp(enemyStats.currentHealth);
 
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(0.05f);
 
-        if (isDead) 
+        if (isDead)
         {
             state = BattleState.WON;
             EndBattle();
@@ -85,6 +138,7 @@ public class BattleSystem : MonoBehaviour
         }
     }
 
+    /// <summary> Getting playerStats Heal method. Waits no seconds and starts the enemys turn. </summary>
     IEnumerator PlayerHeal()
     {
         playerStats.Heal(5);
@@ -97,10 +151,12 @@ public class BattleSystem : MonoBehaviour
         StartCoroutine(EnemyTurn());
     }
 
+    /// <summary> Waits fior 2 seconds makes bool isDead to the Take Damage Method from enemyStats. Set The enemyHud Hp.
+    /// Wait for 0.05 seconds. If isDead is true the Battle is Won and the Battle Ends´else the Enemy´s Turn starts.
+    /// </summary>
     IEnumerator EnemyTurn()
     {
         yield return new WaitForSeconds(2f);
-
         bool isDead = playerStats.TakeDamage(enemyStats.damage);
 
         playerHud.SetHp(playerStats.currentHealth);
@@ -118,37 +174,5 @@ public class BattleSystem : MonoBehaviour
             PlayerTurn();
         }
     }
-
-    public void EndBattle()
-    {
-        if(state == BattleState.WON)
-        {
-
-        }
-        else if(state == BattleState.LOST)
-        {
-
-        }
-    }
-
-    public void PlayerTurn()
-    {
-
-    }
-
-    public void OnAttackButton()
-    {
-        if (state != BattleState.PLAYERTURN)
-            return;
-
-        StartCoroutine(PlayerAttack());
-    }
-
-    public void OnHealButton()
-    {
-        if (state != BattleState.PLAYERTURN)
-            return;
-
-        StartCoroutine(PlayerHeal());
-    }
+    #endregion
 }

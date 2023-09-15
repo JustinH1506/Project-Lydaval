@@ -30,6 +30,7 @@ public class PlayerMovement : MonoBehaviour
 
     #endregion
 
+    #region Methods
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -76,4 +77,5 @@ public class PlayerMovement : MonoBehaviour
             return false;
         return true;
     }
+    #endregion
 }
