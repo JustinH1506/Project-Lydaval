@@ -848,6 +848,10 @@ MonoBehaviour:
   enemyBattleStation: {fileID: 1613454770}
   playerName: {fileID: 1971472660}
   enemyName: {fileID: 669619289}
+  playerStats: {fileID: 4216729953877467935, guid: 45d10a4c1a55ab74399cd668a20c53a8,
+    type: 3}
+  enemyStats: {fileID: 2957588791360323039, guid: 7a6c54f0243548547aab248dc10af866,
+    type: 3}
   playerHud: {fileID: 338526227}
   enemyHud: {fileID: 334815044}
   state: 0

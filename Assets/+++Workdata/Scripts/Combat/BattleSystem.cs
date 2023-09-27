@@ -1,7 +1,7 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public enum BattleState { START, PLAYERTURN, ENEMYTURN, WON, LOST }
 
@@ -26,9 +26,9 @@ public class BattleSystem : MonoBehaviour
     #endregion
 
     #region Stats
-    Stats playerStats;
+    [SerializeField] Stats playerStats;
 
-    Stats enemyStats;
+    [SerializeField] Stats enemyStats;
     #endregion
 
     #region BattleHuds
@@ -42,15 +42,13 @@ public class BattleSystem : MonoBehaviour
 
     #endregion
 
-    #region Methods
+    #region Methods    
     /// <summary> Set Battle State to START and Start Couroutine SetUpBattle </summary>
     void Start()
     {
         state = BattleState.START;
         StartCoroutine(SetUpBattle());
     }
-
-
 
     /// <summary> If the Battle state is WON ... . 
     /// else if it´s LOST ... .
@@ -59,11 +57,11 @@ public class BattleSystem : MonoBehaviour
     {
         if (state == BattleState.WON)
         {
-
+            SceneManager.LoadScene(0);
         }
         else if (state == BattleState.LOST)
         {
-
+            SceneManager.LoadScene(0);
         }
     }
 
@@ -111,8 +109,21 @@ public class BattleSystem : MonoBehaviour
 
         yield return new WaitForSeconds(2f);
 
-        state = BattleState.PLAYERTURN;
-        PlayerTurn();
+        if(playerStats.speed > enemyStats.speed)
+        {
+           state = BattleState.PLAYERTURN;
+           PlayerTurn();
+        }
+        else if(enemyStats.speed > playerStats.speed)
+        {
+            state = BattleState.ENEMYTURN;
+            StartCoroutine(EnemyTurn());
+        }
+        else if(enemyStats.speed == playerStats.speed)
+        {
+            state = BattleState.PLAYERTURN;
+            PlayerTurn();
+        }
     }
 
     /// <summary> Making bool isDead to the Take Damage Method from enemyStats. Set The enemyHud Hp.
@@ -152,11 +163,11 @@ public class BattleSystem : MonoBehaviour
     }
 
     /// <summary> Waits fior 2 seconds makes bool isDead to the Take Damage Method from enemyStats. Set The enemyHud Hp.
-    /// Wait for 0.05 seconds. If isDead is true the Battle is Won and the Battle Ends´else the Enemy´s Turn starts.
+    /// Wait for 0.05 seconds. If isDead is true the Battle is Won and the Battle Ends else the Enemy´s Turn starts.
     /// </summary>
     IEnumerator EnemyTurn()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
         bool isDead = playerStats.TakeDamage(enemyStats.damage);
 
         playerHud.SetHp(playerStats.currentHealth);
