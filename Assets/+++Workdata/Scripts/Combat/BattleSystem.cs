@@ -1,39 +1,64 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Unity.Collections;
 using UnityEngine.SceneManagement;
 
-public enum BattleState { START, PLAYERTURN, ENEMYTURN, WON, LOST }
+public enum BattleState
+{
+    START,
+    PLAYERTURN,
+    ENEMYTURN,
+    WON,
+    LOST
+}
 
 public class BattleSystem : MonoBehaviour
 {
+    #region Variables
+
+    [SerializeField] private int playerRange, enemyRange;
+
+    #endregion
+
     #region Gameobjects
+
     public GameObject playerPrefab;
 
     public GameObject enemyPrefab;
+
     #endregion
 
     #region Transform
+
     public Transform playerBattleStation;
 
     public Transform enemyBattleStation;
+
     #endregion
 
     #region TextMeshProUGUI
+
     public TextMeshProUGUI playerName;
 
     public TextMeshProUGUI enemyName;
+
     #endregion
 
     #region Stats
+
     [SerializeField] Stats playerStats;
 
     [SerializeField] Stats enemyStats;
+
     #endregion
 
     #region BattleHuds
+
     public BattleHud playerHud;
     public BattleHud enemyHud;
+
     #endregion
 
     #region BattleState
@@ -42,8 +67,16 @@ public class BattleSystem : MonoBehaviour
 
     #endregion
 
-    #region Methods    
-    /// <summary> Set Battle State to START and Start Couroutine SetUpBattle </summary>
+    #region Lists
+
+    [SerializeField] private List<GameObject> playerPrefabList, enemyPrefabList;
+    [SerializeField] private List<Transform> playerBattleStationList, enemyBattleStationList;
+
+    #endregion
+
+    #region Methods
+
+    /// <summary> Set Battle State to START and Start Coroutine SetUpBattle </summary>
     void Start()
     {
         state = BattleState.START;
@@ -53,7 +86,7 @@ public class BattleSystem : MonoBehaviour
     /// <summary> If the Battle state is WON ... . 
     /// else if it큦 LOST ... .
     /// </summary>
-    public void EndBattle()
+    private void EndBattle()
     {
         if (state == BattleState.WON)
         {
@@ -68,12 +101,11 @@ public class BattleSystem : MonoBehaviour
     /// <summary>
     /// 
     /// </summary>
-    public void PlayerTurn()
+    private void PlayerTurn()
     {
-
     }
 
-    /// <summary> Returns if state is not PLAYERTURN. Start PlayerAttack Couroutine. </summary>
+    /// <summary> Returns if state is not PLAYERTURN. Start PlayerAttack Coroutine. </summary>
     public void OnAttackButton()
     {
         if (state != BattleState.PLAYERTURN)
@@ -83,7 +115,7 @@ public class BattleSystem : MonoBehaviour
     }
 
     /// <summary>
-    /// Returns if state is not PLAYERTURN. Starts PlayerHeal Courotine.
+    /// Returns if state is not PLAYERTURN. Starts PlayerHeal Coroutine.
     /// </summary>
     public void OnHealButton()
     {
@@ -92,34 +124,44 @@ public class BattleSystem : MonoBehaviour
 
         StartCoroutine(PlayerHeal());
     }
+
     #endregion
 
     #region IEnumerator
-    /// <summary> Instantiate player and enemy prefab and spawning them to the Battlestations. Get the Stats  </summary>
+
+    /// <summary> Instantiate player and enemy prefab and spawning them to the Battlestation큦. Get the Stats.  </summary>
     IEnumerator SetUpBattle()
     {
-        GameObject playerGO = Instantiate(playerPrefab, playerBattleStation);
-        playerStats = playerGO.GetComponent<Stats>();
+        for (int i = 0; i < playerRange; i++)
+        {
+            GameObject playerGo = Instantiate(playerPrefabList[i], playerBattleStationList[i]);
+            playerStats = playerGo.GetComponent<Stats>();
 
-        GameObject enemyGO = Instantiate(enemyPrefab, enemyBattleStation);
-        enemyStats = enemyGO.GetComponent<Stats>();
+            playerHud.SetHud(playerStats);
+        }
 
-        playerHud.SetHud(playerStats);
-        enemyHud.SetHud(enemyStats);
+        for (int i = 0; i < enemyRange; i++)
+        {
+            GameObject enemyGo = Instantiate(enemyPrefabList[i], enemyBattleStationList[i]);
+            enemyStats = enemyGo.GetComponent<Stats>();
+
+            enemyHud.SetHud(enemyStats);
+        }
+
 
         yield return new WaitForSeconds(2f);
 
-        if(playerStats.speed > enemyStats.speed)
+        if (playerStats.speed > enemyStats.speed)
         {
-           state = BattleState.PLAYERTURN;
-           PlayerTurn();
+            state = BattleState.PLAYERTURN;
+            PlayerTurn();
         }
-        else if(enemyStats.speed > playerStats.speed)
+        else if (enemyStats.speed > playerStats.speed)
         {
             state = BattleState.ENEMYTURN;
             StartCoroutine(EnemyTurn());
         }
-        else if(enemyStats.speed == playerStats.speed)
+        else if (enemyStats.speed == playerStats.speed)
         {
             state = BattleState.PLAYERTURN;
             PlayerTurn();
@@ -149,7 +191,7 @@ public class BattleSystem : MonoBehaviour
         }
     }
 
-    /// <summary> Getting playerStats Heal method. Waits no seconds and starts the enemys turn. </summary>
+    /// <summary> Getting playerStats Heal method. Waits no seconds and starts the enemy큦 turn. </summary>
     IEnumerator PlayerHeal()
     {
         playerStats.Heal(5);
@@ -162,7 +204,7 @@ public class BattleSystem : MonoBehaviour
         StartCoroutine(EnemyTurn());
     }
 
-    /// <summary> Waits fior 2 seconds makes bool isDead to the Take Damage Method from enemyStats. Set The enemyHud Hp.
+    /// <summary> Waits for 2 seconds makes bool isDead to the Take Damage Method from enemyStats. Set The enemyHud Hp.
     /// Wait for 0.05 seconds. If isDead is true the Battle is Won and the Battle Ends else the Enemy큦 Turn starts.
     /// </summary>
     IEnumerator EnemyTurn()
@@ -185,5 +227,6 @@ public class BattleSystem : MonoBehaviour
             PlayerTurn();
         }
     }
+
     #endregion
 }
