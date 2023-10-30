@@ -47,10 +47,7 @@
   <ItemGroup>
      <Compile Include="Assets\+++Workdata\Scripts\Managers\BattleManager.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Player\PlayerController.cs" />
-     <Compile Include="Assets\+++Workdata\Scripts\Combat\Stats.cs" />
-     <Compile Include="Assets\+++Workdata\Scripts\Combat\BattleSystem.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Player\PlayerMovement.cs" />
-     <Compile Include="Assets\+++Workdata\Scripts\Combat\BattleHud.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Managers\GameManager.cs" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.8f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.dll</HintPath>
@@ -683,6 +680,10 @@
     <ProjectReference Include="UnityEngine.UI.Player.csproj">
       <Project>{cd8098ef-f8bf-c79c-6b01-367d49303e3e}</Project>
       <Name>UnityEngine.UI.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Lydaval_Combat.Player.csproj">
+      <Project>{f080b476-4604-ac54-71d1-7f9aea7c4fb6}</Project>
+      <Name>Lydaval_Combat.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.InternalAPIEngineBridge.001.Player.csproj">
       <Project>{011087f5-0959-5cf1-2fb9-e7f976e2df47}</Project>

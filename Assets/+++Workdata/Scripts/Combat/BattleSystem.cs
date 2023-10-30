@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 using TMPro;
 using Unity.Collections;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
+using UnityEngine.UI;
 
 public enum BattleState
 {
@@ -18,7 +21,8 @@ public class BattleSystem : MonoBehaviour
 {
     #region Variables
 
-    [SerializeField] private int playerRange, enemyRange;
+    [SerializeField] public int playerRange, enemyRange;
+    [SerializeField] public int enemyId, enemyI, playerId, playerI;
 
     #endregion
 
@@ -69,8 +73,10 @@ public class BattleSystem : MonoBehaviour
 
     #region Lists
 
-    [SerializeField] private List<GameObject> playerPrefabList, enemyPrefabList;
+    [SerializeField] public List<GameObject> playerPrefabList, enemyPrefabList;
     [SerializeField] private List<Transform> playerBattleStationList, enemyBattleStationList;
+    [SerializeField] public List<Image> targetingIndicatorList;
+    [SerializeField] private List<Stats> enemyStatsList, playerStatsList;
 
     #endregion
 
@@ -81,6 +87,7 @@ public class BattleSystem : MonoBehaviour
     {
         state = BattleState.START;
         StartCoroutine(SetUpBattle());
+        Debug.Log("Working");
     }
 
     /// <summary> If the Battle state is WON ... . 
@@ -103,6 +110,7 @@ public class BattleSystem : MonoBehaviour
     /// </summary>
     private void PlayerTurn()
     {
+        
     }
 
     /// <summary> Returns if state is not PLAYERTURN. Start PlayerAttack Coroutine. </summary>
@@ -132,22 +140,27 @@ public class BattleSystem : MonoBehaviour
     /// <summary> Instantiate player and enemy prefab and spawning them to the Battlestation´s. Get the Stats.  </summary>
     IEnumerator SetUpBattle()
     {
-        for (int i = 0; i < playerRange; i++)
+        for (int i = 0; i < playerStatsList.Count; i++)
         {
+            Debug.Log("Working");
+            
+            playerI = i;
+            
             GameObject playerGo = Instantiate(playerPrefabList[i], playerBattleStationList[i]);
             playerStats = playerGo.GetComponent<Stats>();
 
-            playerHud.SetHud(playerStats);
+            playerHud.SetPlayerHud(playerStatsList[i]);
         }
 
-        for (int i = 0; i < enemyRange; i++)
+        for (int i = 0; i < enemyStatsList.Count; i++)
         {
+            enemyI = i;
+            
             GameObject enemyGo = Instantiate(enemyPrefabList[i], enemyBattleStationList[i]);
             enemyStats = enemyGo.GetComponent<Stats>();
 
-            enemyHud.SetHud(enemyStats);
+            enemyHud.SetEnemyHud(enemyStatsList[i]);
         }
-
 
         yield return new WaitForSeconds(2f);
 
@@ -173,9 +186,9 @@ public class BattleSystem : MonoBehaviour
     /// </summary>
     IEnumerator PlayerAttack()
     {
-        bool isDead = enemyStats.TakeDamage(playerStats.damage);
+        bool isDead = enemyStatsList[enemyId].TakeDamage(playerStats.damage);
 
-        enemyHud.SetHp(enemyStats.currentHealth);
+        enemyHud.SetEnemyHp(enemyStats.currentHealth);
 
         yield return new WaitForSeconds(0.05f);
 
@@ -196,7 +209,7 @@ public class BattleSystem : MonoBehaviour
     {
         playerStats.Heal(5);
 
-        playerHud.SetHp(playerStats.currentHealth);
+        playerHud.SetPlayerHp(playerStats.currentHealth);
 
         yield return new WaitForSeconds(0f);
 
@@ -212,7 +225,7 @@ public class BattleSystem : MonoBehaviour
         yield return new WaitForSeconds(1f);
         bool isDead = playerStats.TakeDamage(enemyStats.damage);
 
-        playerHud.SetHp(playerStats.currentHealth);
+        playerHud.SetPlayerHp(playerStats.currentHealth);
 
         yield return new WaitForSeconds(1f);
 

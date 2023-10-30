@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Tilemaps;
@@ -31,6 +32,7 @@ public class PlayerMovement : MonoBehaviour
     #endregion
 
     #region Methods
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -58,16 +60,22 @@ public class PlayerMovement : MonoBehaviour
         playerController.Player.Movement.performed += ctx => Move(ctx.ReadValue<Vector2>());
     }
 
-    /// <summary> If Moveable moving to another tile</summary>
- 
+    /// <summary> 
+    /// If Moveable moving to another tile
+    /// </summary>
     public void Move(Vector2 direction)
     {
-        if(CanMove(direction))
+        if (direction.x != 0)
+            direction.x = Mathf.Sign(direction.x);
+        if (direction.y != 0)
+            direction.y = Mathf.Sign(direction.y);
+        
+        if (CanMove(direction))
             transform.position += (Vector3)direction;
     }
 
-    /// <summary> Making teh gridposition to the groundTilemap to World Cell + the dircetion in Vector 3. 
-    /// asking if groundTilemap does not have a Tile or collisionTilemap has a tile return false. else return true.
+    /// <summary> Making teh Gridposition to the groundTilemap to World Cell + the direction in Vector 3. 
+    /// Asking if groundTilemap does not have a Tile or collisionTilemap has a tile return false. Else return true.
     /// </summary>
     public bool CanMove(Vector2 direction)
     {
@@ -77,5 +85,6 @@ public class PlayerMovement : MonoBehaviour
             return false;
         return true;
     }
+
     #endregion
 }

@@ -47,10 +47,7 @@
   <ItemGroup>
      <Compile Include="Assets\+++Workdata\Scripts\Managers\BattleManager.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Player\PlayerController.cs" />
-     <Compile Include="Assets\+++Workdata\Scripts\Combat\Stats.cs" />
-     <Compile Include="Assets\+++Workdata\Scripts\Combat\BattleSystem.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Player\PlayerMovement.cs" />
-     <Compile Include="Assets\+++Workdata\Scripts\Combat\BattleHud.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Managers\GameManager.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\+++Workdata\Scenes" />
@@ -111,7 +108,6 @@
      <Folder Include="Assets\+++Workdata\Assets\Tilemap" />
      <None Include="Library\PackageCache\com.unity.modules.terrainphysics@1.0.0\package.json" />
      <None Include="Library\PackageCache\com.unity.mathematics@1.2.6\package.json" />
-     <Folder Include="Assets\+++Workdata\Scripts\Combat" />
      <Folder Include="Library\PackageCache\com.unity.2d.animation@9.0.3\Tests" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
      <Folder Include="Assets\TextMesh Pro\Resources" />
@@ -136,7 +132,7 @@
      <Folder Include="Library\PackageCache\com.unity.modules.imageconversion@1.0.0" />
      <Folder Include="Library\PackageCache\com.unity.modules.terrainphysics@1.0.0" />
      <None Include="Library\PackageCache\com.unity.modules.imageconversion@1.0.0\package.json" />
-     <Folder Include="Assets\+++Workdata\Prefabs\Charccters" />
+     <Folder Include="Assets\+++Workdata\Prefabs\Characters" />
      <Folder Include="Library\PackageCache\com.unity.2d.common@8.0.1" />
      <Folder Include="Library\PackageCache\com.unity.modules.unitywebrequest@1.0.0" />
      <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\ValidationExceptions.json" />
@@ -214,6 +210,7 @@
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
      <Folder Include="Library\PackageCache\com.unity.render-pipelines.core@14.0.8" />
      <Folder Include="Library\PackageCache\com.unity.2d.tilemap@1.0.0\Tests" />
+     <Folder Include="Assets\+++Workdata\Scripts\Audio" />
      <None Include="Library\PackageCache\com.unity.modules.unitywebrequestaudio@1.0.0\package.json" />
      <Folder Include="Library\PackageCache\com.unity.searcher@4.9.2\Tests" />
      <None Include="Library\PackageCache\com.unity.feature.2d@2.0.0\package.json" />
@@ -251,6 +248,7 @@
      <Folder Include="Library\PackageCache\com.unity.modules.ai@1.0.0" />
      <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\PackageConversionData_Assets.json" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+     <Folder Include="Assets\+++Workdata\Prefabs\BattleStations" />
      <Folder Include="Library\PackageCache\com.unity.2d.tilemap@1.0.0" />
      <Folder Include="Library\PackageCache\com.unity.render-pipelines.universal@14.0.8\Textures\BlueNoise16\L" />
      <None Include="Library\PackageCache\com.unity.2d.spriteshape@9.0.2\package.json" />
@@ -1042,6 +1040,10 @@
     <ProjectReference Include="UnityEngine.UI.csproj">
       <Project>{030df774-f374-3164-eba0-46473d4e5efa}</Project>
       <Name>UnityEngine.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="Lydaval_Combat.csproj">
+      <Project>{9b2fe4f0-e3f4-a797-8a83-a07139d1e279}</Project>
+      <Name>Lydaval_Combat</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.InternalAPIEditorBridge.005.csproj">
       <Project>{3dfa7cd5-2fd4-4e67-aa37-df4c95311c05}</Project>

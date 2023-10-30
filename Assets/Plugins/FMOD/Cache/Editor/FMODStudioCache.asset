@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: ../../../Fmod/Workspace/3rd_Semester_Project_Lydaval/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638296702438663321
+  lastModified: 638296738438663321
   FileSizes:
   - Name: Desktop
     Value: 808
@@ -35,7 +35,7 @@ MonoBehaviour:
   Path: ../../../Fmod/Workspace/3rd_Semester_Project_Lydaval/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638296702438653314
+  lastModified: 638296738438653314
   FileSizes:
   - Name: Desktop
     Value: 1036
@@ -90,7 +90,7 @@ MonoBehaviour:
   - {fileID: -7908256687053890464}
   StringsBanks:
   - {fileID: -9144409270414383673}
-  cacheTime: 638296702438708452
+  cacheTime: 638296738438708452
   cacheVersion: 131603
 --- !u!114 &7128253995955936814
 MonoBehaviour:
@@ -107,7 +107,7 @@ MonoBehaviour:
   Path: ../../../Fmod/Workspace/3rd_Semester_Project_Lydaval/Build/Desktop/Background.bank
   Name: Background
   StudioPath: bank:/Background
-  lastModified: 638296702438708452
+  lastModified: 638296738438708452
   FileSizes:
   - Name: Desktop
     Value: 1202

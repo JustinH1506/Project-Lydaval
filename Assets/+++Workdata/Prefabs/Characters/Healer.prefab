@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2850141524077882153}
   - component: {fileID: 4216729953877467935}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Healer
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 785b9fbbf23493840a351b16bf10ebe3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitName: Hero
+  unitName: Healer
   maxHealth: 30
   currentHealth: 30
   maxMp: 50
@@ -109,3 +109,4 @@ MonoBehaviour:
   defense: 4
   magicDefense: 3
   damage: 5
+  battleSystem: {fileID: 0}
