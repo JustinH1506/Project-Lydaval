@@ -21,8 +21,7 @@ public class BattleSystem : MonoBehaviour
 {
     #region Variables
 
-    [SerializeField] public int playerRange, enemyRange;
-    [SerializeField] public int enemyId, enemyI, playerId, playerI;
+    public int enemyId, enemyI, playerId, playerI;
 
     #endregion
 
@@ -36,24 +35,23 @@ public class BattleSystem : MonoBehaviour
 
     #region Transform
 
-    public Transform playerBattleStation;
+  //  public Transform playerBattleStation;
 
-    public Transform enemyBattleStation;
+    //public Transform enemyBattleStation;
 
     #endregion
 
     #region TextMeshProUGUI
 
-    public TextMeshProUGUI playerName;
+   // public TextMeshProUGUI playerName;
 
-    public TextMeshProUGUI enemyName;
+   // public TextMeshProUGUI enemyName;
 
     #endregion
 
     #region Stats
 
     [SerializeField] Stats playerStats;
-
     [SerializeField] Stats enemyStats;
 
     #endregion
@@ -76,7 +74,8 @@ public class BattleSystem : MonoBehaviour
     [SerializeField] public List<GameObject> playerPrefabList, enemyPrefabList;
     [SerializeField] private List<Transform> playerBattleStationList, enemyBattleStationList;
     [SerializeField] public List<Image> targetingIndicatorList;
-    [SerializeField] private List<Stats> enemyStatsList, playerStatsList;
+    [SerializeField] public List<Stats> enemyStatsList, playerStatsList;
+    [SerializeField] private List<int> characterSpeedList;
 
     #endregion
 
@@ -151,13 +150,14 @@ public class BattleSystem : MonoBehaviour
 
             playerHud.SetPlayerHud(playerStatsList[i]);
         }
-
-        for (int i = 0; i < enemyStatsList.Count; i++)
+        
+        for (int i = 0; i < 4; i++)
         {
             enemyI = i;
             
             GameObject enemyGo = Instantiate(enemyPrefabList[i], enemyBattleStationList[i]);
             enemyStats = enemyGo.GetComponent<Stats>();
+            enemyStatsList.Add(enemyStats);
 
             enemyHud.SetEnemyHud(enemyStatsList[i]);
         }
@@ -186,9 +186,9 @@ public class BattleSystem : MonoBehaviour
     /// </summary>
     IEnumerator PlayerAttack()
     {
-        bool isDead = enemyStatsList[enemyId].TakeDamage(playerStats.damage);
+        bool isDead = enemyStatsList[enemyId].TakeDamage(playerStatsList[playerId].attack);
 
-        enemyHud.SetEnemyHp(enemyStats.currentHealth);
+        enemyHud.SetEnemyHp(enemyStatsList[enemyId].currentHealth);
 
         yield return new WaitForSeconds(0.05f);
 
@@ -223,9 +223,11 @@ public class BattleSystem : MonoBehaviour
     IEnumerator EnemyTurn()
     {
         yield return new WaitForSeconds(1f);
-        bool isDead = playerStats.TakeDamage(enemyStats.damage);
+        playerId = Random.Range(0, 2);
+        
+        bool isDead = playerStatsList[playerId].TakeDamage(enemyStatsList[enemyId].attack);
 
-        playerHud.SetPlayerHp(playerStats.currentHealth);
+        playerHud.SetPlayerHp(playerStatsList[playerId].currentHealth);
 
         yield return new WaitForSeconds(1f);
 

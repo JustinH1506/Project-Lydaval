@@ -50,6 +50,7 @@
      <Compile Include="Assets\+++Workdata\Scripts\Player\PlayerMovement.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Managers\GameManager.cs" />
      <Folder Include="Assets" />
+     <Folder Include="Assets\+++Workdata\Prefabs\Characters\Enemys" />
      <Folder Include="Assets\+++Workdata\Scenes" />
      <None Include="Library\PackageCache\com.unity.modules.subsystems@1.0.0\package.json" />
      <None Include="Library\PackageCache\com.unity.render-pipelines.universal@14.0.8\package.json" />
@@ -94,6 +95,7 @@
      <None Include="Library\PackageCache\com.unity.modules.tilemap@1.0.0\package.json" />
      <Folder Include="Library\PackageCache\com.unity.modules.assetbundle@1.0.0" />
      <Folder Include="Library\PackageCache\com.unity.burst@1.8.8\Tests" />
+     <Folder Include="Assets\+++Workdata\Prefabs\Characters\Player" />
      <Folder Include="Library\PackageCache\com.unity.cinemachine@2.9.7\Gizmos" />
      <None Include="Library\PackageCache\com.unity.burst@1.8.8\ValidationConfig.json" />
      <None Include="Library\PackageCache\com.unity.timeline@1.7.5\package.json" />

@@ -56,6 +56,7 @@ public class BattleHud : MonoBehaviour
     public void SetEnemyHp(int hp)
     {
         hpSlider[battleSystem.enemyId].value = hp;
+        
     }
     #endregion
 }

@@ -316,7 +316,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '5
+  m_text: '
 
 '
   m_isRightToLeft: 0
@@ -1393,8 +1393,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c812c15306bd724580bc5aba4103542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerRange: 3
-  enemyRange: 4
   enemyId: 0
   enemyI: 0
   playerId: 0
@@ -1403,10 +1401,6 @@ MonoBehaviour:
     type: 3}
   enemyPrefab: {fileID: 629729383928598970, guid: 7a6c54f0243548547aab248dc10af866,
     type: 3}
-  playerBattleStation: {fileID: 2173341469213864383}
-  enemyBattleStation: {fileID: 1613454770}
-  playerName: {fileID: 1971472660}
-  enemyName: {fileID: 669619289}
   playerStats: {fileID: 4216729953877467935, guid: 45d10a4c1a55ab74399cd668a20c53a8,
     type: 3}
   enemyStats: {fileID: 2957588791360323039, guid: 7a6c54f0243548547aab248dc10af866,
@@ -1419,10 +1413,10 @@ MonoBehaviour:
   - {fileID: 1193106798745876386, guid: 7f21eaffaaec4e44e93d8c935cff6b32, type: 3}
   - {fileID: 1193106798745876386, guid: 520deccb4dbd1734bb203e0b9351c1e7, type: 3}
   enemyPrefabList:
-  - {fileID: 629729383928598970, guid: 7a6c54f0243548547aab248dc10af866, type: 3}
-  - {fileID: 629729383928598970, guid: 7a6c54f0243548547aab248dc10af866, type: 3}
-  - {fileID: 629729383928598970, guid: 7a6c54f0243548547aab248dc10af866, type: 3}
   - {fileID: 629729383928598970, guid: 5642db269ff8887478db5431896ac81b, type: 3}
+  - {fileID: 629729383928598970, guid: 7a6c54f0243548547aab248dc10af866, type: 3}
+  - {fileID: 629729383928598970, guid: 782702330dde2ba49960ff82013c68db, type: 3}
+  - {fileID: 629729383928598970, guid: 7d47408ec15da474fbfc879825879124, type: 3}
   playerBattleStationList:
   - {fileID: 2173341469213864383}
   - {fileID: 9047180035249747403}
@@ -1437,11 +1431,7 @@ MonoBehaviour:
   - {fileID: 1850739783}
   - {fileID: 1550215171}
   - {fileID: 877095510}
-  enemyStatsList:
-  - {fileID: 2957588791360323039, guid: 7a6c54f0243548547aab248dc10af866, type: 3}
-  - {fileID: 2957588791360323039, guid: 7a6c54f0243548547aab248dc10af866, type: 3}
-  - {fileID: 2957588791360323039, guid: 7a6c54f0243548547aab248dc10af866, type: 3}
-  - {fileID: 2957588791360323039, guid: 7a6c54f0243548547aab248dc10af866, type: 3}
+  enemyStatsList: []
   playerStatsList:
   - {fileID: 4216729953877467935, guid: 520deccb4dbd1734bb203e0b9351c1e7, type: 3}
   - {fileID: 4216729953877467935, guid: 45d10a4c1a55ab74399cd668a20c53a8, type: 3}
@@ -2525,7 +2515,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '5
+  m_text: '
 
 '
   m_isRightToLeft: 0
@@ -2881,7 +2871,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '5
+  m_text: '
 
 '
   m_isRightToLeft: 0
@@ -3240,10 +3230,10 @@ RectTransform:
   - {fileID: 418523982}
   m_Father: {fileID: 527563362}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -133, y: 698.2497}
-  m_SizeDelta: {x: 160, y: 20}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 50, y: -0}
+  m_SizeDelta: {x: 100, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1259265475
 MonoBehaviour:
@@ -4719,7 +4709,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '5
+  m_text: '
 
 '
   m_isRightToLeft: 0

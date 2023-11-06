@@ -14,21 +14,11 @@ public class Stats : MonoBehaviour
 
     public int currentHealth;
 
-    public int maxMp;
-
-    public int currentMp;
-
     public int speed;
 
     public int attack;
 
-    public int magicAttack;
-
     public int defense;
-
-    public int magicDefense;
-
-    public int damage;
 
     #endregion
     
@@ -72,9 +62,12 @@ public class Stats : MonoBehaviour
     /// <summary>
     /// heals the current health by a certain amount and makes the currentHealth to maxHealth if it goes over maxHealth.
     /// </summary>
-    public void Heal(int amount)
+    public void Heal(int healing)
     {
-        currentHealth += amount;
+        
+        
+        currentHealth += healing;
+        
         if (currentHealth > maxHealth)
         {
             currentHealth = maxHealth;
