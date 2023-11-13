@@ -1,11 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Threading;
 using UnityEngine;
-using TMPro;
-using Unity.Collections;
 using UnityEngine.SceneManagement;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public enum BattleState
@@ -21,7 +17,9 @@ public class BattleSystem : MonoBehaviour
 {
     #region Variables
 
-    public int enemyId, enemyI, playerId, playerI;
+    public int enemyId, enemyI, playerId, playerI, turnId;
+    
+    private int deadEnemies, deadPlayers;
 
     #endregion
 
@@ -50,6 +48,7 @@ public class BattleSystem : MonoBehaviour
     #endregion
 
     #region Stats
+    
 
     [SerializeField] Stats playerStats;
     [SerializeField] Stats enemyStats;
@@ -71,11 +70,12 @@ public class BattleSystem : MonoBehaviour
 
     #region Lists
 
-    [SerializeField] public List<GameObject> playerPrefabList, enemyPrefabList;
-    [SerializeField] private List<Transform> playerBattleStationList, enemyBattleStationList;
+    [SerializeField] List<GameObject> playerPrefabList, enemyPrefabList;
+    [SerializeField] public List<Transform> playerBattleStationList, enemyBattleStationList;
     [SerializeField] public List<Image> targetingIndicatorList;
-    [SerializeField] public List<Stats> enemyStatsList, playerStatsList;
-    [SerializeField] private List<int> characterSpeedList;
+    [SerializeField] public List<Stats> enemyStatsList, playerStatsList, characterStatsList;
+    [SerializeField] List<Button> targetingButtonsList;
+    [SerializeField] List<Stats> characterList;
 
     #endregion
 
@@ -139,16 +139,17 @@ public class BattleSystem : MonoBehaviour
     /// <summary> Instantiate player and enemy prefab and spawning them to the Battlestation´s. Get the Stats.  </summary>
     IEnumerator SetUpBattle()
     {
-        for (int i = 0; i < playerStatsList.Count; i++)
+        for (int i = 0; i < 3; i++)
         {
-            Debug.Log("Working");
-            
             playerI = i;
             
             GameObject playerGo = Instantiate(playerPrefabList[i], playerBattleStationList[i]);
             playerStats = playerGo.GetComponent<Stats>();
+            playerStatsList.Add(playerStats);
 
             playerHud.SetPlayerHud(playerStatsList[i]);
+            
+            characterList.Add(playerStatsList[i]);
         }
         
         for (int i = 0; i < 4; i++)
@@ -160,24 +161,30 @@ public class BattleSystem : MonoBehaviour
             enemyStatsList.Add(enemyStats);
 
             enemyHud.SetEnemyHud(enemyStatsList[i]);
+            
+            characterList.Add(enemyStatsList[i]);
         }
 
+        if (characterList.Count > 0)
+        {
+            characterList.Sort(delegate(Stats stats, Stats stats1)
+            {
+                return (stats.GetComponent<Stats>().speed).CompareTo(stats1.GetComponent<Stats>().speed);
+            });
+            characterList.Reverse();
+        }
+        
         yield return new WaitForSeconds(2f);
-
-        if (playerStats.speed > enemyStats.speed)
+        
+        if (!characterList[turnId].isEnemy)
         {
             state = BattleState.PLAYERTURN;
             PlayerTurn();
         }
-        else if (enemyStats.speed > playerStats.speed)
+        else if (characterList[turnId].isEnemy)
         {
             state = BattleState.ENEMYTURN;
             StartCoroutine(EnemyTurn());
-        }
-        else if (enemyStats.speed == playerStats.speed)
-        {
-            state = BattleState.PLAYERTURN;
-            PlayerTurn();
         }
     }
 
@@ -186,16 +193,46 @@ public class BattleSystem : MonoBehaviour
     /// </summary>
     IEnumerator PlayerAttack()
     {
-        bool isDead = enemyStatsList[enemyId].TakeDamage(playerStatsList[playerId].attack);
+        bool isDead = enemyStatsList[enemyId].TakeDamage(characterList[turnId].attack);
 
         enemyHud.SetEnemyHp(enemyStatsList[enemyId].currentHealth);
 
-        yield return new WaitForSeconds(0.05f);
+        yield return null;
 
         if (isDead)
         {
+            targetingButtonsList[enemyId].interactable = false;
+        }
+        
+        if (enemyStatsList[enemyId].currentHealth <= 0)
+        {
+                deadEnemies++;
+        }
+        
+        if (deadEnemies == 4)
+        {
             state = BattleState.WON;
             EndBattle();
+        }
+        else
+        {
+            StartCoroutine(TurnChange());
+        }
+    }
+
+    IEnumerator TurnChange()
+    {
+        turnId++;
+
+        if (turnId > characterList.Count -1 )
+            turnId = 0;
+
+        yield return null;
+        
+        if(!characterList[turnId].isEnemy)
+        {
+            state = BattleState.PLAYERTURN;
+            PlayerTurn();
         }
         else
         {
@@ -209,7 +246,7 @@ public class BattleSystem : MonoBehaviour
     {
         playerStats.Heal(5);
 
-        playerHud.SetPlayerHp(playerStats.currentHealth);
+        playerHud.SetPlayerHp(characterList[turnId].currentHealth);
 
         yield return new WaitForSeconds(0f);
 
@@ -222,10 +259,10 @@ public class BattleSystem : MonoBehaviour
     /// </summary>
     IEnumerator EnemyTurn()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
         playerId = Random.Range(0, 2);
         
-        bool isDead = playerStatsList[playerId].TakeDamage(enemyStatsList[enemyId].attack);
+        bool isDead = playerStatsList[playerId].TakeDamage(characterList[turnId].attack);
 
         playerHud.SetPlayerHp(playerStatsList[playerId].currentHealth);
 
@@ -233,15 +270,26 @@ public class BattleSystem : MonoBehaviour
 
         if (isDead)
         {
+            
+        }
+        
+        if (enemyStatsList[enemyId].currentHealth <= 0)
+        {
+            deadPlayers++;
+        }
+        
+
+        if(deadPlayers == 3)
+        {
+            Destroy(playerStatsList[playerId].gameObject);
+            
             state = BattleState.LOST;
             EndBattle();
         }
         else
         {
-            state = BattleState.PLAYERTURN;
-            PlayerTurn();
+            StartCoroutine(TurnChange());
         }
     }
-
     #endregion
 }

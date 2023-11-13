@@ -81,6 +81,7 @@
      <Folder Include="Library\PackageCache\com.unity.ide.rider@3.0.25\Rider" />
      <Folder Include="Library\PackageCache\com.unity.2d.pixel-perfect@5.0.3" />
      <Folder Include="Library\PackageCache\com.unity.2d.pixel-perfect@5.0.3\Tests" />
+     <Folder Include="Assets\+++Workdata\Assets\Ui" />
      <None Include="Library\PackageCache\com.unity.2d.pixel-perfect@5.0.3\package.json" />
      <Folder Include="Library\PackageCache\com.unity.cinemachine@2.9.7" />
      <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Editor Resources" />
@@ -96,6 +97,7 @@
      <Folder Include="Library\PackageCache\com.unity.modules.assetbundle@1.0.0" />
      <Folder Include="Library\PackageCache\com.unity.burst@1.8.8\Tests" />
      <Folder Include="Assets\+++Workdata\Prefabs\Characters\Player" />
+     <Folder Include="Assets\+++Workdata\Assets\Background" />
      <Folder Include="Library\PackageCache\com.unity.cinemachine@2.9.7\Gizmos" />
      <None Include="Library\PackageCache\com.unity.burst@1.8.8\ValidationConfig.json" />
      <None Include="Library\PackageCache\com.unity.timeline@1.7.5\package.json" />
@@ -193,6 +195,7 @@
      <None Include="Library\PackageCache\com.unity.2d.tilemap.extras@3.1.1\package.json" />
      <Folder Include="Assets\+++Workdata\Scripts\Other" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+     <Folder Include="Assets\+++Workdata\Assets\Sprites" />
      <None Include="Library\PackageCache\com.unity.inputsystem@1.6.3\ValidationExceptions.json" />
      <Folder Include="Assets\TextMesh Pro\Shaders" />
      <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Editor Resources\Gizmos" />
@@ -217,6 +220,7 @@
      <Folder Include="Library\PackageCache\com.unity.searcher@4.9.2\Tests" />
      <None Include="Library\PackageCache\com.unity.feature.2d@2.0.0\package.json" />
      <Folder Include="Assets\+++Workdata\Scripts\Managers" />
+     <Folder Include="Assets\+++Workdata\Prefabs\New Characters" />
      <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Editor Resources\Shaders\TMP_SDF_SSD.cginc" />
      <Folder Include="Library\PackageCache\com.unity.2d.animation@9.0.3" />
      <Folder Include="Library\PackageCache\com.unity.render-pipelines.universal@14.0.8\Textures\BlueNoise16" />

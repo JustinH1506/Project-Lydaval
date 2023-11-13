@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class TargetingSystem : MonoBehaviour
 {
     [SerializeField] private BattleSystem battleSystem;
+    
     public int idChanger;
 
 
@@ -16,5 +17,10 @@ public class TargetingSystem : MonoBehaviour
         battleSystem.enemyId = idChanger;
 
         battleSystem.targetingIndicatorList[battleSystem.enemyId].enabled = true;
+        
+        if (idChanger > battleSystem.enemyStatsList.Count - 1)
+        {
+            battleSystem.enemyId = battleSystem.enemyStatsList.Count - 1;
+        }
     }
 }

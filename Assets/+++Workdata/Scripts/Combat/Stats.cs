@@ -20,6 +20,8 @@ public class Stats : MonoBehaviour
 
     public int defense;
 
+    public bool isEnemy;
+
     #endregion
     
     #region Scripts
@@ -33,6 +35,13 @@ public class Stats : MonoBehaviour
     private void Awake()
     {
         battleSystem = GetComponent<BattleSystem>();
+        
+        currentHealth = maxHealth;
+
+        if (gameObject.CompareTag("Enemy"))
+        {
+            isEnemy = true;
+        }
     }
     
     /// <summary>
@@ -42,8 +51,6 @@ public class Stats : MonoBehaviour
     {
         maxHealth.ToString();
         currentHealth.ToString();
-
-        currentHealth = maxHealth;
     }
 
     /// <summary>
@@ -64,8 +71,6 @@ public class Stats : MonoBehaviour
     /// </summary>
     public void Heal(int healing)
     {
-        
-        
         currentHealth += healing;
         
         if (currentHealth > maxHealth)
