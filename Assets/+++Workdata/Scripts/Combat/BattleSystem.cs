@@ -28,6 +28,8 @@ public class BattleSystem : MonoBehaviour
     
     private int deadEnemies, deadPlayers;
 
+    private int enemyAdder;
+
     #endregion
 
     #region Gameobjects
@@ -66,6 +68,7 @@ public class BattleSystem : MonoBehaviour
     [SerializeField] public List<Stats> enemyStatsList, playerStatsList, characterStatsList;
     [SerializeField] List<Button> targetingButtonsList;
     [SerializeField] List<Stats> characterList;
+    [SerializeField] private List<GameObject> enemyWormList, enemyThiefList, enemyBoarList;
 
     #endregion
 
@@ -73,13 +76,14 @@ public class BattleSystem : MonoBehaviour
 
     private void Awake()
     {
-        //enemyManager = GameObject.Find("Enemy Manager").GetComponent<EnemyManager>();
+        enemyManager = GameObject.Find("EnemyManager").GetComponent<EnemyManager>();
     }
 
     /// <summary> Set Battle State to START and Start Coroutine SetUpBattle </summary>
     void Start()
     {
         state = BattleState.START;
+        SetEnemiesToList();
         StartCoroutine(SetUpBattle());
         Debug.Log("Working");
     }
@@ -112,6 +116,40 @@ public class BattleSystem : MonoBehaviour
         characterList.RemoveAll(Stats => Stats == null);
     }
 
+    private void SetEnemiesToList()
+    {
+        if (enemyManager.enemyType == EnemyType.THIEF)
+        {
+            enemyAdder = Random.Range(0, 3);
+            
+            for (int i = 0; i <= enemyAdder; i++)
+            {
+                enemyPrefabList.Add(enemyThiefList[i]);
+            }
+        }
+        
+        if (enemyManager.enemyType == EnemyType.BOAR)
+        {
+            enemyAdder = Random.Range(0, 3);
+            
+            for (int i = 0; i <= enemyAdder; i++)
+            {
+                enemyPrefabList.Add(enemyBoarList[i]);
+            }
+            
+        }
+        
+        if (enemyManager.enemyType == EnemyType.WORM)
+        {
+            enemyAdder = Random.Range(0, 3);
+            
+            for (int i = 0; i <= enemyAdder; i++)
+            {
+                enemyPrefabList.Add(enemyWormList[i]);
+            }
+        }
+    }
+
     /// <summary> Returns if state is not PLAYERTURN. Start PlayerAttack Coroutine. </summary>
     public void OnAttackButton()
     {
@@ -139,7 +177,7 @@ public class BattleSystem : MonoBehaviour
     /// <summary> Instantiate player and enemy prefab and spawning them to the Battlestation´s. Get the Stats.  </summary>
     IEnumerator SetUpBattle()
     {
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < playerPrefabList.Count; i++)
         {
             playerI = i;
             
@@ -152,7 +190,7 @@ public class BattleSystem : MonoBehaviour
             characterList.Add(playerStatsList[i]);
         }
         
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < enemyPrefabList.Count; i++)
         {
             enemyI = i;
             
@@ -211,14 +249,11 @@ public class BattleSystem : MonoBehaviour
            yield return null;
            
            ClearList();
+
+           deadEnemies++;
         }
-        
-        if (enemyStatsList[enemyId].currentHealth <= 0)
-        {
-                deadEnemies++;
-        }
-        
-        if (deadEnemies == 4)
+
+        if (deadEnemies == enemyAdder +1)
         {
             state = BattleState.WON;
             EndBattle();
@@ -282,7 +317,15 @@ public class BattleSystem : MonoBehaviour
 
         if (isDead)
         {
+            targetingButtonsList[playerId].interactable = false;
+
+            Destroy(playerStatsList[playerId].gameObject);
             
+            Destroy(playerPrefabList[playerId].gameObject);
+
+            yield return null;
+           
+            ClearList();
         }
         
         if (playerStatsList[playerId].currentHealth <= 0)

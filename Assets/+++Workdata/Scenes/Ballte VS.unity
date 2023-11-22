@@ -1444,11 +1444,7 @@ MonoBehaviour:
   - {fileID: 1193106798745876386, guid: 45d10a4c1a55ab74399cd668a20c53a8, type: 3}
   - {fileID: 1193106798745876386, guid: 7f21eaffaaec4e44e93d8c935cff6b32, type: 3}
   - {fileID: 1193106798745876386, guid: 520deccb4dbd1734bb203e0b9351c1e7, type: 3}
-  enemyPrefabList:
-  - {fileID: 629729383928598970, guid: 5642db269ff8887478db5431896ac81b, type: 3}
-  - {fileID: 629729383928598970, guid: 7a6c54f0243548547aab248dc10af866, type: 3}
-  - {fileID: 629729383928598970, guid: 782702330dde2ba49960ff82013c68db, type: 3}
-  - {fileID: 629729383928598970, guid: 7d47408ec15da474fbfc879825879124, type: 3}
+  enemyPrefabList: []
   playerBattleStationList:
   - {fileID: 2173341469213864383}
   - {fileID: 9047180035249747403}
@@ -1472,6 +1468,18 @@ MonoBehaviour:
   - {fileID: 1334887279}
   - {fileID: 1653711573}
   characterList: []
+  enemyWormList:
+  - {fileID: 629729383928598970, guid: 789d08dac92a8394d988d65c7af38e94, type: 3}
+  - {fileID: 629729383928598970, guid: 664faa8aec30d97448f47789e1ce578a, type: 3}
+  - {fileID: 629729383928598970, guid: 21c1589df3e1070439336ec7722ff508, type: 3}
+  enemyThiefList:
+  - {fileID: 629729383928598970, guid: 782702330dde2ba49960ff82013c68db, type: 3}
+  - {fileID: 629729383928598970, guid: 7e3ebe8edb07663468b115fe26c2ce4a, type: 3}
+  - {fileID: 629729383928598970, guid: 161dcfb9b51f92a42934c05075e98787, type: 3}
+  enemyBoarList:
+  - {fileID: 629729383928598970, guid: 7d47408ec15da474fbfc879825879124, type: 3}
+  - {fileID: 629729383928598970, guid: d0a2ba3bc99f9414d8800d4535c5bb89, type: 3}
+  - {fileID: 629729383928598970, guid: 209cc94d563dd4d49bddb90ae995b311, type: 3}
 --- !u!1 &462086626
 GameObject:
   m_ObjectHideFlags: 0

@@ -98,9 +98,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unitName: Boar
-  maxHealth: 20
-  currentHealth: 20
-  speed: 6
-  attack: 4
+  maxHealth: 18
+  currentHealth: 18
+  speed: 5
+  attack: 6
   defense: 2
+  isEnemy: 0
   battleSystem: {fileID: 0}

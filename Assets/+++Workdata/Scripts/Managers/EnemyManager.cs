@@ -3,8 +3,6 @@ using UnityEngine;
 public class EnemyManager : MonoBehaviour
 {
     public EnemyType enemyType;
-
-    public BattleSystem battleSystem;
     
     #region Instance
     public static EnemyManager Instance { get; private set; }
@@ -18,7 +16,7 @@ public class EnemyManager : MonoBehaviour
     {
         if(Instance != null)
         {
-            Debug.Log("There are more!!!");
+            Destroy(gameObject);
         }
         Instance = this;
         
