@@ -1,11 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class EnemyManager : MonoBehaviour
 {
+    public EnemyType enemyType;
+
+    public BattleSystem battleSystem;
+    
     #region Instance
-    public static GameManager Instance { get; private set; }
+    public static EnemyManager Instance { get; private set; }
     #endregion
 
     #region Methods
@@ -23,4 +25,6 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
     #endregion
+
+    
 }

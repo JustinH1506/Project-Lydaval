@@ -47,15 +47,19 @@ public class BattleHud : MonoBehaviour
     }
 
     /// <summary> Sets hpSliders value to hp. /summary>
-    public void SetPlayerHp(int hp)
+    public void SetPlayerHp(int hp, int maxHp)
     {
         hpSlider[battleSystem.playerId].value = hp;
+
+        unitHp[battleSystem.playerId].text = hp + "/" + maxHp;
     }
     
     /// <summary> Sets hpSliders value to hp. /summary>
-    public void SetEnemyHp(int hp)
+    public void SetEnemyHp(int hp, int maxHp)
     {
         hpSlider[battleSystem.enemyId].value = hp;
+        
+        unitHp[battleSystem.enemyId].text = hp + "/" + maxHp;
     }
     #endregion
 }

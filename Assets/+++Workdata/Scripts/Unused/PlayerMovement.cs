@@ -63,7 +63,7 @@ public class PlayerMovement : MonoBehaviour
     /// <summary> 
     /// If Moveable moving to another tile
     /// </summary>
-    public void Move(Vector2 direction)
+    private void Move(Vector2 direction)
     {
         if (direction.x != 0)
             direction.x = Mathf.Sign(direction.x);
@@ -77,7 +77,7 @@ public class PlayerMovement : MonoBehaviour
     /// <summary> Making teh Gridposition to the groundTilemap to World Cell + the direction in Vector 3. 
     /// Asking if groundTilemap does not have a Tile or collisionTilemap has a tile return false. Else return true.
     /// </summary>
-    public bool CanMove(Vector2 direction)
+    private bool CanMove(Vector2 direction)
     {
         Vector3Int gridPosition = groundTilemap.WorldToCell(transform.position + (Vector3)direction);
 

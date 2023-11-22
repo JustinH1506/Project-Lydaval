@@ -46,9 +46,18 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\+++Workdata\Scripts\Managers\BattleManager.cs" />
+     <Compile Include="Assets\+++Workdata\Scripts\Enemy\EnemyTypeScript.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Player\PlayerController.cs" />
-     <Compile Include="Assets\+++Workdata\Scripts\Player\PlayerMovement.cs" />
+     <Compile Include="Assets\+++Workdata\Scripts\Unused\PlayerMovement.cs" />
+     <Compile Include="Assets\+++Workdata\Scripts\Enemy\EnemySpawnScript.cs" />
+     <Compile Include="Assets\+++Workdata\Scripts\Combat\Stats.cs" />
+     <Compile Include="Assets\+++Workdata\Scripts\Combat\BattleSystem.cs" />
+     <Compile Include="Assets\+++Workdata\Scripts\Weapons\WeaponStats.cs" />
+     <Compile Include="Assets\+++Workdata\Scripts\Combat\BattleHud.cs" />
+     <Compile Include="Assets\+++Workdata\Scripts\Player\PlayerMove.cs" />
+     <Compile Include="Assets\+++Workdata\Scripts\Managers\EnemyManager.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Managers\GameManager.cs" />
+     <Compile Include="Assets\+++Workdata\Scripts\Combat\TargetingSystem.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\+++Workdata\Prefabs\Characters\Enemys" />
      <Folder Include="Assets\+++Workdata\Scenes" />
@@ -112,6 +121,7 @@
      <Folder Include="Assets\+++Workdata\Assets\Tilemap" />
      <None Include="Library\PackageCache\com.unity.modules.terrainphysics@1.0.0\package.json" />
      <None Include="Library\PackageCache\com.unity.mathematics@1.2.6\package.json" />
+     <Folder Include="Assets\+++Workdata\Scripts\Combat" />
      <Folder Include="Library\PackageCache\com.unity.2d.animation@9.0.3\Tests" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
      <Folder Include="Assets\TextMesh Pro\Resources" />
@@ -130,6 +140,7 @@
      <Folder Include="Library\PackageCache\com.unity.cinemachine@2.9.7\Tests" />
      <None Include="Library\PackageCache\com.unity.ide.visualstudio@2.0.18\package.json" />
      <None Include="Library\PackageCache\com.unity.render-pipelines.core@14.0.8\ValidationConfig.json" />
+     <Folder Include="Assets\+++Workdata\Scripts\Weapons" />
      <None Include="Library\PackageCache\com.unity.render-pipelines.core@14.0.8\package.json" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <Folder Include="Library\PackageCache\com.unity.feature.2d@2.0.0" />
@@ -201,6 +212,7 @@
      <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Editor Resources\Gizmos" />
      <Folder Include="Assets\+++Workdata\Scripts\Enemy" />
      <None Include="Library\PackageCache\com.unity.modules.audio@1.0.0\package.json" />
+     <Folder Include="Assets\+++Workdata\Scripts\Unused" />
      <None Include="Library\PackageCache\com.unity.modules.physics@1.0.0\package.json" />
      <Folder Include="Library\PackageCache\com.unity.collab-proxy@2.0.7" />
      <Folder Include="Library\PackageCache\com.unity.render-pipelines.universal@14.0.8\Textures\2D" />
@@ -1046,10 +1058,6 @@
     <ProjectReference Include="UnityEngine.UI.csproj">
       <Project>{030df774-f374-3164-eba0-46473d4e5efa}</Project>
       <Name>UnityEngine.UI</Name>
-    </ProjectReference>
-    <ProjectReference Include="Lydaval_Combat.csproj">
-      <Project>{9b2fe4f0-e3f4-a797-8a83-a07139d1e279}</Project>
-      <Name>Lydaval_Combat</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.InternalAPIEditorBridge.005.csproj">
       <Project>{3dfa7cd5-2fd4-4e67-aa37-df4c95311c05}</Project>

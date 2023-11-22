@@ -1,8 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public enum BattleState
 {
@@ -12,9 +14,14 @@ public enum BattleState
     WON,
     LOST
 }
-
 public class BattleSystem : MonoBehaviour
 {
+    #region Scripts
+    
+    private EnemyManager enemyManager;
+    
+    #endregion 
+    
     #region Variables
 
     public int enemyId, enemyI, playerId, playerI, turnId;
@@ -31,24 +38,7 @@ public class BattleSystem : MonoBehaviour
 
     #endregion
 
-    #region Transform
-
-  //  public Transform playerBattleStation;
-
-    //public Transform enemyBattleStation;
-
-    #endregion
-
-    #region TextMeshProUGUI
-
-   // public TextMeshProUGUI playerName;
-
-   // public TextMeshProUGUI enemyName;
-
-    #endregion
-
     #region Stats
-    
 
     [SerializeField] Stats playerStats;
     [SerializeField] Stats enemyStats;
@@ -81,6 +71,11 @@ public class BattleSystem : MonoBehaviour
 
     #region Methods
 
+    private void Awake()
+    {
+        //enemyManager = GameObject.Find("Enemy Manager").GetComponent<EnemyManager>();
+    }
+
     /// <summary> Set Battle State to START and Start Coroutine SetUpBattle </summary>
     void Start()
     {
@@ -110,6 +105,11 @@ public class BattleSystem : MonoBehaviour
     private void PlayerTurn()
     {
         
+    }
+
+    private void ClearList()
+    {
+        characterList.RemoveAll(Stats => Stats == null);
     }
 
     /// <summary> Returns if state is not PLAYERTURN. Start PlayerAttack Coroutine. </summary>
@@ -195,13 +195,22 @@ public class BattleSystem : MonoBehaviour
     {
         bool isDead = enemyStatsList[enemyId].TakeDamage(characterList[turnId].attack);
 
-        enemyHud.SetEnemyHp(enemyStatsList[enemyId].currentHealth);
+        if (enemyStatsList[enemyId].currentHealth <= 0)
+            enemyStatsList[enemyId].currentHealth = 0;
+        
+        enemyHud.SetEnemyHp(enemyStatsList[enemyId].currentHealth, enemyStatsList[enemyId].maxHealth);
 
         yield return null;
 
         if (isDead)
         {
             targetingButtonsList[enemyId].interactable = false;
+
+           Destroy(enemyStatsList[enemyId].gameObject);
+
+           yield return null;
+           
+           ClearList();
         }
         
         if (enemyStatsList[enemyId].currentHealth <= 0)
@@ -224,7 +233,7 @@ public class BattleSystem : MonoBehaviour
     {
         turnId++;
 
-        if (turnId > characterList.Count -1 )
+        if (turnId == characterList.Count)
             turnId = 0;
 
         yield return null;
@@ -246,7 +255,7 @@ public class BattleSystem : MonoBehaviour
     {
         playerStats.Heal(5);
 
-        playerHud.SetPlayerHp(characterList[turnId].currentHealth);
+        playerHud.SetPlayerHp(characterList[turnId].currentHealth, characterList[turnId].maxHealth);
 
         yield return new WaitForSeconds(0f);
 
@@ -259,21 +268,24 @@ public class BattleSystem : MonoBehaviour
     /// </summary>
     IEnumerator EnemyTurn()
     {
-        yield return new WaitForSeconds(2f);
-        playerId = Random.Range(0, 2);
+        yield return new WaitForSeconds(1f);
+        playerId = Random.Range(0, 3);
         
         bool isDead = playerStatsList[playerId].TakeDamage(characterList[turnId].attack);
 
-        playerHud.SetPlayerHp(playerStatsList[playerId].currentHealth);
+        if (playerStatsList[playerId].currentHealth <= 0)
+            playerStatsList[playerId].currentHealth = 0;
+        
+        playerHud.SetPlayerHp(playerStatsList[playerId].currentHealth, playerStatsList[playerId].maxHealth);
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0f);
 
         if (isDead)
         {
             
         }
         
-        if (enemyStatsList[enemyId].currentHealth <= 0)
+        if (playerStatsList[playerId].currentHealth <= 0)
         {
             deadPlayers++;
         }

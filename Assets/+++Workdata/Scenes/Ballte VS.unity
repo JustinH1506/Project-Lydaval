@@ -1428,6 +1428,7 @@ MonoBehaviour:
   enemyI: 0
   playerId: 0
   playerI: 0
+  turnId: 0
   playerPrefab: {fileID: 1193106798745876386, guid: 45d10a4c1a55ab74399cd668a20c53a8,
     type: 3}
   enemyPrefab: {fileID: 629729383928598970, guid: 7a6c54f0243548547aab248dc10af866,
@@ -1464,12 +1465,13 @@ MonoBehaviour:
   - {fileID: 807607033}
   enemyStatsList: []
   playerStatsList: []
-  characterSpeedList: 
+  characterStatsList: []
   targetingButtonsList:
   - {fileID: 462086628}
   - {fileID: 2048569505}
   - {fileID: 1334887279}
   - {fileID: 1653711573}
+  characterList: []
 --- !u!1 &462086626
 GameObject:
   m_ObjectHideFlags: 0
