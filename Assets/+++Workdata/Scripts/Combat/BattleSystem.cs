@@ -332,7 +332,6 @@ public class BattleSystem : MonoBehaviour
         {
             deadPlayers++;
         }
-        
 
         if(deadPlayers == 3)
         {
