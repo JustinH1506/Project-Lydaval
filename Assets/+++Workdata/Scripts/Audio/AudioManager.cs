@@ -21,22 +21,22 @@ public class AudioManager : MonoBehaviour
     {
         if(instance != null)
         {
-            Debug.LogWarning("Found more than one AudioManager");
+            Destroy(gameObject);
         }
         instance = this;
 
         eventInstances = new List<EventInstance>();
     }
 
-    /// <summary>
-    /// Playy the PlayOneShot sound.
+    /* /// <summary>
+    /// Plays the PlayOneShot sound.
     /// </summary>
     /// <param name="sound"></param>
     /// <param name="worldPos"></param>
     public void PlayOneShot(EventReference sound, Vector3 worldPos)
     {
         RuntimeManager.PlayOneShot(sound, worldPos);    
-    }
+    }*/
 
     /// <summary>
     /// 
@@ -53,7 +53,7 @@ public class AudioManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Start the Music, startMusic and Ambienece.
+    /// Start the Music, startMusic and Ambience.
     /// </summary>
     private void Start()
     {
@@ -76,7 +76,7 @@ public class AudioManager : MonoBehaviour
     }
 
     /// <summary>
-    /// We call the CreateInstance Method to make our musicEventIntsance to this and start it at the start method.
+    /// We call the CreateInstance Method to make our musicEventInstance to this and start it at the start method.
     /// </summary>
     /// <param name="musicEventReference"></param>
     private void InitializeMusic(EventReference musicEventReference)

@@ -484,8 +484,8 @@ MonoBehaviour:
   switchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: ../../../Fmod/Workspace/3rd_Semester_Project_Lydaval/3rd_Semester_Project_Lydaval.fspro
-  sourceBankPath: ../../../Fmod/Workspace/3rd_Semester_Project_Lydaval/Build
+  sourceProjectPath: ../../../Fmod/Workspace/Project Lydaval/ProjectLydaval_Sounds/ProjectLydaval_Sounds.fspro
+  sourceBankPath: ../../../Fmod/Workspace/Project Lydaval/ProjectLydaval_Sounds/Build
   sourceBankPathUnformatted: 
   BankRefreshCooldown: 5
   ShowBankRefreshWindow: 1
@@ -509,7 +509,9 @@ MonoBehaviour:
   MasterBanks:
   - Master
   Banks:
-  - Background
+  - Ambience
+  - Music
+  - Start Musik
   BanksToLoad: []
   LiveUpdatePort: 9264
   EnableMemoryTracking: 0

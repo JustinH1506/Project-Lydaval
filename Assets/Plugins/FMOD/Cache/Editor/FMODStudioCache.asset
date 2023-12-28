@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-9144409270414383673
+--- !u!114 &-8851988411137056674
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: bank:/Master.strings.bank
   m_EditorClassIdentifier: 
-  Path: ../../../Fmod/Workspace/3rd_Semester_Project_Lydaval/Build/Desktop/Master.strings.bank
+  Path: ../../../Fmod/Workspace/Project Lydaval/ProjectLydaval_Sounds/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638296738438663321
+  lastModified: 638393767383287896
   FileSizes:
   - Name: Desktop
-    Value: 808
+    Value: 1146
   Exists: 1
---- !u!114 &-7908256687053890464
+--- !u!114 &-7375891626764633038
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -30,17 +30,58 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
+  m_Name: bank:/Music.bank
   m_EditorClassIdentifier: 
-  Path: ../../../Fmod/Workspace/3rd_Semester_Project_Lydaval/Build/Desktop/Master.bank
-  Name: Master
-  StudioPath: bank:/Master
-  lastModified: 638296738438653314
+  Path: ../../../Fmod/Workspace/Project Lydaval/ProjectLydaval_Sounds/Build/Desktop/Music.bank
+  Name: Music
+  StudioPath: bank:/Music
+  lastModified: 638393765853412936
   FileSizes:
   - Name: Desktop
-    Value: 1036
+    Value: 1231488
   Exists: 1
---- !u!114 &-1618684977689734436
+--- !u!114 &-6017075809221281388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Ambience.bank
+  m_EditorClassIdentifier: 
+  Path: ../../../Fmod/Workspace/Project Lydaval/ProjectLydaval_Sounds/Build/Desktop/Ambience.bank
+  Name: Ambience
+  StudioPath: bank:/Ambience
+  lastModified: 638393767413146017
+  FileSizes:
+  - Name: Desktop
+    Value: 2532512
+  Exists: 1
+--- !u!114 &-5329982642793818585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Start Musik.bank
+  m_EditorClassIdentifier: 
+  Path: ../../../Fmod/Workspace/Project Lydaval/ProjectLydaval_Sounds/Build/Desktop/Start
+    Musik.bank
+  Name: Start Musik
+  StudioPath: bank:/Start Musik
+  lastModified: 638393763584077825
+  FileSizes:
+  - Name: Desktop
+    Value: 1202
+  Exists: 1
+--- !u!114 &-1918027366363845210
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -50,16 +91,43 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music
+  m_Name: event:/Ambient Sounds/Wind Sounds 2
   m_EditorClassIdentifier: 
-  Path: event:/Music
+  Path: event:/Ambient Sounds/Wind Sounds 2
   Guid:
-    Data1: 514792338
-    Data2: 1332444302
-    Data3: -1980802162
-    Data4: -670118407
+    Data1: 2008482428
+    Data2: 1337488494
+    Data3: 1089260177
+    Data4: -1767116956
   Banks:
-  - {fileID: 7128253995955936814}
+  - {fileID: -6017075809221281388}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 196104
+--- !u!114 &-16779131758184186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Start Musik/Empty Sound
+  m_EditorClassIdentifier: 
+  Path: event:/Start Musik/Empty Sound
+  Guid:
+    Data1: 1174357383
+    Data2: 1285954571
+    Data3: -1403991624
+    Data4: -1329129659
+  Banks:
+  - {fileID: -5329982642793818585}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -80,19 +148,51 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: -9144409270414383673}
-  - {fileID: 7128253995955936814}
-  - {fileID: -7908256687053890464}
+  - {fileID: -8851988411137056674}
+  - {fileID: -6017075809221281388}
+  - {fileID: 3422015498378189120}
+  - {fileID: -7375891626764633038}
+  - {fileID: -5329982642793818585}
   EditorEvents:
-  - {fileID: -1618684977689734436}
+  - {fileID: 3569617092399416373}
+  - {fileID: 1600851316174599044}
+  - {fileID: -16779131758184186}
+  - {fileID: -1918027366363845210}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -7908256687053890464}
+  - {fileID: 3422015498378189120}
   StringsBanks:
-  - {fileID: -9144409270414383673}
-  cacheTime: 638296738438708452
+  - {fileID: -8851988411137056674}
+  cacheTime: 638393767413146017
   cacheVersion: 131603
---- !u!114 &7128253995955936814
+--- !u!114 &1600851316174599044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Background Musiks/Background Musik
+  m_EditorClassIdentifier: 
+  Path: event:/Background Musiks/Background Musik
+  Guid:
+    Data1: -1430063025
+    Data2: 1184695492
+    Data3: -678919501
+    Data4: -1956157967
+  Banks:
+  - {fileID: -7375891626764633038}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 85760
+--- !u!114 &3422015498378189120
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -102,13 +202,65 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Background.bank
+  m_Name: bank:/Master.bank
   m_EditorClassIdentifier: 
-  Path: ../../../Fmod/Workspace/3rd_Semester_Project_Lydaval/Build/Desktop/Background.bank
-  Name: Background
-  StudioPath: bank:/Background
-  lastModified: 638296738438708452
+  Path: ../../../Fmod/Workspace/Project Lydaval/ProjectLydaval_Sounds/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 638393767383078161
   FileSizes:
   - Name: Desktop
-    Value: 1202
+    Value: 1036
+  Exists: 1
+--- !u!114 &3569617092399416373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambient Sounds/Wind Sound
+  m_EditorClassIdentifier: 
+  Path: event:/Ambient Sounds/Wind Sound
+  Guid:
+    Data1: -1791160889
+    Data2: 1280165289
+    Data3: -1317051241
+    Data4: -1290483993
+  Banks:
+  - {fileID: -6017075809221281388}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 3682204574082625279}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 12000
+--- !u!114 &3682204574082625279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Wind Sound/Wind_Intensity
+  m_EditorClassIdentifier: 
+  Name: Wind_Intensity
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1659881415
+    data2: 7145509
+  Type: 0
+  IsGlobal: 0
+  Labels: []
   Exists: 1
