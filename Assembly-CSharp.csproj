@@ -45,8 +45,10 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.8f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Ink\Demos\Basic Demo\Scripts\BasicInkExample.cs" />
+     <Compile Include="Assets\+++Workdata\Scripts\Audio\FmodEvents.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Managers\BattleManager.cs" />
-     <Compile Include="Assets\+++Workdata\Scripts\Dialogue\DialogueManager.cs" />
+     <Compile Include="Assets\Ink\Demos\Basic Demo\Scripts\QuitGameOnKeypress.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Inventory\Items\Items.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Player\PlayerController.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Unused\PlayerMovement.cs" />
@@ -56,12 +58,16 @@
      <Compile Include="Assets\+++Workdata\Scripts\Combat\Stats.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Combat\BattleSystem.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Weapons\WeaponStats.cs" />
+     <Compile Include="Assets\+++Workdata\Scripts\Audio\AudioManager.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Other\MenuController.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Combat\BattleHud.cs" />
+     <Compile Include="Assets\+++Workdata\Scripts\Dialogue\Dialogues\NPCDialogues.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Player\PlayerMove.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Managers\EnemyManager.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Managers\GameManager.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Inventory\Equipment\Equipments.cs" />
+     <Compile Include="Assets\+++Workdata\Scripts\Dialogue\DialogueControllMap.cs" />
+     <Compile Include="Assets\+++Workdata\Scripts\Dialogue\Dialogues\DialogueManager.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Combat\TargetingSystem.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\+++Workdata\Prefabs\Characters\Enemys" />
@@ -120,6 +126,7 @@
      <None Include="Library\PackageCache\com.unity.timeline@1.7.5\package.json" />
      <Folder Include="Assets\+++Workdata\Prefabs\Equipment" />
      <Folder Include="Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom" />
+     <None Include="Assets\+++Workdata\Assets\Dialogues\Test_.json" />
      <Folder Include="Library\PackageCache\com.unity.2d.aseprite@1.0.0" />
      <Folder Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections.LowLevel.ILSupport" />
      <Folder Include="Assets\TextMesh Pro\Resources\Fonts &amp; Materials" />
@@ -158,6 +165,7 @@
      <None Include="Library\PackageCache\com.unity.modules.imageconversion@1.0.0\package.json" />
      <Folder Include="Assets\+++Workdata\Prefabs\Characters" />
      <Folder Include="Library\PackageCache\com.unity.2d.common@8.0.1" />
+     <Folder Include="Assets\Ink\Demos\Basic Demo\Scripts" />
      <Folder Include="Library\PackageCache\com.unity.modules.unitywebrequest@1.0.0" />
      <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\ValidationExceptions.json" />
      <Folder Include="Library\PackageCache\com.unity.modules.unitywebrequestassetbundle@1.0.0" />
@@ -165,6 +173,7 @@
      <None Include="Library\PackageCache\com.unity.shadergraph@14.0.8\package.json" />
      <Folder Include="Assets\TextMesh Pro" />
      <None Include="Library\PackageCache\com.unity.modules.unityanalytics@1.0.0\package.json" />
+     <Folder Include="Assets\Ink\Demos\Basic Demo" />
      <Folder Include="Library\PackageCache\com.unity.modules.subsystems@1.0.0" />
      <None Include="Library\PackageCache\com.unity.ide.rider@3.0.25\package.json" />
      <None Include="Library\PackageCache\com.unity.searcher@4.9.2\package.json" />
@@ -177,6 +186,8 @@
      <Folder Include="Library\PackageCache\com.unity.modules.physics@1.0.0" />
      <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Scripts" />
      <Folder Include="Library\PackageCache\com.unity.modules.vr@1.0.0" />
+     <Folder Include="Assets\Ink\Documentation" />
+     <Folder Include="Assets\+++Workdata\Assets\Dialogues" />
      <Folder Include="Library\PackageCache\com.unity.modules.physics2d@1.0.0" />
      <Folder Include="Library\PackageCache\com.unity.2d.common@8.0.1\Path" />
      <Folder Include="Library\PackageCache\com.unity.inputsystem@1.6.3" />
@@ -200,6 +211,7 @@
      <None Include="Library\PackageCache\com.unity.modules.wind@1.0.0\package.json" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
      <Folder Include="Library\PackageCache\com.unity.ugui@1.0.0\Tests" />
+     <Folder Include="Assets\Ink\Demos\Basic Demo\Prefabs" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
      <None Include="Library\PackageCache\com.unity.modules.umbra@1.0.0\package.json" />
      <Folder Include="Assets\+++Workdata\Scripts" />
@@ -207,6 +219,7 @@
      <Folder Include="Library\PackageCache\com.unity.2d.sprite@1.0.0" />
      <Folder Include="Library\PackageCache\com.unity.modules.tilemap@1.0.0" />
      <Folder Include="Assets\+++Workdata\Assets" />
+     <Folder Include="Assets\Ink\Demos\Basic Demo\Ink" />
      <Folder Include="Library\PackageCache\com.unity.modules.ui@1.0.0" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
      <None Include="Library\PackageCache\com.unity.cinemachine@2.9.7\license.txt" />
@@ -232,11 +245,13 @@
      <Folder Include="Assets\TextMesh Pro\Fonts" />
      <None Include="Library\PackageCache\com.unity.modules.vehicles@1.0.0\package.json" />
      <None Include="Library\PackageCache\com.unity.cinemachine@2.9.7\package.json" />
+     <None Include="Assets\+++Workdata\Assets\Dialogues\Test.json" />
      <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6" />
      <Folder Include="Library\PackageCache\com.unity.ide.rider@3.0.25" />
      <None Include="Library\PackageCache\com.unity.modules.unitywebrequestwww@1.0.0\package.json" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
      <Folder Include="Library\PackageCache\com.unity.render-pipelines.core@14.0.8" />
+     <Folder Include="Assets\Ink" />
      <Folder Include="Library\PackageCache\com.unity.2d.tilemap@1.0.0\Tests" />
      <Folder Include="Assets\+++Workdata\Scripts\Audio" />
      <None Include="Library\PackageCache\com.unity.modules.unitywebrequestaudio@1.0.0\package.json" />
@@ -253,6 +268,7 @@
      <None Include="Library\PackageCache\com.unity.modules.xr@1.0.0\package.json" />
      <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Tests" />
      <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Editor Resources\Shaders\TMP_Properties.cginc" />
+     <None Include="Assets\Ink\Demos\Basic Demo\Ink\story.json" />
      <Folder Include="Library\PackageCache\com.unity.render-pipelines.core@14.0.8\Tests" />
      <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Editor Resources\Shaders\TMP_SDF Internal Editor.shader" />
      <Folder Include="Library\PackageCache\com.unity.modules.umbra@1.0.0" />
@@ -278,6 +294,7 @@
      <Folder Include="Library\PackageCache\com.unity.modules.video@1.0.0" />
      <Folder Include="Library\PackageCache\com.unity.modules.ai@1.0.0" />
      <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\PackageConversionData_Assets.json" />
+     <Folder Include="Assets\Ink\Demos" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
      <Folder Include="Assets\+++Workdata\Prefabs\BattleStations" />
      <Folder Include="Assets\+++Workdata\Assets\Tilemap\Village_Forest_Ground" />
@@ -294,6 +311,7 @@
      <None Include="Library\PackageCache\com.unity.2d.tilemap.extras@3.1.1\ValidationExceptions.json" />
      <Folder Include="Assets\TextMesh Pro\Documentation" />
      <None Include="Library\PackageCache\com.unity.2d.animation@9.0.3\package.json" />
+     <Folder Include="Assets\Ink\Extras" />
      <None Include="Library\PackageCache\com.unity.collections@1.2.4\ValidationExceptions.json" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
      <Folder Include="Library\PackageCache\com.unity.2d.aseprite@1.0.0\Tests" />
@@ -1024,6 +1042,10 @@
       <Project>{b8ce9caa-005b-e491-5172-6292096be34e}</Project>
       <Name>Unity.2D.Aseprite.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="Ink-Libraries.csproj">
+      <Project>{180a12f6-cdaa-9676-6a5a-7f2a3b6f6cf7}</Project>
+      <Name>Ink-Libraries</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Universal.Editor.csproj">
       <Project>{4cab362e-5afb-e103-5ea4-7c1ddbd7e892}</Project>
       <Name>Unity.RenderPipelines.Universal.Editor</Name>
@@ -1079,6 +1101,10 @@
     <ProjectReference Include="Unity.InternalAPIEditorBridge.005.csproj">
       <Project>{3dfa7cd5-2fd4-4e67-aa37-df4c95311c05}</Project>
       <Name>Unity.InternalAPIEditorBridge.005</Name>
+    </ProjectReference>
+    <ProjectReference Include="InkEditor.csproj">
+      <Project>{1feb74dd-cd2e-11f2-f5e6-b673305f3d76}</Project>
+      <Name>InkEditor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.InternalAPIEngineBridge.001.csproj">
       <Project>{c1025a3f-5794-29b8-3bac-4bf06f56584a}</Project>

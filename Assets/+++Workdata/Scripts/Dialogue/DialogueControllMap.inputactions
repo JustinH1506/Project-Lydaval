@@ -1,0 +1,34 @@
+{
+    "name": "DialogueControllMap",
+    "maps": [
+        {
+            "name": "Dialogue",
+            "id": "f0a2c188-fa9e-4916-b321-14ea0dc13e15",
+            "actions": [
+                {
+                    "name": "Submit",
+                    "type": "Button",
+                    "id": "dda64ac9-4e80-494b-b4d1-540a403e7aac",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "7201c73d-3dec-4641-9133-935862da85e0",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Submit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

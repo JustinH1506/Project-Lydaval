@@ -45,8 +45,10 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.8f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Ink\Demos\Basic Demo\Scripts\BasicInkExample.cs" />
+     <Compile Include="Assets\+++Workdata\Scripts\Audio\FmodEvents.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Managers\BattleManager.cs" />
-     <Compile Include="Assets\+++Workdata\Scripts\Dialogue\DialogueManager.cs" />
+     <Compile Include="Assets\Ink\Demos\Basic Demo\Scripts\QuitGameOnKeypress.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Inventory\Items\Items.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Player\PlayerController.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Unused\PlayerMovement.cs" />
@@ -56,12 +58,16 @@
      <Compile Include="Assets\+++Workdata\Scripts\Combat\Stats.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Combat\BattleSystem.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Weapons\WeaponStats.cs" />
+     <Compile Include="Assets\+++Workdata\Scripts\Audio\AudioManager.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Other\MenuController.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Combat\BattleHud.cs" />
+     <Compile Include="Assets\+++Workdata\Scripts\Dialogue\Dialogues\NPCDialogues.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Player\PlayerMove.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Managers\EnemyManager.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Managers\GameManager.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Inventory\Equipment\Equipments.cs" />
+     <Compile Include="Assets\+++Workdata\Scripts\Dialogue\DialogueControllMap.cs" />
+     <Compile Include="Assets\+++Workdata\Scripts\Dialogue\Dialogues\DialogueManager.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Combat\TargetingSystem.cs" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.8f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.dll</HintPath>
@@ -670,6 +676,10 @@
     <ProjectReference Include="Unity.TextMeshPro.Player.csproj">
       <Project>{29e449d9-b57a-bed7-2a72-8defd3a43da4}</Project>
       <Name>Unity.TextMeshPro.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Ink-Libraries.Player.csproj">
+      <Project>{b693ceff-af9b-0bfc-08b1-7c2dc73649a8}</Project>
+      <Name>Ink-Libraries.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.Player.csproj">
       <Project>{58885bfd-16d9-2776-2cc8-3bc1450ce309}</Project>
