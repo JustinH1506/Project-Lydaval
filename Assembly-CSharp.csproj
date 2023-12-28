@@ -46,17 +46,22 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\+++Workdata\Scripts\Managers\BattleManager.cs" />
-     <Compile Include="Assets\+++Workdata\Scripts\Enemy\EnemyTypeScript.cs" />
+     <Compile Include="Assets\+++Workdata\Scripts\Dialogue\DialogueManager.cs" />
+     <Compile Include="Assets\+++Workdata\Scripts\Inventory\Items\Items.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Player\PlayerController.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Unused\PlayerMovement.cs" />
+     <Compile Include="Assets\+++Workdata\Scripts\Managers\InventoryManager.cs" />
+     <Compile Include="Assets\+++Workdata\Scripts\Other\MenuControllerMap.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Enemy\EnemySpawnScript.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Combat\Stats.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Combat\BattleSystem.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Weapons\WeaponStats.cs" />
+     <Compile Include="Assets\+++Workdata\Scripts\Other\MenuController.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Combat\BattleHud.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Player\PlayerMove.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Managers\EnemyManager.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Managers\GameManager.cs" />
+     <Compile Include="Assets\+++Workdata\Scripts\Inventory\Equipment\Equipments.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Combat\TargetingSystem.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\+++Workdata\Prefabs\Characters\Enemys" />
@@ -105,6 +110,7 @@
      <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\package.json" />
      <None Include="Library\PackageCache\com.unity.modules.imgui@1.0.0\package.json" />
      <None Include="Library\PackageCache\com.unity.modules.tilemap@1.0.0\package.json" />
+     <Folder Include="Assets\+++Workdata\Scripts\Inventory\Equipment" />
      <Folder Include="Library\PackageCache\com.unity.modules.assetbundle@1.0.0" />
      <Folder Include="Library\PackageCache\com.unity.burst@1.8.8\Tests" />
      <Folder Include="Assets\+++Workdata\Prefabs\Characters\Player" />
@@ -112,6 +118,7 @@
      <Folder Include="Library\PackageCache\com.unity.cinemachine@2.9.7\Gizmos" />
      <None Include="Library\PackageCache\com.unity.burst@1.8.8\ValidationConfig.json" />
      <None Include="Library\PackageCache\com.unity.timeline@1.7.5\package.json" />
+     <Folder Include="Assets\+++Workdata\Prefabs\Equipment" />
      <Folder Include="Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom" />
      <Folder Include="Library\PackageCache\com.unity.2d.aseprite@1.0.0" />
      <Folder Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections.LowLevel.ILSupport" />
@@ -176,6 +183,7 @@
      <Folder Include="Library\PackageCache\com.unity.render-pipelines.universal@14.0.8" />
      <None Include="Library\PackageCache\com.unity.modules.particlesystem@1.0.0\package.json" />
      <Folder Include="Library\PackageCache\com.unity.modules.wind@1.0.0" />
+     <Folder Include="Assets\+++Workdata\Scripts\Inventory" />
      <Folder Include="Library\PackageCache\com.unity.shadergraph@14.0.8" />
      <None Include="Library\PackageCache\com.unity.modules.physics2d@1.0.0\package.json" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
@@ -256,6 +264,8 @@
      <None Include="Library\PackageCache\com.unity.2d.aseprite@1.0.0\package.json" />
      <Folder Include="Library\PackageCache\com.unity.modules.jsonserialize@1.0.0" />
      <Folder Include="Library\PackageCache\com.unity.render-pipelines.universal@14.0.8\Textures\BlueNoise256" />
+     <Folder Include="Assets\+++Workdata\Prefabs\Items" />
+     <Folder Include="Assets\+++Workdata\Assets\Tilemap\Collisison_Tiles" />
      <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Editor Resources\Shaders" />
      <Folder Include="Library\PackageCache\com.unity.modules.director@1.0.0" />
      <Folder Include="Library\PackageCache\com.unity.modules.audio@1.0.0" />
@@ -289,8 +299,11 @@
      <Folder Include="Library\PackageCache\com.unity.2d.aseprite@1.0.0\Tests" />
      <None Include="Library\PackageCache\com.unity.burst@1.8.8\Unity.Burst.Unsafe.xml" />
      <None Include="Library\PackageCache\com.unity.2d.psdimporter@8.0.2\package.json" />
+     <Folder Include="Assets\+++Workdata\Scripts\Dialogue" />
+     <Folder Include="Assets\+++Workdata\Scripts\Dialogue\Dialogues" />
      <None Include="Library\PackageCache\com.unity.render-pipelines.universal@14.0.8\ValidationConfig.json" />
      <None Include="Library\PackageCache\com.unity.modules.unitywebrequest@1.0.0\package.json" />
+     <Folder Include="Assets\+++Workdata\Scripts\Inventory\Items" />
      <None Include="Library\PackageCache\com.unity.modules.uielements@1.0.0\package.json" />
      <None Include="Library\PackageCache\com.unity.burst@1.8.8\package.json" />
      <Folder Include="Assets\+++Workdata\Scripts\Player" />

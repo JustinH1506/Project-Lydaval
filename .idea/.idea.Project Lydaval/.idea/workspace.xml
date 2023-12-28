@@ -6,7 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="60fe24dc-a470-438e-9d29-fb3fa2e8b3cf" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Lydaval/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Lydaval/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.Player.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.Player.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Scenes/VS.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Scenes/VS.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Combat/BattleSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Combat/BattleSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Player/PlayerMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Player/PlayerMove.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +39,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/+++Workdata/Scripts/Combat/Stats.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/+++Workdata/Scripts/Combat/TargetingSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/+++Workdata/Scripts/Enemy/EnemyTypeScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/+++Workdata/Scripts/Inventory/Equipment/Equipments.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/+++Workdata/Scripts/Player/PlayerMove.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/+++Workdata/Scripts/Weapons/WeaponStats.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -95,10 +101,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="24812">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="24812" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -145,6 +151,12 @@
       <workItem from="1699877848036" duration="3581000" />
       <workItem from="1700637586092" duration="1049000" />
       <workItem from="1700640138149" duration="17846000" />
+      <workItem from="1701123353873" duration="1078000" />
+      <workItem from="1702975852197" duration="6351000" />
+      <workItem from="1703607467863" duration="52000" />
+      <workItem from="1703607531011" duration="14000" />
+      <workItem from="1703607587678" duration="2615000" />
+      <workItem from="1703691240695" duration="2416000" />
     </task>
     <servers />
   </component>
@@ -155,24 +167,5 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/+++Workdata/Scripts/Combat/BattleSystem.cs</url>
-          <line>84</line>
-          <properties documentPath="D:\Unity Stuff\Git\Project Lydaval\Assets\+++Workdata\Scripts\Combat\BattleSystem.cs" initialLine="84" containingFunctionPresentation="Method 'Start'">
-            <startOffsets>
-              <option value="1805" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1831" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

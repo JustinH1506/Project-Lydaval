@@ -76,7 +76,7 @@ public class BattleSystem : MonoBehaviour
 
     private void Awake()
     {
-        enemyManager = GameObject.Find("EnemyManager").GetComponent<EnemyManager>();
+        enemyManager = GameObject.Find("---EnemyManager").GetComponent<EnemyManager>();
     }
 
     /// <summary> Set Battle State to START and Start Coroutine SetUpBattle </summary>
@@ -243,7 +243,7 @@ public class BattleSystem : MonoBehaviour
         if (isDead)
         {
             targetingButtonsList[enemyId].interactable = false;
-
+            
            Destroy(enemyStatsList[enemyId].gameObject);
 
            yield return null;

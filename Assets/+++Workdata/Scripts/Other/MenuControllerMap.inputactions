@@ -1,0 +1,54 @@
+{
+    "name": "MenuControllerMap",
+    "maps": [
+        {
+            "name": "Pause_Inventory",
+            "id": "1248b715-60b1-4ab6-b66c-1f2cfc8b15a0",
+            "actions": [
+                {
+                    "name": "Pause",
+                    "type": "Button",
+                    "id": "28aa045c-6dd1-4580-9167-bf101ac86aae",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Inventroy",
+                    "type": "Button",
+                    "id": "228679b5-e358-469e-8711-4f22149a77cd",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "48174e91-344a-4069-a308-8d8f2858d3f0",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1fbd1b7f-11d3-4d77-a670-913990016b95",
+                    "path": "<Keyboard>/i",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Inventroy",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

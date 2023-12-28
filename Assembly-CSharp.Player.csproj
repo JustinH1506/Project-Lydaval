@@ -46,17 +46,22 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\+++Workdata\Scripts\Managers\BattleManager.cs" />
-     <Compile Include="Assets\+++Workdata\Scripts\Enemy\EnemyTypeScript.cs" />
+     <Compile Include="Assets\+++Workdata\Scripts\Dialogue\DialogueManager.cs" />
+     <Compile Include="Assets\+++Workdata\Scripts\Inventory\Items\Items.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Player\PlayerController.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Unused\PlayerMovement.cs" />
+     <Compile Include="Assets\+++Workdata\Scripts\Managers\InventoryManager.cs" />
+     <Compile Include="Assets\+++Workdata\Scripts\Other\MenuControllerMap.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Enemy\EnemySpawnScript.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Combat\Stats.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Combat\BattleSystem.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Weapons\WeaponStats.cs" />
+     <Compile Include="Assets\+++Workdata\Scripts\Other\MenuController.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Combat\BattleHud.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Player\PlayerMove.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Managers\EnemyManager.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Managers\GameManager.cs" />
+     <Compile Include="Assets\+++Workdata\Scripts\Inventory\Equipment\Equipments.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Combat\TargetingSystem.cs" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.8f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.dll</HintPath>
