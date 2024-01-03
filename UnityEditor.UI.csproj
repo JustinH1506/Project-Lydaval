@@ -358,6 +358,9 @@
      <Reference Include="log4netPlastic">
      <HintPath>D:\Unity Stuff\Git\Project Lydaval\Library\PackageCache\com.unity.collab-proxy@2.0.7\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
      </Reference>
+     <Reference Include="Newtonsoft.Json">
+     <HintPath>D:\Unity Stuff\Git\Project Lydaval\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.2.1\Runtime\Newtonsoft.Json.dll</HintPath>
+     </Reference>
      <Reference Include="unityplastic">
      <HintPath>D:\Unity Stuff\Git\Project Lydaval\Library\PackageCache\com.unity.collab-proxy@2.0.7\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
      </Reference>

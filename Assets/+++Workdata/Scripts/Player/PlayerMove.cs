@@ -6,13 +6,20 @@ using UnityEngine.InputSystem;
 
 public class PlayerMove : MonoBehaviour
 {
+    public class Data
+   { 
+    
+    public SaveableVector3 savePositions;
+    
+   }
     #region Variables
-
+    
     private float inputX;
-
+    
     private float inputY;
-
+    
     public int moveSpeed;
+
     
     #endregion
 

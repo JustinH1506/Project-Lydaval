@@ -139,8 +139,8 @@
      <Compile Include="Library\PackageCache\com.unity.inputsystem@1.6.3\InputSystem\Plugins\Steam\SteamControllerType.cs" />
      <Compile Include="Library\PackageCache\com.unity.inputsystem@1.6.3\InputSystem\Plugins\Users\InputUserSettings.cs" />
      <Compile Include="Library\PackageCache\com.unity.inputsystem@1.6.3\InputSystem\Plugins\iOS\iOSSupport.cs" />
-     <Compile Include="Library\PackageCache\com.unity.inputsystem@1.6.3\InputSystem\Editor\UITKAssetEditor\SerializedInputAction.cs" />
      <Compile Include="Library\PackageCache\com.unity.inputsystem@1.6.3\InputSystem\Devices\Commands\QueryPairedUserAccountCommand.cs" />
+     <Compile Include="Library\PackageCache\com.unity.inputsystem@1.6.3\InputSystem\Editor\UITKAssetEditor\SerializedInputAction.cs" />
      <Compile Include="Library\PackageCache\com.unity.inputsystem@1.6.3\InputSystem\Utilities\Observables\Observer.cs" />
      <Compile Include="Library\PackageCache\com.unity.inputsystem@1.6.3\InputSystem\Actions\Interactions\MultiTapInteraction.cs" />
      <Compile Include="Library\PackageCache\com.unity.inputsystem@1.6.3\InputSystem\Plugins\OnScreen\OnScreenControl.cs" />
@@ -163,9 +163,9 @@
      <Compile Include="Library\PackageCache\com.unity.inputsystem@1.6.3\InputSystem\Editor\Internal\InputEventTreeView.cs" />
      <Compile Include="Library\PackageCache\com.unity.inputsystem@1.6.3\InputSystem\Devices\IEventMerger.cs" />
      <Compile Include="Library\PackageCache\com.unity.inputsystem@1.6.3\InputSystem\Utilities\CallbackArray.cs" />
-     <Compile Include="Library\PackageCache\com.unity.inputsystem@1.6.3\InputSystem\Utilities\Comparers.cs" />
      <Compile Include="Library\PackageCache\com.unity.inputsystem@1.6.3\InputSystem\Plugins\Steam\SteamController.cs" />
      <Compile Include="Library\PackageCache\com.unity.inputsystem@1.6.3\InputSystem\Plugins\Android\AndroidSensors.cs" />
+     <Compile Include="Library\PackageCache\com.unity.inputsystem@1.6.3\InputSystem\Utilities\Comparers.cs" />
      <Compile Include="Library\PackageCache\com.unity.inputsystem@1.6.3\InputSystem\Editor\Internal\SerializedPropertyLinqExtensions.cs" />
      <Compile Include="Library\PackageCache\com.unity.inputsystem@1.6.3\InputSystem\Actions\Interactions\PressInteraction.cs" />
      <Compile Include="Library\PackageCache\com.unity.inputsystem@1.6.3\InputSystem\State\IInputStateTypeInfo.cs" />
@@ -328,8 +328,8 @@
      <Compile Include="Library\PackageCache\com.unity.inputsystem@1.6.3\InputSystem\Devices\IInputUpdateCallbackReceiver.cs" />
      <Compile Include="Library\PackageCache\com.unity.inputsystem@1.6.3\InputSystem\Editor\UITKAssetEditor\InputActionsEditorConstants.cs" />
      <Compile Include="Library\PackageCache\com.unity.inputsystem@1.6.3\InputSystem\Plugins\UI\BaseInputOverride.cs" />
-     <Compile Include="Library\PackageCache\com.unity.inputsystem@1.6.3\InputSystem\Plugins\EnhancedTouch\EnhancedTouchSupport.cs" />
      <Compile Include="Library\PackageCache\com.unity.inputsystem@1.6.3\InputSystem\Editor\InputLayoutCodeGenerator.cs" />
+     <Compile Include="Library\PackageCache\com.unity.inputsystem@1.6.3\InputSystem\Plugins\EnhancedTouch\EnhancedTouchSupport.cs" />
      <Compile Include="Library\PackageCache\com.unity.inputsystem@1.6.3\InputSystem\InputManagerStateMonitors.cs" />
      <Compile Include="Library\PackageCache\com.unity.inputsystem@1.6.3\InputSystem\Devices\Commands\RequestResetCommand.cs" />
      <Compile Include="Library\PackageCache\com.unity.inputsystem@1.6.3\InputSystem\Plugins\UI\InputSystemUIInputModuleEditor.cs" />
@@ -618,6 +618,9 @@
      </Reference>
      <Reference Include="Unity.Collections.LowLevel.ILSupport">
      <HintPath>D:\Unity Stuff\Git\Project Lydaval\Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections.LowLevel.ILSupport\Unity.Collections.LowLevel.ILSupport.dll</HintPath>
+     </Reference>
+     <Reference Include="Newtonsoft.Json">
+     <HintPath>D:\Unity Stuff\Git\Project Lydaval\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.2.1\Runtime\AOT\Newtonsoft.Json.dll</HintPath>
      </Reference>
      <Reference Include="netstandard">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.8f1\Editor\Data\NetStandard\ref\2.1.0\netstandard.dll</HintPath>

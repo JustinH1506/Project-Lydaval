@@ -45,29 +45,34 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.8f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\+++Workdata\Scripts\SaveAndLoadSystem\GameData.cs" />
      <Compile Include="Assets\Ink\Demos\Basic Demo\Scripts\BasicInkExample.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Audio\FmodEvents.cs" />
+     <Compile Include="Assets\+++Workdata\Scripts\SaveAndLoadSystem\SaveManagment\SaveableVector3.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Managers\BattleManager.cs" />
      <Compile Include="Assets\Ink\Demos\Basic Demo\Scripts\QuitGameOnKeypress.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Inventory\Items\Items.cs" />
+     <Compile Include="Assets\+++Workdata\Scripts\SaveAndLoadSystem\SaveManagment\SaveManager.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Player\PlayerController.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Unused\PlayerMovement.cs" />
-     <Compile Include="Assets\+++Workdata\Scripts\Managers\InventoryManager.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Other\MenuControllerMap.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Enemy\EnemySpawnScript.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Combat\Stats.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Combat\BattleSystem.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Weapons\WeaponStats.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Audio\AudioManager.cs" />
+     <Compile Include="Assets\+++Workdata\Scripts\Inventory\Items\InventoryEntry.cs" />
+     <Compile Include="Assets\+++Workdata\Scripts\Managers\Inventory.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Other\MenuController.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Combat\BattleHud.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Dialogue\Dialogues\NPCDialogues.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Player\PlayerMove.cs" />
+     <Compile Include="Assets\+++Workdata\Scripts\Managers\PlayerManager.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Managers\EnemyManager.cs" />
-     <Compile Include="Assets\+++Workdata\Scripts\Managers\GameManager.cs" />
-     <Compile Include="Assets\+++Workdata\Scripts\Inventory\Equipment\Equipments.cs" />
+     <Compile Include="Assets\+++Workdata\Scripts\SaveAndLoadSystem\InGameButtons.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Dialogue\DialogueControllMap.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Dialogue\Dialogues\DialogueManager.cs" />
+     <Compile Include="Assets\+++Workdata\Scripts\SaveAndLoadSystem\GameStateManager.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Combat\TargetingSystem.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\+++Workdata\Prefabs\Characters\Enemys" />
@@ -124,7 +129,6 @@
      <Folder Include="Library\PackageCache\com.unity.cinemachine@2.9.7\Gizmos" />
      <None Include="Library\PackageCache\com.unity.burst@1.8.8\ValidationConfig.json" />
      <None Include="Library\PackageCache\com.unity.timeline@1.7.5\package.json" />
-     <Folder Include="Assets\+++Workdata\Prefabs\Equipment" />
      <Folder Include="Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom" />
      <None Include="Assets\+++Workdata\Assets\Dialogues\Test_.json" />
      <Folder Include="Library\PackageCache\com.unity.2d.aseprite@1.0.0" />
@@ -135,16 +139,19 @@
      <Folder Include="Library\PackageCache\com.unity.ext.nunit@1.0.6\net35" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
      <Folder Include="Assets\+++Workdata\Assets\Tilemap" />
+     <Folder Include="Assets\+++Workdata\Prefabs\Inventory" />
      <None Include="Library\PackageCache\com.unity.modules.terrainphysics@1.0.0\package.json" />
      <None Include="Library\PackageCache\com.unity.mathematics@1.2.6\package.json" />
      <Folder Include="Assets\+++Workdata\Scripts\Combat" />
      <Folder Include="Library\PackageCache\com.unity.2d.animation@9.0.3\Tests" />
+     <Folder Include="Library\PackageCache\com.unity.nuget.newtonsoft-json@3.2.1\Runtime\AOT" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
      <Folder Include="Assets\TextMesh Pro\Resources" />
      <Folder Include="Library\PackageCache\com.unity.modules.screencapture@1.0.0" />
      <None Include="Library\PackageCache\com.unity.timeline@1.7.5\ValidationExceptions.json" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.7\package.json" />
      <Folder Include="Library\PackageCache\com.unity.timeline@1.7.5" />
+     <Folder Include="Assets\+++Workdata\Scripts\SaveAndLoadSystem" />
      <Folder Include="Library\PackageCache\com.unity.modules.cloth@1.0.0" />
      <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\PackageConversionData.json" />
      <None Include="Library\PackageCache\com.unity.modules.unitywebrequestassetbundle@1.0.0\package.json" />
@@ -208,6 +215,7 @@
      <None Include="Library\PackageCache\com.unity.2d.common@8.0.1\package.json" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
      <None Include="Library\PackageCache\com.unity.ide.visualstudio@2.0.18\ValidationExceptions.json" />
+     <None Include="Library\PackageCache\com.unity.nuget.newtonsoft-json@3.2.1\link.xml" />
      <None Include="Library\PackageCache\com.unity.modules.wind@1.0.0\package.json" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
      <Folder Include="Library\PackageCache\com.unity.ugui@1.0.0\Tests" />
@@ -215,6 +223,7 @@
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
      <None Include="Library\PackageCache\com.unity.modules.umbra@1.0.0\package.json" />
      <Folder Include="Assets\+++Workdata\Scripts" />
+     <None Include="Library\PackageCache\com.unity.nuget.newtonsoft-json@3.2.1\package.json" />
      <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Editor Resources\Textures" />
      <Folder Include="Library\PackageCache\com.unity.2d.sprite@1.0.0" />
      <Folder Include="Library\PackageCache\com.unity.modules.tilemap@1.0.0" />
@@ -258,16 +267,17 @@
      <Folder Include="Library\PackageCache\com.unity.searcher@4.9.2\Tests" />
      <None Include="Library\PackageCache\com.unity.feature.2d@2.0.0\package.json" />
      <Folder Include="Assets\+++Workdata\Scripts\Managers" />
-     <Folder Include="Assets\+++Workdata\Prefabs\New Characters" />
      <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Editor Resources\Shaders\TMP_SDF_SSD.cginc" />
      <Folder Include="Library\PackageCache\com.unity.2d.animation@9.0.3" />
      <Folder Include="Library\PackageCache\com.unity.render-pipelines.universal@14.0.8\Textures\BlueNoise16" />
+     <Folder Include="Assets\+++Workdata\Scripts\SaveAndLoadSystem\SaveManagment" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.7\ValidationConfig.json" />
      <Folder Include="Assets\+++Workdata" />
      <Folder Include="Library\PackageCache\com.unity.modules.vehicles@1.0.0" />
      <None Include="Library\PackageCache\com.unity.modules.xr@1.0.0\package.json" />
      <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Tests" />
      <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Editor Resources\Shaders\TMP_Properties.cginc" />
+     <None Include="Library\PackageCache\com.unity.nuget.newtonsoft-json@3.2.1\Runtime\AOT\Newtonsoft.Json.xml" />
      <None Include="Assets\Ink\Demos\Basic Demo\Ink\story.json" />
      <Folder Include="Library\PackageCache\com.unity.render-pipelines.core@14.0.8\Tests" />
      <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Editor Resources\Shaders\TMP_SDF Internal Editor.shader" />
@@ -280,7 +290,7 @@
      <None Include="Library\PackageCache\com.unity.2d.aseprite@1.0.0\package.json" />
      <Folder Include="Library\PackageCache\com.unity.modules.jsonserialize@1.0.0" />
      <Folder Include="Library\PackageCache\com.unity.render-pipelines.universal@14.0.8\Textures\BlueNoise256" />
-     <Folder Include="Assets\+++Workdata\Prefabs\Items" />
+     <Folder Include="Assets\+++Workdata\Prefabs\Inventory\Items" />
      <Folder Include="Assets\+++Workdata\Assets\Tilemap\Collisison_Tiles" />
      <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Editor Resources\Shaders" />
      <Folder Include="Library\PackageCache\com.unity.modules.director@1.0.0" />
@@ -308,10 +318,13 @@
      <Folder Include="Library\PackageCache\com.unity.2d.tilemap.extras@3.1.1\Tests" />
      <Folder Include="Library\PackageCache\com.unity.2d.sprite@1.0.0\Tests" />
      <None Include="Library\PackageCache\com.unity.modules.animation@1.0.0\package.json" />
+     <Folder Include="Library\PackageCache\com.unity.nuget.newtonsoft-json@3.2.1" />
      <None Include="Library\PackageCache\com.unity.2d.tilemap.extras@3.1.1\ValidationExceptions.json" />
      <Folder Include="Assets\TextMesh Pro\Documentation" />
      <None Include="Library\PackageCache\com.unity.2d.animation@9.0.3\package.json" />
      <Folder Include="Assets\Ink\Extras" />
+     <Folder Include="Library\PackageCache\com.unity.nuget.newtonsoft-json@3.2.1\Runtime" />
+     <None Include="Library\PackageCache\com.unity.nuget.newtonsoft-json@3.2.1\Runtime\Newtonsoft.Json.xml" />
      <None Include="Library\PackageCache\com.unity.collections@1.2.4\ValidationExceptions.json" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
      <Folder Include="Library\PackageCache\com.unity.2d.aseprite@1.0.0\Tests" />
@@ -585,6 +598,9 @@
      </Reference>
      <Reference Include="Unity.Collections.LowLevel.ILSupport">
      <HintPath>D:\Unity Stuff\Git\Project Lydaval\Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections.LowLevel.ILSupport\Unity.Collections.LowLevel.ILSupport.dll</HintPath>
+     </Reference>
+     <Reference Include="Newtonsoft.Json">
+     <HintPath>D:\Unity Stuff\Git\Project Lydaval\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.2.1\Runtime\Newtonsoft.Json.dll</HintPath>
      </Reference>
      <Reference Include="netstandard">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.8f1\Editor\Data\NetStandard\ref\2.1.0\netstandard.dll</HintPath>

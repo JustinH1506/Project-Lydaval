@@ -45,29 +45,34 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.8f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\+++Workdata\Scripts\SaveAndLoadSystem\GameData.cs" />
      <Compile Include="Assets\Ink\Demos\Basic Demo\Scripts\BasicInkExample.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Audio\FmodEvents.cs" />
+     <Compile Include="Assets\+++Workdata\Scripts\SaveAndLoadSystem\SaveManagment\SaveableVector3.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Managers\BattleManager.cs" />
      <Compile Include="Assets\Ink\Demos\Basic Demo\Scripts\QuitGameOnKeypress.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Inventory\Items\Items.cs" />
+     <Compile Include="Assets\+++Workdata\Scripts\SaveAndLoadSystem\SaveManagment\SaveManager.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Player\PlayerController.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Unused\PlayerMovement.cs" />
-     <Compile Include="Assets\+++Workdata\Scripts\Managers\InventoryManager.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Other\MenuControllerMap.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Enemy\EnemySpawnScript.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Combat\Stats.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Combat\BattleSystem.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Weapons\WeaponStats.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Audio\AudioManager.cs" />
+     <Compile Include="Assets\+++Workdata\Scripts\Inventory\Items\InventoryEntry.cs" />
+     <Compile Include="Assets\+++Workdata\Scripts\Managers\Inventory.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Other\MenuController.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Combat\BattleHud.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Dialogue\Dialogues\NPCDialogues.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Player\PlayerMove.cs" />
+     <Compile Include="Assets\+++Workdata\Scripts\Managers\PlayerManager.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Managers\EnemyManager.cs" />
-     <Compile Include="Assets\+++Workdata\Scripts\Managers\GameManager.cs" />
-     <Compile Include="Assets\+++Workdata\Scripts\Inventory\Equipment\Equipments.cs" />
+     <Compile Include="Assets\+++Workdata\Scripts\SaveAndLoadSystem\InGameButtons.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Dialogue\DialogueControllMap.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Dialogue\Dialogues\DialogueManager.cs" />
+     <Compile Include="Assets\+++Workdata\Scripts\SaveAndLoadSystem\GameStateManager.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Combat\TargetingSystem.cs" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.8f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.dll</HintPath>
@@ -272,6 +277,9 @@
      </Reference>
      <Reference Include="Unity.Collections.LowLevel.ILSupport">
      <HintPath>D:\Unity Stuff\Git\Project Lydaval\Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections.LowLevel.ILSupport\Unity.Collections.LowLevel.ILSupport.dll</HintPath>
+     </Reference>
+     <Reference Include="Newtonsoft.Json">
+     <HintPath>D:\Unity Stuff\Git\Project Lydaval\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.2.1\Runtime\AOT\Newtonsoft.Json.dll</HintPath>
      </Reference>
      <Reference Include="netstandard">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.8f1\Editor\Data\NetStandard\ref\2.1.0\netstandard.dll</HintPath>
