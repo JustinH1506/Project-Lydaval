@@ -17,13 +17,18 @@ public class GameStateManager : MonoBehaviour
       DontDestroyOnLoad(this);
    }
 
-   
+   public void StartNewGame()
+   {
+      data = new GameData();
 
+      SceneManager.LoadScene(1);
+   }
+   
    public void LoadFromSave(string saveName)
    {
       if (!SaveManager.TryLoadData<GameData>(saveName, out var loadedData))
          return;
-
+      
       data = loadedData;
 
       SceneManager.LoadScene(1);

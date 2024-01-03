@@ -6,12 +6,15 @@ using UnityEngine.InputSystem;
 
 public class PlayerMove : MonoBehaviour
 {
+    [System.Serializable]
     public class Data
-   { 
+    {
+
+        public Dictionary<string, SaveableVector3> positionsBySceneName = new Dictionary<string, SaveableVector3>();
+        public float health = 100;
+
+    }
     
-    public SaveableVector3 savePositions;
-    
-   }
     #region Variables
     
     private float inputX;
@@ -19,7 +22,6 @@ public class PlayerMove : MonoBehaviour
     private float inputY;
     
     public int moveSpeed;
-
     
     #endregion
 
