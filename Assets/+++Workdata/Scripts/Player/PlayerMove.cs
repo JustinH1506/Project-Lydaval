@@ -57,7 +57,14 @@ public class PlayerMove : MonoBehaviour
 
         playerController = new PlayerController();
     }
-    
+
+    private void Start()
+    {
+        Data data = GameStateManager.instance.data.data;
+        if (data.positionsBySceneName.ContainsKey(gameObject.scene.name))
+            transform.position = data.positionsBySceneName[gameObject.scene.name];
+    }
+
     private void OnEnable()
     {
         playerController.Enable();
@@ -80,6 +87,11 @@ public class PlayerMove : MonoBehaviour
     private void FixedUpdate()
     {
         rb.velocity = new Vector2(inputX * moveSpeed, inputY * moveSpeed);
+
+        Data data = GameStateManager.instance.data.data;
+        if (!data.positionsBySceneName.ContainsKey(gameObject.scene.name))
+            data.positionsBySceneName.Add(gameObject.scene.name, new SaveableVector3());
+        data.positionsBySceneName[gameObject.scene.name] = transform.position;
     }
 
     /// <summary>

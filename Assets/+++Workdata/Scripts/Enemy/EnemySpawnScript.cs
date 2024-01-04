@@ -22,7 +22,7 @@ public class EnemySpawnScript : MonoBehaviour
         {
             enemyManager.enemyType = enemyType;
             
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(2);
         }
     }
 }

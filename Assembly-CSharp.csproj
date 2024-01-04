@@ -220,6 +220,7 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
      <Folder Include="Library\PackageCache\com.unity.ugui@1.0.0\Tests" />
      <Folder Include="Assets\Ink\Demos\Basic Demo\Prefabs" />
+     <Folder Include="Assets\+++Workdata\Scenes\Vertical Slices" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
      <None Include="Library\PackageCache\com.unity.modules.umbra@1.0.0\package.json" />
      <Folder Include="Assets\+++Workdata\Scripts" />
