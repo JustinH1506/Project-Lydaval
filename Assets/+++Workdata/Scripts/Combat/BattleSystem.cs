@@ -285,14 +285,14 @@ public class BattleSystem : MonoBehaviour
         }
     }
 
-    /// <summary> Getting playerStats Heal method. Waits no seconds and starts the enemy´s turn. </summary>
+    /// <summary> Getting playerStats Heal method. Waits until the next frame and starts the enemy´s turn. </summary>
     IEnumerator PlayerHeal()
     {
         playerStats.Heal(5);
 
         playerHud.SetPlayerHp(characterList[turnId].currentHealth, characterList[turnId].maxHealth);
 
-        yield return new WaitForSeconds(0f);
+        yield return null;
 
         state = BattleState.ENEMYTURN;
         StartCoroutine(EnemyTurn());

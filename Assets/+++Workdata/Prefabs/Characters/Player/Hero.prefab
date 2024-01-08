@@ -104,4 +104,5 @@ MonoBehaviour:
   speed: 8
   attack: 6
   defense: 4
+  isEnemy: 0
   battleSystem: {fileID: 0}

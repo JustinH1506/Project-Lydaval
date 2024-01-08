@@ -36,7 +36,6 @@ public class Inventory : MonoBehaviour
         else
             Instantiate(entryPrefab, entrySpawnPosition2);
         
-        
         inventoryEntry.Initialize(item);
     }
 

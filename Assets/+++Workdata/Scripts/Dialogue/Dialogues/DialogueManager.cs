@@ -1,7 +1,4 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
-using FMOD.Studio;
 using UnityEngine;
 using TMPro;
 using UnityEngine.InputSystem;
@@ -14,6 +11,8 @@ public class DialogueManager : MonoBehaviour
     private Story currentStory;
 
     private DialogueControllMap dialogueControllMap;
+
+    [SerializeField] private PlayerMove playerMove;
 
     [SerializeField] private GameObject dialoguePanel;
 
@@ -38,16 +37,7 @@ public class DialogueManager : MonoBehaviour
         
         dialogueControllMap.Dialogue.Submit.performed -= Submit;
         dialogueControllMap.Dialogue.Submit.canceled -= Submit;
-        
     }
-    
-     public void Update()
-     {
-         if(!dialogueIsPlaying) 
-         {
-             return;
-         }
-     }
 
      public void EnterDialogueMode(TextAsset inkJSON)
      {
@@ -56,17 +46,33 @@ public class DialogueManager : MonoBehaviour
          dialoguePanel.SetActive(true);
          
          dialogueIsPlaying = true;
+
+         playerMove.enabled = false;
          
-         ContinueStory();
+         currentStory.BindExternalFunction("Test2", (string secondTest) =>
+         {
+             Debug.Log(secondTest);
+         });
+         
+         currentStory.BindExternalFunction("TestThis", (string textTest) =>
+         {
+             Debug.Log(textTest);
+         });
      }
      
      private IEnumerator ExitDialogueMode()
      {
-         yield return new WaitForSeconds(2f);
+         yield return null;
 
+         currentStory.UnbindExternalFunction("TestThis");
+         
+         currentStory.UnbindExternalFunction("Test2");
+         
          dialogueIsPlaying = false;
 
          dialoguePanel.SetActive(false);
+
+         playerMove.enabled = true;
      }
      
      public void ContinueStory()

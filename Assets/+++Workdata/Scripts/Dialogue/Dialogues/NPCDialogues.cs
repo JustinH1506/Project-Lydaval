@@ -57,6 +57,7 @@ public class NPCDialogues : MonoBehaviour
         if (context.performed && inRange)
         {
             dialogueManager.EnterDialogueMode(inkJSON);
+            inRange = false;
         }
     }
 }
