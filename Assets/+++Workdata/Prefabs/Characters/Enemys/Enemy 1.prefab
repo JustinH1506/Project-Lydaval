@@ -103,5 +103,18 @@ MonoBehaviour:
   speed: 6
   attack: 5
   defense: 3
-  isEnemy: 0
+  level: 0
+  xp: 0
+  neededXp: 0
+  enemyGiveXp: 500
+  types: 0
   battleSystem: {fileID: 0}
+  data:
+    heroStats: {fileID: 0}
+    healerStats: {fileID: 0}
+    tankStats: {fileID: 0}
+    maxHealth: 0
+    currentHealth: 0
+    speed: 0
+    attack: 0
+    defense: 0

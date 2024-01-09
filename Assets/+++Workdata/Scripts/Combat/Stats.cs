@@ -1,9 +1,14 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Threading;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
+public enum CharacterTypes
+{
+    Enemy,
+    Hero,
+    Tank,
+    Healer
+}
 public class Stats : MonoBehaviour
 {
     #region Variables
@@ -20,13 +25,25 @@ public class Stats : MonoBehaviour
 
     public int defense;
 
-    public bool isEnemy;
+    public int level;
+
+    public int xp;
+
+    public int neededXp;
+
+    public int enemyGiveXp;
+
+    //public bool isEnemy;
+
+    public CharacterTypes types;
 
     #endregion
     
     #region Scripts
 
     [SerializeField] private BattleSystem battleSystem;
+
+    [SerializeField] private StatManager.Data data;
     
     #endregion
 
@@ -34,15 +51,13 @@ public class Stats : MonoBehaviour
 
     private void Awake()
     {
-        battleSystem = GetComponent<BattleSystem>();
-
-        maxHealth = 
+        battleSystem = GameObject.Find("Battle_System").GetComponent<BattleSystem>();
         
         currentHealth = maxHealth;
 
         if (gameObject.CompareTag("Enemy"))
         {
-            isEnemy = true;
+            types = CharacterTypes.Enemy;
         }
     }
     
@@ -55,6 +70,13 @@ public class Stats : MonoBehaviour
         currentHealth.ToString();
     }
 
+
+    public void HasEnoughXp()
+    {
+        if (xp >= neededXp)
+            LevelUp();
+    }
+
     /// <summary>
     /// Calculates the currentHealth minus the dmg and returns true if the currentHealth is equal to or less then 0.
     /// </summary>
@@ -64,8 +86,8 @@ public class Stats : MonoBehaviour
 
         if (currentHealth <= 0)
             return true;
-        else
-            return false;
+        
+        return false;
     }
 
     /// <summary>
@@ -81,5 +103,72 @@ public class Stats : MonoBehaviour
         }
     }
 
+    public void LevelUp()
+    {
+        if (types == CharacterTypes.Hero)
+        {
+            level++;
+
+            int randomNumber = Random.Range(5, 15);
+
+            maxHealth += randomNumber;
+
+            currentHealth += randomNumber;
+
+            speed += Random.Range(0, 3);
+
+            attack += Random.Range(2, 5);
+
+            defense += Random.Range(1, 3);
+
+            xp -= neededXp;
+
+            neededXp = (neededXp *= 2);
+        }
+        
+        if (types == CharacterTypes.Healer)
+        {
+            level++;
+
+            int randomNumber = Random.Range(10, 20);
+
+            maxHealth += randomNumber;
+
+            currentHealth += randomNumber;
+
+            speed += Random.Range(2, 5);
+
+            attack += Random.Range(0, 3);
+
+            defense += Random.Range(0, 3);
+            
+            xp -= neededXp;
+
+            neededXp = (neededXp *= 2);
+        }
+        
+        if (types == CharacterTypes.Tank)
+        {
+            level++;
+
+            int randomNumber = Random.Range(20, 30);
+
+            maxHealth += randomNumber;
+
+            currentHealth += randomNumber;
+
+            speed += Random.Range(0, 3);
+
+            attack += Random.Range(0, 3);
+
+            defense += Random.Range(3, 5);
+            
+            xp -= neededXp;
+
+            neededXp = (neededXp *= 2);
+        }
+        
+        battleSystem.SetHp();
+    }
     #endregion
 }

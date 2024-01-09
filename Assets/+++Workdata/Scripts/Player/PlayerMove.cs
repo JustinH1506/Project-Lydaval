@@ -57,7 +57,7 @@ public class PlayerMove : MonoBehaviour
 
     private void Start()
     {
-        Data data = GameStateManager.instance.data.data;
+        Data data = GameStateManager.instance.data.positionData;
         if (data.positionsBySceneName.ContainsKey(gameObject.scene.name))
             transform.position = data.positionsBySceneName[gameObject.scene.name];
     }
@@ -85,7 +85,7 @@ public class PlayerMove : MonoBehaviour
     {
         rb.velocity = new Vector2(inputX * moveSpeed, inputY * moveSpeed);
 
-        Data data = GameStateManager.instance.data.data;
+        Data data = GameStateManager.instance.data.positionData;
         if (!data.positionsBySceneName.ContainsKey(gameObject.scene.name))
             data.positionsBySceneName.Add(gameObject.scene.name, new SaveableVector3());
         data.positionsBySceneName[gameObject.scene.name] = transform.position;

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.TextCore.Text;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
@@ -157,6 +158,14 @@ public class BattleSystem : MonoBehaviour
         }
     }
 
+    public void SetHp()
+    {
+            playerHud.SetPlayerHp(playerStatsList[playerId].currentHealth, playerStatsList[playerId].maxHealth);
+        
+            enemyHud.SetEnemyHp(enemyStatsList[enemyId].currentHealth, enemyStatsList[enemyId].maxHealth);
+    }
+    
+
     /// <summary> Returns if state is not PLAYERTURN. Start PlayerAttack Coroutine. </summary>
     public void OnAttackButton()
     {
@@ -181,7 +190,7 @@ public class BattleSystem : MonoBehaviour
 
     #region IEnumerator
 
-    /// <summary> Instantiate player and enemy prefab and spawning them to the Battlestation´s. Get the Stats.  </summary>
+    /// <summary> Instantiate player and enemy prefab and spawning them to the Battlestation´s. Get the Stats. </summary>
     IEnumerator SetUpBattle()
     {
         for (int i = 0; i < playerPrefabList.Count; i++)
@@ -221,12 +230,12 @@ public class BattleSystem : MonoBehaviour
         
         yield return new WaitForSeconds(2f);
         
-        if (!characterList[turnId].isEnemy)
+        if (characterList[turnId].types != CharacterTypes.Enemy)
         {
             state = BattleState.PLAYERTURN;
             PlayerTurn();
         }
-        else if (characterList[turnId].isEnemy)
+        else if (characterList[turnId].types == CharacterTypes.Enemy)
         {
             state = BattleState.ENEMYTURN;
             StartCoroutine(EnemyTurn());
@@ -243,21 +252,28 @@ public class BattleSystem : MonoBehaviour
         if (enemyStatsList[enemyId].currentHealth <= 0)
             enemyStatsList[enemyId].currentHealth = 0;
         
-        enemyHud.SetEnemyHp(enemyStatsList[enemyId].currentHealth, enemyStatsList[enemyId].maxHealth);
+        SetHp();
 
         yield return null;
 
         if (isDead)
         {
             targetingButtonsList[enemyId].interactable = false;
+
+            for (int i = 0; i < playerStatsList.Count; i++)
+            {
+                playerStatsList[i].xp += enemyStatsList[enemyId].enemyGiveXp;
+                
+                playerStatsList[i].HasEnoughXp();
+            }
             
-           Destroy(enemyStatsList[enemyId].gameObject);
+            Destroy(enemyStatsList[enemyId].gameObject);
 
-           yield return null;
+            yield return null;
            
-           ClearList();
+            ClearList();
 
-           deadEnemies++;
+            deadEnemies++;
         }
 
         if (deadEnemies == enemyAdder +1)
@@ -280,7 +296,7 @@ public class BattleSystem : MonoBehaviour
 
         yield return null;
         
-        if(!characterList[turnId].isEnemy)
+        if(characterList[turnId].types != CharacterTypes.Enemy)
         {
             state = BattleState.PLAYERTURN;
             PlayerTurn();
@@ -318,7 +334,7 @@ public class BattleSystem : MonoBehaviour
         if (playerStatsList[playerId].currentHealth <= 0)
             playerStatsList[playerId].currentHealth = 0;
         
-        playerHud.SetPlayerHp(playerStatsList[playerId].currentHealth, playerStatsList[playerId].maxHealth);
+        SetHp();
 
         yield return new WaitForSeconds(0f);
 

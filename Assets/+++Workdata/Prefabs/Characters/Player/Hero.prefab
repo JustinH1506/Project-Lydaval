@@ -99,10 +99,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unitName: Hero
-  maxHealth: 30
+  maxHealth: 50
   currentHealth: 30
   speed: 8
   attack: 6
   defense: 4
-  isEnemy: 0
+  level: 0
+  xp: 0
+  neededXp: 500
+  enemyGiveXp: 0
+  types: 1
   battleSystem: {fileID: 0}
+  data:
+    heroStats: {fileID: 0}
+    healerStats: {fileID: 0}
+    tankStats: {fileID: 0}
+    maxHealth: 0
+    currentHealth: 0
+    speed: 0
+    attack: 0
+    defense: 0

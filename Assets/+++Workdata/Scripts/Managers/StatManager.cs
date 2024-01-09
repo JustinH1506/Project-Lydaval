@@ -31,11 +31,6 @@ public class StatManager : MonoBehaviour
         
         DontDestroyOnLoad(this);
     }
-
-    public void Start()
-    {
-        data.maxHealth += maxHealth;
-    }  
     
     [System.Serializable]
     public class Data

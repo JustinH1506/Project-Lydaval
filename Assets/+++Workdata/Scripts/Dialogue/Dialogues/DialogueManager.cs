@@ -49,9 +49,9 @@ public class DialogueManager : MonoBehaviour
 
          playerMove.enabled = false;
          
-         currentStory.BindExternalFunction("Test2", (string secondTest) =>
+         currentStory.BindExternalFunction("Test2", (string lol) =>
          {
-             Debug.Log(secondTest);
+             Debug.Log(lol);
          });
          
          currentStory.BindExternalFunction("TestThis", (string textTest) =>

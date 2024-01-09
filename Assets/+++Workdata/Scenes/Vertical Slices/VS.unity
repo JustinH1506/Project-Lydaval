@@ -8312,7 +8312,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98d12dc405bce3b43817db0f3a303840, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {}
+  data:
+    statData:
+      heroStats: {fileID: 0}
+      healerStats: {fileID: 0}
+      tankStats: {fileID: 0}
+      maxHealth: 0
+      currentHealth: 0
+      speed: 0
+      attack: 0
+      defense: 0
 --- !u!4 &2069130556
 Transform:
   m_ObjectHideFlags: 0

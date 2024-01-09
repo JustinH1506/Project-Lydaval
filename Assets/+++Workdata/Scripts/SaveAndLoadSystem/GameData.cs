@@ -5,5 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class GameData
 {
-    [SerializeField] public PlayerMove.Data data;
+    [SerializeField] public PlayerMove.Data positionData;
+
+    [SerializeField] public StatManager.Data statData;
 }

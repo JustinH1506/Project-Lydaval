@@ -101,12 +101,21 @@ MonoBehaviour:
   unitName: Tank
   maxHealth: 40
   currentHealth: 40
-  maxMp: 0
-  currentMp: 0
   speed: 4
   attack: 3
-  magicAttack: 1
   defense: 6
-  magicDefense: 4
-  damage: 5
+  level: 0
+  xp: 500
+  neededXp: 500
+  enemyGiveXp: 0
+  types: 2
   battleSystem: {fileID: 0}
+  data:
+    heroStats: {fileID: 0}
+    healerStats: {fileID: 0}
+    tankStats: {fileID: 0}
+    maxHealth: 0
+    currentHealth: 0
+    speed: 0
+    attack: 0
+    defense: 0
