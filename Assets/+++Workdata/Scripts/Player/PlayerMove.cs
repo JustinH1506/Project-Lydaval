@@ -9,10 +9,7 @@ public class PlayerMove : MonoBehaviour
     [System.Serializable]
     public class Data
     {
-
         public Dictionary<string, SaveableVector3> positionsBySceneName = new Dictionary<string, SaveableVector3>();
-        public float health = 100;
-
     }
     
     #region Variables

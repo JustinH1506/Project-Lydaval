@@ -1,5 +1,6 @@
 EXTERNAL Test2(secondTest)
 ~ Test2("Was geht")
+
 Lol
 
 This is the second test!!!

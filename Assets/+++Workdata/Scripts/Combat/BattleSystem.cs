@@ -65,10 +65,11 @@ public class BattleSystem : MonoBehaviour
     [SerializeField] List<GameObject> playerPrefabList, enemyPrefabList;
     [SerializeField] public List<Transform> playerBattleStationList, enemyBattleStationList;
     [SerializeField] public List<Image> targetingIndicatorList;
-    [SerializeField] public List<Stats> enemyStatsList, playerStatsList, characterStatsList;
-    [SerializeField] List<Button> targetingButtonsList;
+    [SerializeField] public List<Stats> enemyStatsList, playerStatsList;
+    [SerializeField] public List<Button> targetingButtonsList;
     [SerializeField] List<Stats> characterList;
     [SerializeField] private List<GameObject> enemyWormList, enemyThiefList, enemyBoarList;
+    [SerializeField] private List<Slider> enemyHpList;
 
     #endregion
 
@@ -114,6 +115,7 @@ public class BattleSystem : MonoBehaviour
     private void ClearList()
     {
         characterList.RemoveAll(Stats => Stats == null);
+        enemyStatsList.RemoveAll(Stats => Stats == null);
     }
 
     private void SetEnemiesToList()
@@ -125,6 +127,8 @@ public class BattleSystem : MonoBehaviour
             for (int i = 0; i <= enemyAdder; i++)
             {
                 enemyPrefabList.Add(enemyThiefList[i]);
+                targetingButtonsList[i].gameObject.SetActive(true);
+                enemyHpList[i].gameObject.SetActive(true);
             }
         }
         
@@ -135,8 +139,9 @@ public class BattleSystem : MonoBehaviour
             for (int i = 0; i <= enemyAdder; i++)
             {
                 enemyPrefabList.Add(enemyBoarList[i]);
+                targetingButtonsList[i].gameObject.SetActive(true);
+                enemyHpList[i].gameObject.SetActive(true);
             }
-            
         }
         
         if (enemyManager.enemyType == EnemyType.WORM)
@@ -146,6 +151,8 @@ public class BattleSystem : MonoBehaviour
             for (int i = 0; i <= enemyAdder; i++)
             {
                 enemyPrefabList.Add(enemyWormList[i]);
+                targetingButtonsList[i].gameObject.SetActive(true);
+                enemyHpList[i].gameObject.SetActive(true);
             }
         }
     }

@@ -21,5 +21,6 @@ public class TargetingSystem : MonoBehaviour
         {
             battleSystem.enemyId = battleSystem.enemyStatsList.Count - 1;
         }
+        //else if(idChanger < battleSystem.enemyStatsList.Count - 1)
     }
 }

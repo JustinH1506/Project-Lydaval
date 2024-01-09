@@ -35,6 +35,8 @@ public class Stats : MonoBehaviour
     private void Awake()
     {
         battleSystem = GetComponent<BattleSystem>();
+
+        maxHealth = 
         
         currentHealth = maxHealth;
 
