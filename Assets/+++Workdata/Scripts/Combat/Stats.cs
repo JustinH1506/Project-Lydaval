@@ -25,7 +25,7 @@ public class Stats : MonoBehaviour
 
     public int defense;
 
-    public int level;
+    public int level = 1;
 
     public int xp;
 
@@ -73,7 +73,7 @@ public class Stats : MonoBehaviour
 
     public void HasEnoughXp()
     {
-        if (xp >= neededXp)
+      if (xp >= neededXp)
             LevelUp();
     }
 

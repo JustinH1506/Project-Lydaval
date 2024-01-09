@@ -116,7 +116,7 @@ public class BattleSystem : MonoBehaviour
     private void ClearList()
     {
         characterList.RemoveAll(Stats => Stats == null);
-        enemyStatsList.RemoveAll(Stats => Stats == null);
+        //enemyStatsList.RemoveAll(Stats => Stats == null);
     }
 
     private void SetEnemiesToList()
@@ -160,9 +160,10 @@ public class BattleSystem : MonoBehaviour
 
     public void SetHp()
     {
-            playerHud.SetPlayerHp(playerStatsList[playerId].currentHealth, playerStatsList[playerId].maxHealth);
-        
-            enemyHud.SetEnemyHp(enemyStatsList[enemyId].currentHealth, enemyStatsList[enemyId].maxHealth);
+        for(int i = 0; i < playerStatsList.Count; i++)
+        {
+            playerHud.SetPlayerHp(playerStatsList[i].currentHealth, playerStatsList[i].maxHealth);
+        }
     }
     
 
@@ -252,13 +253,17 @@ public class BattleSystem : MonoBehaviour
         if (enemyStatsList[enemyId].currentHealth <= 0)
             enemyStatsList[enemyId].currentHealth = 0;
         
-        SetHp();
+        enemyHud.SetEnemyHp(enemyStatsList[enemyId].currentHealth, enemyStatsList[enemyId].maxHealth);
 
         yield return null;
 
         if (isDead)
         {
             targetingButtonsList[enemyId].interactable = false;
+
+            targetingIndicatorList[enemyId].enabled = false;
+
+            enemyHpList[enemyId].gameObject.SetActive(false);
 
             for (int i = 0; i < playerStatsList.Count; i++)
             {
@@ -285,13 +290,25 @@ public class BattleSystem : MonoBehaviour
         {
             StartCoroutine(TurnChange());
         }
+        
+        for (int i = 0; i < enemyStatsList.Count; i++)
+        {
+            if (enemyStatsList[i] != null)
+            {
+                enemyId = i;
+
+                targetingIndicatorList[i].enabled = true;
+
+                break;
+            }
+        }
     }
 
     IEnumerator TurnChange()
     {
         turnId++;
 
-        if (turnId == characterList.Count)
+        if (turnId >= characterList.Count)
             turnId = 0;
 
         yield return null;

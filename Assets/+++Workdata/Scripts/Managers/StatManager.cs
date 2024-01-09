@@ -9,7 +9,7 @@ public class StatManager : MonoBehaviour
 
     [SerializeField] private Data data;
     
-    public int maxHealth = 10;
+    public int maxHealth;
     
     public int currentHealth;
     

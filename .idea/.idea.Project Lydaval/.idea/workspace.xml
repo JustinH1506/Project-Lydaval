@@ -6,38 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="60fe24dc-a470-438e-9d29-fb3fa2e8b3cf" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Lydaval/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Lydaval/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Scenes/Vertical Slices/VS.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Scenes/Vertical Slices/VS.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Prefabs/Characters/Enemys/Boar.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Prefabs/Characters/Enemys/Boar.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Prefabs/Characters/Enemys/Enemy 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Prefabs/Characters/Enemys/Enemy 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Prefabs/Characters/Enemys/Enemy 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Prefabs/Characters/Enemys/Enemy 2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Prefabs/Characters/Enemys/Enemy 3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Prefabs/Characters/Enemys/Enemy 3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Prefabs/Characters/Player/Healer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Prefabs/Characters/Player/Healer.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Prefabs/Characters/Player/Hero.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Prefabs/Characters/Player/Hero.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Prefabs/Characters/Player/Tank.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Prefabs/Characters/Player/Tank.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Combat/BattleSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Combat/BattleSystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Combat/Stats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Combat/Stats.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Dialogue/Dialogues/DialogueManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Dialogue/Dialogues/DialogueManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Managers/StatManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Managers/StatManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Player/PlayerMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Player/PlayerMove.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/SaveAndLoadSystem/GameData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/SaveAndLoadSystem/GameData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.Player.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.Player.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/Cinemachine.Player.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Cinemachine.Player.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/FMODUnity.Player.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/FMODUnity.Player.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/FMODUnityResonance.Player.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/FMODUnityResonance.Player.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/Unity.2D.Animation.Runtime.Player.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Unity.2D.Animation.Runtime.Player.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/Unity.2D.Common.Runtime.Player.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Unity.2D.Common.Runtime.Player.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/Unity.2D.IK.Runtime.Player.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Unity.2D.IK.Runtime.Player.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/Unity.2D.PixelPerfect.Player.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Unity.2D.PixelPerfect.Player.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/Unity.2D.SpriteShape.Runtime.Player.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Unity.2D.SpriteShape.Runtime.Player.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/Unity.2D.Tilemap.Extras.Player.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Unity.2D.Tilemap.Extras.Player.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/Unity.Burst.Player.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Unity.Burst.Player.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/Unity.Collections.Player.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Unity.Collections.Player.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/Unity.InputSystem.ForUI.Player.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Unity.InputSystem.ForUI.Player.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/Unity.InputSystem.Player.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Unity.InputSystem.Player.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/Unity.InternalAPIEngineBridge.001.Player.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Unity.InternalAPIEngineBridge.001.Player.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/Unity.Mathematics.Player.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Unity.Mathematics.Player.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/Unity.RenderPipeline.Universal.ShaderLibrary.Player.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Unity.RenderPipeline.Universal.ShaderLibrary.Player.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/Unity.RenderPipelines.Core.Runtime.Player.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Unity.RenderPipelines.Core.Runtime.Player.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/Unity.RenderPipelines.Core.ShaderLibrary.Player.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Unity.RenderPipelines.Core.ShaderLibrary.Player.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.Player.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.Player.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/Unity.RenderPipelines.Universal.Runtime.Player.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Unity.RenderPipelines.Universal.Runtime.Player.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/Unity.RenderPipelines.Universal.Shaders.Player.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Unity.RenderPipelines.Universal.Shaders.Player.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/Unity.TextMeshPro.Player.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Unity.TextMeshPro.Player.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/Unity.Timeline.Player.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Unity.Timeline.Player.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/UnityEngine.UI.Player.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/UnityEngine.UI.Player.csproj.AssemblyReference.cache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +35,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5243aba1830e4953bd0b895413190d0b3c00/6f/aed040cb/NativeInputSystem.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/a26505b064194c429b83f4a02cfddb4d59800/e4/b1d88590/SerializedObjectBindingContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b89873cb176e44a995a4781c7487d41046ac00/4f/2e4cec2a/Int32.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b89873cb176e44a995a4781c7487d41046ac00/5e/a6c423b7/ThrowHelper.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b89873cb176e44a995a4781c7487d41046ac00/da/a2d8c934/List`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b8c852c145a8456ba2512bf23f96ab0b175400/1a/b4866c1f/BaseVerticalCollectionView.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b8c852c145a8456ba2512bf23f96ab0b175400/64/b7378487/CallbackEventHandler.cs" root0="SKIP_HIGHLIGHTING" />
@@ -133,10 +112,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="28588">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="19280">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="28588" />
+      <option name="pid" value="19280" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -201,7 +180,7 @@
       <workItem from="1704645679863" duration="776000" />
       <workItem from="1704653241713" duration="2294000" />
       <workItem from="1704699818695" duration="15801000" />
-      <workItem from="1704785250162" duration="5665000" />
+      <workItem from="1704785250162" duration="17499000" />
     </task>
     <servers />
   </component>
@@ -218,16 +197,16 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/+++Workdata/Scripts/Combat/BattleSystem.cs</url>
-          <line>283</line>
-          <properties documentPath="D:\Unity Stuff\Git\Project Lydaval\Assets\+++Workdata\Scripts\Combat\BattleSystem.cs" initialLine="283" containingFunctionPresentation="Method 'TurnChange'">
+          <line>164</line>
+          <properties documentPath="D:\Unity Stuff\Git\Project Lydaval\Assets\+++Workdata\Scripts\Combat\BattleSystem.cs" initialLine="164" containingFunctionPresentation="Method 'SetHp'">
             <startOffsets>
-              <option value="7383" />
+              <option value="3966" />
             </startOffsets>
             <endOffsets>
-              <option value="7438" />
+              <option value="4052" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="1" />
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
