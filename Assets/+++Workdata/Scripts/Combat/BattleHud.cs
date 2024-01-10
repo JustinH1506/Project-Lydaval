@@ -31,19 +31,19 @@ public class BattleHud : MonoBehaviour
     /// <summary> Makes texts to Name of Unit, hp of unit and sets the hp sliders values. </summary>
     public void SetPlayerHud(Stats stats)
     {
-        unitName[battleSystem.playerI].text = stats.unitName;
-        unitHp[battleSystem.playerI].text = stats.currentHealth + "/" + stats.maxHealth;
-        hpSlider[battleSystem.playerI].maxValue = stats.maxHealth;
-        hpSlider[battleSystem.playerI].value = stats.currentHealth;
+        unitName[battleSystem.playerI].text = stats.data.unitName;
+        unitHp[battleSystem.playerI].text = stats.data.currentHealth + "/" + stats.data.maxHealth;
+        hpSlider[battleSystem.playerI].maxValue = stats.data.maxHealth;
+        hpSlider[battleSystem.playerI].value = stats.data.currentHealth;
     }
     
     /// <summary> Makes texts to Name of Unit, hp of unit and set the hp slider. </summary>
     public void SetEnemyHud(Stats stats)
     {
-        unitName[battleSystem.enemyI].text = stats.unitName;
-        unitHp[battleSystem.enemyI].text = stats.currentHealth + "/" + stats.maxHealth;
-        hpSlider[battleSystem.enemyI].maxValue = stats.maxHealth;
-        hpSlider[battleSystem.enemyI].value = stats.currentHealth;
+        unitName[battleSystem.enemyI].text = stats.data.unitName;
+        unitHp[battleSystem.enemyI].text = stats.data.currentHealth + "/" + stats.data.maxHealth;
+        hpSlider[battleSystem.enemyI].maxValue = stats.data.maxHealth;
+        hpSlider[battleSystem.enemyI].value = stats.data.currentHealth;
     }
 
     /// <summary> Sets hpSliders value to hp. </summary>

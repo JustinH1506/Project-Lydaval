@@ -98,24 +98,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 785b9fbbf23493840a351b16bf10ebe3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitName: Tank
-  maxHealth: 40
-  currentHealth: 40
-  speed: 4
-  attack: 3
-  defense: 6
-  level: 1
-  xp: 0
-  neededXp: 500
-  enemyGiveXp: 0
-  types: 2
   battleSystem: {fileID: 0}
   data:
-    heroStats: {fileID: 0}
-    healerStats: {fileID: 0}
-    tankStats: {fileID: 0}
-    maxHealth: 0
-    currentHealth: 0
-    speed: 0
-    attack: 0
-    defense: 0
+    unitName: Tank
+    maxHealth: 50
+    currentHealth: 50
+    speed: 3
+    attack: 4
+    defense: 6
+    level: 1
+    xp: 0
+    neededXp: 500
+    enemyGiveXp: 0
+    types: 2

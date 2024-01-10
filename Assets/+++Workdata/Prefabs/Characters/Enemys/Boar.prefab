@@ -97,24 +97,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 785b9fbbf23493840a351b16bf10ebe3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitName: Boar
-  maxHealth: 20
-  currentHealth: 20
-  speed: 5
-  attack: 4
-  defense: 2
-  level: 0
-  xp: 0
-  neededXp: 0
-  enemyGiveXp: 505
-  types: 0
   battleSystem: {fileID: 0}
   data:
-    heroStats: {fileID: 0}
-    healerStats: {fileID: 0}
-    tankStats: {fileID: 0}
-    maxHealth: 0
-    currentHealth: 0
-    speed: 0
-    attack: 0
-    defense: 0
+    unitName: Boar
+    maxHealth: 15
+    currentHealth: 15
+    speed: 5
+    attack: 5
+    defense: 5
+    level: 1
+    xp: 0
+    neededXp: 0
+    enemyGiveXp: 500
+    types: 0

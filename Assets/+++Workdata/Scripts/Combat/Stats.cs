@@ -11,39 +11,36 @@ public enum CharacterTypes
 }
 public class Stats : MonoBehaviour
 {
-    #region Variables
+    [System.Serializable]
+    public class Data
+    {
+        public string unitName;
 
-    public string unitName;
+        public int maxHealth;
 
-    public int maxHealth;
+        public int currentHealth;
 
-    public int currentHealth;
+        public int speed;
 
-    public int speed;
+        public int attack;
 
-    public int attack;
+        public int defense;
 
-    public int defense;
+        public int level = 1;
 
-    public int level = 1;
+        public int xp;
 
-    public int xp;
+        public int neededXp;
 
-    public int neededXp;
+        public int enemyGiveXp;
 
-    public int enemyGiveXp;
-
-    //public bool isEnemy;
-
-    public CharacterTypes types;
-
-    #endregion
+        public CharacterTypes types;
+    }
     
     #region Scripts
 
     [SerializeField] private BattleSystem battleSystem;
-
-    [SerializeField] private StatManager.Data data;
+    [SerializeField] public Data data;
     
     #endregion
 
@@ -53,11 +50,11 @@ public class Stats : MonoBehaviour
     {
         battleSystem = GameObject.Find("Battle_System").GetComponent<BattleSystem>();
         
-        currentHealth = maxHealth;
+        data.currentHealth = data.maxHealth;
 
         if (gameObject.CompareTag("Enemy"))
         {
-            types = CharacterTypes.Enemy;
+            data.types = CharacterTypes.Enemy;
         }
     }
     
@@ -66,14 +63,14 @@ public class Stats : MonoBehaviour
     /// </summary>
     private void Start()
     {
-        maxHealth.ToString();
-        currentHealth.ToString();
+        data.maxHealth.ToString();
+        data.currentHealth.ToString();
     }
 
 
     public void HasEnoughXp()
     {
-      if (xp >= neededXp)
+      if (data.xp >= data.neededXp)
             LevelUp();
     }
 
@@ -82,9 +79,9 @@ public class Stats : MonoBehaviour
     /// </summary>
     public bool TakeDamage(int dmg)
     {
-        currentHealth -= dmg;
+        data.currentHealth -= dmg;
 
-        if (currentHealth <= 0)
+        if (data.currentHealth <= 0)
             return true;
         
         return false;
@@ -95,77 +92,77 @@ public class Stats : MonoBehaviour
     /// </summary>
     public void Heal(int healing)
     {
-        currentHealth += healing;
+        data.currentHealth += healing;
         
-        if (currentHealth > maxHealth)
+        if (data.currentHealth > data.maxHealth)
         {
-            currentHealth = maxHealth;
+            data.currentHealth = data.maxHealth;
         }
     }
 
     public void LevelUp()
     {
-        if (types == CharacterTypes.Hero)
+        if (data.types == CharacterTypes.Hero)
         {
-            level++;
+            data.level++;
 
             int randomNumber = Random.Range(5, 15);
 
-            maxHealth += randomNumber;
+            data.maxHealth += randomNumber;
 
-            currentHealth += randomNumber;
+            data.currentHealth += randomNumber;
 
-            speed += Random.Range(0, 3);
+            data.speed += Random.Range(0, 3);
 
-            attack += Random.Range(2, 5);
+            data.attack += Random.Range(2, 5);
 
-            defense += Random.Range(1, 3);
+            data.defense += Random.Range(1, 3);
 
-            xp -= neededXp;
+            data.xp -= data.neededXp;
 
-            neededXp = neededXp *= 2;
+            data.neededXp = data.neededXp *= 2;
         }
         
-        if (types == CharacterTypes.Healer)
+        if (data.types == CharacterTypes.Healer)
         {
-            level++;
+            data.level++;
 
             int randomNumber = Random.Range(10, 20);
 
-            maxHealth += randomNumber;
+            data.maxHealth += randomNumber;
 
-            currentHealth += randomNumber;
+            data.currentHealth += randomNumber;
 
-            speed += Random.Range(2, 5);
+            data.speed += Random.Range(2, 5);
 
-            attack += Random.Range(0, 3);
+            data.attack += Random.Range(0, 3);
 
-            defense += Random.Range(0, 3);
+            data.defense += Random.Range(0, 3);
             
-            xp -= neededXp;
+            data.xp -= data.neededXp;
 
-            neededXp = (neededXp *= 2);
+            data.neededXp = (data.neededXp *= 2);
         }
         
-        if (types == CharacterTypes.Tank)
+        if (data.types == CharacterTypes.Tank)
         {
-            level++;
+            data.level++;
 
             int randomNumber = Random.Range(20, 30);
 
-            maxHealth += randomNumber;
+            data.maxHealth += randomNumber;
 
-            currentHealth += randomNumber;
+            data.currentHealth += randomNumber;
 
-            speed += Random.Range(0, 3);
+            data.speed += Random.Range(0, 3);
 
-            attack += Random.Range(0, 3);
+            data.attack += Random.Range(0, 3);
 
-            defense += Random.Range(3, 5);
+            data.defense += Random.Range(3, 5);
             
-            xp -= neededXp;
+            data.xp -= data.neededXp;
 
-            neededXp = (neededXp *= 2);
+            data.neededXp = (data.neededXp *= 2);
         }
         
         battleSystem.SetHp();

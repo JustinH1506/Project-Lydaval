@@ -16,6 +16,6 @@ public class LevelTest : MonoBehaviour
 
     public void BuffPrefab()
     {
-        playerStats.maxHealth += 5;
+        playerStats.data.maxHealth += 5;
     }
 }

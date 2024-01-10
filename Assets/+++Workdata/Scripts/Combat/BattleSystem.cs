@@ -225,19 +225,19 @@ public class BattleSystem : MonoBehaviour
         {
             characterList.Sort(delegate(Stats stats, Stats stats1)
             {
-                return (stats.GetComponent<Stats>().speed).CompareTo(stats1.GetComponent<Stats>().speed);
+                return (stats.GetComponent<Stats>().data.speed).CompareTo(stats1.GetComponent<Stats>().data.speed);
             });
             characterList.Reverse();
         }
         
         yield return new WaitForSeconds(2f);
         
-        if (characterList[turnId].types != CharacterTypes.Enemy)
+        if (characterList[turnId].data.types != CharacterTypes.Enemy)
         {
             state = BattleState.PLAYERTURN;
             PlayerTurn();
         }
-        else if (characterList[turnId].types == CharacterTypes.Enemy)
+        else if (characterList[turnId].data.types == CharacterTypes.Enemy)
         {
             state = BattleState.ENEMYTURN;
             StartCoroutine(EnemyTurn());
@@ -249,12 +249,12 @@ public class BattleSystem : MonoBehaviour
     /// </summary>
     IEnumerator PlayerAttack()
     {
-        bool isDead = enemyStatsList[enemyId].TakeDamage(characterList[turnId].attack);
+        bool isDead = enemyStatsList[enemyId].TakeDamage(characterList[turnId].data.attack);
 
-        if (enemyStatsList[enemyId].currentHealth <= 0)
-            enemyStatsList[enemyId].currentHealth = 0;
+        if (enemyStatsList[enemyId].data.currentHealth <= 0)
+            enemyStatsList[enemyId].data.currentHealth = 0;
         
-        enemyHud.SetEnemyHp(enemyStatsList[enemyId].currentHealth, enemyStatsList[enemyId].maxHealth);
+        enemyHud.SetEnemyHp(enemyStatsList[enemyId].data.currentHealth, enemyStatsList[enemyId].data.maxHealth);
 
         yield return null;
 
@@ -268,7 +268,7 @@ public class BattleSystem : MonoBehaviour
 
             for (int i = 0; i < playerStatsList.Count; i++)
             {
-                playerStatsList[i].xp += enemyStatsList[enemyId].enemyGiveXp;
+                playerStatsList[i].data.xp += enemyStatsList[enemyId].data.enemyGiveXp;
                 
                 playerStatsList[i].HasEnoughXp();
             }
@@ -314,7 +314,7 @@ public class BattleSystem : MonoBehaviour
 
         yield return null;
         
-        if(characterList[turnId].types != CharacterTypes.Enemy)
+        if(characterList[turnId].data.types != CharacterTypes.Enemy)
         {
             state = BattleState.PLAYERTURN;
             PlayerTurn();
@@ -331,7 +331,7 @@ public class BattleSystem : MonoBehaviour
     {
         playerStats.Heal(5);
 
-        playerHud.SetPlayerHp(characterList[turnId].currentHealth, characterList[turnId].maxHealth);
+        playerHud.SetPlayerHp(characterList[turnId].data.currentHealth, characterList[turnId].data.maxHealth);
 
         yield return null;
 
@@ -347,12 +347,12 @@ public class BattleSystem : MonoBehaviour
         yield return new WaitForSeconds(1f);
         playerId = Random.Range(0, 2);
         
-        bool isDead = playerStatsList[playerId].TakeDamage(characterList[turnId].attack);
+        bool isDead = playerStatsList[playerId].TakeDamage(characterList[turnId].data.attack);
 
-        if (playerStatsList[playerId].currentHealth <= 0)
-            playerStatsList[playerId].currentHealth = 0;
+        if (playerStatsList[playerId].data.currentHealth <= 0)
+            playerStatsList[playerId].data.currentHealth = 0;
         
-        playerHud.SetPlayerHp(playerStatsList[playerId].currentHealth, playerStatsList[playerId].maxHealth);
+        playerHud.SetPlayerHp(playerStatsList[playerId].data.currentHealth, playerStatsList[playerId].data.maxHealth);
 
         yield return new WaitForSeconds(0f);
 
@@ -367,7 +367,7 @@ public class BattleSystem : MonoBehaviour
             ClearList();
         }
         
-        if (playerStatsList[playerId].currentHealth <= 0)
+        if (playerStatsList[playerId].data.currentHealth <= 0)
         {
             deadPlayers++;
         }
