@@ -161,7 +161,9 @@ public class BattleSystem : MonoBehaviour
     {
         for(int i = 0; i < playerStatsList.Count; i++)
         {
-            playerHud.SetPlayerHp(playerStatsList[i].currentHealth, playerStatsList[i].maxHealth);
+            playerI = i;
+            
+            playerHud.SetPlayerHud(playerStatsList[i]);
         }
     }
     
@@ -343,14 +345,14 @@ public class BattleSystem : MonoBehaviour
     IEnumerator EnemyTurn()
     {
         yield return new WaitForSeconds(1f);
-        playerId = Random.Range(0, 3);
+        playerId = Random.Range(0, 2);
         
         bool isDead = playerStatsList[playerId].TakeDamage(characterList[turnId].attack);
 
         if (playerStatsList[playerId].currentHealth <= 0)
             playerStatsList[playerId].currentHealth = 0;
         
-        SetHp();
+        playerHud.SetPlayerHp(playerStatsList[playerId].currentHealth, playerStatsList[playerId].maxHealth);
 
         yield return new WaitForSeconds(0f);
 

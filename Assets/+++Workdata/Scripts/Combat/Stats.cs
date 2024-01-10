@@ -123,7 +123,7 @@ public class Stats : MonoBehaviour
 
             xp -= neededXp;
 
-            neededXp = (neededXp *= 2);
+            neededXp = neededXp *= 2;
         }
         
         if (types == CharacterTypes.Healer)
