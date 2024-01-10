@@ -116,7 +116,6 @@ public class BattleSystem : MonoBehaviour
     private void ClearList()
     {
         characterList.RemoveAll(Stats => Stats == null);
-        //enemyStatsList.RemoveAll(Stats => Stats == null);
     }
 
     private void SetEnemiesToList()
@@ -279,6 +278,18 @@ public class BattleSystem : MonoBehaviour
             ClearList();
 
             deadEnemies++;
+            
+            for (int i = 0; i < enemyStatsList.Count; i++)
+            {
+                if (enemyStatsList[i] != null)
+                {
+                    enemyId = i;
+
+                    targetingIndicatorList[i].enabled = true;
+
+                    break;
+                }
+            }
         }
 
         if (deadEnemies == enemyAdder +1)
@@ -289,18 +300,6 @@ public class BattleSystem : MonoBehaviour
         else
         {
             StartCoroutine(TurnChange());
-        }
-        
-        for (int i = 0; i < enemyStatsList.Count; i++)
-        {
-            if (enemyStatsList[i] != null)
-            {
-                enemyId = i;
-
-                targetingIndicatorList[i].enabled = true;
-
-                break;
-            }
         }
     }
 
@@ -357,8 +356,6 @@ public class BattleSystem : MonoBehaviour
 
         if (isDead)
         {
-            targetingButtonsList[playerId].interactable = false;
-
             Destroy(playerStatsList[playerId].gameObject);
             
             Destroy(playerPrefabList[playerId].gameObject);

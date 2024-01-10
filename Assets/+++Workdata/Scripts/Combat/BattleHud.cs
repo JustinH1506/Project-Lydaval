@@ -28,7 +28,7 @@ public class BattleHud : MonoBehaviour
 
     #region Methods
 
-    /// <summary> Makes texts to Name of Unit, hp of unit and set the hp slider. </summary>
+    /// <summary> Makes texts to Name of Unit, hp of unit and sets the hp sliders values. </summary>
     public void SetPlayerHud(Stats stats)
     {
         unitName[battleSystem.playerI].text = stats.unitName;
@@ -46,7 +46,7 @@ public class BattleHud : MonoBehaviour
         hpSlider[battleSystem.enemyI].value = stats.currentHealth;
     }
 
-    /// <summary> Sets hpSliders value to hp. /summary>
+    /// <summary> Sets hpSliders value to hp. </summary>
     public void SetPlayerHp(int hp, int maxHp)
     {
         hpSlider[battleSystem.playerId].value = hp;
@@ -54,7 +54,7 @@ public class BattleHud : MonoBehaviour
         unitHp[battleSystem.playerId].text = hp + "/" + maxHp;
     }
     
-    /// <summary> Sets hpSliders value to hp. /summary>
+    /// <summary> Sets hpSliders value to hp. </summary>
     public void SetEnemyHp(int hp, int maxHp)
     {
         hpSlider[battleSystem.enemyId].value = hp;
