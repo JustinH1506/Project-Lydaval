@@ -88,7 +88,8 @@ public class PlayerMove : MonoBehaviour
         Data data = GameStateManager.instance.data.positionData;
         if (!data.positionsBySceneName.ContainsKey(gameObject.scene.name))
             data.positionsBySceneName.Add(gameObject.scene.name, new SaveableVector3());
-        data.positionsBySceneName[gameObject.scene.name] = transform.position;
+        else
+            data.positionsBySceneName[gameObject.scene.name] = transform.position;
     }
 
     /// <summary>

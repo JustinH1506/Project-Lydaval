@@ -7830,20 +7830,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 287dda6e8eef52e42bd3e8b325214ce7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data:
-    heroStats: {fileID: 0}
-    healerStats: {fileID: 0}
-    tankStats: {fileID: 0}
-    maxHealth: 50
+  heroStats: {fileID: 4216729953877467935, guid: 45d10a4c1a55ab74399cd668a20c53a8,
+    type: 3}
+  tankStats: {fileID: 4216729953877467935, guid: 7f21eaffaaec4e44e93d8c935cff6b32,
+    type: 3}
+  healerStats: {fileID: 4216729953877467935, guid: 520deccb4dbd1734bb203e0b9351c1e7,
+    type: 3}
+  heroData:
+    unitName: Hero
+    maxHealth: 0
     currentHealth: 0
     speed: 0
     attack: 0
     defense: 0
-  maxHealth: 10
-  currentHealth: 0
-  speed: 0
-  attack: 0
-  defense: 0
+    level: 1
+    xp: 0
+    neededXp: 0
+    types: 0
+  tankData:
+    unitName: Tank
+    maxHealth: 0
+    currentHealth: 0
+    speed: 0
+    attack: 0
+    defense: 0
+    level: 1
+    xp: 0
+    neededXp: 0
+    enemyGiveXp: 0
+    types: 0
+  healerData:
+    unitName: Healer
+    maxHealth: 0
+    currentHealth: 0
+    speed: 0
+    attack: 0
+    defense: 0
+    level: 1
+    xp: 0
+    neededXp: 0
+    enemyGiveXp: 0
+    types: 0
 --- !u!4 &1834946113
 Transform:
   m_ObjectHideFlags: 0
@@ -8266,15 +8293,41 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data:
-    statData:
-      heroStats: {fileID: 0}
-      healerStats: {fileID: 0}
-      tankStats: {fileID: 0}
+    heroStatData:
+      unitName: 
       maxHealth: 0
       currentHealth: 0
       speed: 0
       attack: 0
       defense: 0
+      level: 0
+      xp: 0
+      neededXp: 0
+      types: 0
+    healerStatData:
+      unitName: 
+      maxHealth: 0
+      currentHealth: 0
+      speed: 0
+      attack: 0
+      defense: 0
+      level: 0
+      xp: 0
+      neededXp: 0
+      enemyGiveXp: 0
+      types: 0
+    tankStatData:
+      unitName: 
+      maxHealth: 0
+      currentHealth: 0
+      speed: 0
+      attack: 0
+      defense: 0
+      level: 0
+      xp: 0
+      neededXp: 0
+      enemyGiveXp: 0
+      types: 0
 --- !u!4 &2069130556
 Transform:
   m_ObjectHideFlags: 0
