@@ -69,7 +69,6 @@
      <Compile Include="Assets\+++Workdata\Scripts\Dialogue\Dialogues\NPCDialogues.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Player\PlayerMove.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Managers\PlayerManager.cs" />
-     <Compile Include="Assets\+++Workdata\Scripts\Managers\StatManager.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Managers\EnemyManager.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\SaveAndLoadSystem\InGameButtons.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Dialogue\DialogueControllMap.cs" />
@@ -155,6 +154,7 @@
      <Folder Include="Library\PackageCache\com.unity.timeline@1.7.5" />
      <Folder Include="Assets\+++Workdata\Scripts\SaveAndLoadSystem" />
      <Folder Include="Library\PackageCache\com.unity.modules.cloth@1.0.0" />
+     <Folder Include="Assets\+++Workdata\Prefabs\Characters\Enemys\Overworld" />
      <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\PackageConversionData.json" />
      <None Include="Library\PackageCache\com.unity.modules.unitywebrequestassetbundle@1.0.0\package.json" />
      <Folder Include="Assets\+++Workdata\Prefabs" />
@@ -176,6 +176,7 @@
      <Folder Include="Library\PackageCache\com.unity.2d.common@8.0.1" />
      <Folder Include="Assets\Ink\Demos\Basic Demo\Scripts" />
      <Folder Include="Library\PackageCache\com.unity.modules.unitywebrequest@1.0.0" />
+     <Folder Include="Assets\+++Workdata\Prefabs\Characters\Enemys\Battle" />
      <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\ValidationExceptions.json" />
      <Folder Include="Library\PackageCache\com.unity.modules.unitywebrequestassetbundle@1.0.0" />
      <Folder Include="Assets\Settings\Scenes" />

@@ -1461,7 +1461,6 @@ MonoBehaviour:
   - {fileID: 807607033}
   enemyStatsList: []
   playerStatsList: []
-  characterStatsList: []
   targetingButtonsList:
   - {fileID: 462086628}
   - {fileID: 2048569505}
@@ -3399,8 +3398,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 967, y: 187}
-  m_SizeDelta: {x: 130, y: 50}
+  m_AnchoredPosition: {x: 977.5398, y: 187}
+  m_SizeDelta: {x: 142.6766, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1343072733
 MonoBehaviour:
@@ -3535,8 +3534,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 967, y: 187}
-  m_SizeDelta: {x: 130, y: 50}
+  m_AnchoredPosition: {x: 977.5398, y: 187}
+  m_SizeDelta: {x: 142.6766, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1375298885
 MonoBehaviour:
@@ -3943,8 +3942,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 967, y: 187}
-  m_SizeDelta: {x: 130, y: 50}
+  m_AnchoredPosition: {x: 977.5398, y: 187}
+  m_SizeDelta: {x: 142.6766, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1483009810
 MonoBehaviour:

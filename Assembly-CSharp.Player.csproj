@@ -69,7 +69,6 @@
      <Compile Include="Assets\+++Workdata\Scripts\Dialogue\Dialogues\NPCDialogues.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Player\PlayerMove.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Managers\PlayerManager.cs" />
-     <Compile Include="Assets\+++Workdata\Scripts\Managers\StatManager.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Managers\EnemyManager.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\SaveAndLoadSystem\InGameButtons.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Dialogue\DialogueControllMap.cs" />

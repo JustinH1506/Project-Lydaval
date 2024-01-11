@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -39,7 +36,7 @@ public class Enemy : MonoBehaviour
             transform.position = data.position;
             
             if(data.isDead)
-                Destroy(gameObject);
+                gameObject.SetActive(false);
                 
         }
         else

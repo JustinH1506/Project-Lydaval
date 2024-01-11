@@ -1,9 +1,5 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class InventoryEntry : MonoBehaviour
 {
@@ -13,6 +9,6 @@ public class InventoryEntry : MonoBehaviour
     {
         newName.text = item.newName;
         
-        amount.text = item.amount.ToString() + "x";
+        amount.text = item.amount + "x";
     }
 }

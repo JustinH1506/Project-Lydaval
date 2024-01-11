@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -9,6 +7,13 @@ public class GameStateManager : MonoBehaviour
    public static GameStateManager instance;
 
    public GameData data = new GameData();
+
+   public Stats heroStats;
+   
+   public Stats healerStats;
+   
+   public Stats tankStats;
+   
    
    private void Awake()
    {
@@ -26,6 +31,12 @@ public class GameStateManager : MonoBehaviour
    public void StartNewGame()
    {
       data = new GameData();
+
+      data.heroStatData = heroStats.data;
+
+      data.healerStatData = healerStats.data;
+
+      data.tankStatData = tankStats.data;
 
       SceneManager.LoadScene(1);
    }

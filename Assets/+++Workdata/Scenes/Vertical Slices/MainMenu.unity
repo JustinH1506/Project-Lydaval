@@ -1160,6 +1160,7 @@ MonoBehaviour:
       level: 0
       xp: 0
       neededXp: 0
+      enemyGiveXp: 0
       types: 0
     healerStatData:
       unitName: 
@@ -1185,6 +1186,12 @@ MonoBehaviour:
       neededXp: 0
       enemyGiveXp: 0
       types: 0
+  heroStats: {fileID: 4216729953877467935, guid: 45d10a4c1a55ab74399cd668a20c53a8,
+    type: 3}
+  healerStats: {fileID: 4216729953877467935, guid: 520deccb4dbd1734bb203e0b9351c1e7,
+    type: 3}
+  tankStats: {fileID: 4216729953877467935, guid: 7f21eaffaaec4e44e93d8c935cff6b32,
+    type: 3}
 --- !u!4 &1773356300
 Transform:
   m_ObjectHideFlags: 0
