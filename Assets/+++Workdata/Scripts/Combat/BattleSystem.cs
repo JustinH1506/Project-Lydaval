@@ -78,7 +78,7 @@ public class BattleSystem : MonoBehaviour
 
     private void Awake()
     {
-        enemyManager = GameObject.Find("---EnemyManager").GetComponent<EnemyManager>();
+       enemyManager = GameObject.Find("---EnemyManager").GetComponent<EnemyManager>();
     }
 
     /// <summary> Set Battle State to START and Start Coroutine SetUpBattle </summary>
@@ -97,7 +97,25 @@ public class BattleSystem : MonoBehaviour
     {
         if (state == BattleState.WON)
         {
-            SceneManager.LoadScene(0);
+            for (int i = 0; i < playerStatsList.Count; i++)
+            {
+                if (playerStatsList[i].data.types == CharacterTypes.Hero)
+                {
+                    GameStateManager.instance.data.heroStatData = playerStatsList[i].data;
+                }
+                
+                if (playerStatsList[i].data.types == CharacterTypes.Healer)
+                {
+                    GameStateManager.instance.data.healerStatData = playerStatsList[i].data;
+                }
+                
+                if (playerStatsList[i].data.types == CharacterTypes.Tank)
+                {
+                    GameStateManager.instance.data.tankStatData = playerStatsList[i].data;
+                }
+            }
+            
+            SceneManager.LoadScene(1);
         }
         else if (state == BattleState.LOST)
         {
@@ -228,6 +246,24 @@ public class BattleSystem : MonoBehaviour
                 return (stats.GetComponent<Stats>().data.speed).CompareTo(stats1.GetComponent<Stats>().data.speed);
             });
             characterList.Reverse();
+        }
+        
+        for (int i = 0; i < playerStatsList.Count; i++)
+        {
+            if (playerStatsList[i].data.types == CharacterTypes.Hero)
+            {
+                playerStatsList[i].data = GameStateManager.instance.data.heroStatData;
+            }
+                
+            if (playerStatsList[i].data.types == CharacterTypes.Healer)
+            {
+                playerStatsList[i].data = GameStateManager.instance.data.healerStatData;
+            }
+                
+            if (playerStatsList[i].data.types == CharacterTypes.Tank)
+            {
+                playerStatsList[i].data = GameStateManager.instance.data.tankStatData;
+            }
         }
         
         yield return new WaitForSeconds(2f);

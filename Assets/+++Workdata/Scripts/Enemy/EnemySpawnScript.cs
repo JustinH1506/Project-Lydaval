@@ -22,6 +22,8 @@ public class EnemySpawnScript : MonoBehaviour
         {
             enemyManager.enemyType = enemyType;
             
+            Destroy(gameObject);
+            
             SceneManager.LoadScene(2);
         }
     }

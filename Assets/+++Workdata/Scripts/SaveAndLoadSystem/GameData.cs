@@ -8,9 +8,9 @@ public class GameData
 {
     [SerializeField] public PlayerMove.Data positionData;
 
-    [SerializeField] public StatManager.HeroData heroStatData;
+    [SerializeField] public Stats.Data heroStatData;
     
-    [SerializeField] public StatManager.HealerData healerStatData;
+    [SerializeField] public Stats.Data healerStatData;
     
-    [SerializeField] public StatManager.TankData tankStatData;
+    [SerializeField] public Stats.Data tankStatData;
 }

@@ -47,6 +47,8 @@ public class DialogueManager : MonoBehaviour
          
          dialogueIsPlaying = true;
 
+         playerMove.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+
          playerMove.enabled = false;
          
          currentStory.BindExternalFunction("Test2", (string lol) =>

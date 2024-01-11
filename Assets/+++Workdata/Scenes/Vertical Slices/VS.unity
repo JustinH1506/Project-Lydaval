@@ -7812,7 +7812,7 @@ GameObject:
   - component: {fileID: 1834946113}
   - component: {fileID: 1834946112}
   m_Layer: 0
-  m_Name: ---StatManager
+  m_Name: StartStats
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7836,41 +7836,6 @@ MonoBehaviour:
     type: 3}
   healerStats: {fileID: 4216729953877467935, guid: 520deccb4dbd1734bb203e0b9351c1e7,
     type: 3}
-  heroData:
-    unitName: Hero
-    maxHealth: 0
-    currentHealth: 0
-    speed: 0
-    attack: 0
-    defense: 0
-    level: 1
-    xp: 0
-    neededXp: 0
-    types: 0
-  tankData:
-    unitName: Tank
-    maxHealth: 0
-    currentHealth: 0
-    speed: 0
-    attack: 0
-    defense: 0
-    level: 1
-    xp: 0
-    neededXp: 0
-    enemyGiveXp: 0
-    types: 0
-  healerData:
-    unitName: Healer
-    maxHealth: 0
-    currentHealth: 0
-    speed: 0
-    attack: 0
-    defense: 0
-    level: 1
-    xp: 0
-    neededXp: 0
-    enemyGiveXp: 0
-    types: 0
 --- !u!4 &1834946113
 Transform:
   m_ObjectHideFlags: 0
@@ -8303,6 +8268,7 @@ MonoBehaviour:
       level: 0
       xp: 0
       neededXp: 0
+      enemyGiveXp: 0
       types: 0
     healerStatData:
       unitName: 

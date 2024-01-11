@@ -6,11 +6,14 @@ using UnityEngine.InputSystem;
 
 public class PlayerMove : MonoBehaviour
 {
+    #region Local classes
     [System.Serializable]
     public class Data
     {
         public Dictionary<string, SaveableVector3> positionsBySceneName = new Dictionary<string, SaveableVector3>();
     }
+    
+    #endregion 
     
     #region Variables
     
