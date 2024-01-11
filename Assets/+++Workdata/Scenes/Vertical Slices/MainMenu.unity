@@ -1120,6 +1120,86 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!1 &1773356298
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1773356300}
+  - component: {fileID: 1773356299}
+  m_Layer: 0
+  m_Name: ---GameStateManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1773356299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1773356298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98d12dc405bce3b43817db0f3a303840, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data:
+    heroStatData:
+      unitName: 
+      maxHealth: 0
+      currentHealth: 0
+      speed: 0
+      attack: 0
+      defense: 0
+      level: 0
+      xp: 0
+      neededXp: 0
+      types: 0
+    healerStatData:
+      unitName: 
+      maxHealth: 0
+      currentHealth: 0
+      speed: 0
+      attack: 0
+      defense: 0
+      level: 0
+      xp: 0
+      neededXp: 0
+      enemyGiveXp: 0
+      types: 0
+    tankStatData:
+      unitName: 
+      maxHealth: 0
+      currentHealth: 0
+      speed: 0
+      attack: 0
+      defense: 0
+      level: 0
+      xp: 0
+      neededXp: 0
+      enemyGiveXp: 0
+      types: 0
+--- !u!4 &1773356300
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1773356298}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.293719, y: 1.0111579, z: 0.27443936}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1815710573
 GameObject:
   m_ObjectHideFlags: 0
@@ -1713,3 +1793,4 @@ SceneRoots:
   - {fileID: 864595056}
   - {fileID: 1560910610}
   - {fileID: 1198224832}
+  - {fileID: 1773356300}

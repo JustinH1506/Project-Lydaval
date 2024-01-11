@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using FMODUnity;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -20,8 +21,6 @@ public class StatManager : MonoBehaviour
     [SerializeField] public TankData tankData;
 
     [SerializeField] public HealerData healerData;
-
-    
     
     private void Awake()
     {
@@ -88,9 +87,12 @@ public class StatManager : MonoBehaviour
         healerData.neededXp = healerStats.data.neededXp;
 
         healerData.types = healerStats.data.types;
+    }
 
+    private void Start()
+    {
         var heroCurrentStats = GameStateManager.instance.data.heroStatData;
-
+        
         if (heroCurrentStats != null)
         {
             heroData = heroCurrentStats;
@@ -109,7 +111,12 @@ public class StatManager : MonoBehaviour
         {
             tankData = tankCurrentStats;
         }
+
+        GameStateManager.instance.data.heroStatData = heroData;
         
+        GameStateManager.instance.data.healerStatData = healerData;
+        
+        GameStateManager.instance.data.tankStatData = tankData;
     }
 
     [System.Serializable]

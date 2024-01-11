@@ -25,6 +25,7 @@ public class PlayerMove : MonoBehaviour
     #region Scripts
 
     private PlayerController playerController;
+    [SerializeField] private Data positionData;
 
     #endregion
 
@@ -57,9 +58,15 @@ public class PlayerMove : MonoBehaviour
 
     private void Start()
     {
-        Data data = GameStateManager.instance.data.positionData;
-        if (data.positionsBySceneName.ContainsKey(gameObject.scene.name))
-            transform.position = data.positionsBySceneName[gameObject.scene.name];
+        var currentPosition = GameStateManager.instance.data.positionData;
+        if (currentPosition != null)
+        {
+            positionData = currentPosition;
+            
+            GetPosition();
+        }
+
+        GameStateManager.instance.data.positionData = positionData;
     }
 
     private void OnEnable()
@@ -78,18 +85,27 @@ public class PlayerMove : MonoBehaviour
         playerController.Player.Movement.canceled -= Move;
     }
     
+    private void GetPosition()
+    {
+        if (positionData.positionsBySceneName.TryGetValue(gameObject.scene.name, out var position))
+            transform.position = position;
+    }
+    
     /// <summary>
-    /// We multiply the velocity with the inputX vaue and the moveSpeed and the inputY value times the moveSpeed. 
+    /// We multiply the velocity with the inputX value and the moveSpeed and the inputY value times the moveSpeed. 
     /// </summary>
     private void FixedUpdate()
     {
         rb.velocity = new Vector2(inputX * moveSpeed, inputY * moveSpeed);
+    }
 
-        Data data = GameStateManager.instance.data.positionData;
-        if (!data.positionsBySceneName.ContainsKey(gameObject.scene.name))
-            data.positionsBySceneName.Add(gameObject.scene.name, new SaveableVector3());
+    private void LateUpdate()
+    {
+        var sceneName = gameObject.scene.name;
+        if (!positionData.positionsBySceneName.ContainsKey(sceneName))
+            positionData.positionsBySceneName.Add(sceneName, transform.position);
         else
-            data.positionsBySceneName[gameObject.scene.name] = transform.position;
+            positionData.positionsBySceneName[sceneName] = transform.position;
     }
 
     /// <summary>
