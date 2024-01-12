@@ -103,9 +103,9 @@ MonoBehaviour:
     unitName: Tank
     maxHealth: 50
     currentHealth: 50
-    speed: 3
+    speed: 4
     attack: 4
-    defense: 6
+    defense: 7
     level: 1
     xp: 0
     neededXp: 500

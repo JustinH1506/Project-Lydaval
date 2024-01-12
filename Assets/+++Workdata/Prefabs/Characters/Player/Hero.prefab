@@ -101,9 +101,9 @@ MonoBehaviour:
   battleSystem: {fileID: 0}
   data:
     unitName: Hero
-    maxHealth: 35
-    currentHealth: 35
-    speed: 6
+    maxHealth: 30
+    currentHealth: 30
+    speed: 5
     attack: 5
     defense: 5
     level: 1

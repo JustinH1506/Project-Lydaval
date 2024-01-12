@@ -24,6 +24,8 @@ public class BattleSystem : MonoBehaviour
     #region Variables
 
     public int enemyId, enemyI, playerId, playerI, turnId;
+
+    private int random1 = 0, random2 = 2;
     
     private int deadEnemies, deadPlayers;
 
@@ -379,7 +381,8 @@ public class BattleSystem : MonoBehaviour
     IEnumerator EnemyTurn()
     {
         yield return new WaitForSeconds(1f);
-        playerId = Random.Range(0, 2);
+
+        playerId = Random.Range(random1, random2);
         
         bool isDead = playerStatsList[playerId].TakeDamage(characterList[turnId].data.attack);
 
@@ -394,7 +397,18 @@ public class BattleSystem : MonoBehaviour
         {
             Destroy(playerStatsList[playerId].gameObject);
             
-            Destroy(playerPrefabList[playerId].gameObject);
+            for (int i = 0; i < playerStatsList.Count; i++)
+            {
+                for (int j = playerStatsList.Count -1; j >= 0 ; j--)
+                {
+                    if(playerStatsList[i] != null && playerStatsList[j] != null)
+                    {
+                        random1 = i;
+                        random2 = j;
+                        break;
+                    }
+                }
+            }
 
             yield return null;
            

@@ -38,6 +38,12 @@ public class GameStateManager : MonoBehaviour
 
       data.tankStatData = tankStats.data;
 
+      heroStats = null;
+
+      healerStats = null;
+
+      tankStats = null;
+
       SceneManager.LoadScene(1);
    }
    
@@ -47,6 +53,12 @@ public class GameStateManager : MonoBehaviour
          return;
       
       data = loadedData;
+      
+      heroStats = null;
+
+      healerStats = null;
+
+      tankStats = null;
 
       SceneManager.LoadScene(1);
    }

@@ -103,7 +103,7 @@ MonoBehaviour:
     unitName: Healer
     maxHealth: 25
     currentHealth: 25
-    speed: 5
+    speed: 6
     attack: 4
     defense: 4
     level: 1

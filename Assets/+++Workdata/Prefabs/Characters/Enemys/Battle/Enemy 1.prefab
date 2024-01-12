@@ -102,7 +102,7 @@ MonoBehaviour:
     unitName: Boar
     maxHealth: 15
     currentHealth: 15
-    speed: 5
+    speed: 4
     attack: 5
     defense: 5
     level: 1
