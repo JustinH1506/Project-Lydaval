@@ -25,7 +25,7 @@ public class BattleSystem : MonoBehaviour
 
     public int enemyId, enemyI, playerId, playerI, turnId;
 
-    private int random1 = 0, random2 = 2;
+    private int random1, random2 = 2;
     
     private int deadEnemies, deadPlayers;
 
@@ -70,7 +70,7 @@ public class BattleSystem : MonoBehaviour
     [SerializeField] public List<Button> targetingButtonsList;
     [SerializeField] List<Stats> characterList;
     [SerializeField] private List<GameObject> enemyWormList, enemyThiefList, enemyBoarList;
-    [SerializeField] private List<Slider> enemyHpList;
+    [SerializeField] private List<Slider> enemyHpList, playerHpList;
 
     #endregion
 
@@ -134,6 +134,10 @@ public class BattleSystem : MonoBehaviour
     private void ClearList()
     {
         characterList.RemoveAll(Stats => Stats == null);
+
+        playerStatsList.RemoveAll(Stats => Stats == null);
+
+        playerHpList.RemoveAll(Stats => Stats == null);
     }
 
     private void SetEnemiesToList()
@@ -395,35 +399,43 @@ public class BattleSystem : MonoBehaviour
 
         if (isDead)
         {
+            if (playerStatsList[playerId].data.currentHealth <= 0)
+            {
+                deadPlayers++;
+            }
+            
             Destroy(playerStatsList[playerId].gameObject);
             
-            for (int i = 0; i < playerStatsList.Count; i++)
+            Destroy(playerHpList[playerId].gameObject);
+            
+            yield return null;
+           
+            ClearList();
+            
+            if(playerStatsList != null)
             {
-                for (int j = playerStatsList.Count -1; j >= 0 ; j--)
+                for (int i = 0; i < playerStatsList.Count; i++)
                 {
-                    if(playerStatsList[i] != null && playerStatsList[j] != null)
+                    if (playerStatsList[i] != null)
                     {
                         random1 = i;
+                        break;
+                    }
+                }
+
+                for (int j = playerStatsList.Count - 1; j >= 0; j--)
+                {
+                    if (playerStatsList[j] != null)
+                    {
                         random2 = j;
                         break;
                     }
                 }
             }
-
-            yield return null;
-           
-            ClearList();
-        }
-        
-        if (playerStatsList[playerId].data.currentHealth <= 0)
-        {
-            deadPlayers++;
         }
 
         if(deadPlayers == 3)
         {
-            Destroy(playerStatsList[playerId].gameObject);
-            
             state = BattleState.LOST;
             EndBattle();
         }

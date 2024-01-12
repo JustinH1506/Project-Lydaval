@@ -1484,6 +1484,10 @@ MonoBehaviour:
   - {fileID: 1140909797}
   - {fileID: 1048525195}
   - {fileID: 690660929}
+  playerHpList:
+  - {fileID: 1746277208}
+  - {fileID: 1942394477}
+  - {fileID: 1942862205}
 --- !u!1 &462086626
 GameObject:
   m_ObjectHideFlags: 0
