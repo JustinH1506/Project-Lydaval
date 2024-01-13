@@ -103,7 +103,7 @@ MonoBehaviour:
     maxHealth: 15
     currentHealth: 15
     speed: 4
-    attack: 100
+    attack: 5
     defense: 5
     level: 1
     xp: 0

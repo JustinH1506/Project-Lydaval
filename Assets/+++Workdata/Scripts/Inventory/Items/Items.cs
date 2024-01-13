@@ -9,24 +9,21 @@ public enum ItemType
 }
 public class Items : MonoBehaviour
 {
-   private Items item;
-
-   private Inventory _inventory;
-   
-   public string newName;
-
-   public ItemType itemType;
-
-   public int healAmount, atk, def;
-
-   public int amount;
-
-   public void Awake()
+   [System.Serializable]
+   public class Data
    {
-      item = GetComponent<Items>();
+      public string newName;
 
-      _inventory = GameObject.Find("---InventoryManager").GetComponent<Inventory>();
+      public ItemType itemType;
+
+      public int healAmount, atk, def;
+
+      public int amount;
    }
+
+   [SerializeField] private Inventory inventory;
+
+   public Data data;
 
    public void OnTriggerEnter2D(Collider2D other)
    {
@@ -36,12 +33,12 @@ public class Items : MonoBehaviour
       }
    }
 
-   public IEnumerator WaitForBeforeDestruction()
+   private IEnumerator WaitForBeforeDestruction()
    {
-      _inventory.AddItemToList(item);
-
+      inventory.AddItemToList(data);
+      
       yield return null;
       
-      Destroy(gameObject);
+      gameObject.SetActive(false);
    }
 }

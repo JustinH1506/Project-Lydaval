@@ -1,44 +1,57 @@
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class Inventory : MonoBehaviour
-{ 
-    public static Inventory instance { get; private set; }
+{
+    [System.Serializable]
+    public class Data
+    {
+        public List<Items.Data> itemListData, equipmentList;
+    }
 
-    public List<Items> itemList, equipmentList;
+    public Data data;
 
     [SerializeField] private InventoryEntry inventoryEntry;
 
     [SerializeField] private GameObject entryPrefab;
 
-    [SerializeField] private Transform entrySpawnPosition, entrySpawnPosition2;
+    [SerializeField] private List<Transform> entrySpawnPositionList;
     
-    private void Awake()
+    public void AddItemToList(Items.Data item)
     {
-        if (instance != null)
+        for (int i = 0; i < data.itemListData.Count; i++)
         {
-            Destroy(gameObject);
+            if(data.itemListData[i].newName == item.newName)
+            {
+                data.itemListData[i].amount += item.amount;
+
+                inventoryEntry.Initialize(data.itemListData[i]);
+
+                GameStateManager.instance.data.inventoryData = data;
+                
+                break;
+            }
+            
+            if (data.itemListData[i].newName == "")
+            {
+                Instantiate(entryPrefab, entrySpawnPositionList[i]);
+
+                data.itemListData[i] = item;
+                
+                inventoryEntry.Initialize(item);
+                
+                GameStateManager.instance.data.inventoryData = data;
+
+                break;
+            }
         }
-        instance = this;
-        
-        DontDestroyOnLoad(this);
     }
-
-    public void AddItemToList(Items item)
+    
+    public void AddEquipmentToList(Items.Data item)
     {
-        itemList.Add(item);
-
-        if(itemList.Count == 1)
-            Instantiate(entryPrefab, entrySpawnPosition);
-        else
-            Instantiate(entryPrefab, entrySpawnPosition2);
-        
-        inventoryEntry.Initialize(item);
-    }
-
-    public void AddEquipmentToList(Items item)
-    {
-        equipmentList.Add(item);
+        data.equipmentList.Add(item);
         
         inventoryEntry.Initialize(item);
     }
