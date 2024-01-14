@@ -6,15 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="60fe24dc-a470-438e-9d29-fb3fa2e8b3cf" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Lydaval/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Lydaval/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Prefabs/Characters/Enemys/Battle/Boar.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Prefabs/Characters/Enemys/Battle/Boar.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Prefabs/Characters/Enemys/Battle/Enemy 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Prefabs/Characters/Enemys/Battle/Enemy 1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Prefabs/Characters/Enemys/Battle/Enemy 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Prefabs/Characters/Enemys/Battle/Enemy 2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Prefabs/Characters/Enemys/Battle/Enemy 3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Prefabs/Characters/Enemys/Battle/Enemy 3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Prefabs/Inventory/Items/ItemEntry.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Prefabs/Inventory/Items/ItemEntry.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Scenes/Vertical Slices/Ballte VS.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Scenes/Vertical Slices/Ballte VS.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Scenes/Vertical Slices/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Scenes/Vertical Slices/MainMenu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Scenes/Vertical Slices/VS.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Scenes/Vertical Slices/VS.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Inventory/Items/InventoryEntry.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Inventory/Items/InventoryEntry.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Inventory/Items/Items.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Inventory/Items/Items.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Managers/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Managers/Inventory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/SaveAndLoadSystem/GameData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/SaveAndLoadSystem/GameData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/SaveAndLoadSystem/InGameButtons.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/SaveAndLoadSystem/InGameButtons.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" afterDir="false" />
     </list>
@@ -115,10 +114,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="15144">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="15144" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -195,7 +194,9 @@
       <workItem from="1705001965559" duration="2178000" />
       <workItem from="1705051840751" duration="7802000" />
       <workItem from="1705152204704" duration="4637000" />
-      <workItem from="1705177306602" duration="713000" />
+      <workItem from="1705177306602" duration="2759000" />
+      <workItem from="1705227936316" duration="3992000" />
+      <workItem from="1705237443207" duration="4060000" />
     </task>
     <servers />
   </component>

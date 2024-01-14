@@ -14,6 +14,8 @@ public class InGameButtons : MonoBehaviour
     {
         Time.timeScale = 1;
         
+        Destroy(GameStateManager.instance.gameObject);
+        
         SceneManager.LoadScene(0);
     }
 

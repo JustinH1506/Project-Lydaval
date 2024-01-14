@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 
@@ -5,10 +6,10 @@ public class InventoryEntry : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI newName, amount;
 
-    public void Initialize(Items.Data item)
+    public void Initialize(Items.Data itemData)
     {
-        newName.text = item.newName;
+        newName.text = itemData.newName;
         
-        amount.text = item.amount + "x";
+        amount.text = itemData.amount + "x";
     }
 }
