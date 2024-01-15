@@ -116,7 +116,18 @@ public class Inventory : MonoBehaviour
             {
                 GameStateManager.instance.data.heroStatData.currentHealth += data.itemListData[i].healAmount;
 
-                data.itemListData[i].amount--;
+                Stats.Data statsData = GameStateManager.instance.data.heroStatData;
+
+                
+                if(statsData.currentHealth < statsData.maxHealth)
+                {
+                    data.itemListData[i].amount--;
+
+                    if (statsData.currentHealth > statsData.maxHealth)
+                    {
+                        statsData.currentHealth = statsData.maxHealth;
+                    }
+                }
 
                 if(data.itemListData[i].amount <= 0)
                 {

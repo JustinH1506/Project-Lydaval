@@ -37,17 +37,13 @@ public class Enemy : MonoBehaviour
             
             if(data.isDead)
                 gameObject.SetActive(false);
-                
         }
         else
         {
             GameStateManager.instance.data.SpawnEnemy(uniqueGuid, data);
             data.position = transform.position;
         }
-    }
-
-    private void LateUpdate()
-    {
+        
         data.position = transform.position;
     }
 
