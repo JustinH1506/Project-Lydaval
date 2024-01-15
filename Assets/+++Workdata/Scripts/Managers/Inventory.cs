@@ -92,13 +92,17 @@ public class Inventory : MonoBehaviour
     {
         if (characterSelect != null)
         { 
+            
             for (int i = 0; i < inventoryEntryList.Count; i++)
             {
-                if(inventoryEntryList[i].selected)
+                if(inventoryEntryList[i] != null)
                 {
-                    inventoryEntryList[i].selected = false;
-                    
-                    break;
+                    if (inventoryEntryList[i].selected)
+                    {
+                        inventoryEntryList[i].selected = false;
+
+                        break;
+                    }
                 }
             }
         }

@@ -35,13 +35,17 @@ public class InventoryEntry : MonoBehaviour
 
     public void Select()
     {
-        if (!selected)
+        if(selected)
+        {
+            selected = false;
+            
+            _inventory.LookForSelected();
+        }
+        else if(!selected)
         {
             _inventory.LookForSelected();
             
             selected = true;
         }
-        else 
-            selected = false;
     }
 }
