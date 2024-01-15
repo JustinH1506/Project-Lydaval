@@ -50,6 +50,7 @@
      <Compile Include="Assets\+++Workdata\Scripts\Audio\FmodEvents.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\SaveAndLoadSystem\SaveManagment\SaveableVector3.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Managers\BattleManager.cs" />
+     <Compile Include="Assets\+++Workdata\Scripts\Inventory\Items\SelectCharacter.cs" />
      <Compile Include="Assets\LevelTest.cs" />
      <Compile Include="Assets\Ink\Demos\Basic Demo\Scripts\QuitGameOnKeypress.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Enemy\Enemy.cs" />
@@ -57,6 +58,7 @@
      <Compile Include="Assets\+++Workdata\Scripts\SaveAndLoadSystem\SaveManagment\SaveManager.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Player\PlayerController.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Unused\PlayerMovement.cs" />
+     <Compile Include="Assets\+++Workdata\Scripts\Player\PlayerAnimator.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Other\MenuControllerMap.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Combat\Stats.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Combat\BattleSystem.cs" />
@@ -146,8 +148,10 @@
      <Folder Include="Assets\+++Workdata\Scripts\Combat" />
      <Folder Include="Library\PackageCache\com.unity.2d.animation@9.0.3\Tests" />
      <Folder Include="Library\PackageCache\com.unity.nuget.newtonsoft-json@3.2.1\Runtime\AOT" />
+     <None Include="Assets\+++Workdata\Assets\Dialogues\Olera_MainCharacter_AfterVillageAttack_Dialogue.json" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
      <Folder Include="Assets\TextMesh Pro\Resources" />
+     <None Include="Assets\+++Workdata\Assets\Dialogues\Olera_MainCharacter_Dialogue.json" />
      <Folder Include="Library\PackageCache\com.unity.modules.screencapture@1.0.0" />
      <None Include="Library\PackageCache\com.unity.timeline@1.7.5\ValidationExceptions.json" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.7\package.json" />
@@ -170,6 +174,7 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <Folder Include="Library\PackageCache\com.unity.feature.2d@2.0.0" />
      <Folder Include="Library\PackageCache\com.unity.modules.imageconversion@1.0.0" />
+     <Folder Include="Assets\+++Workdata\Assets\Sprites\Player\OverWorld\Animation" />
      <Folder Include="Library\PackageCache\com.unity.modules.terrainphysics@1.0.0" />
      <None Include="Library\PackageCache\com.unity.modules.imageconversion@1.0.0\package.json" />
      <Folder Include="Assets\+++Workdata\Prefabs\Characters" />
@@ -203,6 +208,7 @@
      <Folder Include="Library\PackageCache\com.unity.inputsystem@1.6.3" />
      <Folder Include="Library\PackageCache\com.unity.render-pipelines.universal@14.0.8" />
      <None Include="Library\PackageCache\com.unity.modules.particlesystem@1.0.0\package.json" />
+     <None Include="Assets\+++Workdata\Assets\Dialogues\MainCharacter_Reon_Dialogue.json" />
      <Folder Include="Library\PackageCache\com.unity.modules.wind@1.0.0" />
      <Folder Include="Assets\+++Workdata\Scripts\Inventory" />
      <Folder Include="Library\PackageCache\com.unity.shadergraph@14.0.8" />
@@ -232,6 +238,7 @@
      <Folder Include="Library\PackageCache\com.unity.2d.sprite@1.0.0" />
      <Folder Include="Library\PackageCache\com.unity.modules.tilemap@1.0.0" />
      <Folder Include="Assets\+++Workdata\Assets" />
+     <Folder Include="Assets\+++Workdata\Assets\Sprites\Player\OverWorld" />
      <Folder Include="Assets\Ink\Demos\Basic Demo\Ink" />
      <Folder Include="Library\PackageCache\com.unity.modules.ui@1.0.0" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />

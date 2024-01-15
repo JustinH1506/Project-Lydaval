@@ -20,6 +20,8 @@ public class PlayerMove : MonoBehaviour
     private float inputX;
     
     private float inputY;
+
+    private float walkDirectionX, walkDirectionY;
     
     public int moveSpeed;
     
@@ -100,6 +102,11 @@ public class PlayerMove : MonoBehaviour
     private void FixedUpdate()
     {
         rb.velocity = new Vector2(inputX * moveSpeed, inputY * moveSpeed);
+
+        if (rb.velocity.x != 0 || rb.velocity.y != 0)
+        {
+            
+        }
     }
 
     private void LateUpdate()

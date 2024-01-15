@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem.HID;
 using UnityEngine.UIElements;
+using Button = UnityEngine.UI.Button;
 
 public class Inventory : MonoBehaviour
 {
@@ -21,6 +22,8 @@ public class Inventory : MonoBehaviour
     
     [SerializeField] private List<InventoryEntry> inventoryEntryList;
 
+    public SelectCharacter characterSelect;
+
     private void Start()
     {
         SpawnAfterLoading();
@@ -35,6 +38,8 @@ public class Inventory : MonoBehaviour
                 data.itemListData[i].amount += item.amount;
 
                 inventoryEntryList[i].Initialize(data.itemListData[i]);
+                
+                inventoryEntryList[i].GetComponent<Button>().interactable = true;
 
                 GameStateManager.instance.data.inventoryData = data;
                 
@@ -73,12 +78,88 @@ public class Inventory : MonoBehaviour
             { 
                 if(data.itemListData[i].newName != "")
                 {
-                    inventoryEntryList[i] = inventoryEntry;
+                    GameObject spawnedEntry = Instantiate(entryPrefab, entrySpawnPositionList[i]);
+
+                    inventoryEntryList[i] = spawnedEntry.GetComponent<InventoryEntry>();
                     
-                    inventoryEntry.Initialize(data.itemListData[i]);
-                    
-                    Instantiate(entryPrefab, entrySpawnPositionList[i]);
+                    inventoryEntryList[i].Initialize(data.itemListData[i]);
                 }
+            }
+        }
+    }
+
+    public void LookForSelected()
+    {
+        if (characterSelect != null)
+        { 
+            for (int i = 0; i < inventoryEntryList.Count; i++)
+            {
+                if(inventoryEntryList[i].selected)
+                {
+                    inventoryEntryList[i].selected = false;
+                    
+                    break;
+                }
+            }
+        }
+    }
+
+    public void HealPlayer()
+    {
+        for (int i = 0; i < inventoryEntryList.Count; i++)
+        {
+            if (inventoryEntryList[i].selected && characterSelect.characterType == SelectCharacter.CharacterType.Hero)
+            {
+                GameStateManager.instance.data.heroStatData.currentHealth += data.itemListData[i].healAmount;
+
+                data.itemListData[i].amount--;
+
+                if(data.itemListData[i].amount <= 0)
+                {
+                    inventoryEntryList[i].selected = false;
+                    
+                    inventoryEntryList[i].GetComponent<Button>().interactable = false;
+                }
+                
+                inventoryEntryList[i].Initialize(data.itemListData[i]);
+
+                break;
+            }
+            
+            if (inventoryEntryList[i].selected && characterSelect.characterType == SelectCharacter.CharacterType.Healer)
+            {
+                GameStateManager.instance.data.healerStatData.currentHealth += data.itemListData[i].healAmount;
+
+                data.itemListData[i].amount--;
+                
+                if(data.itemListData[i].amount <= 0)
+                {
+                    inventoryEntryList[i].selected = false;
+                    
+                    inventoryEntryList[i].GetComponent<Button>().interactable = false;
+                }
+                
+                inventoryEntryList[i].Initialize(data.itemListData[i]);
+
+                break;
+            }
+            
+            if (inventoryEntryList[i].selected && characterSelect.characterType == SelectCharacter.CharacterType.Tank)
+            {
+                GameStateManager.instance.data.tankStatData.currentHealth += data.itemListData[i].healAmount;
+
+                data.itemListData[i].amount--;
+
+                if(data.itemListData[i].amount <= 0)
+                {
+                    inventoryEntryList[i].selected = false;
+                    
+                    inventoryEntryList[i].GetComponent<Button>().interactable = false;
+                }
+                
+                inventoryEntryList[i].Initialize(data.itemListData[i]);
+                
+                break;
             }
         }
     }
