@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 51766a139bfe1444783c180a5463ce16
+guid: 52887c0507d619a4bb67e494baa2784b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -21,7 +21,7 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
     flipGreenChannel: 0
-  isReadable: 1
+  isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Ui_InGame_Menu_Tab_0
+      name: Ui_InGame_Menu_Inventory_BoxSelected_Options_-_EXAMPLE_-_Copy_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 291
-        height: 69
+        x: 863
+        y: 148
+        width: 2115
+        height: 1738
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 50a9993e19671154f968d128a112c5ca
-      internalID: -401423399
+      spriteID: 629f555db3cb1bb4e9e8be7a4b335505
+      internalID: 1855858615
       vertices: []
       indices: 
       edges: []
@@ -141,7 +141,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Ui_InGame_Menu_Tab_0: -401423399
+      Ui_InGame_Menu_Inventory_BoxSelected_Options_-_EXAMPLE_-_Copy_0: 1855858615
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

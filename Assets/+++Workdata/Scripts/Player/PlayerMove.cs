@@ -24,6 +24,8 @@ public class PlayerMove : MonoBehaviour
     private float walkDirectionX, walkDirectionY;
     
     public int moveSpeed;
+
+    [SerializeField] private PlayerAnimator playerAnimator;
     
     #endregion
 
@@ -39,9 +41,7 @@ public class PlayerMove : MonoBehaviour
     Rigidbody2D rb;
 
     SpriteRenderer sr;
-
-    Animator anim;
-
+    
     #endregion
 
     #region Methods
@@ -56,7 +56,7 @@ public class PlayerMove : MonoBehaviour
 
         sr = GetComponent<SpriteRenderer>();
 
-        anim = GetComponent<Animator>();
+        playerAnimator = GetComponentInChildren<PlayerAnimator>();
 
         playerController = new PlayerController();
     }
@@ -102,10 +102,15 @@ public class PlayerMove : MonoBehaviour
     private void FixedUpdate()
     {
         rb.velocity = new Vector2(inputX * moveSpeed, inputY * moveSpeed);
-
+        
         if (rb.velocity.x != 0 || rb.velocity.y != 0)
         {
-            
+            playerAnimator.SetRun();
+            playerAnimator.SetWalkDirection(rb.velocity);
+        }
+        else
+        {
+            playerAnimator.SetRunFalse();
         }
     }
 

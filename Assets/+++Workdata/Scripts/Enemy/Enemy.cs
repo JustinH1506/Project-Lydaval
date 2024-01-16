@@ -1,4 +1,6 @@
+using System;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
 
 public enum EnemyType
@@ -25,6 +27,15 @@ public class Enemy : MonoBehaviour
     
     public EnemyType enemyType;
 
+    [SerializeField] private GameObject player;
+
+    private SpriteRenderer sr;
+
+    private void Awake()
+    {
+        sr = GetComponent<SpriteRenderer>();
+    }
+
     private void Start()
     {
         Data loadedData = GameStateManager.instance.data.GetEnemyPosition(uniqueGuid);
@@ -45,6 +56,16 @@ public class Enemy : MonoBehaviour
         }
         
         data.position = transform.position;
+    }
+
+    private void Update()
+    {
+        if (transform.position.y < player.transform.position.y)
+            sr.sortingOrder = 10;
+        else
+        {
+            sr.sortingOrder = -10;
+        }
     }
 
     private void OnValidate()

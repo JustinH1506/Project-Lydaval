@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem.HID;
 using UnityEngine.UIElements;
@@ -9,7 +10,7 @@ public class Inventory : MonoBehaviour
     [System.Serializable]
     public class Data
     {
-        public List<Items.Data> itemListData;
+        public List<Items.Data> itemListData, setItemActiveList;
     }
 
     public Data data;
@@ -22,9 +23,11 @@ public class Inventory : MonoBehaviour
     
     [SerializeField] private List<InventoryEntry> inventoryEntryList;
 
+    [SerializeField] private List<CharacterPartyStats> partyStatsList;
+
     public SelectCharacter characterSelect;
 
-    private void Start()
+    private void Awake()
     {
         SpawnAfterLoading();
     }
@@ -117,7 +120,6 @@ public class Inventory : MonoBehaviour
                 GameStateManager.instance.data.heroStatData.currentHealth += data.itemListData[i].healAmount;
 
                 Stats.Data statsData = GameStateManager.instance.data.heroStatData;
-
                 
                 if(statsData.currentHealth < statsData.maxHealth)
                 {
@@ -126,7 +128,16 @@ public class Inventory : MonoBehaviour
                     if (statsData.currentHealth > statsData.maxHealth)
                     {
                         statsData.currentHealth = statsData.maxHealth;
+                        
+                        partyStatsList[i].ChangeStats();
                     }
+                }
+                
+                if (statsData.currentHealth > statsData.maxHealth)
+                {
+                    statsData.currentHealth = statsData.maxHealth;
+                    
+                    partyStatsList[i].ChangeStats();
                 }
 
                 if(data.itemListData[i].amount <= 0)
@@ -145,7 +156,26 @@ public class Inventory : MonoBehaviour
             {
                 GameStateManager.instance.data.healerStatData.currentHealth += data.itemListData[i].healAmount;
 
-                data.itemListData[i].amount--;
+                Stats.Data statsData = GameStateManager.instance.data.healerStatData;
+                
+                if(statsData.currentHealth < statsData.maxHealth)
+                {
+                    data.itemListData[i].amount--;
+
+                    if (statsData.currentHealth > statsData.maxHealth)
+                    {
+                        statsData.currentHealth = statsData.maxHealth;
+                        
+                        partyStatsList[i].ChangeStats();
+                    }
+                }
+                
+                if (statsData.currentHealth > statsData.maxHealth)
+                {
+                    statsData.currentHealth = statsData.maxHealth;
+                    
+                    partyStatsList[i].ChangeStats();
+                }
                 
                 if(data.itemListData[i].amount <= 0)
                 {
@@ -163,7 +193,26 @@ public class Inventory : MonoBehaviour
             {
                 GameStateManager.instance.data.tankStatData.currentHealth += data.itemListData[i].healAmount;
 
-                data.itemListData[i].amount--;
+                Stats.Data statsData = GameStateManager.instance.data.tankStatData;
+                
+                if(statsData.currentHealth < statsData.maxHealth)
+                {
+                    data.itemListData[i].amount--;
+
+                    if (statsData.currentHealth > statsData.maxHealth)
+                    {
+                        statsData.currentHealth = statsData.maxHealth;
+                        
+                        partyStatsList[i].ChangeStats();
+                    }
+                }
+                
+                if (statsData.currentHealth > statsData.maxHealth)
+                {
+                    statsData.currentHealth = statsData.maxHealth;
+                    
+                    partyStatsList[i].ChangeStats();
+                }
 
                 if(data.itemListData[i].amount <= 0)
                 {

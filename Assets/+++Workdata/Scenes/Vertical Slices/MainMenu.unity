@@ -1191,23 +1191,18 @@ MonoBehaviour:
     inventoryData:
       itemListData:
       - newName: 
-        itemType: 0
         healAmount: 0
-        atk: 0
-        def: 0
         amount: 0
+        playerGotIt: 0
       - newName: 
-        itemType: 0
         healAmount: 0
-        atk: 0
-        def: 0
         amount: 0
+        playerGotIt: 0
       - newName: 
-        itemType: 0
         healAmount: 0
-        atk: 0
-        def: 0
         amount: 0
+        playerGotIt: 0
+      setItemActiveList: []
   heroStats: {fileID: 4216729953877467935, guid: 45d10a4c1a55ab74399cd668a20c53a8,
     type: 3}
   healerStats: {fileID: 4216729953877467935, guid: 520deccb4dbd1734bb203e0b9351c1e7,

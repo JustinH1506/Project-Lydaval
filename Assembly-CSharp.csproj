@@ -51,6 +51,7 @@
      <Compile Include="Assets\+++Workdata\Scripts\SaveAndLoadSystem\SaveManagment\SaveableVector3.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Managers\BattleManager.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Inventory\Items\SelectCharacter.cs" />
+     <Compile Include="Assets\+++Workdata\Scripts\UI\UiButtons.cs" />
      <Compile Include="Assets\LevelTest.cs" />
      <Compile Include="Assets\Ink\Demos\Basic Demo\Scripts\QuitGameOnKeypress.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Enemy\Enemy.cs" />
@@ -58,6 +59,7 @@
      <Compile Include="Assets\+++Workdata\Scripts\SaveAndLoadSystem\SaveManagment\SaveManager.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Player\PlayerController.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Unused\PlayerMovement.cs" />
+     <Compile Include="Assets\+++Workdata\Scripts\UI\CharacterPartyStats.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Player\PlayerAnimator.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Other\MenuControllerMap.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Combat\Stats.cs" />
@@ -78,12 +80,14 @@
      <Compile Include="Assets\+++Workdata\Scripts\SaveAndLoadSystem\GameStateManager.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Combat\TargetingSystem.cs" />
      <Folder Include="Assets" />
+     <Folder Include="Assets\+++Workdata\Assets\Ui\UI_Elements\UI Elements\UI_Combat" />
      <Folder Include="Assets\+++Workdata\Prefabs\Characters\Enemys" />
      <Folder Include="Assets\+++Workdata\Scenes" />
      <None Include="Library\PackageCache\com.unity.modules.subsystems@1.0.0\package.json" />
      <None Include="Library\PackageCache\com.unity.render-pipelines.universal@14.0.8\package.json" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Library\PackageCache\com.unity.modules.jsonserialize@1.0.0\package.json" />
+     <Folder Include="Assets\+++Workdata\Assets\Ui\UI_Elements\UI Elements\UI_Ingame_Menu\UI_System\UI_Options" />
      <Folder Include="Library\PackageCache\com.unity.test-framework@1.1.33" />
      <Folder Include="Library\PackageCache\com.unity.searcher@4.9.2" />
      <None Include="Library\PackageCache\com.unity.modules.screencapture@1.0.0\package.json" />
@@ -141,6 +145,7 @@
      <None Include="Library\PackageCache\com.unity.ide.visualstudio@2.0.18\ValidationConfig.json" />
      <Folder Include="Library\PackageCache\com.unity.ext.nunit@1.0.6\net35" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
+     <Folder Include="Assets\+++Workdata\Assets\Ui\UI_Elements\UI Elements\UI_Ingame_Menu\UI_System" />
      <Folder Include="Assets\+++Workdata\Assets\Tilemap" />
      <Folder Include="Assets\+++Workdata\Prefabs\Inventory" />
      <None Include="Library\PackageCache\com.unity.modules.terrainphysics@1.0.0\package.json" />
@@ -214,6 +219,7 @@
      <Folder Include="Library\PackageCache\com.unity.shadergraph@14.0.8" />
      <None Include="Library\PackageCache\com.unity.modules.physics2d@1.0.0\package.json" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
+     <Folder Include="Assets\+++Workdata\Assets\Ui\UI_Elements\UI Elements\UI_Overworld" />
      <None Include="Library\PackageCache\com.unity.modules.vr@1.0.0\package.json" />
      <Folder Include="Library\PackageCache\com.unity.render-pipelines.universal@14.0.8\Textures\BlueNoise64\L" />
      <Folder Include="Library\PackageCache\com.unity.modules.uielements@1.0.0" />
@@ -243,6 +249,7 @@
      <Folder Include="Library\PackageCache\com.unity.modules.ui@1.0.0" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
      <None Include="Library\PackageCache\com.unity.cinemachine@2.9.7\license.txt" />
+     <Folder Include="Assets\+++Workdata\Assets\Ui\UI_Elements\UI Elements\UI_Ingame_Menu\UI_System\UI_Save_load_Game" />
      <Folder Include="Library\PackageCache\com.unity.render-pipelines.universal@14.0.8\Textures" />
      <Folder Include="Library\PackageCache\com.unity.mathematics@1.2.6" />
      <Folder Include="Library\PackageCache\com.unity.2d.psdimporter@8.0.2" />
@@ -268,22 +275,27 @@
      <None Include="Assets\+++Workdata\Assets\Dialogues\Test.json" />
      <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6" />
      <Folder Include="Library\PackageCache\com.unity.ide.rider@3.0.25" />
+     <Folder Include="Assets\+++Workdata\Assets\Ui\UI_Elements\UI Elements\UI_Overworld\Quest_Tracker" />
      <None Include="Library\PackageCache\com.unity.modules.unitywebrequestwww@1.0.0\package.json" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
      <Folder Include="Library\PackageCache\com.unity.render-pipelines.core@14.0.8" />
      <Folder Include="Assets\Ink" />
      <Folder Include="Library\PackageCache\com.unity.2d.tilemap@1.0.0\Tests" />
+     <Folder Include="Assets\+++Workdata\Assets\Ui\UI_Elements" />
      <Folder Include="Assets\+++Workdata\Scripts\Audio" />
      <None Include="Library\PackageCache\com.unity.modules.unitywebrequestaudio@1.0.0\package.json" />
      <Folder Include="Library\PackageCache\com.unity.searcher@4.9.2\Tests" />
      <None Include="Library\PackageCache\com.unity.feature.2d@2.0.0\package.json" />
+     <Folder Include="Assets\+++Workdata\Assets\Ui\UI_Elements\UI Elements\UI_Overworld\Dialogue" />
      <Folder Include="Assets\+++Workdata\Scripts\Managers" />
      <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Editor Resources\Shaders\TMP_SDF_SSD.cginc" />
      <Folder Include="Library\PackageCache\com.unity.2d.animation@9.0.3" />
      <Folder Include="Library\PackageCache\com.unity.render-pipelines.universal@14.0.8\Textures\BlueNoise16" />
      <Folder Include="Assets\+++Workdata\Scripts\SaveAndLoadSystem\SaveManagment" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.7\ValidationConfig.json" />
+     <Folder Include="Assets\+++Workdata\Scripts\UI" />
      <Folder Include="Assets\+++Workdata" />
+     <Folder Include="Assets\+++Workdata\Assets\Ui\UI_Elements\UI Elements\UI_Ingame_Menu\UI_Inventory" />
      <Folder Include="Library\PackageCache\com.unity.modules.vehicles@1.0.0" />
      <None Include="Library\PackageCache\com.unity.modules.xr@1.0.0\package.json" />
      <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Tests" />
@@ -311,6 +323,7 @@
      <Folder Include="Library\PackageCache\com.unity.ide.visualstudio@2.0.18" />
      <None Include="Library\PackageCache\com.unity.collections@1.2.4\package.json" />
      <None Include="Library\PackageCache\com.unity.modules.androidjni@1.0.0\package.json" />
+     <Folder Include="Assets\+++Workdata\Assets\Ui\UI_Elements\UI Elements\UI_Ingame_Menu" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
      <Folder Include="Library\PackageCache\com.unity.modules.video@1.0.0" />
      <Folder Include="Library\PackageCache\com.unity.modules.ai@1.0.0" />
@@ -324,7 +337,6 @@
      <None Include="Library\PackageCache\com.unity.2d.spriteshape@9.0.2\package.json" />
      <None Include="Library\PackageCache\com.unity.mathematics@1.2.6\ValidationExceptions.json" />
      <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Package Resources" />
-     <Folder Include="Assets\+++Workdata\Scripts\XpSystem" />
      <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
      <Folder Include="Library\PackageCache\com.unity.modules.terrain@1.0.0" />
      <Folder Include="Library\PackageCache\com.unity.2d.tilemap.extras@3.1.1\Tests" />
@@ -358,6 +370,8 @@
      <None Include="Library\PackageCache\com.unity.modules.ui@1.0.0\package.json" />
      <Folder Include="Library\PackageCache\com.unity.2d.spriteshape@9.0.2\Tests" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
+     <Folder Include="Assets\+++Workdata\Assets\Ui\UI_Elements\UI Elements" />
+     <Folder Include="Assets\+++Workdata\Assets\Ui\UI_Elements\UI Elements\UI_Ingame_Menu\UI_QuestLog" />
      <Folder Include="Library\PackageCache\com.unity.2d.psdimporter@8.0.2\Tests" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.8f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>

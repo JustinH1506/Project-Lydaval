@@ -13,6 +13,8 @@ public class InventoryEntry : MonoBehaviour
 
     [SerializeField] private Inventory _inventory;
 
+    [SerializeField] private GameObject apple, bread;
+
     private void Awake()
     {
         _inventory = GameObject.Find("Inventory").GetComponent<Inventory>();
@@ -31,6 +33,20 @@ public class InventoryEntry : MonoBehaviour
         newName.text = itemData.newName;
         
         amount.text = itemData.amount + "x";
+        
+        if(itemData.newName == ("Apple"))
+        {
+            apple.SetActive(true);
+            
+            bread.SetActive(false);
+        }
+        
+        if(itemData.newName == ("Bread"))
+        {
+            bread.SetActive(true);
+            
+            apple.SetActive(false);
+        }
     }
 
     public void Select()

@@ -51,6 +51,7 @@
      <Compile Include="Assets\+++Workdata\Scripts\SaveAndLoadSystem\SaveManagment\SaveableVector3.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Managers\BattleManager.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Inventory\Items\SelectCharacter.cs" />
+     <Compile Include="Assets\+++Workdata\Scripts\UI\UiButtons.cs" />
      <Compile Include="Assets\LevelTest.cs" />
      <Compile Include="Assets\Ink\Demos\Basic Demo\Scripts\QuitGameOnKeypress.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Enemy\Enemy.cs" />
@@ -58,6 +59,7 @@
      <Compile Include="Assets\+++Workdata\Scripts\SaveAndLoadSystem\SaveManagment\SaveManager.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Player\PlayerController.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Unused\PlayerMovement.cs" />
+     <Compile Include="Assets\+++Workdata\Scripts\UI\CharacterPartyStats.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Player\PlayerAnimator.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Other\MenuControllerMap.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Combat\Stats.cs" />

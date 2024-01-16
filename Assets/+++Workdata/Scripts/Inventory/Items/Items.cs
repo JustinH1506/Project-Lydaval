@@ -1,83 +1,69 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-public enum ItemType
-{
-   HealthItem,
-   Weapon,
-   Armor,
-}
 public class Items : MonoBehaviour
 {
-   [SerializeField] private string uniqueGuid;
-   
    [System.Serializable]
    public class Data
    {
       public string newName;
 
-      public ItemType itemType;
-
-      public int healAmount, atk, def;
+      public int healAmount;
 
       public int amount;
-   }
-
-   [System.Serializable]
-   public class PositionData
-   {
-      public SaveableVector3 position;
+      
       public bool playerGotIt;
    }
 
    [SerializeField] private Inventory inventory;
 
+   [SerializeField] private GameObject player;
+
+   private SpriteRenderer sr;
+
    public Data data;
 
-   public PositionData positionData;
+   private void Awake()
+   {
+      sr = GetComponent<SpriteRenderer>();
+   }
 
    private void Start()
    {
-      PositionData loadedData = GameStateManager.instance.data.GetItemPosition(uniqueGuid);
-
-      if (loadedData != null)
+      for (int i = 0; i < inventory.data.setItemActiveList.Count; i++)
       {
-         positionData = loadedData;
-
-         transform.position = positionData.position;
-            
-         if(positionData.playerGotIt)
-            gameObject.SetActive(false);
+         if (data.newName == inventory.data.setItemActiveList[i].newName)
+         {
+            data = inventory.data.setItemActiveList[i];
+         }
       }
-      else
-      {
-         GameStateManager.instance.data.SpawnItem(uniqueGuid, positionData);
-         positionData.position = transform.position;
-      }
-        
-      positionData.position = transform.position;
+      
+      if (data.playerGotIt)
+         gameObject.SetActive(false);
    }
 
-   private void OnValidate()
+   public void Update()
    {
-      if (string.IsNullOrEmpty(gameObject.scene.name))
+      if (transform.position.y < player.transform.position.y)
+         sr.sortingOrder = 10;
+      else
       {
-         uniqueGuid = "";
-      }
-      else if (string.IsNullOrEmpty(uniqueGuid))
-      {
-         uniqueGuid = System.Guid.NewGuid().ToString();
+         sr.sortingOrder = -10;
       }
    }
    
+
    public void OnTriggerEnter2D(Collider2D other)
    {
       if (other.CompareTag("Player"))
       {
+         inventory.data.setItemActiveList.Add(data);
+         
          inventory.AddItemToList(data);
 
-         positionData.playerGotIt = true;
+         data.playerGotIt = true;
       
          gameObject.SetActive(false);
       }

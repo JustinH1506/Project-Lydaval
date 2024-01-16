@@ -8,7 +8,7 @@ public class MenuController : MonoBehaviour
 {
     private MenuControllerMap menuControllerMap;
 
-    [SerializeField] private GameObject pauseScreen, inventoryScreen;
+    [SerializeField] private GameObject inventoryScreen;
 
     /// <summary>
     /// menuControllerMap is a new MenuControllerMap script.
@@ -21,9 +21,6 @@ public class MenuController : MonoBehaviour
     private void OnEnable()
     {
         menuControllerMap.Enable();
-
-        menuControllerMap.Pause_Inventory.Pause.performed += PauseScreen;
-        menuControllerMap.Pause_Inventory.Pause.canceled += PauseScreen;
         
         menuControllerMap.Pause_Inventory.Inventroy.performed += InventoryScreen;
         menuControllerMap.Pause_Inventory.Inventroy.canceled += InventoryScreen;
@@ -33,30 +30,8 @@ public class MenuController : MonoBehaviour
     {
         menuControllerMap.Disable();
         
-        menuControllerMap.Pause_Inventory.Pause.performed -= PauseScreen;
-        menuControllerMap.Pause_Inventory.Pause.canceled -= PauseScreen;
-        
         menuControllerMap.Pause_Inventory.Inventroy.performed -= InventoryScreen;
         menuControllerMap.Pause_Inventory.Inventroy.canceled -= InventoryScreen;
-    }
-
-    /// <summary>
-    ///  We set the Pause screen active if the button was pressed and its not active and set it off if
-    /// the button was pressed and its active. 
-    /// </summary>
-    private void PauseScreen(InputAction.CallbackContext context)
-    {
-        if (context.performed && !pauseScreen.activeSelf)
-        {
-            pauseScreen.SetActive(true);
-            inventoryScreen.SetActive(false);
-            Time.timeScale = 0;
-        }
-        else if (context.performed)
-        {
-            pauseScreen.SetActive(false);
-            Time.timeScale = 1;
-        }
     }
     
     /// <summary>
@@ -68,7 +43,6 @@ public class MenuController : MonoBehaviour
         if (context.performed && !inventoryScreen.activeSelf)
         {
             inventoryScreen.SetActive(true);
-            pauseScreen.SetActive(false);
             Time.timeScale = 0;
         }
         else if (context.performed)
