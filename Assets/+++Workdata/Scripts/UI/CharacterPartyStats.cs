@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -17,6 +14,8 @@ public class CharacterPartyStats : MonoBehaviour
 
     public TextMeshProUGUI statsText;
 
+    const string breakLineHash = "<br>" + "<br>";
+
     public void Start()
     {
         ChangeStats();
@@ -24,37 +23,27 @@ public class CharacterPartyStats : MonoBehaviour
 
     public void ChangeStats()
     {
+        Stats.Data statData = new();
+        var data = GameStateManager.instance.data;
+
         if (_characterType == CharacterType.Hero)
-        {
-            Stats.Data statData = GameStateManager.instance.data.heroStatData;
+            statData = data.heroStatData;
 
-            statsText.text = statData.unitName + "<br>" + "<br>" + "Level: " + statData.level + "<br>" + "<br>" +
-                             statData.currentHealth + "/" + statData.maxHealth + "<br>" + "<br>" + "Attack: " +
-                             statData.attack + "<br>" + "<br>" + "Defense: " + statData.defense + "<br>" + "<br>" +
-                             "Speed: " + statData.speed + "<br>" + "<br>" + "Xp: " + statData.xp + "/" +
-                             statData.neededXp;
-        }
-        
-        if (_characterType == CharacterType.Healer)
-        {
-            Stats.Data statData = GameStateManager.instance.data.healerStatData;
+        else if (_characterType == CharacterType.Healer)
+            statData = data.healerStatData;
 
-            statsText.text = statData.unitName + "<br>" + "<br>" + "Level: " + statData.level + "<br>" + "<br>" +
-                             statData.currentHealth + "/" + statData.maxHealth + "<br>" + "<br>" + "Attack: " +
-                             statData.attack + "<br>" + "<br>" + "Defense: " + statData.defense + "<br>" + "<br>" +
-                             "Speed: " + statData.speed + "<br>" + "<br>" + "Xp: " + statData.xp + "/" +
-                             statData.neededXp;
-        }
-        
-        if (_characterType == CharacterType.Tank)
-        {
-            Stats.Data statData = GameStateManager.instance.data.tankStatData;
+        else if (_characterType == CharacterType.Tank)
+            statData = data.tankStatData;
 
-            statsText.text = statData.unitName + "<br>" + "<br>" + "Level: " + statData.level + "<br>" + "<br>" +
-                             statData.currentHealth + "/" + statData.maxHealth + "<br>" + "<br>" + "Attack: " +
-                             statData.attack + "<br>" + "<br>" + "Defense: " + statData.defense + "<br>" + "<br>" +
-                             "Speed: " + statData.speed + "<br>" + "<br>" + "Xp: " + statData.xp + "/" +
-                             statData.neededXp;
-        }
+        statsText.text = StatCollectionString(statData);
+    }
+
+    private static string StatCollectionString(Stats.Data statData)
+    {
+        return statData.unitName + breakLineHash + "Level: " + statData.level + breakLineHash + "Hp: "+
+               statData.currentHealth + "/" + statData.maxHealth + breakLineHash + "Attack: " +
+               statData.attack + breakLineHash + "Defense: " + statData.defense + breakLineHash +
+               "Speed: " + statData.speed + breakLineHash + "Xp: " + statData.xp + "/" +
+               statData.neededXp;
     }
 }

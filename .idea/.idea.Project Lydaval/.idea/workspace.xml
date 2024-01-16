@@ -5,25 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="60fe24dc-a470-438e-9d29-fb3fa2e8b3cf" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Lydaval/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Lydaval/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.Player.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.Player.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Sprites/Player/OverWorld/Animation/[Capsule] Sprite.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Sprites/Player/OverWorld/Animation/[Capsule] Sprite.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Ui/UI_Elements/UI Elements/UI_Ingame_Menu/Ui-InGame-Menu-Background.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Ui/UI_Elements/UI Elements/UI_Ingame_Menu/Ui-InGame-Menu-Background.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Ui/UI_Elements/UI Elements/UI_Ingame_Menu/Ui_InGame_Menu_Tab.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Ui/UI_Elements/UI Elements/UI_Ingame_Menu/Ui_InGame_Menu_Tab.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Ui/UI_Elements/UI Elements/UI_Ingame_Menu/Ui_InGame_Menu_TabSelected.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Ui/UI_Elements/UI Elements/UI_Ingame_Menu/Ui_InGame_Menu_TabSelected.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Prefabs/Inventory/Items/ItemEntry.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Prefabs/Inventory/Items/ItemEntry.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Sprites/Background/Gree Tile.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Sprites/Background/Gree Tile.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Sprites/Background/Gree Tile.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Sprites/Background/Gree Tile.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Sprites/Background/Red Tile.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Sprites/Background/Red Tile.psd.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Sprites/Background/Red-Tile.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Sprites/Background/Red-Tile.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Sprites/Background/Tilemap Test.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Sprites/Background/Tilemap Test.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Sprites/Background/WegTiles-Sheet.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Sprites/Background/WegTiles-Sheet.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Sprites/Player/OverWorld/Lydaval_Spritesheet_Protagonist_WalkcycleEast_DONE_11.01.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Sprites/Player/OverWorld/Lydaval_Spritesheet_Protagonist_WalkcycleEast_DONE_11.01.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Sprites/Player/OverWorld/Lydaval_Spritesheet_Protagonist_WalkcycleNorth_DONE_11.01.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Sprites/Player/OverWorld/Lydaval_Spritesheet_Protagonist_WalkcycleNorth_DONE_11.01.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Sprites/Player/OverWorld/Lydaval_Spritesheet_Protagonist_WalkcycleSouth_DONE_11.01.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Sprites/Player/OverWorld/Lydaval_Spritesheet_Protagonist_WalkcycleSouth_DONE_11.01.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Scenes/Vertical Slices/VS.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Scenes/Vertical Slices/VS.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Inventory/Items/InventoryEntry.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Inventory/Items/InventoryEntry.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Inventory/Items/Items.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Inventory/Items/Items.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Managers/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Managers/Inventory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Other/MenuController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Other/MenuController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Other/MenuControllerMap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Other/MenuControllerMap.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Other/MenuControllerMap.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Other/MenuControllerMap.inputactions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Player/PlayerAnimator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Player/PlayerAnimator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Player/PlayerMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Player/PlayerMove.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/SaveAndLoadSystem/GameData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/SaveAndLoadSystem/GameData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/XpSystem.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Enemy/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Enemy/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/UI/CharacterPartyStats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/UI/CharacterPartyStats.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" afterDir="false" />
     </list>
@@ -215,7 +214,7 @@
       <workItem from="1705305156463" duration="21847000" />
       <workItem from="1705345845784" duration="1789000" />
       <workItem from="1705351896288" duration="3909000" />
-      <workItem from="1705390939784" duration="8589000" />
+      <workItem from="1705390939784" duration="13992000" />
     </task>
     <servers />
   </component>

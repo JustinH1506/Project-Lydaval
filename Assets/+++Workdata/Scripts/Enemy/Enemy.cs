@@ -33,7 +33,7 @@ public class Enemy : MonoBehaviour
 
     private void Awake()
     {
-        sr = GetComponent<SpriteRenderer>();
+        sr = GetComponentInChildren<SpriteRenderer>();
     }
 
     private void Start()
