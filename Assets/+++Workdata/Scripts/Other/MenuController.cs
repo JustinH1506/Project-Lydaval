@@ -36,7 +36,7 @@ public class MenuController : MonoBehaviour
     
     /// <summary>
     ///  We set the Inventory screen active if the button was pressed and its not active and set it off if
-    /// the button was pressed and  its active. 
+    /// the button was pressed and its active. 
     /// </summary>
     private void InventoryScreen(InputAction.CallbackContext context)
     {

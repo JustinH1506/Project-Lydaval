@@ -40,6 +40,7 @@ public class Stats : MonoBehaviour
 
     [SerializeField] private BattleSystem battleSystem;
     [SerializeField] public Data data;
+    public Animator anim;
     
     #endregion
 
@@ -47,6 +48,8 @@ public class Stats : MonoBehaviour
 
     private void Awake()
     {
+        anim = GetComponent<Animator>();
+        
         battleSystem = GameObject.Find("Battle_System").GetComponent<BattleSystem>();
         
         data.currentHealth = data.maxHealth;

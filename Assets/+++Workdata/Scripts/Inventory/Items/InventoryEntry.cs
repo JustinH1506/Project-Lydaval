@@ -9,7 +9,7 @@ public class InventoryEntry : MonoBehaviour
 
     [SerializeField] private GameObject selectButtons;
 
-    [SerializeField] private GameObject apple, bread, itemInfo;
+    [SerializeField] private GameObject apple, bread;
 
     [SerializeField] private Inventory _inventory;
 

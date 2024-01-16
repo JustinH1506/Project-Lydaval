@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 800279964950807639}
   - component: {fileID: 3954574239168791158}
   - component: {fileID: 2957588791360323039}
+  - component: {fileID: -8114920951907417616}
   m_Layer: 15
   m_Name: Worm 3
   m_TagString: Enemy
@@ -28,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -17.45, y: 13.9, z: 0.000000014901}
-  m_LocalScale: {x: 11.87113, y: 11.87113, z: 11.87113}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -74,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d73d00366d487af408df42ca2eb88b88, type: 3}
+  m_Sprite: {fileID: -550241390, guid: 6c2de0f45a480b042bc1b9c7ed1aa8e8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -97,11 +98,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 785b9fbbf23493840a351b16bf10ebe3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitName: Worm
-  maxHealth: 20
-  currentHealth: 20
-  speed: 5
-  attack: 8
-  defense: 4
-  isEnemy: 0
   battleSystem: {fileID: 0}
+  data:
+    unitName: Worm
+    maxHealth: 30
+    currentHealth: 30
+    speed: 4
+    attack: 6
+    defense: 4
+    level: 1
+    xp: 0
+    neededXp: 0
+    enemyGiveXp: 300
+    types: 0
+--- !u!95 &-8114920951907417616
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 629729383928598970}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 69f84f6f72615dd49955d5128293104b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

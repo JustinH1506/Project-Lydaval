@@ -387,6 +387,10 @@ public class BattleSystem : MonoBehaviour
 
         playerId = Random.Range(random1, random2);
         
+        characterList[turnId].anim.SetTrigger("Attacking");
+
+        yield return new WaitForSeconds(2f);
+        
         bool isDead = playerStatsList[playerId].TakeDamage(characterList[turnId].data.attack);
 
         if (playerStatsList[playerId].data.currentHealth <= 0)

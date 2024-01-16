@@ -97,10 +97,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 785b9fbbf23493840a351b16bf10ebe3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitName: Thief
-  maxHealth: 18
-  currentHealth: 18
-  speed: 6
-  attack: 4
-  defense: 2
   battleSystem: {fileID: 0}
+  data:
+    unitName: Thief
+    maxHealth: 25
+    currentHealth: 25
+    speed: 8
+    attack: 4
+    defense: 4
+    level: 1
+    xp: 0
+    neededXp: 0
+    enemyGiveXp: 200
+    types: 0
