@@ -87,7 +87,6 @@ public class BattleSystem : MonoBehaviour
         state = BattleState.START;
         SetEnemiesToList();
         StartCoroutine(SetUpBattle());
-        Debug.Log("Working");
     }
 
     /// <summary> If the Battle state is WON ... . 

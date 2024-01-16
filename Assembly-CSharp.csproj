@@ -89,6 +89,7 @@
      <None Include="Library\PackageCache\com.unity.modules.jsonserialize@1.0.0\package.json" />
      <Folder Include="Assets\+++Workdata\Assets\Ui\UI_Elements\UI Elements\UI_Ingame_Menu\UI_System\UI_Options" />
      <Folder Include="Library\PackageCache\com.unity.test-framework@1.1.33" />
+     <Folder Include="Assets\+++Workdata\Assets\Sprites\Background\Animations" />
      <Folder Include="Library\PackageCache\com.unity.searcher@4.9.2" />
      <None Include="Library\PackageCache\com.unity.modules.screencapture@1.0.0\package.json" />
      <Folder Include="Library\PackageCache\com.unity.render-pipelines.universal@14.0.8\Tests" />
@@ -170,6 +171,7 @@
      <Folder Include="Library\PackageCache\com.unity.ext.nunit@1.0.6" />
      <Folder Include="Library\PackageCache\com.unity.render-pipelines.universal@14.0.8\Textures\FilmGrain" />
      <Folder Include="Library\PackageCache\com.unity.2d.animation@9.0.3\IK" />
+     <Folder Include="Assets\+++Workdata\Assets\Sprites\Background\Environment\Plants_And_Animals" />
      <Folder Include="Library\PackageCache\com.unity.burst@1.8.8" />
      <Folder Include="Library\PackageCache\com.unity.cinemachine@2.9.7\Tests" />
      <None Include="Library\PackageCache\com.unity.ide.visualstudio@2.0.18\package.json" />
@@ -252,6 +254,7 @@
      <Folder Include="Assets\+++Workdata\Assets\Ui\UI_Elements\UI Elements\UI_Ingame_Menu\UI_System\UI_Save_load_Game" />
      <Folder Include="Library\PackageCache\com.unity.render-pipelines.universal@14.0.8\Textures" />
      <Folder Include="Library\PackageCache\com.unity.mathematics@1.2.6" />
+     <Folder Include="Assets\+++Workdata\Assets\Sprites\Background\Tiles" />
      <Folder Include="Library\PackageCache\com.unity.2d.psdimporter@8.0.2" />
      <Folder Include="Library\PackageCache\com.unity.modules.androidjni@1.0.0" />
      <None Include="Library\PackageCache\com.unity.2d.tilemap.extras@3.1.1\package.json" />
@@ -294,6 +297,7 @@
      <Folder Include="Assets\+++Workdata\Scripts\SaveAndLoadSystem\SaveManagment" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.7\ValidationConfig.json" />
      <Folder Include="Assets\+++Workdata\Scripts\UI" />
+     <Folder Include="Assets\+++Workdata\Assets\Sprites\Background\Environment\Houses" />
      <Folder Include="Assets\+++Workdata" />
      <Folder Include="Assets\+++Workdata\Assets\Ui\UI_Elements\UI Elements\UI_Ingame_Menu\UI_Inventory" />
      <Folder Include="Library\PackageCache\com.unity.modules.vehicles@1.0.0" />
@@ -332,8 +336,10 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
      <Folder Include="Assets\+++Workdata\Prefabs\BattleStations" />
      <Folder Include="Assets\+++Workdata\Assets\Tilemap\Village_Forest_Ground" />
+     <Folder Include="Assets\+++Workdata\Assets\Tilemap\Fields" />
      <Folder Include="Library\PackageCache\com.unity.2d.tilemap@1.0.0" />
      <Folder Include="Library\PackageCache\com.unity.render-pipelines.universal@14.0.8\Textures\BlueNoise16\L" />
+     <Folder Include="Assets\+++Workdata\Assets\Sprites\Background\Environment\Fields" />
      <None Include="Library\PackageCache\com.unity.2d.spriteshape@9.0.2\package.json" />
      <None Include="Library\PackageCache\com.unity.mathematics@1.2.6\ValidationExceptions.json" />
      <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Package Resources" />
@@ -346,6 +352,7 @@
      <None Include="Library\PackageCache\com.unity.2d.tilemap.extras@3.1.1\ValidationExceptions.json" />
      <Folder Include="Assets\TextMesh Pro\Documentation" />
      <None Include="Library\PackageCache\com.unity.2d.animation@9.0.3\package.json" />
+     <Folder Include="Assets\+++Workdata\Assets\Sprites\Background\Environment" />
      <Folder Include="Assets\Ink\Extras" />
      <Folder Include="Library\PackageCache\com.unity.nuget.newtonsoft-json@3.2.1\Runtime" />
      <None Include="Library\PackageCache\com.unity.nuget.newtonsoft-json@3.2.1\Runtime\Newtonsoft.Json.xml" />

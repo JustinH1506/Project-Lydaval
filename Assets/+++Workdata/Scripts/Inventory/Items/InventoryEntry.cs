@@ -1,20 +1,24 @@
-using System;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Animations;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class InventoryEntry : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI newName, amount;
 
-    public bool selected;
-
     [SerializeField] private GameObject selectButtons;
+
+    [SerializeField] private GameObject apple, bread, itemInfo;
 
     [SerializeField] private Inventory _inventory;
 
-    [SerializeField] private GameObject apple, bread;
+    private Button item;
 
+    private BaseEventData highlighted;
+    
+    public bool selected;
+    
     private void Awake()
     {
         _inventory = GameObject.Find("Inventory").GetComponent<Inventory>();
