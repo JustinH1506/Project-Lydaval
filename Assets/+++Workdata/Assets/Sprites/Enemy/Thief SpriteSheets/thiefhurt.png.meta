@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0b01485d8a0a270478dc997516d67dde
+guid: b0e46a01ea17afd488e54710fc89117d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 20
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Ui_Combat_Party_Background_with_Icon_0
+      name: thiefhurt_0
       rect:
         serializedVersion: 2
-        x: 1344
-        y: 24
-        width: 528
-        height: 261
+        x: 0
+        y: 0
+        width: 50
+        height: 70
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,8 +124,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 125dcfe4fa8c4bb499ea0d46292e97a6
-      internalID: 1451815221
+      spriteID: 9e41316f79655aa448a9edb23ecf7bea
+      internalID: -1970048475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thiefhurt_1
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 0
+        width: 50
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6cf5fbd8e275eb4a843085a31644849
+      internalID: 1498158354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thiefhurt_2
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 0
+        width: 50
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8fd48c98b4845941bdf74c71268adf0
+      internalID: 2147361792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thiefhurt_3
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 0
+        width: 50
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7df6242106e29c345a2ccda9fcdd10ea
+      internalID: -306100883
       vertices: []
       indices: 
       edges: []
@@ -141,9 +204,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Ui_Combat_Party_Background_with_Icon_0: 1451815221
-      Ui_Combat_Party_Background_with_Icon_1: 1306383363
-      Ui_Combat_Party_Background_with_Icon_2: -1248051304
+      thiefhurt_0: -1970048475
+      thiefhurt_1: 1498158354
+      thiefhurt_2: 2147361792
+      thiefhurt_3: -306100883
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

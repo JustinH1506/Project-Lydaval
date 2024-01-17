@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1359449925, guid: 439a08014dcfa1d4aa4c3f16172d1663, type: 3}
+  m_Sprite: {fileID: -586886777, guid: 382b02716b37809499f8790f2b971dfe, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -112,3 +112,7 @@ MonoBehaviour:
     types: 0
   anim: {fileID: 0}
   cooldown: -1
+  select: 0
+  taunt: 0
+  skillButton: {fileID: 0}
+  healButton: {fileID: 0}

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 800279964950807639}
   - component: {fileID: 3954574239168791158}
   - component: {fileID: 2957588791360323039}
+  - component: {fileID: 8632953365888686079}
   m_Layer: 15
   m_Name: Kultist
   m_TagString: Enemy
@@ -74,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1359449925, guid: 439a08014dcfa1d4aa4c3f16172d1663, type: 3}
+  m_Sprite: {fileID: -586886777, guid: 382b02716b37809499f8790f2b971dfe, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -112,3 +113,28 @@ MonoBehaviour:
     types: 0
   anim: {fileID: 0}
   cooldown: -1
+  select: 0
+  taunt: 0
+  skillButton: {fileID: 0}
+  healButton: {fileID: 0}
+--- !u!95 &8632953365888686079
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 629729383928598970}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cd2d8d0f35a66744c9dcb79ffc63987d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0b01485d8a0a270478dc997516d67dde
+guid: 382b02716b37809499f8790f2b971dfe
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 20
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Ui_Combat_Party_Background_with_Icon_0
+      name: thiefidle_0
       rect:
         serializedVersion: 2
-        x: 1344
-        y: 24
-        width: 528
-        height: 261
+        x: 0
+        y: 0
+        width: 50
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,8 +124,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 125dcfe4fa8c4bb499ea0d46292e97a6
-      internalID: 1451815221
+      spriteID: 1a63685635d6d504e9ef0c84f9a8f628
+      internalID: -586886777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thiefidle_1
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 0
+        width: 50
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b28b5f1d2849864eb8468e5684ed97c
+      internalID: 1172332880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thiefidle_2
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 0
+        width: 50
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b25916fe5a736cb46b49841750fb6614
+      internalID: 1424204961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thiefidle_3
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 0
+        width: 50
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a014acc178e52ca4bb01d83489097d3c
+      internalID: -1779127638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thiefidle_4
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 0
+        width: 50
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06905ed7114c03a46b7acdd57037661f
+      internalID: 801162504
       vertices: []
       indices: 
       edges: []
@@ -141,9 +225,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Ui_Combat_Party_Background_with_Icon_0: 1451815221
-      Ui_Combat_Party_Background_with_Icon_1: 1306383363
-      Ui_Combat_Party_Background_with_Icon_2: -1248051304
+      thiefidle_0: -586886777
+      thiefidle_1: 1172332880
+      thiefidle_2: 1424204961
+      thiefidle_3: -1779127638
+      thiefidle_4: 801162504
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

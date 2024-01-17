@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0b01485d8a0a270478dc997516d67dde
+guid: a509b188c1b096843a268c2bd5061f47
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 20
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Ui_Combat_Party_Background_with_Icon_0
+      name: thiefattack_0
       rect:
         serializedVersion: 2
-        x: 1344
-        y: 24
-        width: 528
-        height: 261
+        x: 0
+        y: 0
+        width: 70
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,8 +124,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 125dcfe4fa8c4bb499ea0d46292e97a6
-      internalID: 1451815221
+      spriteID: f4472a5379bede14993893244f22a6fa
+      internalID: 52791437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thiefattack_1
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 0
+        width: 70
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68258bb924960b44c9cfd0b7909e292e
+      internalID: 1920728713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thiefattack_2
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 0
+        width: 70
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67bcdc95c3ce04d43af75cc07b5b04e7
+      internalID: -790785006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thiefattack_3
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 0
+        width: 70
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e959ab0585e4b574091d74467fa33c67
+      internalID: -166103127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thiefattack_4
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 0
+        width: 70
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b32918cd8649dcc4a9ba3dded791b6a5
+      internalID: 407970688
       vertices: []
       indices: 
       edges: []
@@ -141,9 +225,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Ui_Combat_Party_Background_with_Icon_0: 1451815221
-      Ui_Combat_Party_Background_with_Icon_1: 1306383363
-      Ui_Combat_Party_Background_with_Icon_2: -1248051304
+      thiefattack_0: 52791437
+      thiefattack_1: 1920728713
+      thiefattack_2: -790785006
+      thiefattack_3: -166103127
+      thiefattack_4: 407970688
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

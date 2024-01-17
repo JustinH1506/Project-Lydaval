@@ -32,6 +32,14 @@ public class BattleSystem : MonoBehaviour
 
     private int enemyAdder;
 
+
+    #endregion
+    
+    #region Buttons
+
+    [SerializeField] private Button attackButton;
+    [SerializeField] private Button skill, heal, taunt;
+
     #endregion
 
     #region Stats
@@ -64,12 +72,6 @@ public class BattleSystem : MonoBehaviour
     [SerializeField] List<Stats> characterList;
     [SerializeField] private List<GameObject> enemyWormList, enemyThiefList, enemyBoarList;
     [SerializeField] private List<Slider> enemyHpList, playerHpList;
-
-    #endregion
-
-    #region Buttons
-
-    [SerializeField] private Button skill;
 
     #endregion
 
@@ -300,11 +302,13 @@ public class BattleSystem : MonoBehaviour
     /// </summary>
     IEnumerator PlayerAttack()
     {
+        attackButton.interactable = false;
+        
         characterList[turnId].anim.SetTrigger("Attack");
 
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(0.75f);
         
-        //enemyStatsList[enemyId].anim.SetTrigger("Hurt");
+        enemyStatsList[enemyId].anim.SetTrigger("Damage");
         
         bool isDead = enemyStatsList[enemyId].TakeDamage(characterList[turnId].data.attack);
 
@@ -358,6 +362,7 @@ public class BattleSystem : MonoBehaviour
         }
         else
         {
+            attackButton.interactable = true;
             characterList[turnId].SetTurnFalse();
             StartCoroutine(TurnChange());
         }
@@ -369,7 +374,9 @@ public class BattleSystem : MonoBehaviour
         
         characterList[turnId].anim.SetTrigger("Attack");
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.75f);
+        
+        enemyStatsList[enemyId].anim.SetTrigger("Damage");
         
         bool isDead = enemyStatsList[enemyId].TakeDamage(characterList[turnId].data.attack * 2);
 
@@ -432,11 +439,9 @@ public class BattleSystem : MonoBehaviour
 
     IEnumerator PlayerHealSkill()
     {
-        characterList[turnId].cooldown = 2;
+        heal.interactable = false;
         
-        characterList[turnId].anim.SetTrigger("Attack");
-
-        yield return new WaitForSeconds(1f);
+        characterList[turnId].cooldown = 2;
 
         for (int i = 0; i < playerStatsList.Count; i++)
         {
@@ -453,6 +458,12 @@ public class BattleSystem : MonoBehaviour
                 
                 if (playerStatsList[i].data.currentHealth < playerStatsList[i].data.maxHealth)
                 {
+                    characterList[turnId].anim.SetTrigger("Attack");
+        
+                    characterList[turnId].healButton.transform.parent.gameObject.SetActive(false);
+
+                    yield return new WaitForSeconds(0.5f);
+                    
                     playerStatsList[i].data.currentHealth += 10;
                     
                     if(playerStatsList[i].data.currentHealth >= playerStatsList[i].data.maxHealth)
@@ -461,8 +472,8 @@ public class BattleSystem : MonoBehaviour
                     }
                     playerStatsList[i].select = false;
                 }
-                
-                characterList[turnId].healButton.transform.parent.gameObject.SetActive(false);
+
+                heal.interactable = true;
                 
                 SetHp();
                 
@@ -476,6 +487,8 @@ public class BattleSystem : MonoBehaviour
 
     IEnumerator PlayerTauntSkill()
     {
+        taunt.interactable = false;
+        
         characterList[turnId].taunt = true;
         
         characterList[turnId].cooldown = 3;
@@ -483,7 +496,8 @@ public class BattleSystem : MonoBehaviour
         characterList[turnId].anim.SetTrigger("Attack");
 
         yield return new WaitForSeconds(1f);
-        
+
+        taunt.interactable = true;
         characterList[turnId].SetTurnFalse();
         StartCoroutine(TurnChange());
     }
@@ -546,7 +560,7 @@ public class BattleSystem : MonoBehaviour
 
         characterList[turnId].anim.SetTrigger("Attacking");
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.75f);
         
         playerStatsList[playerId].anim.SetTrigger("Damage");
 
@@ -556,6 +570,8 @@ public class BattleSystem : MonoBehaviour
             playerStatsList[playerId].data.currentHealth = 0;
 
         playerHud.SetPlayerHp(playerStatsList[playerId].data.currentHealth, playerStatsList[playerId].data.maxHealth);
+        
+        yield return new WaitForSeconds(0.5f);
 
         if (isDead)
         {

@@ -205,6 +205,7 @@
      <None Include="Library\PackageCache\com.unity.modules.video@1.0.0\package.json" />
      <None Include="Library\PackageCache\com.unity.shadergraph@14.0.8\ValidationConfig.json" />
      <Folder Include="Assets\+++Workdata\Assets\Sprites\Player" />
+     <Folder Include="Assets\+++Workdata\Assets\Sprites\Player\Animations" />
      <Folder Include="Library\PackageCache\com.unity.shadergraph@14.0.8\Tests" />
      <None Include="Library\PackageCache\com.unity.test-framework@1.1.33\package.json" />
      <Folder Include="Library\PackageCache\com.unity.modules.unityanalytics@1.0.0" />
@@ -327,6 +328,7 @@
      <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Editor Resources\Shaders" />
      <Folder Include="Library\PackageCache\com.unity.modules.director@1.0.0" />
      <Folder Include="Library\PackageCache\com.unity.modules.audio@1.0.0" />
+     <Folder Include="Assets\+++Workdata\Assets\Sprites\Player\Combat Sprite Sheet" />
      <None Include="Library\PackageCache\com.unity.modules.terrain@1.0.0\package.json" />
      <None Include="Library\PackageCache\com.unity.2d.sprite@1.0.0\package.json" />
      <Folder Include="Library\PackageCache\com.unity.ide.visualstudio@2.0.18" />
