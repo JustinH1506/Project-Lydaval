@@ -213,7 +213,7 @@ public class BattleSystem : MonoBehaviour
         StartCoroutine(PlayerHealSkill());
     }
 
-    public void OnPlayerTauntSkill()
+    public void OnPlayerTauntSkillButton()
     {
         if (state != BattleState.PlayerTurn)
             return;
@@ -281,7 +281,7 @@ public class BattleSystem : MonoBehaviour
             }
         }
 
-        yield return new WaitForSeconds(2f);
+        yield return null;
 
         if (characterList[turnId].data.types != CharacterTypes.Enemy)
         {
@@ -422,23 +422,49 @@ public class BattleSystem : MonoBehaviour
 
     IEnumerator PlayerHealSkill()
     {
+        characterList[turnId].cooldown = 2;
+
         for (int i = 0; i < playerStatsList.Count; i++)
         {
             if (playerStatsList[i].select)
             {
-                playerStatsList[i].data.currentHealth += 10;
+                if(playerStatsList[i].data.currentHealth >= playerStatsList[i].data.maxHealth)
+                {
+                    playerStatsList[i].data.currentHealth = playerStatsList[i].data.maxHealth;
+
+                    playerStatsList[i].select = false;
+                    
+                    break;
+                }
+                
+                if (playerStatsList[i].data.currentHealth < playerStatsList[i].data.maxHealth)
+                {
+                    playerStatsList[i].data.currentHealth += 10;
+                    
+                    if(playerStatsList[i].data.currentHealth >= playerStatsList[i].data.maxHealth)
+                    {
+                        playerStatsList[i].data.currentHealth = playerStatsList[i].data.maxHealth;
+                    }
+                    playerStatsList[i].select = false;
+                }
+                
+                characterList[turnId].healButton.transform.parent.gameObject.SetActive(false);
+                
+                SetHp();
+                
+                characterList[turnId].SetTurnFalse();
+                
+                StartCoroutine(TurnChange());
             }
         }
-
         yield return null;
-        
-        characterList[turnId].SetTurnFalse();
-        StartCoroutine(TurnChange());
     }
 
     IEnumerator PlayerTauntSkill()
     {
         characterList[turnId].taunt = true;
+        
+        characterList[turnId].cooldown = 3;
 
         yield return null;
         
@@ -561,8 +587,6 @@ public class BattleSystem : MonoBehaviour
         {
             StartCoroutine(TurnChange());
         }
-        
-        
     }
     #endregion
 }

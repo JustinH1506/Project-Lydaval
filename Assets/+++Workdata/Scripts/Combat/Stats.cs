@@ -49,7 +49,7 @@ public class Stats : MonoBehaviour
 
     public bool taunt;
 
-    public GameObject skillButton;
+    public GameObject skillButton, healButton;
     
     #endregion
 
@@ -67,13 +67,35 @@ public class Stats : MonoBehaviour
         {
             data.types = CharacterTypes.Enemy;
         }
-
+        
         if (data.types == CharacterTypes.Hero)
+        {
             skillButton = GameObject.Find("Player_Skill_Button");
+            healButton = GameObject.Find("Player_Heal_Hero_Button");
+        }       
         else if(data.types == CharacterTypes.Healer)
+        {
             skillButton = GameObject.Find("Player_Heal_Button");
+            healButton = GameObject.Find("Player_Heal_Healer_Button");
+
+            
+        }        
         else if(data.types == CharacterTypes.Tank)
+        {
             skillButton = GameObject.Find("Player_Taunt_Button");
+            healButton = GameObject.Find("Player_Heal_Tank_Button");
+        }
+        
+        if(skillButton != null)
+        {
+            skillButton.SetActive(false);
+        }
+
+        if (healButton != null)
+        {
+            healButton.GetComponent<Button>().onClick.AddListener(Select);
+            healButton.GetComponent<Button>().onClick.AddListener(battleSystem.OnPlayerHealSkillButton);
+        }
     }
     
     /// <summary>
@@ -83,6 +105,11 @@ public class Stats : MonoBehaviour
     {
         data.maxHealth.ToString();
         data.currentHealth.ToString();
+        
+        if (healButton != null)
+        {
+            healButton.gameObject.transform.parent.gameObject.SetActive(false);
+        }
     }
 
 
@@ -103,19 +130,6 @@ public class Stats : MonoBehaviour
             return true;
         
         return false;
-    }
-
-    /// <summary>
-    /// heals the current health by a certain amount and makes the currentHealth to maxHealth if it goes over maxHealth.
-    /// </summary>
-    public void Heal(int healing)
-    {
-        data.currentHealth += healing;
-        
-        if (data.currentHealth > data.maxHealth)
-        {
-            data.currentHealth = data.maxHealth;
-        }
     }
 
     public void LevelUp()
@@ -194,6 +208,12 @@ public class Stats : MonoBehaviour
     public void SetTurn()
     {
         skillButton.SetActive(true);
+
+        if (cooldown > 0)
+            skillButton.GetComponent<Button>().interactable = false;
+        else
+            skillButton.GetComponent<Button>().interactable = true;
+        
     }
 
     public void SetTurnFalse()
