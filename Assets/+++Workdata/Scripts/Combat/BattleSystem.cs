@@ -60,7 +60,7 @@ public class BattleSystem : MonoBehaviour
     [SerializeField] public List<Transform> playerBattleStationList, enemyBattleStationList;
     [SerializeField] public List<Image> targetingIndicatorList;
     [SerializeField] public List<Stats> enemyStatsList, playerStatsList;
-    [SerializeField] public List<Button> targetingButtonsList;
+    [SerializeField] public List<Button> targetingButtonsList, skillButtonList;
     [SerializeField] List<Stats> characterList;
     [SerializeField] private List<GameObject> enemyWormList, enemyThiefList, enemyBoarList;
     [SerializeField] private List<Slider> enemyHpList, playerHpList;
@@ -126,7 +126,7 @@ public class BattleSystem : MonoBehaviour
     /// </summary>
     private void PlayerTurn()
     {
-
+      characterList[turnId].SetTurn();
     }
 
     private void ClearList()
@@ -204,6 +204,23 @@ public class BattleSystem : MonoBehaviour
 
         StartCoroutine(PlayerAttackSkill());
     }
+
+    public void OnPlayerHealSkillButton()
+    {
+        if (state != BattleState.PlayerTurn)
+            return;
+
+        StartCoroutine(PlayerHealSkill());
+    }
+
+    public void OnPlayerTauntSkill()
+    {
+        if (state != BattleState.PlayerTurn)
+            return;
+
+        StartCoroutine(PlayerTauntSkill());
+    }
+    
     #endregion
 
     #region IEnumerator
@@ -335,6 +352,7 @@ public class BattleSystem : MonoBehaviour
         }
         else
         {
+            characterList[turnId].SetTurnFalse();
             StartCoroutine(TurnChange());
         }
     }
@@ -397,8 +415,35 @@ public class BattleSystem : MonoBehaviour
         }
         else
         {
+            characterList[turnId].SetTurnFalse();
             StartCoroutine(TurnChange());
         }
+    }
+
+    IEnumerator PlayerHealSkill()
+    {
+        for (int i = 0; i < playerStatsList.Count; i++)
+        {
+            if (playerStatsList[i].select)
+            {
+                playerStatsList[i].data.currentHealth += 10;
+            }
+        }
+
+        yield return null;
+        
+        characterList[turnId].SetTurnFalse();
+        StartCoroutine(TurnChange());
+    }
+
+    IEnumerator PlayerTauntSkill()
+    {
+        characterList[turnId].taunt = true;
+
+        yield return null;
+        
+        characterList[turnId].SetTurnFalse();
+        StartCoroutine(TurnChange());
     }
 
     IEnumerator TurnChange()
@@ -407,6 +452,11 @@ public class BattleSystem : MonoBehaviour
 
         if (turnId >= characterList.Count)
             turnId = 0;
+        
+        if (characterList[turnId].taunt)
+        {
+            characterList[turnId].taunt = false;
+        }
 
         if (characterList[turnId].cooldown > 0)
         {
@@ -443,6 +493,14 @@ public class BattleSystem : MonoBehaviour
         yield return new WaitForSeconds(1f);
 
         playerId = Random.Range(random1, random2);
+
+        for (int i = 0; i < playerStatsList.Count; i++)
+        {
+            if (playerStatsList[i].taunt)
+            {
+                playerId = i;
+            }
+        }
 
         characterList[turnId].anim.SetTrigger("Attacking");
 
@@ -503,6 +561,8 @@ public class BattleSystem : MonoBehaviour
         {
             StartCoroutine(TurnChange());
         }
+        
+        
     }
     #endregion
 }

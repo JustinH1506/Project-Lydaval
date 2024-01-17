@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 public enum CharacterTypes
@@ -43,6 +44,12 @@ public class Stats : MonoBehaviour
     public Animator anim;
 
     public int cooldown;
+
+    public bool select;
+
+    public bool taunt;
+
+    public GameObject skillButton;
     
     #endregion
 
@@ -60,6 +67,13 @@ public class Stats : MonoBehaviour
         {
             data.types = CharacterTypes.Enemy;
         }
+
+        if (data.types == CharacterTypes.Hero)
+            skillButton = GameObject.Find("Player_Skill_Button");
+        else if(data.types == CharacterTypes.Healer)
+            skillButton = GameObject.Find("Player_Heal_Button");
+        else if(data.types == CharacterTypes.Tank)
+            skillButton = GameObject.Find("Player_Taunt_Button");
     }
     
     /// <summary>
@@ -171,5 +185,21 @@ public class Stats : MonoBehaviour
         
         battleSystem.SetHp();
     }
+
+    public void Select()
+    {
+        select = true;
+    }
+
+    public void SetTurn()
+    {
+        skillButton.SetActive(true);
+    }
+
+    public void SetTurnFalse()
+    {
+        skillButton.SetActive(false);
+    }
+
     #endregion
 }

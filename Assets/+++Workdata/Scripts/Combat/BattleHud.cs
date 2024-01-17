@@ -39,7 +39,9 @@ public class BattleHud : MonoBehaviour
 
     public void ClearPlayerStats()
     {
-        unitHp.Remove(unitName[battleSystem.playerId]);
+        unitHp.Remove(unitHp[battleSystem.playerId]);
+
+        hpSlider.Remove(hpSlider[battleSystem.playerId]);
     }
     
     /// <summary> Makes texts to Name of Unit, hp of unit and set the hp slider. </summary>
