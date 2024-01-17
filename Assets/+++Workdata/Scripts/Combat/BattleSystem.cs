@@ -300,6 +300,12 @@ public class BattleSystem : MonoBehaviour
     /// </summary>
     IEnumerator PlayerAttack()
     {
+        characterList[turnId].anim.SetTrigger("Attack");
+
+        yield return new WaitForSeconds(2f);
+        
+        //enemyStatsList[enemyId].anim.SetTrigger("Hurt");
+        
         bool isDead = enemyStatsList[enemyId].TakeDamage(characterList[turnId].data.attack);
 
         if (enemyStatsList[enemyId].data.currentHealth <= 0)
@@ -360,6 +366,10 @@ public class BattleSystem : MonoBehaviour
     IEnumerator PlayerAttackSkill()
     {
         skill.interactable = false;
+        
+        characterList[turnId].anim.SetTrigger("Attack");
+
+        yield return new WaitForSeconds(1f);
         
         bool isDead = enemyStatsList[enemyId].TakeDamage(characterList[turnId].data.attack * 2);
 
@@ -423,6 +433,10 @@ public class BattleSystem : MonoBehaviour
     IEnumerator PlayerHealSkill()
     {
         characterList[turnId].cooldown = 2;
+        
+        characterList[turnId].anim.SetTrigger("Attack");
+
+        yield return new WaitForSeconds(1f);
 
         for (int i = 0; i < playerStatsList.Count; i++)
         {
@@ -465,8 +479,10 @@ public class BattleSystem : MonoBehaviour
         characterList[turnId].taunt = true;
         
         characterList[turnId].cooldown = 3;
+        
+        characterList[turnId].anim.SetTrigger("Attack");
 
-        yield return null;
+        yield return new WaitForSeconds(1f);
         
         characterList[turnId].SetTurnFalse();
         StartCoroutine(TurnChange());
@@ -531,6 +547,8 @@ public class BattleSystem : MonoBehaviour
         characterList[turnId].anim.SetTrigger("Attacking");
 
         yield return new WaitForSeconds(1f);
+        
+        playerStatsList[playerId].anim.SetTrigger("Damage");
 
         bool isDead = playerStatsList[playerId].TakeDamage(characterList[turnId].data.attack);
 

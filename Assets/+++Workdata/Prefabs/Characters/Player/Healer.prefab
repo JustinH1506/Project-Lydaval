@@ -75,8 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6,
-    type: 3}
+  m_Sprite: {fileID: 1154435159, guid: bb09724f17845e64cad1a61fe2bed1f6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -117,6 +116,7 @@ MonoBehaviour:
   select: 0
   taunt: 0
   skillButton: {fileID: 0}
+  healButton: {fileID: 0}
 --- !u!95 &8390754044533698382
 Animator:
   serializedVersion: 5
@@ -127,7 +127,7 @@ Animator:
   m_GameObject: {fileID: 1193106798745876386}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e2b7d5b4e774cf34898a15eb3fb97883, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
