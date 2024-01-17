@@ -832,9 +832,10 @@ GameObject:
   m_Component:
   - component: {fileID: 240084863}
   - component: {fileID: 240084865}
+  - component: {fileID: 240084866}
   - component: {fileID: 240084864}
   m_Layer: 5
-  m_Name: Player_Heal_Button
+  m_Name: Player_Skill_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -853,7 +854,7 @@ RectTransform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1086748313}
-  m_Father: {fileID: 1731389171}
+  m_Father: {fileID: 547709725}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -900,13 +901,13 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 240084866}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 404145778}
         m_TargetAssemblyTypeName: BattleSystem, Assembly-CSharp
-        m_MethodName: OnHealButton
+        m_MethodName: OnAttackSkillButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -924,6 +925,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 240084862}
   m_CullTransparentMesh: 1
+--- !u!114 &240084866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 240084862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.39215687}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &258440771
 GameObject:
   m_ObjectHideFlags: 0
@@ -956,7 +987,7 @@ RectTransform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 220144967}
-  m_Father: {fileID: 1731389171}
+  m_Father: {fileID: 547709725}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1179,23 +1210,18 @@ MonoBehaviour:
   data:
     itemListData:
     - newName: 
-      itemType: 0
       healAmount: 0
-      atk: 0
-      def: 0
       amount: 0
+      playerGotIt: 0
     - newName: 
-      itemType: 0
       healAmount: 0
-      atk: 0
-      def: 0
       amount: 0
+      playerGotIt: 0
     - newName: 
-      itemType: 0
       healAmount: 0
-      atk: 0
-      def: 0
       amount: 0
+      playerGotIt: 0
+    setItemActiveList: []
   inventoryEntry: {fileID: 8020687743794492515, guid: d2134ba8505c0034aa52e9579aa9c84b,
     type: 3}
   entryPrefab: {fileID: 8768866282988187801, guid: d2134ba8505c0034aa52e9579aa9c84b,
@@ -1208,6 +1234,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  partyStatsList: []
   characterSelect: {fileID: 0}
 --- !u!1 &334815040
 GameObject:
@@ -1501,10 +1528,6 @@ MonoBehaviour:
   playerId: 0
   playerI: 0
   turnId: 0
-  playerPrefab: {fileID: 1193106798745876386, guid: 45d10a4c1a55ab74399cd668a20c53a8,
-    type: 3}
-  enemyPrefab: {fileID: 629729383928598970, guid: 7a6c54f0243548547aab248dc10af866,
-    type: 3}
   playerStats: {fileID: 4216729953877467935, guid: 45d10a4c1a55ab74399cd668a20c53a8,
     type: 3}
   enemyStats: {fileID: 2957588791360323039, guid: 7a6c54f0243548547aab248dc10af866,
@@ -1560,6 +1583,7 @@ MonoBehaviour:
   - {fileID: 1746277208}
   - {fileID: 1942394477}
   - {fileID: 1942862205}
+  skill: {fileID: 240084864}
 --- !u!1 &462086626
 GameObject:
   m_ObjectHideFlags: 0
@@ -1926,6 +1950,43 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!1 &547709724
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 547709725}
+  m_Layer: 5
+  m_Name: Player Attacks
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &547709725
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 547709724}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 258440772}
+  - {fileID: 240084863}
+  m_Father: {fileID: 1731389171}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &555111189
 GameObject:
   m_ObjectHideFlags: 0
@@ -3139,7 +3200,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Heal
+  m_text: 'Skill
 
 '
   m_isRightToLeft: 0
@@ -4886,8 +4947,7 @@ RectTransform:
   - {fileID: 1820806615}
   - {fileID: 56436091}
   - {fileID: 874091344}
-  - {fileID: 258440772}
-  - {fileID: 240084863}
+  - {fileID: 547709725}
   m_Father: {fileID: 338526224}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}

@@ -7,37 +7,30 @@ using Random = UnityEngine.Random;
 
 public enum BattleState
 {
-    START,
-    PLAYERTURN,
-    ENEMYTURN,
-    WON,
-    LOST
+    Start,
+    PlayerTurn,
+    EnemyTurn,
+    Won,
+    Lost
 }
+
 public class BattleSystem : MonoBehaviour
 {
     #region Scripts
-    
+
     private EnemyManager enemyManager;
-    
-    #endregion 
-    
+
+    #endregion
+
     #region Variables
 
     public int enemyId, enemyI, playerId, playerI, turnId;
 
     private int random1, random2 = 2;
-    
+
     private int deadEnemies, deadPlayers;
 
     private int enemyAdder;
-
-    #endregion
-
-    #region Gameobjects
-
-    public GameObject playerPrefab;
-
-    public GameObject enemyPrefab;
 
     #endregion
 
@@ -74,17 +67,23 @@ public class BattleSystem : MonoBehaviour
 
     #endregion
 
+    #region Buttons
+
+    [SerializeField] private Button skill;
+
+    #endregion
+
     #region Methods
 
     private void Awake()
     {
-       enemyManager = GameObject.Find("---EnemyManager").GetComponent<EnemyManager>();
+        enemyManager = GameObject.Find("---EnemyManager").GetComponent<EnemyManager>();
     }
 
     /// <summary> Set Battle State to START and Start Coroutine SetUpBattle </summary>
     void Start()
     {
-        state = BattleState.START;
+        state = BattleState.Start;
         SetEnemiesToList();
         StartCoroutine(SetUpBattle());
     }
@@ -94,7 +93,7 @@ public class BattleSystem : MonoBehaviour
     /// </summary>
     private void EndBattle()
     {
-        if (state == BattleState.WON)
+        if (state == BattleState.Won)
         {
             for (int i = 0; i < playerStatsList.Count; i++)
             {
@@ -102,21 +101,21 @@ public class BattleSystem : MonoBehaviour
                 {
                     GameStateManager.instance.data.heroStatData = playerStatsList[i].data;
                 }
-                
+
                 if (playerStatsList[i].data.types == CharacterTypes.Healer)
                 {
                     GameStateManager.instance.data.healerStatData = playerStatsList[i].data;
                 }
-                
+
                 if (playerStatsList[i].data.types == CharacterTypes.Tank)
                 {
                     GameStateManager.instance.data.tankStatData = playerStatsList[i].data;
                 }
             }
-            
+
             SceneManager.LoadScene(1);
         }
-        else if (state == BattleState.LOST)
+        else if (state == BattleState.Lost)
         {
             SceneManager.LoadScene(0);
         }
@@ -127,7 +126,7 @@ public class BattleSystem : MonoBehaviour
     /// </summary>
     private void PlayerTurn()
     {
-        
+
     }
 
     private void ClearList()
@@ -144,7 +143,7 @@ public class BattleSystem : MonoBehaviour
         if (enemyManager.enemyType == EnemyType.THIEF)
         {
             enemyAdder = Random.Range(0, 3);
-            
+
             for (int i = 0; i <= enemyAdder; i++)
             {
                 enemyPrefabList.Add(enemyThiefList[i]);
@@ -152,11 +151,11 @@ public class BattleSystem : MonoBehaviour
                 enemyHpList[i].gameObject.SetActive(true);
             }
         }
-        
+
         if (enemyManager.enemyType == EnemyType.BOAR)
         {
             enemyAdder = Random.Range(0, 3);
-            
+
             for (int i = 0; i <= enemyAdder; i++)
             {
                 enemyPrefabList.Add(enemyBoarList[i]);
@@ -164,11 +163,11 @@ public class BattleSystem : MonoBehaviour
                 enemyHpList[i].gameObject.SetActive(true);
             }
         }
-        
+
         if (enemyManager.enemyType == EnemyType.WORM)
         {
             enemyAdder = Random.Range(0, 3);
-            
+
             for (int i = 0; i <= enemyAdder; i++)
             {
                 enemyPrefabList.Add(enemyWormList[i]);
@@ -180,35 +179,31 @@ public class BattleSystem : MonoBehaviour
 
     public void SetHp()
     {
-        for(int i = 0; i < playerStatsList.Count; i++)
+        for (int i = 0; i < playerStatsList.Count; i++)
         {
             playerI = i;
-            
+
             playerHud.SetPlayerHud(playerStatsList[i]);
         }
     }
-    
 
-    /// <summary> Returns if state is not PLAYERTURN. Start PlayerAttack Coroutine. </summary>
+
+    /// <summary> Returns if state is not PlayerTurn. Start PlayerAttack Coroutine. </summary>
     public void OnAttackButton()
     {
-        if (state != BattleState.PLAYERTURN)
+        if (state != BattleState.PlayerTurn)
             return;
 
         StartCoroutine(PlayerAttack());
     }
 
-    /// <summary>
-    /// Returns if state is not PLAYERTURN. Starts PlayerHeal Coroutine.
-    /// </summary>
-    public void OnHealButton()
+    public void OnAttackSkillButton()
     {
-        if (state != BattleState.PLAYERTURN)
+        if (state != BattleState.PlayerTurn)
             return;
 
-        StartCoroutine(PlayerHeal());
+        StartCoroutine(PlayerAttackSkill());
     }
-
     #endregion
 
     #region IEnumerator
@@ -219,26 +214,26 @@ public class BattleSystem : MonoBehaviour
         for (int i = 0; i < playerPrefabList.Count; i++)
         {
             playerI = i;
-            
+
             GameObject playerGo = Instantiate(playerPrefabList[i], playerBattleStationList[i]);
             playerStats = playerGo.GetComponent<Stats>();
             playerStatsList.Add(playerStats);
 
             playerHud.SetPlayerHud(playerStatsList[i]);
-            
+
             characterList.Add(playerStatsList[i]);
         }
-        
+
         for (int i = 0; i < enemyPrefabList.Count; i++)
         {
             enemyI = i;
-            
+
             GameObject enemyGo = Instantiate(enemyPrefabList[i], enemyBattleStationList[i]);
             enemyStats = enemyGo.GetComponent<Stats>();
             enemyStatsList.Add(enemyStats);
 
             enemyHud.SetEnemyHud(enemyStatsList[i]);
-            
+
             characterList.Add(enemyStatsList[i]);
         }
 
@@ -250,35 +245,35 @@ public class BattleSystem : MonoBehaviour
             });
             characterList.Reverse();
         }
-        
+
         for (int i = 0; i < playerStatsList.Count; i++)
         {
             if (playerStatsList[i].data.types == CharacterTypes.Hero)
             {
                 playerStatsList[i].data = GameStateManager.instance.data.heroStatData;
             }
-                
+
             if (playerStatsList[i].data.types == CharacterTypes.Healer)
             {
                 playerStatsList[i].data = GameStateManager.instance.data.healerStatData;
             }
-                
+
             if (playerStatsList[i].data.types == CharacterTypes.Tank)
             {
                 playerStatsList[i].data = GameStateManager.instance.data.tankStatData;
             }
         }
-        
+
         yield return new WaitForSeconds(2f);
-        
+
         if (characterList[turnId].data.types != CharacterTypes.Enemy)
         {
-            state = BattleState.PLAYERTURN;
+            state = BattleState.PlayerTurn;
             PlayerTurn();
         }
         else if (characterList[turnId].data.types == CharacterTypes.Enemy)
         {
-            state = BattleState.ENEMYTURN;
+            state = BattleState.EnemyTurn;
             StartCoroutine(EnemyTurn());
         }
     }
@@ -292,7 +287,7 @@ public class BattleSystem : MonoBehaviour
 
         if (enemyStatsList[enemyId].data.currentHealth <= 0)
             enemyStatsList[enemyId].data.currentHealth = 0;
-        
+
         enemyHud.SetEnemyHp(enemyStatsList[enemyId].data.currentHealth, enemyStatsList[enemyId].data.maxHealth);
 
         yield return null;
@@ -308,18 +303,18 @@ public class BattleSystem : MonoBehaviour
             for (int i = 0; i < playerStatsList.Count; i++)
             {
                 playerStatsList[i].data.xp += enemyStatsList[enemyId].data.enemyGiveXp;
-                
+
                 playerStatsList[i].HasEnoughXp();
             }
-            
+
             Destroy(enemyStatsList[enemyId].gameObject);
 
             yield return null;
-           
+
             ClearList();
 
             deadEnemies++;
-            
+
             for (int i = 0; i < enemyStatsList.Count; i++)
             {
                 if (enemyStatsList[i] != null)
@@ -333,9 +328,71 @@ public class BattleSystem : MonoBehaviour
             }
         }
 
-        if (deadEnemies == enemyAdder +1)
+        if (deadEnemies == enemyAdder + 1)
         {
-            state = BattleState.WON;
+            state = BattleState.Won;
+            EndBattle();
+        }
+        else
+        {
+            StartCoroutine(TurnChange());
+        }
+    }
+
+    IEnumerator PlayerAttackSkill()
+    {
+        skill.interactable = false;
+        
+        bool isDead = enemyStatsList[enemyId].TakeDamage(characterList[turnId].data.attack * 2);
+
+        characterList[turnId].cooldown = 2;
+
+        if (enemyStatsList[enemyId].data.currentHealth <= 0)
+            enemyStatsList[enemyId].data.currentHealth = 0;
+
+        enemyHud.SetEnemyHp(enemyStatsList[enemyId].data.currentHealth, enemyStatsList[enemyId].data.maxHealth);
+
+        yield return null;
+
+        if (isDead)
+        {
+            targetingButtonsList[enemyId].interactable = false;
+
+            targetingIndicatorList[enemyId].enabled = false;
+
+            enemyHpList[enemyId].gameObject.SetActive(false);
+
+            for (int i = 0; i < playerStatsList.Count; i++)
+            {
+                playerStatsList[i].data.xp += enemyStatsList[enemyId].data.enemyGiveXp;
+
+                playerStatsList[i].HasEnoughXp();
+            }
+
+            Destroy(enemyStatsList[enemyId].gameObject);
+
+            yield return null;
+
+            ClearList();
+
+            deadEnemies++;
+
+            for (int i = 0; i < enemyStatsList.Count; i++)
+            {
+                if (enemyStatsList[i] != null)
+                {
+                    enemyId = i;
+
+                    targetingIndicatorList[i].enabled = true;
+
+                    break;
+                }
+            }
+        }
+
+        if (deadEnemies == enemyAdder + 1)
+        {
+            state = BattleState.Won;
             EndBattle();
         }
         else
@@ -351,31 +408,31 @@ public class BattleSystem : MonoBehaviour
         if (turnId >= characterList.Count)
             turnId = 0;
 
-        yield return null;
-        
-        if(characterList[turnId].data.types != CharacterTypes.Enemy)
+        if (characterList[turnId].cooldown > 0)
         {
-            state = BattleState.PLAYERTURN;
+            characterList[turnId].cooldown--;
+        }
+        else if(characterList[turnId].cooldown == 0)
+        {
+            skill.interactable = true;
+        }
+        else
+        {
+            skill.interactable = false;
+        }
+
+        yield return null;
+
+        if (characterList[turnId].data.types != CharacterTypes.Enemy)
+        {
+            state = BattleState.PlayerTurn;
             PlayerTurn();
         }
         else
         {
-            state = BattleState.ENEMYTURN;
+            state = BattleState.EnemyTurn;
             StartCoroutine(EnemyTurn());
         }
-    }
-
-    /// <summary> Getting playerStats Heal method. Waits until the next frame and starts the enemy´s turn. </summary>
-    IEnumerator PlayerHeal()
-    {
-        playerStats.Heal(5);
-
-        playerHud.SetPlayerHp(characterList[turnId].data.currentHealth, characterList[turnId].data.maxHealth);
-
-        yield return null;
-
-        state = BattleState.ENEMYTURN;
-        StartCoroutine(EnemyTurn());
     }
 
     /// <summary> Waits for 2 seconds makes bool isDead to the Take Damage Method from enemyStats. Set The enemyHud Hp.
@@ -386,19 +443,17 @@ public class BattleSystem : MonoBehaviour
         yield return new WaitForSeconds(1f);
 
         playerId = Random.Range(random1, random2);
-        
+
         characterList[turnId].anim.SetTrigger("Attacking");
 
-        yield return new WaitForSeconds(2f);
-        
+        yield return new WaitForSeconds(1f);
+
         bool isDead = playerStatsList[playerId].TakeDamage(characterList[turnId].data.attack);
 
         if (playerStatsList[playerId].data.currentHealth <= 0)
             playerStatsList[playerId].data.currentHealth = 0;
-        
-        playerHud.SetPlayerHp(playerStatsList[playerId].data.currentHealth, playerStatsList[playerId].data.maxHealth);
 
-        yield return new WaitForSeconds(0f);
+        playerHud.SetPlayerHp(playerStatsList[playerId].data.currentHealth, playerStatsList[playerId].data.maxHealth);
 
         if (isDead)
         {
@@ -406,16 +461,18 @@ public class BattleSystem : MonoBehaviour
             {
                 deadPlayers++;
             }
+
+            playerHud.ClearPlayerStats();
             
             Destroy(playerStatsList[playerId].gameObject);
-            
+
             Destroy(playerHpList[playerId].gameObject);
-            
+
             yield return null;
-           
+
             ClearList();
-            
-            if(playerStatsList != null)
+
+            if (playerStatsList != null)
             {
                 for (int i = 0; i < playerStatsList.Count; i++)
                 {
@@ -437,9 +494,9 @@ public class BattleSystem : MonoBehaviour
             }
         }
 
-        if(deadPlayers == 3)
+        if (deadPlayers == 3)
         {
-            state = BattleState.LOST;
+            state = BattleState.Lost;
             EndBattle();
         }
         else

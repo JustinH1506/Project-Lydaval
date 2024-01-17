@@ -41,6 +41,8 @@ public class Stats : MonoBehaviour
     [SerializeField] private BattleSystem battleSystem;
     [SerializeField] public Data data;
     public Animator anim;
+
+    public int cooldown;
     
     #endregion
 

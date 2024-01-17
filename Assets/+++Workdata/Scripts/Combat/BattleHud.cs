@@ -36,6 +36,11 @@ public class BattleHud : MonoBehaviour
         hpSlider[battleSystem.playerI].maxValue = stats.data.maxHealth;
         hpSlider[battleSystem.playerI].value = stats.data.currentHealth;
     }
+
+    public void ClearPlayerStats()
+    {
+        unitHp.Remove(unitName[battleSystem.playerId]);
+    }
     
     /// <summary> Makes texts to Name of Unit, hp of unit and set the hp slider. </summary>
     public void SetEnemyHud(Stats stats)

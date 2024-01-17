@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 99401bf7be6cb8e4db3936a3011f2ba1
+guid: e71e1a72fd25f834bb44824766d09326
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 20
+  spritePixelsToUnits: 30
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Wormattack-Sheet_0
+      name: Lydaval_Sprite_PathTilesSheet_03.01_Aproved.png-Sheet-export_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 32
         y: 0
-        width: 1500
-        height: 1200
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b3181d7956f963f4cbfe5ae92e6cc7d6
-      internalID: 1907448820
+      spriteID: 8521b57f9c063d841abd2704d4fd5c75
+      internalID: -467792031
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wormattack-Sheet_1
+      name: Lydaval_Sprite_PathTilesSheet_03.01_Aproved.png-Sheet-export_1
       rect:
         serializedVersion: 2
-        x: 1500
+        x: 64
         y: 0
-        width: 1500
-        height: 1200
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 377dd122cc33f8544925ae2dd0aa6e67
-      internalID: 1091867842
+      spriteID: d0c5824f85a7ddd40a686ac1d7c1027d
+      internalID: 1472328196
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wormattack-Sheet_2
+      name: Lydaval_Sprite_PathTilesSheet_03.01_Aproved.png-Sheet-export_2
       rect:
         serializedVersion: 2
-        x: 3000
+        x: 96
         y: 0
-        width: 1500
-        height: 1200
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5408a01f742729f4caeb64586f12e66b
-      internalID: 1167218252
+      spriteID: 8b3135a7c8b2d524aa860b5566d64254
+      internalID: -739291920
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wormattack-Sheet_3
+      name: Lydaval_Sprite_PathTilesSheet_03.01_Aproved.png-Sheet-export_3
       rect:
         serializedVersion: 2
-        x: 4500
+        x: 128
         y: 0
-        width: 1500
-        height: 1200
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d78fdd32d4a3be44698857b1e21b1de6
-      internalID: -1461051708
+      spriteID: 22ac4a6d596238746a6607841d2c6e4a
+      internalID: 576476112
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wormattack-Sheet_4
+      name: Lydaval_Sprite_PathTilesSheet_03.01_Aproved.png-Sheet-export_4
       rect:
         serializedVersion: 2
-        x: 6000
+        x: 160
         y: 0
-        width: 1500
-        height: 1200
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,20 +208,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2d445c0f44a60ed43b5295d7bd8d467e
-      internalID: -889884614
+      spriteID: 7370852b7ee366e409aa7dbdbec320d3
+      internalID: -1660511529
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wormattack-Sheet_5
+      name: Lydaval_Sprite_PathTilesSheet_03.01_Aproved.png-Sheet-export_5
       rect:
         serializedVersion: 2
-        x: 7500
+        x: 192
         y: 0
-        width: 1500
-        height: 1200
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,20 +229,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 75ab88480f7d56d408f6762cabb99b65
-      internalID: 1282572777
+      spriteID: 0697728bc19c9a14c87d3138ac414dc7
+      internalID: 2047526026
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wormattack-Sheet_6
+      name: Lydaval_Sprite_PathTilesSheet_03.01_Aproved.png-Sheet-export_6
       rect:
         serializedVersion: 2
-        x: 9000
+        x: 224
         y: 0
-        width: 1500
-        height: 1200
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,20 +250,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9b5cf5901a3ab80408f90df1a7e976a5
-      internalID: -1447771618
+      spriteID: e2b11c4b662a93f48b9810ed91079f56
+      internalID: 1339666737
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wormattack-Sheet_7
+      name: Lydaval_Sprite_PathTilesSheet_03.01_Aproved.png-Sheet-export_7
       rect:
         serializedVersion: 2
-        x: 10500
+        x: 256
         y: 0
-        width: 1500
-        height: 1200
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -271,20 +271,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2943875c4e5cb2a438fde506c28b2b99
-      internalID: -1062585187
+      spriteID: b68a47985f25b654aac3c6295f252053
+      internalID: 643213677
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wormattack-Sheet_8
+      name: Lydaval_Sprite_PathTilesSheet_03.01_Aproved.png-Sheet-export_8
       rect:
         serializedVersion: 2
-        x: 12000
+        x: 288
         y: 0
-        width: 1500
-        height: 1200
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -292,8 +292,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 87d19e609f2d3814ca392e4111e0061f
-      internalID: 1190787292
+      spriteID: ff6951a5b1ac2d84bb448196c7c23ad8
+      internalID: 14375083
       vertices: []
       indices: 
       edges: []
@@ -309,15 +309,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Wormattack-Sheet_0: 1907448820
-      Wormattack-Sheet_1: 1091867842
-      Wormattack-Sheet_2: 1167218252
-      Wormattack-Sheet_3: -1461051708
-      Wormattack-Sheet_4: -889884614
-      Wormattack-Sheet_5: 1282572777
-      Wormattack-Sheet_6: -1447771618
-      Wormattack-Sheet_7: -1062585187
-      Wormattack-Sheet_8: 1190787292
+      Lydaval_Sprite_PathTilesSheet_03.01_Aproved.png-Sheet-export_0: -467792031
+      Lydaval_Sprite_PathTilesSheet_03.01_Aproved.png-Sheet-export_1: 1472328196
+      Lydaval_Sprite_PathTilesSheet_03.01_Aproved.png-Sheet-export_2: -739291920
+      Lydaval_Sprite_PathTilesSheet_03.01_Aproved.png-Sheet-export_3: 576476112
+      Lydaval_Sprite_PathTilesSheet_03.01_Aproved.png-Sheet-export_4: -1660511529
+      Lydaval_Sprite_PathTilesSheet_03.01_Aproved.png-Sheet-export_5: 2047526026
+      Lydaval_Sprite_PathTilesSheet_03.01_Aproved.png-Sheet-export_6: 1339666737
+      Lydaval_Sprite_PathTilesSheet_03.01_Aproved.png-Sheet-export_7: 643213677
+      Lydaval_Sprite_PathTilesSheet_03.01_Aproved.png-Sheet-export_8: 14375083
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

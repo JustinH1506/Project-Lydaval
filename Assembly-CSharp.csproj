@@ -109,6 +109,7 @@
      <Folder Include="Library\PackageCache\com.unity.modules.xr@1.0.0" />
      <None Include="Library\PackageCache\com.unity.2d.tilemap@1.0.0\package.json" />
      <Folder Include="Assets\TextMesh Pro\Resources\Sprite Assets" />
+     <Folder Include="Assets\+++Workdata\Assets\Sprites\Enemy\Battle" />
      <None Include="Library\PackageCache\com.unity.ext.nunit@1.0.6\package.json" />
      <Folder Include="Library\PackageCache\com.unity.render-pipelines.universal@14.0.8\Textures\SMAA" />
      <Folder Include="Library\PackageCache\com.unity.ide.rider@3.0.25\Rider" />
@@ -221,6 +222,7 @@
      <Folder Include="Library\PackageCache\com.unity.shadergraph@14.0.8" />
      <None Include="Library\PackageCache\com.unity.modules.physics2d@1.0.0\package.json" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
+     <Folder Include="Assets\+++Workdata\Assets\Sprites\Npcs" />
      <Folder Include="Assets\+++Workdata\Assets\Ui\UI_Elements\UI Elements\UI_Overworld" />
      <None Include="Library\PackageCache\com.unity.modules.vr@1.0.0\package.json" />
      <Folder Include="Library\PackageCache\com.unity.render-pipelines.universal@14.0.8\Textures\BlueNoise64\L" />
@@ -265,6 +267,7 @@
      <Folder Include="Assets\TextMesh Pro\Shaders" />
      <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Editor Resources\Gizmos" />
      <Folder Include="Assets\+++Workdata\Scripts\Enemy" />
+     <Folder Include="Assets\+++Workdata\Assets\Sprites\Enemy\Animation" />
      <None Include="Library\PackageCache\com.unity.modules.audio@1.0.0\package.json" />
      <Folder Include="Assets\+++Workdata\Scripts\Unused" />
      <None Include="Library\PackageCache\com.unity.modules.physics@1.0.0\package.json" />
@@ -331,6 +334,7 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
      <Folder Include="Library\PackageCache\com.unity.modules.video@1.0.0" />
      <Folder Include="Library\PackageCache\com.unity.modules.ai@1.0.0" />
+     <Folder Include="Assets\+++Workdata\Assets\Sprites\Enemy\Overworld" />
      <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\PackageConversionData_Assets.json" />
      <Folder Include="Assets\Ink\Demos" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />

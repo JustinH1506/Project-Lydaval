@@ -111,6 +111,8 @@ MonoBehaviour:
     neededXp: 0
     enemyGiveXp: 300
     types: 0
+  anim: {fileID: 0}
+  cooldown: -1
 --- !u!95 &475954832036865819
 Animator:
   serializedVersion: 5

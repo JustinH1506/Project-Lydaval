@@ -6,7 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="60fe24dc-a470-438e-9d29-fb3fa2e8b3cf" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Lydaval/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Lydaval/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Sprites/Enemy/Worm.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Sprites/Enemy/Worm.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Sprites/Enemy/Wormattack-Sheet.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Sprites/Enemy/Wormattack-Sheet.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Prefabs/Characters/Enemys/Battle/Boar.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Prefabs/Characters/Enemys/Battle/Boar.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Prefabs/Characters/Enemys/Battle/Enemy 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Prefabs/Characters/Enemys/Battle/Enemy 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Prefabs/Characters/Enemys/Battle/Enemy 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Prefabs/Characters/Enemys/Battle/Enemy 2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Prefabs/Characters/Enemys/Battle/Enemy 3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Prefabs/Characters/Enemys/Battle/Enemy 3.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Prefabs/Characters/Enemys/Battle/Kultist.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Prefabs/Characters/Enemys/Battle/Kultist.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Prefabs/Characters/Enemys/Battle/Thief 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Prefabs/Characters/Enemys/Battle/Thief 1.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Prefabs/Characters/Enemys/Battle/Thief 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Prefabs/Characters/Enemys/Battle/Thief 2.prefab" afterDir="false" />
@@ -15,11 +20,13 @@
       <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Prefabs/Characters/Enemys/Battle/Worm 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Prefabs/Characters/Enemys/Battle/Worm 2.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Prefabs/Characters/Enemys/Battle/Worm 3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Prefabs/Characters/Enemys/Battle/Worm 3.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Prefabs/Characters/Enemys/Battle/Worm.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Prefabs/Characters/Enemys/Battle/Worm.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Scenes/Vertical Slices/Ballte VS.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Scenes/Vertical Slices/Ballte VS.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Scenes/Vertical Slices/VS.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Scenes/Vertical Slices/VS.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Combat/BattleHud.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Combat/BattleHud.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Combat/BattleSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Combat/BattleSystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Combat/Stats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Combat/Stats.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Inventory/Items/InventoryEntry.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Inventory/Items/InventoryEntry.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Other/MenuController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Other/MenuController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,10 +129,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="19796">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="19796" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -210,7 +217,8 @@
       <workItem from="1705345845784" duration="1789000" />
       <workItem from="1705351896288" duration="3909000" />
       <workItem from="1705390939784" duration="13992000" />
-      <workItem from="1705437248970" duration="5312000" />
+      <workItem from="1705437248970" duration="5593000" />
+      <workItem from="1705476156229" duration="5693000" />
     </task>
     <servers />
   </component>
@@ -223,6 +231,23 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/+++Workdata/Scripts/Combat/BattleSystem.cs</url>
+          <line>464</line>
+          <properties documentPath="D:\Unity Stuff\Git\Project Lydaval\Assets\+++Workdata\Scripts\Combat\BattleSystem.cs" initialLine="464" containingFunctionPresentation="Method 'EnemyTurn'">
+            <startOffsets>
+              <option value="12511" />
+            </startOffsets>
+            <endOffsets>
+              <option value="12540" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="Type#Items+Data" memberName="itemType" />

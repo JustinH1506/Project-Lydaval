@@ -110,3 +110,5 @@ MonoBehaviour:
     neededXp: 0
     enemyGiveXp: 500
     types: 0
+  anim: {fileID: 0}
+  cooldown: -1
