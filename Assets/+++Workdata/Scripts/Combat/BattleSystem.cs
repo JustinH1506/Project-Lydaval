@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -22,6 +23,12 @@ public class BattleSystem : MonoBehaviour
     private EnemyManager enemyManager;
 
     #endregion
+    
+    #region GameObjects
+
+    [SerializeField] private GameObject enemyButtons, skillButtons;
+    
+    #endregion
 
     #region Variables
 
@@ -33,6 +40,11 @@ public class BattleSystem : MonoBehaviour
 
     private int enemyAdder;
 
+    public bool pressed, attacking;
+    
+    public string turnStart = "   turn begins";
+
+    public TextMeshProUGUI unitName, inBetweenText;
 
     #endregion
     
@@ -66,12 +78,17 @@ public class BattleSystem : MonoBehaviour
     #region Lists
 
     [SerializeField] List<GameObject> playerPrefabList, enemyPrefabList;
-    [SerializeField] public List<Transform> playerBattleStationList, enemyBattleStationList;
-    [SerializeField] public List<Image> targetingIndicatorList;
-    [SerializeField] public List<Stats> enemyStatsList, playerStatsList;
-    [SerializeField] public List<Button> targetingButtonsList, skillButtonList;
-    [SerializeField] List<Stats> characterList;
     [SerializeField] private List<GameObject> enemyWormList, enemyThiefList, enemyBoarList;
+    
+    [SerializeField] private List<Stats> characterList;
+    [SerializeField] public List<Stats> enemyStatsList, playerStatsList;
+    
+    [SerializeField] public List<Transform> playerBattleStationList, enemyBattleStationList;
+    
+    [SerializeField] public List<Image> targetingIndicatorList;
+    
+    [SerializeField] public List<Button> targetingButtonsList;
+    
     [SerializeField] private List<Slider> enemyHpList, playerHpList;
 
     #endregion
@@ -129,7 +146,15 @@ public class BattleSystem : MonoBehaviour
     /// </summary>
     private void PlayerTurn()
     {
-      characterList[turnId].SetTurn();
+        unitName.text = characterList[turnId].data.unitName;
+        
+        inBetweenText.gameObject.SetActive(true);
+
+        inBetweenText.text = characterList[turnId].data.unitName + " " +  turnStart;
+        
+        characterList[turnId].SetTurn();
+
+        pressed = false;
     }
 
     private void ClearList()
@@ -192,34 +217,52 @@ public class BattleSystem : MonoBehaviour
 
 
     /// <summary> Returns if state is not PlayerTurn. Start PlayerAttack Coroutine. </summary>
-    public void OnAttackButton()
+    public void OnAttackButton(TargetingSystem targetSystem)
     {
-        if (state != BattleState.PlayerTurn)
+        if (state != BattleState.PlayerTurn || pressed)
             return;
 
-        StartCoroutine(PlayerAttack());
+        TargetingSystem target = targetSystem;
+        
+        if (attacking && targetSystem.idChanger == enemyId )
+        {
+                pressed = true;
+
+               StartCoroutine(PlayerAttack());
+        }
     }
 
-    public void OnAttackSkillButton()
+    public void OnAttackSkillButton(TargetingSystem targetSystem)
     {
-        if (state != BattleState.PlayerTurn)
+        if (state != BattleState.PlayerTurn || pressed)
             return;
 
-        StartCoroutine(PlayerAttackSkill());
+        TargetingSystem target = targetSystem;
+        
+        if (!attacking && targetSystem.idChanger == enemyId )
+        {
+            pressed = true;
+
+            StartCoroutine(PlayerAttackSkill());
+        }
     }
 
     public void OnPlayerHealSkillButton()
     {
-        if (state != BattleState.PlayerTurn)
+        if (state != BattleState.PlayerTurn || pressed)
             return;
+        
+        pressed = true;
 
         StartCoroutine(PlayerHealSkill());
     }
 
     public void OnPlayerTauntSkillButton()
     {
-        if (state != BattleState.PlayerTurn)
+        if (state != BattleState.PlayerTurn || pressed)
             return;
+
+        pressed = true;
 
         StartCoroutine(PlayerTauntSkill());
     }
@@ -307,7 +350,7 @@ public class BattleSystem : MonoBehaviour
         
         characterList[turnId].anim.SetTrigger("Attack");
 
-        yield return new WaitForSeconds(0.75f);
+        yield return new WaitForSeconds(0.5f);
         
         enemyStatsList[enemyId].anim.SetTrigger("Damage");
         
@@ -317,8 +360,6 @@ public class BattleSystem : MonoBehaviour
             enemyStatsList[enemyId].data.currentHealth = 0;
 
         enemyHud.SetEnemyHp(enemyStatsList[enemyId].data.currentHealth, enemyStatsList[enemyId].data.maxHealth);
-
-        yield return null;
 
         if (isDead)
         {
@@ -331,6 +372,8 @@ public class BattleSystem : MonoBehaviour
             for (int i = 0; i < playerStatsList.Count; i++)
             {
                 playerStatsList[i].data.xp += enemyStatsList[enemyId].data.enemyGiveXp;
+                
+                
 
                 playerStatsList[i].HasEnoughXp();
             }
@@ -350,6 +393,8 @@ public class BattleSystem : MonoBehaviour
                     enemyId = i;
 
                     targetingIndicatorList[i].enabled = true;
+                    
+                    attacking = false;
 
                     break;
                 }
@@ -359,13 +404,19 @@ public class BattleSystem : MonoBehaviour
         if (deadEnemies == enemyAdder + 1)
         {
             state = BattleState.Won;
+            
             EndBattle();
         }
         else
         {
             attackButton.interactable = true;
+            
             characterList[turnId].SetTurnFalse();
+
+            attacking = false;
+            
             state = BattleState.TurnChange;
+            
             StartCoroutine(TurnChange());
         }
     }
@@ -437,6 +488,8 @@ public class BattleSystem : MonoBehaviour
             characterList[turnId].SetTurnFalse();
             
             state = BattleState.TurnChange;
+            
+            attacking = true;
 
             StartCoroutine(TurnChange());
         }
@@ -457,6 +510,10 @@ public class BattleSystem : MonoBehaviour
                     playerStatsList[i].data.currentHealth = playerStatsList[i].data.maxHealth;
 
                     playerStatsList[i].select = false;
+                    
+                    heal.interactable = true;
+
+                    pressed = false;
                     
                     break;
                 }
@@ -516,6 +573,10 @@ public class BattleSystem : MonoBehaviour
     IEnumerator TurnChange()
     {
         turnId++;
+        
+        enemyButtons.SetActive(false);
+            
+        skillButtons.SetActive(false);
 
         if (turnId >= characterList.Count)
             turnId = 0;
@@ -541,6 +602,9 @@ public class BattleSystem : MonoBehaviour
         if (characterList[turnId].data.types != CharacterTypes.Enemy)
         {
             state = BattleState.PlayerTurn;
+            
+            yield return new WaitForSeconds(1.5f);
+            
             PlayerTurn();
         }
         else
@@ -548,11 +612,11 @@ public class BattleSystem : MonoBehaviour
             state = BattleState.EnemyTurn;
             
             state = BattleState.TurnChange;
+            
+            yield return new WaitForSeconds(1.5f);
 
             StartCoroutine(EnemyTurn());
         }
-        
-        yield return null;
     }
 
     /// <summary> Waits for 2 seconds makes bool isDead to the Take Damage Method from enemyStats. Set The enemyHud Hp.
@@ -560,7 +624,11 @@ public class BattleSystem : MonoBehaviour
     /// </summary>
     IEnumerator EnemyTurn()
     {
-        yield return new WaitForSeconds(1f);
+        inBetweenText.gameObject.SetActive(true);
+        
+        inBetweenText.text =  characterList[turnId].data.unitName + " " + turnStart;
+        
+        yield return new WaitForSeconds(2f);
 
         playerId = Random.Range(random1, random2);
 

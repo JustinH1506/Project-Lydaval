@@ -51,6 +51,7 @@ public class BattleHud : MonoBehaviour
         unitHp[battleSystem.enemyI].text = stats.data.currentHealth + "/" + stats.data.maxHealth;
         hpSlider[battleSystem.enemyI].maxValue = stats.data.maxHealth;
         hpSlider[battleSystem.enemyI].value = stats.data.currentHealth;
+        unitName[battleSystem.enemyI].gameObject.transform.parent.gameObject.transform.parent.gameObject.transform.parent.gameObject.SetActive(false);
     }
 
     /// <summary> Sets hpSliders value to hp. </summary>

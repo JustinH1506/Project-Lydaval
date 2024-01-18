@@ -41,6 +41,13 @@ public class Stats : MonoBehaviour
 
     [SerializeField] private BattleSystem battleSystem;
     [SerializeField] public Data data;
+    
+    #endregion
+    
+    #region Variables
+    
+    public GameObject skillButton, healButton;
+    
     public Animator anim;
 
     public int cooldown;
@@ -48,13 +55,10 @@ public class Stats : MonoBehaviour
     public bool select;
 
     public bool taunt;
-
-    public GameObject skillButton, healButton;
     
     #endregion
 
     #region Methods
-
     private void Awake()
     {
         anim = GetComponent<Animator>();
@@ -109,6 +113,7 @@ public class Stats : MonoBehaviour
         if (healButton != null)
         {
             healButton.gameObject.transform.parent.gameObject.SetActive(false);
+            skillButton.gameObject.transform.parent.gameObject.SetActive(false);
         }
     }
 

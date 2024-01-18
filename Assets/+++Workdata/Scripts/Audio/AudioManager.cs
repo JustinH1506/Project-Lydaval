@@ -86,7 +86,7 @@ public class AudioManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Stoping the sounds when entering other scenes.
+    /// Stopping the sounds when entering other scenes.
     /// </summary>
     private void CleanUp()
     {

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 29dfda2a6216f9542a3616100c3b94a8
+guid: aca4cd7c5395daa43a377d07ec9ea657
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Wormhurt_0
+      name: WormhurtSheet (1)_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 150
-        height: 120
+        width: 1500
+        height: 1200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1f17cf69df2323f48b3a0f163242e7ba
-      internalID: 1128195259
+      spriteID: 629a4d846d680844780e43aae0ccd704
+      internalID: 916377181
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wormhurt_1
+      name: WormhurtSheet (1)_1
       rect:
         serializedVersion: 2
-        x: 150
+        x: 1500
         y: 0
-        width: 150
-        height: 120
+        width: 1500
+        height: 1200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f2dbc8c172e4d3d4faf7f67e9aef0007
-      internalID: -87136074
+      spriteID: 9b889ff05086ee74e93810e2b1466a1b
+      internalID: 1715156989
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wormhurt_2
+      name: WormhurtSheet (1)_2
       rect:
         serializedVersion: 2
-        x: 300
+        x: 3000
         y: 0
-        width: 150
-        height: 120
+        width: 1500
+        height: 1200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a1c93527c9171847b30dfe92be425c9
-      internalID: 1442797554
+      spriteID: 0bb88dd4131bab741985e9d995d5dc7e
+      internalID: -1271363723
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wormhurt_3
+      name: WormhurtSheet (1)_3
       rect:
         serializedVersion: 2
-        x: 450
+        x: 4500
         y: 0
-        width: 150
-        height: 120
+        width: 1500
+        height: 1200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,8 +187,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b577e53a26b91ae43ae55c7ec3fd7aca
-      internalID: -59169778
+      spriteID: 11d003523e5b13b478fa18cb3995d46b
+      internalID: -1381360706
       vertices: []
       indices: 
       edges: []
@@ -204,10 +204,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Wormhurt_0: 1128195259
-      Wormhurt_1: -87136074
-      Wormhurt_2: 1442797554
-      Wormhurt_3: -59169778
+      WormhurtSheet (1)_0: 916377181
+      WormhurtSheet (1)_1: 1715156989
+      WormhurtSheet (1)_2: -1271363723
+      WormhurtSheet (1)_3: -1381360706
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
