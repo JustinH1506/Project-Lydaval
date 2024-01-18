@@ -209,6 +209,7 @@
      <Folder Include="Assets\+++Workdata\Assets\Sprites\Player" />
      <Folder Include="Assets\+++Workdata\Assets\Sprites\Player\Animations" />
      <Folder Include="Library\PackageCache\com.unity.shadergraph@14.0.8\Tests" />
+     <Folder Include="Assets\+++Workdata\Assets\Ui\UI_Elements\UI Elements\UI_Ingame_Menu\UI_Party" />
      <None Include="Library\PackageCache\com.unity.test-framework@1.1.33\package.json" />
      <Folder Include="Library\PackageCache\com.unity.modules.unityanalytics@1.0.0" />
      <Folder Include="Library\PackageCache\com.unity.modules.physics@1.0.0" />
