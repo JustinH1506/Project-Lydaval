@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 66e58ecbb9b20794e94c3d9bdafbdcc5
+guid: c0357b432cb6d2745adffcf548643bca
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ZaunSheett_0
+      name: Lydaval_Spritesheet_ReonIdle_DONE_18.01_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 2
-        width: 27
-        height: 21
+        x: 0
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d633e37746bd3e4389a096a5ccfe52b
-      internalID: 847829813
+      spriteID: 39113b9d0ac570f43ac9642c052db27d
+      internalID: -917055496
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ZaunSheett_1
+      name: Lydaval_Spritesheet_ReonIdle_DONE_18.01_1
       rect:
         serializedVersion: 2
-        x: 33
-        y: 2
-        width: 21
-        height: 21
+        x: 80
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2b099d4e54e777d4db6cfd2f11236cdf
-      internalID: 1715392567
+      spriteID: 5876033c429895f4cbe6d2d5a6da7dee
+      internalID: -1082598509
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ZaunSheett_2
+      name: Lydaval_Spritesheet_ReonIdle_DONE_18.01_2
       rect:
         serializedVersion: 2
-        x: 59
-        y: 2
-        width: 6
-        height: 21
+        x: 160
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 82822c4e04d8d5949a1072b58fc78db7
-      internalID: 379111541
+      spriteID: 56bcf22a36759194395248cefa2a354c
+      internalID: -1726625638
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ZaunSheett_4
+      name: Lydaval_Spritesheet_ReonIdle_DONE_18.01_3
       rect:
         serializedVersion: 2
-        x: 71
-        y: 1
-        width: 25
-        height: 21
+        x: 240
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea3fd70cb03e91c4db5d06dd33f53d0e
-      internalID: 506709255
+      spriteID: 95cc70d3a22e6054691de4c22f8dcad1
+      internalID: -1183242621
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ZaunSheett_5
+      name: Lydaval_Spritesheet_ReonIdle_DONE_18.01_4
       rect:
         serializedVersion: 2
-        x: 99
-        y: 1
-        width: 21
-        height: 21
+        x: 320
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,8 +208,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 94bf6369741e95947bf92bc84676bdc1
-      internalID: -1415902019
+      spriteID: 096c50fce56bc6842b1478defe239b85
+      internalID: 188106203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lydaval_Spritesheet_ReonIdle_DONE_18.01_5
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ef7068d12f28e94e96f1c5c157c7836
+      internalID: 1229475427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lydaval_Spritesheet_ReonIdle_DONE_18.01_6
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e563dcfa782f4204d81d3e7676524d7d
+      internalID: -1311491545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lydaval_Spritesheet_ReonIdle_DONE_18.01_7
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24581f8dfb010b84e9a7f8b015d472cf
+      internalID: 383590754
       vertices: []
       indices: 
       edges: []
@@ -225,12 +288,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      ZaunSheett_0: 847829813
-      ZaunSheett_1: 1715392567
-      ZaunSheett_2: 379111541
-      ZaunSheett_3: 668337415
-      ZaunSheett_4: 506709255
-      ZaunSheett_5: -1415902019
+      Lydaval_Spritesheet_ReonIdle_DONE_18.01_0: -917055496
+      Lydaval_Spritesheet_ReonIdle_DONE_18.01_1: -1082598509
+      Lydaval_Spritesheet_ReonIdle_DONE_18.01_2: -1726625638
+      Lydaval_Spritesheet_ReonIdle_DONE_18.01_3: -1183242621
+      Lydaval_Spritesheet_ReonIdle_DONE_18.01_4: 188106203
+      Lydaval_Spritesheet_ReonIdle_DONE_18.01_5: 1229475427
+      Lydaval_Spritesheet_ReonIdle_DONE_18.01_6: -1311491545
+      Lydaval_Spritesheet_ReonIdle_DONE_18.01_7: 383590754
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

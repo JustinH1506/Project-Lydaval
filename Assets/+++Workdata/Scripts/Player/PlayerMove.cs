@@ -11,6 +11,8 @@ public class PlayerMove : MonoBehaviour
     public class Data
     {
         public Dictionary<string, SaveableVector3> positionsBySceneName = new Dictionary<string, SaveableVector3>();
+
+        public bool startCutsceneOff;
     }
     
     #endregion 
@@ -25,6 +27,8 @@ public class PlayerMove : MonoBehaviour
     
     public int moveSpeed;
 
+    [SerializeField] private GameObject startCutscene;
+
     [SerializeField] private PlayerAnimator playerAnimator;
     
     #endregion
@@ -32,7 +36,7 @@ public class PlayerMove : MonoBehaviour
     #region Scripts
 
     private PlayerController playerController;
-    [SerializeField] private Data positionData;
+    public Data positionData;
 
     #endregion
 
@@ -69,6 +73,9 @@ public class PlayerMove : MonoBehaviour
             positionData = currentPosition;
             
             GetPosition();
+            
+            if(positionData.startCutsceneOff)
+                startCutscene.SetActive(false);
         }
 
         GameStateManager.instance.data.positionData = positionData;

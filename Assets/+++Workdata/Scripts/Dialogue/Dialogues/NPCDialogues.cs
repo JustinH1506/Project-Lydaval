@@ -36,6 +36,14 @@ public class NPCDialogues : MonoBehaviour
         
     }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            inRange = true;
+        }
+    }
+
     public void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Player"))

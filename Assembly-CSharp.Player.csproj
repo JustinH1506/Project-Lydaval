@@ -69,6 +69,7 @@
      <Compile Include="Assets\+++Workdata\Scripts\Audio\AudioManager.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Inventory\Items\InventoryEntry.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Managers\Inventory.cs" />
+     <Compile Include="Assets\DialogueAfterTimeline.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Other\MenuController.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Combat\BattleHud.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Dialogue\Dialogues\NPCDialogues.cs" />

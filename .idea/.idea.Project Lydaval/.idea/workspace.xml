@@ -5,14 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="60fe24dc-a470-438e-9d29-fb3fa2e8b3cf" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Ui/UI_Elements/UI Elements/UI_Ingame_Menu/Ui_InGame_Menu_Button_Highlighted.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Ui/UI_Elements/UI Elements/UI_Ingame_Menu/Ui_InGame_Menu_Button_Highlighted.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Scenes/Vertical Slices/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Scenes/Vertical Slices/MainMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FMODUnity.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/FMODUnity.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FMODUnityEditor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/FMODUnityEditor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FMODUnityResonance.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/FMODUnityResonance.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FMODUnityResonanceEditor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/FMODUnityResonanceEditor.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Lydaval/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Lydaval/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.Player.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.Player.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Sprites/Background/Environment/Plants_And_Animals/ZaunSheett.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Sprites/Background/Environment/Plants_And_Animals/ZaunSheett.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Sprites/Enemy/Overworld/Wormchillin-Sheet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Sprites/Enemy/Overworld/Wormchillin-Sheet.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Sprites/Npcs/Lydaval_Sprite_Lydaval_Sprite_LadyOlera_DONE_12.01.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Sprites/Npcs/Lydaval_Sprite_Lydaval_Sprite_LadyOlera_DONE_12.01.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Scenes/Overworld Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Scenes/Overworld Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Dialogue/Dialogues/NPCDialogues.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Dialogue/Dialogues/NPCDialogues.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Player/PlayerMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Player/PlayerMove.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project Lydaval.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Project Lydaval.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" afterDir="false" />
     </list>
@@ -58,6 +62,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/+++Workdata/Scripts/UI/PlayerSkills.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/+++Workdata/Scripts/UI/UiButtons.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/+++Workdata/Scripts/Weapons/WeaponStats.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/DialogueAfterTimeline.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/LevelTest.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
@@ -118,10 +123,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="20956">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="20956" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -211,6 +216,7 @@
       <workItem from="1705504208964" duration="1071000" />
       <workItem from="1705524936090" duration="3605000" />
       <workItem from="1705562278036" duration="21815000" />
+      <workItem from="1705614236186" duration="3704000" />
     </task>
     <servers />
   </component>

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 66e58ecbb9b20794e94c3d9bdafbdcc5
+guid: 89c9834f792a2e549b0ec68b897d79e5
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ZaunSheett_0
+      name: Wormoverworld-sheet_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 2
-        width: 27
-        height: 21
+        x: 0
+        y: 0
+        width: 40
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d633e37746bd3e4389a096a5ccfe52b
-      internalID: 847829813
+      spriteID: dde389ef6f427f3418f5b15e53b4a356
+      internalID: -1686698193
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ZaunSheett_1
+      name: Wormoverworld-sheet_1
       rect:
         serializedVersion: 2
-        x: 33
-        y: 2
-        width: 21
-        height: 21
+        x: 40
+        y: 0
+        width: 40
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2b099d4e54e777d4db6cfd2f11236cdf
-      internalID: 1715392567
+      spriteID: 4b4044589e3716546a5d233235d303f4
+      internalID: -70121520
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ZaunSheett_2
+      name: Wormoverworld-sheet_2
       rect:
         serializedVersion: 2
-        x: 59
-        y: 2
-        width: 6
-        height: 21
+        x: 80
+        y: 0
+        width: 40
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,50 +166,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 82822c4e04d8d5949a1072b58fc78db7
-      internalID: 379111541
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ZaunSheett_4
-      rect:
-        serializedVersion: 2
-        x: 71
-        y: 1
-        width: 25
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ea3fd70cb03e91c4db5d06dd33f53d0e
-      internalID: 506709255
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ZaunSheett_5
-      rect:
-        serializedVersion: 2
-        x: 99
-        y: 1
-        width: 21
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 94bf6369741e95947bf92bc84676bdc1
-      internalID: -1415902019
+      spriteID: f52f745aa6999904d84356efac9b0499
+      internalID: -667269630
       vertices: []
       indices: 
       edges: []
@@ -225,12 +183,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      ZaunSheett_0: 847829813
-      ZaunSheett_1: 1715392567
-      ZaunSheett_2: 379111541
-      ZaunSheett_3: 668337415
-      ZaunSheett_4: 506709255
-      ZaunSheett_5: -1415902019
+      Wormoverworld-sheet_0: -1686698193
+      Wormoverworld-sheet_1: -70121520
+      Wormoverworld-sheet_2: -667269630
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 66e58ecbb9b20794e94c3d9bdafbdcc5
+guid: d7edd3f6ece1bb64e8b2980833d0617e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ZaunSheett_0
+      name: Lydaval_Spritesheet_FrowinIdle_DONE_18.01_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 2
-        width: 27
-        height: 21
+        x: 0
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d633e37746bd3e4389a096a5ccfe52b
-      internalID: 847829813
+      spriteID: f886bacfb0793c045aab5cf486225100
+      internalID: 1432596161
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ZaunSheett_1
+      name: Lydaval_Spritesheet_FrowinIdle_DONE_18.01_1
       rect:
         serializedVersion: 2
-        x: 33
-        y: 2
-        width: 21
-        height: 21
+        x: 80
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2b099d4e54e777d4db6cfd2f11236cdf
-      internalID: 1715392567
+      spriteID: 6a2f26ff0b2116f4da1d01dfe10f4747
+      internalID: -1062176655
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ZaunSheett_2
+      name: Lydaval_Spritesheet_FrowinIdle_DONE_18.01_2
       rect:
         serializedVersion: 2
-        x: 59
-        y: 2
-        width: 6
-        height: 21
+        x: 160
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 82822c4e04d8d5949a1072b58fc78db7
-      internalID: 379111541
+      spriteID: 24f64134ed2d62e4bbe1492fb42d5444
+      internalID: -185935352
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ZaunSheett_4
+      name: Lydaval_Spritesheet_FrowinIdle_DONE_18.01_3
       rect:
         serializedVersion: 2
-        x: 71
-        y: 1
-        width: 25
-        height: 21
+        x: 240
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea3fd70cb03e91c4db5d06dd33f53d0e
-      internalID: 506709255
+      spriteID: f2722b788bbe4604eb9576ffcbe10666
+      internalID: -642757871
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ZaunSheett_5
+      name: Lydaval_Spritesheet_FrowinIdle_DONE_18.01_4
       rect:
         serializedVersion: 2
-        x: 99
-        y: 1
-        width: 21
-        height: 21
+        x: 320
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,8 +208,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 94bf6369741e95947bf92bc84676bdc1
-      internalID: -1415902019
+      spriteID: 693e83cc71bdcb94c871854e98e82f2d
+      internalID: -1206637652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lydaval_Spritesheet_FrowinIdle_DONE_18.01_5
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4811891097f50794bbc26916f33b5a70
+      internalID: -807626475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lydaval_Spritesheet_FrowinIdle_DONE_18.01_6
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba69de888c589f84ca2c50867662a553
+      internalID: 457523788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lydaval_Spritesheet_FrowinIdle_DONE_18.01_7
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 650afbf8e1e130a41857695632949bc1
+      internalID: 1460248430
       vertices: []
       indices: 
       edges: []
@@ -225,12 +288,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      ZaunSheett_0: 847829813
-      ZaunSheett_1: 1715392567
-      ZaunSheett_2: 379111541
-      ZaunSheett_3: 668337415
-      ZaunSheett_4: 506709255
-      ZaunSheett_5: -1415902019
+      Lydaval_Spritesheet_FrowinIdle_DONE_18.01_0: 1432596161
+      Lydaval_Spritesheet_FrowinIdle_DONE_18.01_1: -1062176655
+      Lydaval_Spritesheet_FrowinIdle_DONE_18.01_2: -185935352
+      Lydaval_Spritesheet_FrowinIdle_DONE_18.01_3: -642757871
+      Lydaval_Spritesheet_FrowinIdle_DONE_18.01_4: -1206637652
+      Lydaval_Spritesheet_FrowinIdle_DONE_18.01_5: -807626475
+      Lydaval_Spritesheet_FrowinIdle_DONE_18.01_6: 457523788
+      Lydaval_Spritesheet_FrowinIdle_DONE_18.01_7: 1460248430
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

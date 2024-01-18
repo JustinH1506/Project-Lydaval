@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 66e58ecbb9b20794e94c3d9bdafbdcc5
+guid: 5face46ce03066440a7633f7dd6ec9d3
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ZaunSheett_0
+      name: Lydaval_Spritesheet_HildaIdle_DONE_18.01_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 2
-        width: 27
-        height: 21
+        x: 0
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d633e37746bd3e4389a096a5ccfe52b
-      internalID: 847829813
+      spriteID: cf0e63029b1849f49918aa65445144b3
+      internalID: -1031327348
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ZaunSheett_1
+      name: Lydaval_Spritesheet_HildaIdle_DONE_18.01_1
       rect:
         serializedVersion: 2
-        x: 33
-        y: 2
-        width: 21
-        height: 21
+        x: 80
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2b099d4e54e777d4db6cfd2f11236cdf
-      internalID: 1715392567
+      spriteID: 0ae477c01b81d85408f2566dc05752ab
+      internalID: -93800395
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ZaunSheett_2
+      name: Lydaval_Spritesheet_HildaIdle_DONE_18.01_2
       rect:
         serializedVersion: 2
-        x: 59
-        y: 2
-        width: 6
-        height: 21
+        x: 160
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 82822c4e04d8d5949a1072b58fc78db7
-      internalID: 379111541
+      spriteID: e013f45067845f34e8ef982cfb4818b0
+      internalID: 1693973833
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ZaunSheett_4
+      name: Lydaval_Spritesheet_HildaIdle_DONE_18.01_3
       rect:
         serializedVersion: 2
-        x: 71
-        y: 1
-        width: 25
-        height: 21
+        x: 240
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea3fd70cb03e91c4db5d06dd33f53d0e
-      internalID: 506709255
+      spriteID: 78b32ff464a93814a819c55a7347dee0
+      internalID: 779571552
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ZaunSheett_5
+      name: Lydaval_Spritesheet_HildaIdle_DONE_18.01_4
       rect:
         serializedVersion: 2
-        x: 99
-        y: 1
-        width: 21
-        height: 21
+        x: 320
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,8 +208,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 94bf6369741e95947bf92bc84676bdc1
-      internalID: -1415902019
+      spriteID: f686198b15539bb409a8697cff85beb2
+      internalID: 2132954733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lydaval_Spritesheet_HildaIdle_DONE_18.01_5
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39af86f7f33c00a46bf77f9be9b781b2
+      internalID: 1961238424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lydaval_Spritesheet_HildaIdle_DONE_18.01_6
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fbfea237c44568468c05fc869db17ea
+      internalID: 2129245713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lydaval_Spritesheet_HildaIdle_DONE_18.01_7
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: add8d604f3482fe4c81d67b32f2ed17b
+      internalID: 1634149107
       vertices: []
       indices: 
       edges: []
@@ -225,12 +288,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      ZaunSheett_0: 847829813
-      ZaunSheett_1: 1715392567
-      ZaunSheett_2: 379111541
-      ZaunSheett_3: 668337415
-      ZaunSheett_4: 506709255
-      ZaunSheett_5: -1415902019
+      Lydaval_Spritesheet_HildaIdle_DONE_18.01_0: -1031327348
+      Lydaval_Spritesheet_HildaIdle_DONE_18.01_1: -93800395
+      Lydaval_Spritesheet_HildaIdle_DONE_18.01_2: 1693973833
+      Lydaval_Spritesheet_HildaIdle_DONE_18.01_3: 779571552
+      Lydaval_Spritesheet_HildaIdle_DONE_18.01_4: 2132954733
+      Lydaval_Spritesheet_HildaIdle_DONE_18.01_5: 1961238424
+      Lydaval_Spritesheet_HildaIdle_DONE_18.01_6: 2129245713
+      Lydaval_Spritesheet_HildaIdle_DONE_18.01_7: 1634149107
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

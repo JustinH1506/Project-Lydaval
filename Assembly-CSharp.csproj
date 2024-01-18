@@ -69,6 +69,7 @@
      <Compile Include="Assets\+++Workdata\Scripts\Audio\AudioManager.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Inventory\Items\InventoryEntry.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Managers\Inventory.cs" />
+     <Compile Include="Assets\DialogueAfterTimeline.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Other\MenuController.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Combat\BattleHud.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Dialogue\Dialogues\NPCDialogues.cs" />
@@ -128,11 +129,13 @@
      <Folder Include="Assets\Settings" />
      <Folder Include="Assets\+++Workdata\Assets\Sprites\Enemy" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+     <Folder Include="Assets\+++Workdata\Assets\Sprites\Npcs\Charatcter Overworld Spritesheet" />
      <Folder Include="Library\PackageCache\com.unity.render-pipelines.universal@14.0.8\Textures\BlueNoise64" />
      <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\package.json" />
      <None Include="Library\PackageCache\com.unity.modules.imgui@1.0.0\package.json" />
      <None Include="Library\PackageCache\com.unity.modules.tilemap@1.0.0\package.json" />
      <Folder Include="Assets\+++Workdata\Scripts\Inventory\Equipment" />
+     <Folder Include="Assets\+++Workdata\Assets\Tilemap\Fences" />
      <Folder Include="Library\PackageCache\com.unity.modules.assetbundle@1.0.0" />
      <Folder Include="Library\PackageCache\com.unity.burst@1.8.8\Tests" />
      <Folder Include="Assets\+++Workdata\Prefabs\Characters\Player" />
@@ -152,6 +155,7 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
      <Folder Include="Assets\+++Workdata\Assets\Ui\UI_Elements\UI Elements\UI_Ingame_Menu\UI_System" />
      <Folder Include="Assets\+++Workdata\Assets\Tilemap" />
+     <Folder Include="Assets\+++Workdata\Assets\Sprites\Npcs\Animation" />
      <Folder Include="Assets\+++Workdata\Prefabs\Inventory" />
      <None Include="Library\PackageCache\com.unity.modules.terrainphysics@1.0.0\package.json" />
      <None Include="Library\PackageCache\com.unity.mathematics@1.2.6\package.json" />
@@ -285,6 +289,7 @@
      <Folder Include="Assets\TextMesh Pro\Fonts" />
      <None Include="Library\PackageCache\com.unity.modules.vehicles@1.0.0\package.json" />
      <None Include="Library\PackageCache\com.unity.cinemachine@2.9.7\package.json" />
+     <Folder Include="Assets\+++Workdata\Assets\Sprites\Enemy\Overworld\Overworld enemy spritesheets" />
      <None Include="Assets\+++Workdata\Assets\Dialogues\Test.json" />
      <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6" />
      <Folder Include="Library\PackageCache\com.unity.ide.rider@3.0.25" />
@@ -305,6 +310,7 @@
      <Folder Include="Library\PackageCache\com.unity.2d.animation@9.0.3" />
      <Folder Include="Library\PackageCache\com.unity.render-pipelines.universal@14.0.8\Textures\BlueNoise16" />
      <Folder Include="Assets\+++Workdata\Scripts\SaveAndLoadSystem\SaveManagment" />
+     <Folder Include="Assets\+++Workdata\Timelines" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.7\ValidationConfig.json" />
      <Folder Include="Assets\+++Workdata\Scripts\UI" />
      <Folder Include="Assets\+++Workdata\Assets\Sprites\Background\Environment\Houses" />
