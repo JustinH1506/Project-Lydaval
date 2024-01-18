@@ -144,6 +144,7 @@
      <None Include="Assets\+++Workdata\Assets\Dialogues\Test_.json" />
      <Folder Include="Library\PackageCache\com.unity.2d.aseprite@1.0.0" />
      <Folder Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections.LowLevel.ILSupport" />
+     <Folder Include="Assets\+++Workdata\Assets\Sprites\Enemy\Worm Sprite Sheet" />
      <Folder Include="Assets\TextMesh Pro\Resources\Fonts &amp; Materials" />
      <Folder Include="Library\PackageCache\com.unity.collections@1.2.4" />
      <None Include="Library\PackageCache\com.unity.ide.visualstudio@2.0.18\ValidationConfig.json" />
@@ -170,6 +171,7 @@
      <Folder Include="Assets\+++Workdata\Prefabs\Characters\Enemys\Overworld" />
      <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\PackageConversionData.json" />
      <None Include="Library\PackageCache\com.unity.modules.unitywebrequestassetbundle@1.0.0\package.json" />
+     <None Include="Assets\OFL.txt" />
      <Folder Include="Assets\+++Workdata\Prefabs" />
      <Folder Include="Library\PackageCache\com.unity.ext.nunit@1.0.6" />
      <Folder Include="Library\PackageCache\com.unity.render-pipelines.universal@14.0.8\Textures\FilmGrain" />
@@ -211,6 +213,7 @@
      <Folder Include="Library\PackageCache\com.unity.modules.unityanalytics@1.0.0" />
      <Folder Include="Library\PackageCache\com.unity.modules.physics@1.0.0" />
      <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Scripts" />
+     <Folder Include="Assets\+++Workdata\Fonts" />
      <Folder Include="Library\PackageCache\com.unity.modules.vr@1.0.0" />
      <Folder Include="Assets\Ink\Documentation" />
      <Folder Include="Assets\+++Workdata\Assets\Dialogues" />
@@ -328,6 +331,7 @@
      <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Editor Resources\Shaders" />
      <Folder Include="Library\PackageCache\com.unity.modules.director@1.0.0" />
      <Folder Include="Library\PackageCache\com.unity.modules.audio@1.0.0" />
+     <Folder Include="Assets\+++Workdata\Assets\Sprites\Enemy\Thief SpriteSheets" />
      <Folder Include="Assets\+++Workdata\Assets\Sprites\Player\Combat Sprite Sheet" />
      <None Include="Library\PackageCache\com.unity.modules.terrain@1.0.0\package.json" />
      <None Include="Library\PackageCache\com.unity.2d.sprite@1.0.0\package.json" />

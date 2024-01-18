@@ -10,6 +10,7 @@ public enum BattleState
     Start,
     PlayerTurn,
     EnemyTurn,
+    TurnChange,
     Won,
     Lost
 }
@@ -364,6 +365,7 @@ public class BattleSystem : MonoBehaviour
         {
             attackButton.interactable = true;
             characterList[turnId].SetTurnFalse();
+            state = BattleState.TurnChange;
             StartCoroutine(TurnChange());
         }
     }
@@ -433,6 +435,9 @@ public class BattleSystem : MonoBehaviour
         else
         {
             characterList[turnId].SetTurnFalse();
+            
+            state = BattleState.TurnChange;
+
             StartCoroutine(TurnChange());
         }
     }
@@ -479,6 +484,8 @@ public class BattleSystem : MonoBehaviour
                 
                 characterList[turnId].SetTurnFalse();
                 
+                state = BattleState.TurnChange;
+                
                 StartCoroutine(TurnChange());
             }
         }
@@ -498,7 +505,11 @@ public class BattleSystem : MonoBehaviour
         yield return new WaitForSeconds(1f);
 
         taunt.interactable = true;
+        
         characterList[turnId].SetTurnFalse();
+        
+        state = BattleState.TurnChange;
+
         StartCoroutine(TurnChange());
     }
 
@@ -527,8 +538,6 @@ public class BattleSystem : MonoBehaviour
             skill.interactable = false;
         }
 
-        yield return null;
-
         if (characterList[turnId].data.types != CharacterTypes.Enemy)
         {
             state = BattleState.PlayerTurn;
@@ -537,8 +546,13 @@ public class BattleSystem : MonoBehaviour
         else
         {
             state = BattleState.EnemyTurn;
+            
+            state = BattleState.TurnChange;
+
             StartCoroutine(EnemyTurn());
         }
+        
+        yield return null;
     }
 
     /// <summary> Waits for 2 seconds makes bool isDead to the Take Damage Method from enemyStats. Set The enemyHud Hp.
@@ -619,6 +633,8 @@ public class BattleSystem : MonoBehaviour
         }
         else
         {
+            state = BattleState.TurnChange;
+            
             StartCoroutine(TurnChange());
         }
     }
