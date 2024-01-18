@@ -100,7 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   battleSystem: {fileID: 0}
   data:
-    unitName: Healer
+    unitName: Frowin
     maxHealth: 25
     currentHealth: 25
     speed: 6
@@ -111,12 +111,12 @@ MonoBehaviour:
     neededXp: 500
     enemyGiveXp: 0
     types: 3
+  skillButton: {fileID: 0}
+  healButton: {fileID: 0}
   anim: {fileID: 0}
   cooldown: 0
   select: 0
   taunt: 0
-  skillButton: {fileID: 0}
-  healButton: {fileID: 0}
 --- !u!95 &8390754044533698382
 Animator:
   serializedVersion: 5

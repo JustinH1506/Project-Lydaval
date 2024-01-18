@@ -100,7 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   battleSystem: {fileID: 0}
   data:
-    unitName: Tank
+    unitName: Hilda
     maxHealth: 50
     currentHealth: 50
     speed: 4
@@ -111,12 +111,12 @@ MonoBehaviour:
     neededXp: 500
     enemyGiveXp: 0
     types: 2
+  skillButton: {fileID: 0}
+  healButton: {fileID: 0}
   anim: {fileID: 0}
   cooldown: 0
   select: 0
   taunt: 0
-  skillButton: {fileID: 0}
-  healButton: {fileID: 0}
 --- !u!95 &7959835491640557419
 Animator:
   serializedVersion: 5
