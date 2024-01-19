@@ -75,6 +75,7 @@
      <Compile Include="Assets\+++Workdata\Scripts\Dialogue\Dialogues\NPCDialogues.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Player\PlayerMove.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Managers\PlayerManager.cs" />
+     <Compile Include="Assets\+++Workdata\Scripts\Timeline\TimelineStart.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Managers\EnemyManager.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\SaveAndLoadSystem\InGameButtons.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Dialogue\DialogueControllMap.cs" />
@@ -259,6 +260,7 @@
      <Folder Include="Library\PackageCache\com.unity.2d.sprite@1.0.0" />
      <Folder Include="Library\PackageCache\com.unity.modules.tilemap@1.0.0" />
      <Folder Include="Assets\+++Workdata\Assets" />
+     <Folder Include="Assets\+++Workdata\Scripts\Timeline" />
      <Folder Include="Assets\+++Workdata\Assets\Sprites\Player\OverWorld" />
      <Folder Include="Assets\Ink\Demos\Basic Demo\Ink" />
      <Folder Include="Library\PackageCache\com.unity.modules.ui@1.0.0" />
