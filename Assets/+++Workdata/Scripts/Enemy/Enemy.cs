@@ -20,8 +20,6 @@ public class Enemy : MonoBehaviour
         public SaveableVector3 position;
         public bool isDead;
     }
-    
-    public EnemyManager enemyManager;
 
     [SerializeField] private Data data;
     
@@ -84,7 +82,7 @@ public class Enemy : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            enemyManager.enemyType = enemyType;
+            EnemyManager.Instance.enemyType = enemyType;
 
             data.isDead = true;
             

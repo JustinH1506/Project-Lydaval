@@ -3,6 +3,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.InputSystem;
 using Ink.Runtime;
+using UnityEngine.Playables;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private GameObject dialoguePanel;
 
     [SerializeField] private TextMeshProUGUI dialogueText;
+
+    [SerializeField] private PlayableDirector blackScreenFadeIn;
 
     private void Awake()
     {
@@ -51,28 +54,23 @@ public class DialogueManager : MonoBehaviour
 
          playerMove.enabled = false;
          
-         currentStory.BindExternalFunction("Test2", (string lol) =>
+         currentStory.BindExternalFunction("activateCutscene", (string activate) =>
          {
-             Debug.Log(lol);
-         });
-         
-         currentStory.BindExternalFunction("TestThis", (string textTest) =>
-         {
-             Debug.Log(textTest);
+             blackScreenFadeIn.Play();
+
+             StartCoroutine(ExitDialogueMode());
          });
      }
      
      private IEnumerator ExitDialogueMode()
      {
          yield return null;
-
-         currentStory.UnbindExternalFunction("TestThis");
-         
-         currentStory.UnbindExternalFunction("Test2");
          
          dialogueIsPlaying = false;
 
          dialoguePanel.SetActive(false);
+         
+         currentStory.UnbindExternalFunction("activateCutscene");
 
          playerMove.enabled = true;
      }

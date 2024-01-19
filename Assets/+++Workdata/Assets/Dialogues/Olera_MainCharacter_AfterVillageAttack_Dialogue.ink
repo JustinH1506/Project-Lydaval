@@ -16,5 +16,4 @@ Player: “I don’t even know where to go! I’m lucky I survived all that, tha
 Olera: “The village will be fine, you need to go and save him. And you’re not on your own, I’m sure your friends will join you. I wish I could do more to help you…”
 
  She gives you an pastry.
-
     -> END
