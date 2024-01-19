@@ -5,24 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="60fe24dc-a470-438e-9d29-fb3fa2e8b3cf" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Lydaval/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Lydaval/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Dialogues/MainCharacter_Reon_Dialogue.ink" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Dialogues/MainCharacter_Reon_Dialogue.ink" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Dialogues/MainCharacter_Reon_Dialogue.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Dialogues/MainCharacter_Reon_Dialogue.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Dialogues/Olera_MainCharacter_AfterVillageAttack_Dialogue.ink" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Dialogues/Olera_MainCharacter_AfterVillageAttack_Dialogue.ink" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Dialogues/Olera_MainCharacter_Dialogue.ink" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Dialogues/Olera_MainCharacter_Dialogue.ink" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Sprites/Background/Environment/Plants_And_Animals/Lydaval_Sprite_Baumstumpf1_12.01_Aproved.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Sprites/Background/Environment/Plants_And_Animals/Lydaval_Sprite_Baumstumpf1_12.01_Aproved.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Sprites/Background/Environment/Plants_And_Animals/Lydaval_Sprite_Baumstumpf2_12.01_Aproved.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Sprites/Background/Environment/Plants_And_Animals/Lydaval_Sprite_Baumstumpf2_12.01_Aproved.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Sprites/Background/Environment/Plants_And_Animals/Lydaval_Sprite_BushOne_12.01_Aproved.png.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Sprites/Background/Environment/Plants_And_Animals/Lydaval_Sprite_BushOne_12.01_Aproved.png.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Sprites/Background/Environment/Plants_And_Animals/Lydaval_Sprite_BushThree_12.01_Aproved.png.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Sprites/Background/Environment/Plants_And_Animals/Lydaval_Sprite_BushThree_12.01_Aproved.png.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Sprites/Background/Environment/Plants_And_Animals/Lydaval_Sprite_BushTwo_12.01_Aproved.png.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Sprites/Background/Environment/Plants_And_Animals/Lydaval_Sprite_BushTwo_12.01_Aproved.png.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Sprites/Background/Environment/Plants_And_Animals/Lydaval_Sprite_Dummy_12.01_Aproved..png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Sprites/Background/Environment/Plants_And_Animals/Lydaval_Sprite_Dummy_12.01_Aproved..png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Sprites/Background/Environment/Plants_And_Animals/Lydaval_Sprite_TreeOne_12.01_Aproved.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Sprites/Background/Environment/Plants_And_Animals/Lydaval_Sprite_TreeOne_12.01_Aproved.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Sprites/Background/Environment/Plants_And_Animals/Lydaval_Sprite_Grass_03.01_Aproved.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Sprites/Background/Environment/Plants_And_Animals/Lydaval_Sprite_Grass_03.01_Aproved.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Scenes/Overworld Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Scenes/Overworld Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Dialogue/Dialogues/DialogueManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Dialogue/Dialogues/DialogueManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Enemy/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Enemy/Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Timelines/Timeline.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Timelines/Timeline.playable" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Search.settings" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Search.settings" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -221,7 +205,7 @@
       <workItem from="1705524936090" duration="3605000" />
       <workItem from="1705562278036" duration="21815000" />
       <workItem from="1705614236186" duration="3704000" />
-      <workItem from="1705654302882" duration="3349000" />
+      <workItem from="1705654302882" duration="3955000" />
     </task>
     <servers />
   </component>
