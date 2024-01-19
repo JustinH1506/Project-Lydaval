@@ -6,14 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="60fe24dc-a470-438e-9d29-fb3fa2e8b3cf" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Lydaval/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Lydaval/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.Player.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.Player.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Dialogues/MainCharacter_Reon_Dialogue.ink" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Dialogues/MainCharacter_Reon_Dialogue.ink" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Dialogues/MainCharacter_Reon_Dialogue.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Dialogues/MainCharacter_Reon_Dialogue.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Scenes/Overworld Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Scenes/Overworld Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Scenes/Vertical Slices/Ballte VS.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Scenes/Vertical Slices/Ballte VS.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Dialogue/Dialogues/DialogueManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Dialogue/Dialogues/DialogueManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Dialogue/Dialogues/NPCDialogues.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Dialogue/Dialogues/NPCDialogues.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Timelines/StartOFWoodsTimeline.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Timelines/StartOFWoodsTimeline.playable" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DialogueAfterTimeline.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DialogueAfterTimeline.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,10 +120,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="21764">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="21764" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -215,6 +216,7 @@
       <workItem from="1705614236186" duration="3704000" />
       <workItem from="1705654302882" duration="4697000" />
       <workItem from="1705674064548" duration="1427000" />
+      <workItem from="1705684636776" duration="1986000" />
     </task>
     <servers />
   </component>
@@ -227,6 +229,23 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/+++Workdata/Scripts/Dialogue/Dialogues/DialogueManager.cs</url>
+          <line>46</line>
+          <properties documentPath="D:\Unity Stuff\Git\Project Lydaval\Assets\+++Workdata\Scripts\Dialogue\Dialogues\DialogueManager.cs" initialLine="46" containingFunctionPresentation="Method 'EnterDialogueMode'">
+            <startOffsets>
+              <option value="1174" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1213" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="Type#Items+Data" memberName="itemType" />

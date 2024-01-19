@@ -19,7 +19,5 @@ public class DialogueAfterTimeline : MonoBehaviour
         playerMove.positionData.startCutsceneOff = true;
         
         dialogueManager.EnterDialogueMode(inkJSON);
-        
-        dialogueManager.ContinueStory();
     }
 }

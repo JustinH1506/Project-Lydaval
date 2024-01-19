@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Playables;
 
 public class NPCDialogues : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class NPCDialogues : MonoBehaviour
     [SerializeField] private DialogueManager dialogueManager;
 
     [SerializeField] private TextAsset inkJSON;
+
+    [SerializeField] private PlayableDirector _director;
     
     private bool inRange;
 
@@ -75,5 +78,12 @@ public class NPCDialogues : MonoBehaviour
             dialogueManager.EnterDialogueMode(inkJSON);
             inRange = false;
         }
+    }
+
+    public void StartDialogueMode()
+    {
+        dialogueManager.EnterDialogueMode(inkJSON);
+        
+        _director.Pause();
     }
 }

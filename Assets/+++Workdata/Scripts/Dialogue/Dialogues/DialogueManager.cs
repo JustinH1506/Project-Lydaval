@@ -19,7 +19,7 @@ public class DialogueManager : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI dialogueText;
 
-    [SerializeField] private PlayableDirector blackScreenFadeIn;
+    [SerializeField] private PlayableDirector blackScreenFadeIn, forestEntry;
 
     private void Awake()
     {
@@ -60,6 +60,15 @@ public class DialogueManager : MonoBehaviour
 
              StartCoroutine(ExitDialogueMode());
          });
+         
+         currentStory.BindExternalFunction("playResume", (string resume) =>
+         {
+             forestEntry.Resume();
+
+             StartCoroutine(ExitDialogueMode());
+         });
+         
+         ContinueStory();
      }
      
      private IEnumerator ExitDialogueMode()
@@ -71,6 +80,8 @@ public class DialogueManager : MonoBehaviour
          dialoguePanel.SetActive(false);
          
          currentStory.UnbindExternalFunction("activateCutscene");
+         
+         currentStory.UnbindExternalFunction("playResume");
 
          playerMove.enabled = true;
      }
