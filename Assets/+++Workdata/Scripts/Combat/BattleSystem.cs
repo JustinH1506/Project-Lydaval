@@ -26,7 +26,7 @@ public class BattleSystem : MonoBehaviour
     
     #region GameObjects
 
-    [SerializeField] private GameObject enemyButtons, skillButtons;
+    [SerializeField] private GameObject enemyButtons, skillButtons, tutorialPanel;
     
     #endregion
 
@@ -170,7 +170,7 @@ public class BattleSystem : MonoBehaviour
     {
         if (enemyManager.enemyType == EnemyType.THIEF)
         {
-            enemyAdder = Random.Range(0, 3);
+            enemyAdder = Random.Range(0, 2);
 
             for (int i = 0; i <= enemyAdder; i++)
             {
@@ -194,7 +194,7 @@ public class BattleSystem : MonoBehaviour
 
         if (enemyManager.enemyType == EnemyType.WORM)
         {
-            enemyAdder = Random.Range(0, 3);
+            enemyAdder = 0;
 
             for (int i = 0; i <= enemyAdder; i++)
             {
@@ -326,6 +326,8 @@ public class BattleSystem : MonoBehaviour
                 playerStatsList[i].data = GameStateManager.instance.data.tankStatData;
             }
         }
+        
+        
 
         yield return null;
 

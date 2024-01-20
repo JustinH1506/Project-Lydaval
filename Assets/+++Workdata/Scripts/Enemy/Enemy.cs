@@ -29,6 +29,8 @@ public class Enemy : MonoBehaviour
 
     private SpriteRenderer sr;
 
+    [SerializeField] private int index;
+
     private void Awake()
     {
         sr = GetComponentInChildren<SpriteRenderer>();
@@ -86,7 +88,18 @@ public class Enemy : MonoBehaviour
 
             data.isDead = true;
             
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(index);
         }
+    }
+
+    public void StartCombat()
+    {
+        EnemyManager.Instance.enemyType = enemyType;
+
+        EnemyManager.Instance.combatIndex = 2;
+
+        data.isDead = true;
+            
+        SceneManager.LoadScene(index);  
     }
 }

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Playables;
 
 public class PlayerMove : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class PlayerMove : MonoBehaviour
     {
         public Dictionary<string, SaveableVector3> positionsBySceneName = new Dictionary<string, SaveableVector3>();
 
-        public bool startCutsceneOff;
+        public bool startCutsceneOff, burningHousesOn;
     }
     
     #endregion 
@@ -42,7 +43,7 @@ public class PlayerMove : MonoBehaviour
 
     #region Components
 
-    Rigidbody2D rb;
+    public Rigidbody2D rb;
 
     SpriteRenderer sr;
     
@@ -73,12 +74,15 @@ public class PlayerMove : MonoBehaviour
             positionData = currentPosition;
             
             GetPosition();
-            
-            if(positionData.startCutsceneOff)
+
+            if (positionData.startCutsceneOff)
                 startCutscene.SetActive(false);
         }
 
         GameStateManager.instance.data.positionData = positionData;
+        
+        if(positionData.startCutsceneOff == false)
+            startCutscene.GetComponent<PlayableDirector>().Play();
     }
 
     private void OnEnable()

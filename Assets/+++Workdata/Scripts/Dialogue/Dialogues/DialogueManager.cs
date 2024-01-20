@@ -42,7 +42,7 @@ public class DialogueManager : MonoBehaviour
         dialogueControllMap.Dialogue.Submit.canceled -= Submit;
     }
 
-     public void EnterDialogueMode(TextAsset inkJSON)
+     public void EnterDialogueMode(TextAsset inkJSON, PlayableDirector director)
      {
          currentStory = new Story(inkJSON.text);
 
@@ -63,7 +63,14 @@ public class DialogueManager : MonoBehaviour
          
          currentStory.BindExternalFunction("playResume", (string resume) =>
          {
-             forestEntry.Resume();
+             director.Resume();
+
+             StartCoroutine(ExitDialogueMode());
+         });
+         
+         currentStory.BindExternalFunction("afterTutorial", (string resume) =>
+         {
+             director.Resume();
 
              StartCoroutine(ExitDialogueMode());
          });
@@ -82,6 +89,8 @@ public class DialogueManager : MonoBehaviour
          currentStory.UnbindExternalFunction("activateCutscene");
          
          currentStory.UnbindExternalFunction("playResume");
+         
+         currentStory.UnbindExternalFunction("afterTutorial");
 
          playerMove.enabled = true;
      }

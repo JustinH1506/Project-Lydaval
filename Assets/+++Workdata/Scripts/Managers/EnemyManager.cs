@@ -6,6 +6,9 @@ public class EnemyManager : MonoBehaviour
     
     #region Instance
     public static EnemyManager Instance { get; private set; }
+
+    public int combatIndex;
+    
     #endregion
 
     #region Methods
@@ -23,6 +26,4 @@ public class EnemyManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
     #endregion
-
-    
 }

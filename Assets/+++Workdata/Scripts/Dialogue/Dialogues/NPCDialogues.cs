@@ -75,14 +75,14 @@ public class NPCDialogues : MonoBehaviour
     {
         if (context.performed && inRange)
         {
-            dialogueManager.EnterDialogueMode(inkJSON);
+            dialogueManager.EnterDialogueMode(inkJSON, _director);
             inRange = false;
         }
     }
-
-    public void StartDialogueMode()
+    
+    public void StartDialogueModeAndStopDirector()
     {
-        dialogueManager.EnterDialogueMode(inkJSON);
+        dialogueManager.EnterDialogueMode(inkJSON, _director);
         
         _director.Pause();
     }

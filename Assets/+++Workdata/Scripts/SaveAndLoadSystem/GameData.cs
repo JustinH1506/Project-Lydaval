@@ -14,6 +14,8 @@ public class GameData
 
     [SerializeField] public Inventory.Data inventoryData;
 
+    [SerializeField] public ObjectData.Data objectData;
+
     public Dictionary<string, Enemy.Data> enemyPositionByGuid = new Dictionary<string, Enemy.Data>();
 
     public void SpawnEnemy(string guid, Enemy.Data data)

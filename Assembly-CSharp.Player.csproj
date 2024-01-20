@@ -55,6 +55,7 @@
      <Compile Include="Assets\LevelTest.cs" />
      <Compile Include="Assets\Ink\Demos\Basic Demo\Scripts\QuitGameOnKeypress.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Enemy\Enemy.cs" />
+     <Compile Include="Assets\ObjectData.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Inventory\Items\Items.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\SaveAndLoadSystem\SaveManagment\SaveManager.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Player\PlayerController.cs" />
@@ -82,6 +83,7 @@
      <Compile Include="Assets\+++Workdata\Scripts\Dialogue\Dialogues\DialogueManager.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\SaveAndLoadSystem\GameStateManager.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\UI\PlayerSkills.cs" />
+     <Compile Include="Assets\+++Workdata\Scripts\Dialogue\Dialogues\AfterFightDialogue.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Combat\TargetingSystem.cs" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.8f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.dll</HintPath>

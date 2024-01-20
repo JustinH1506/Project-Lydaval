@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -114,9 +114,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1344
-        y: 24
+        y: 216
         width: 528
-        height: 261
+        height: 69
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -126,6 +126,48 @@ TextureImporter:
       bones: []
       spriteID: 125dcfe4fa8c4bb499ea0d46292e97a6
       internalID: 1451815221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ui_Combat_Party_Background_with_Icon_1
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 120
+        width: 528
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dbfd9bbd05e96a4a9826eb91e2874b0
+      internalID: 1306383363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ui_Combat_Party_Background_with_Icon_2
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 24
+        width: 528
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77ec724abc8a44841a50773fb933a361
+      internalID: -1248051304
       vertices: []
       indices: 
       edges: []
