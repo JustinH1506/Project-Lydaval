@@ -43,18 +43,7 @@ public class Items : MonoBehaviour
         if (data.playerGotIt)
             gameObject.SetActive(false);
     }
-
-    public void Update()
-    {
-        if (transform.position.y < player.transform.position.y)
-            sr.sortingOrder = 10;
-        else
-        {
-            sr.sortingOrder = -10;
-        }
-    }
-
-
+    
     public void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))

@@ -20,7 +20,6 @@ public class PlayerSkills : MonoBehaviour
           select.SetActive(true);
           
           _battleSystem.inBetweenText.gameObject.SetActive(false);
-
       }   
    }
 

@@ -26,7 +26,7 @@ public class BattleSystem : MonoBehaviour
     
     #region GameObjects
 
-    [SerializeField] private GameObject enemyButtons, skillButtons, tutorialPanel;
+    [SerializeField] private GameObject enemyButtons, skillButtons, tutorialPanel, levelUpPanel;
     
     #endregion
 
@@ -44,7 +44,7 @@ public class BattleSystem : MonoBehaviour
     
     public string turnStart = "   turn begins";
 
-    public TextMeshProUGUI unitName, inBetweenText;
+    public TextMeshProUGUI unitName, inBetweenText, levelUpText;
 
     #endregion
     
@@ -182,7 +182,7 @@ public class BattleSystem : MonoBehaviour
 
         if (enemyManager.enemyType == EnemyType.BOAR)
         {
-            enemyAdder = Random.Range(0, 3);
+            enemyAdder = Random.Range(0, 2);
 
             for (int i = 0; i <= enemyAdder; i++)
             {
@@ -201,6 +201,7 @@ public class BattleSystem : MonoBehaviour
                 enemyPrefabList.Add(enemyWormList[i]);
                 targetingButtonsList[i].gameObject.SetActive(true);
                 enemyHpList[i].gameObject.SetActive(true);
+                tutorialPanel.SetActive(true);
             }
         }
     }
@@ -219,7 +220,7 @@ public class BattleSystem : MonoBehaviour
     /// <summary> Returns if state is not PlayerTurn. Start PlayerAttack Coroutine. </summary>
     public void OnAttackButton(TargetingSystem targetSystem)
     {
-        if (state != BattleState.PlayerTurn || pressed)
+        if (state != BattleState.PlayerTurn && pressed)
             return;
 
         TargetingSystem target = targetSystem;
@@ -234,7 +235,7 @@ public class BattleSystem : MonoBehaviour
 
     public void OnAttackSkillButton(TargetingSystem targetSystem)
     {
-        if (state != BattleState.PlayerTurn || pressed)
+        if (state != BattleState.PlayerTurn && pressed)
             return;
 
         TargetingSystem target = targetSystem;
@@ -249,7 +250,7 @@ public class BattleSystem : MonoBehaviour
 
     public void OnPlayerHealSkillButton()
     {
-        if (state != BattleState.PlayerTurn || pressed)
+        if (state != BattleState.PlayerTurn && pressed)
             return;
         
         pressed = true;
@@ -259,7 +260,7 @@ public class BattleSystem : MonoBehaviour
 
     public void OnPlayerTauntSkillButton()
     {
-        if (state != BattleState.PlayerTurn || pressed)
+        if (state != BattleState.PlayerTurn && pressed)
             return;
 
         pressed = true;
@@ -375,8 +376,6 @@ public class BattleSystem : MonoBehaviour
             {
                 playerStatsList[i].data.xp += enemyStatsList[enemyId].data.enemyGiveXp;
                 
-                
-
                 playerStatsList[i].HasEnoughXp();
             }
 
@@ -572,6 +571,17 @@ public class BattleSystem : MonoBehaviour
         StartCoroutine(TurnChange());
     }
 
+    public IEnumerator LevelUp()
+    {
+        levelUpPanel.SetActive(true);
+        
+        
+
+        yield return new WaitForSeconds(2.5f);
+        
+        levelUpPanel.SetActive(false);
+    }
+
     IEnumerator TurnChange()
     {
         turnId++;
@@ -707,6 +717,19 @@ public class BattleSystem : MonoBehaviour
             
             StartCoroutine(TurnChange());
         }
+    }
+
+    public void LevelUpText()
+    {
+        string breakLineHash = "<br>" + "<br>";
+        
+        Stats.Data statData = characterList[turnId].data;
+        
+        levelUpText.text = characterList[turnId].data.unitName + breakLineHash + "Level: " + statData.level + breakLineHash + "Hp: "+
+                           statData.currentHealth + "/" + statData.maxHealth + breakLineHash + "Attack: " +
+                           statData.attack + breakLineHash + "Defense: " + statData.defense + breakLineHash +
+                           "Speed: " + statData.speed + breakLineHash + "Xp: " + statData.xp + "/" +
+                           statData.neededXp;
     }
     #endregion
 }

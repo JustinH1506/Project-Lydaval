@@ -108,7 +108,7 @@ MonoBehaviour:
     defense: 7
     level: 1
     xp: 0
-    neededXp: 500
+    neededXp: 132
     enemyGiveXp: 0
     types: 2
   skillButton: {fileID: 0}

@@ -1,4 +1,3 @@
-EXTERNAL playResume(cutscene)
 Atal:	"Finally here!”
 
 	    Your friends are already entertaining your little brother
@@ -14,5 +13,4 @@ Reon:		“You’ll see, my training with our scarecrow has taught me a lot alrea
 		 You and your friends can’t help but laugh a little
 
 Hilda:		“Then show us what you’ve got, little fighter!” 
-~ playResume("resume")
     -> END

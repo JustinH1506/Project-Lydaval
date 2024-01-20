@@ -83,7 +83,5 @@ public class NPCDialogues : MonoBehaviour
     public void StartDialogueModeAndStopDirector()
     {
         dialogueManager.EnterDialogueMode(inkJSON, _director);
-        
-        _director.Pause();
     }
 }

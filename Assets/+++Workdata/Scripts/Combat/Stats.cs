@@ -122,6 +122,10 @@ public class Stats : MonoBehaviour
     {
       if (data.xp >= data.neededXp)
             LevelUp();
+
+      battleSystem.LevelUpText();
+
+      battleSystem.LevelUp();
     }
 
     /// <summary>

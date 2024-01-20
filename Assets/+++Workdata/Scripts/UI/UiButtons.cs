@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -21,5 +22,10 @@ public class UiButtons : MonoBehaviour
         buttonFunction3.SetActive(false);
         
         buttonFunction4.SetActive(false);
+    }
+
+    public void DeactivateTutorial()
+    {
+        buttonFunction1.SetActive(false);
     }
 }

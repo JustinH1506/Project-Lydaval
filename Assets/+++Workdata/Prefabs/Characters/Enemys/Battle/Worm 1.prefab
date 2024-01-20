@@ -101,18 +101,22 @@ MonoBehaviour:
   battleSystem: {fileID: 0}
   data:
     unitName: Worm
-    maxHealth: 30
-    currentHealth: 30
+    maxHealth: 15
+    currentHealth: 15
     speed: 4
     attack: 6
     defense: 4
     level: 1
     xp: 0
     neededXp: 0
-    enemyGiveXp: 300
+    enemyGiveXp: 54
     types: 0
+  skillButton: {fileID: 0}
+  healButton: {fileID: 0}
   anim: {fileID: 0}
   cooldown: -1
+  select: 0
+  taunt: 0
 --- !u!95 &-7977988669236531476
 Animator:
   serializedVersion: 5

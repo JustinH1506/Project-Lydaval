@@ -19,7 +19,7 @@ public class DialogueManager : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI dialogueText;
 
-    [SerializeField] private PlayableDirector blackScreenFadeIn, forestEntry;
+    [SerializeField] private PlayableDirector mainDirector;
 
     private void Awake()
     {
@@ -44,6 +44,10 @@ public class DialogueManager : MonoBehaviour
 
      public void EnterDialogueMode(TextAsset inkJSON, PlayableDirector director)
      {
+         mainDirector = director;
+         
+         director.Pause();
+         
          currentStory = new Story(inkJSON.text);
 
          dialoguePanel.SetActive(true);
@@ -54,48 +58,26 @@ public class DialogueManager : MonoBehaviour
 
          playerMove.enabled = false;
          
-         currentStory.BindExternalFunction("activateCutscene", (string activate) =>
-         {
-             blackScreenFadeIn.Play();
-
-             StartCoroutine(ExitDialogueMode());
-         });
-         
-         currentStory.BindExternalFunction("playResume", (string resume) =>
-         {
-             director.Resume();
-
-             StartCoroutine(ExitDialogueMode());
-         });
-         
-         currentStory.BindExternalFunction("afterTutorial", (string resume) =>
-         {
-             director.Resume();
-
-             StartCoroutine(ExitDialogueMode());
-         });
-         
-         ContinueStory();
+         ContinueStory(director);
      }
      
-     private IEnumerator ExitDialogueMode()
+     private IEnumerator ExitDialogueMode(PlayableDirector director)
      {
          yield return null;
          
          dialogueIsPlaying = false;
 
          dialoguePanel.SetActive(false);
-         
-         currentStory.UnbindExternalFunction("activateCutscene");
-         
-         currentStory.UnbindExternalFunction("playResume");
-         
-         currentStory.UnbindExternalFunction("afterTutorial");
 
          playerMove.enabled = true;
+
+         if (director != null)
+         {
+             director.Resume();
+         } 
      }
      
-     public void ContinueStory()
+     public void ContinueStory(PlayableDirector director)
      {
          if (currentStory.canContinue)
          {
@@ -103,7 +85,7 @@ public class DialogueManager : MonoBehaviour
          }
          else
          {
-             StartCoroutine(ExitDialogueMode());
+             StartCoroutine(ExitDialogueMode(director));
          }
      }
      
@@ -111,7 +93,7 @@ public class DialogueManager : MonoBehaviour
      {
          if (context.performed && dialogueIsPlaying)
          {
-             ContinueStory();
+             ContinueStory(mainDirector);
          }
      }
 }

@@ -15,8 +15,6 @@ public class DialogueAfterTimeline : MonoBehaviour
     private void Awake()
     {
         playerMove = GetComponent<PlayerMove>();
-        
-        
     }
 
     private void Start()

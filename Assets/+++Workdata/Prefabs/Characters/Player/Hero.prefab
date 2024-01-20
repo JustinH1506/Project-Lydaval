@@ -100,7 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   battleSystem: {fileID: 0}
   data:
-    unitName: Hero
+    unitName: Atal
     maxHealth: 30
     currentHealth: 30
     speed: 5
@@ -108,15 +108,15 @@ MonoBehaviour:
     defense: 5
     level: 1
     xp: 0
-    neededXp: 500
+    neededXp: 132
     enemyGiveXp: 0
     types: 1
+  skillButton: {fileID: 0}
+  healButton: {fileID: 0}
   anim: {fileID: 0}
   cooldown: 0
   select: 0
   taunt: 0
-  skillButton: {fileID: 0}
-  healButton: {fileID: 0}
 --- !u!95 &8118707346596874025
 Animator:
   serializedVersion: 5

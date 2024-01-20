@@ -101,15 +101,15 @@ MonoBehaviour:
   battleSystem: {fileID: 0}
   data:
     unitName: Thief
-    maxHealth: 25
-    currentHealth: 25
-    speed: 8
+    maxHealth: 20
+    currentHealth: 20
+    speed: 6
     attack: 4
     defense: 4
     level: 1
     xp: 0
     neededXp: 0
-    enemyGiveXp: 200
+    enemyGiveXp: 63
     types: 0
   skillButton: {fileID: 0}
   healButton: {fileID: 0}
@@ -117,7 +117,6 @@ MonoBehaviour:
   cooldown: -1
   select: 0
   taunt: 0
-  skillUse: 0
 --- !u!95 &7100286306984469456
 Animator:
   serializedVersion: 5

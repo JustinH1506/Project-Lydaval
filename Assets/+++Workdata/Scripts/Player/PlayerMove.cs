@@ -13,7 +13,7 @@ public class PlayerMove : MonoBehaviour
     {
         public Dictionary<string, SaveableVector3> positionsBySceneName = new Dictionary<string, SaveableVector3>();
 
-        public bool startCutsceneOff, burningHousesOn;
+        public bool startCutsceneOff;
     }
     
     #endregion 
@@ -83,6 +83,8 @@ public class PlayerMove : MonoBehaviour
         
         if(positionData.startCutsceneOff == false)
             startCutscene.GetComponent<PlayableDirector>().Play();
+
+        positionData.startCutsceneOff = true;
     }
 
     private void OnEnable()

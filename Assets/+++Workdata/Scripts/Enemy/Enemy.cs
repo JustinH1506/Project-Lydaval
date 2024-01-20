@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
+using Object = UnityEngine.Object;
 
 public enum EnemyType
 {
@@ -23,11 +24,13 @@ public class Enemy : MonoBehaviour
 
     [SerializeField] private Data data;
     
+    private SpriteRenderer sr;
+
+    [SerializeField] private ObjectData _objectData;
+    
     public EnemyType enemyType;
 
     [SerializeField] private GameObject player;
-
-    private SpriteRenderer sr;
 
     [SerializeField] private int index;
 
@@ -97,6 +100,14 @@ public class Enemy : MonoBehaviour
         EnemyManager.Instance.enemyType = enemyType;
 
         EnemyManager.Instance.combatIndex = 2;
+
+        _objectData.data.enemies = true;
+
+        _objectData.data.houses = true;
+
+        _objectData.data.fightWon = true;
+
+        GameStateManager.instance.data.objectData = _objectData.data;
 
         data.isDead = true;
             
