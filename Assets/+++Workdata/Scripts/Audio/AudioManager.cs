@@ -8,9 +8,13 @@ public class AudioManager : MonoBehaviour
 {
     private List<EventInstance> eventInstances;
 
-    private EventInstance musicEventInstance;
-
-    private EventInstance ambienceEventInstance;
+    private EventInstance forestMusicEventInstance;
+    
+    private EventInstance villageMusicEventInstance;
+    
+    private EventInstance mainMenuMusicEventInstance;
+    
+    private EventInstance battleMusicEventInstance;
 
     public static AudioManager instance { get; private set; }    
 
@@ -26,6 +30,8 @@ public class AudioManager : MonoBehaviour
         instance = this;
 
         eventInstances = new List<EventInstance>();
+        
+        DontDestroyOnLoad(gameObject);
     }
 
     /* /// <summary>
@@ -57,52 +63,28 @@ public class AudioManager : MonoBehaviour
     /// </summary>
     private void Start()
     {
-        InitializeMusic(FmodEvents.instance.music);
-
-        InitializeMusic(FmodEvents.instance.startMusic);
-
-        InitializedAmbience(FmodEvents.instance.ambience);
-    }
-
-    /// <summary>
-    /// Starting the ambience sound.
-    /// </summary>
-    /// <param name="ambienceEventReference"></param>
-    private void InitializedAmbience(EventReference ambienceEventReference)
-    {
-        ambienceEventInstance = CreateInstance(ambienceEventReference);
-
-        ambienceEventInstance.start();
+        InitializeMusic(FmodEvents.instance.mainMenuMusic);
     }
 
     /// <summary>
     /// We call the CreateInstance Method to make our musicEventInstance to this and start it at the start method.
     /// </summary>
     /// <param name="musicEventReference"></param>
-    private void InitializeMusic(EventReference musicEventReference)
+    public void InitializeMusic(EventReference musicEventReference)
     {
-        musicEventInstance = CreateInstance(musicEventReference);
-        musicEventInstance.start();
+        forestMusicEventInstance = CreateInstance(musicEventReference);
+        forestMusicEventInstance.start();
     }
 
     /// <summary>
     /// Stopping the sounds when entering other scenes.
     /// </summary>
-    private void CleanUp()
+    public void CleanUp()
     {
         foreach(EventInstance eventInstance in eventInstances)
         {
             eventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
             eventInstance.release();
         }
-    }
-
-
-    /// <summary>
-    /// Calling CleanUp method.
-    /// </summary>
-    private void OnDestroy()
-    {
-        CleanUp();
     }
 }

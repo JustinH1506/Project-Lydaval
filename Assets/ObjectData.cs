@@ -37,7 +37,7 @@ public class ObjectData : MonoBehaviour
 
     [SerializeField] private List<string> questTexts;
 
-    [SerializeField] private TextMeshProUGUI questTextPlace, questTextsInventory;
+    [SerializeField] private TextMeshProUGUI questTextPlace;
 
     private void Start()
     {
@@ -56,7 +56,6 @@ public class ObjectData : MonoBehaviour
             {
                 timelineCollider[1].SetActive(true);
                 questTextPlace.text = questTexts[1];
-
             }           
             else if (data.objectStates == ObjectStates.AfterTutorialFight)
             {
@@ -125,5 +124,43 @@ public class ObjectData : MonoBehaviour
         }
 
         GameStateManager.instance.data.objectData = data;
+    }
+
+    public void ChangeQuestTracker()
+    {
+            if(data.objectStates == ObjectStates.StartCutscene)
+            {
+                questTextPlace.text = questTexts[0];
+            }            
+            else if(data.objectStates == ObjectStates.ForestEntry)
+            {
+                questTextPlace.text = questTexts[1];
+            }           
+            else if (data.objectStates == ObjectStates.AfterTutorialFight)
+            {
+                questTextPlace.text = questTexts[2];
+            }
+            else if(data.objectStates == ObjectStates.BeforeVillageDuringAttack)
+            {
+                questTextPlace.text = questTexts[3];
+            }            
+            else if(data.objectStates == ObjectStates.ReonsKidnapping)
+            {
+                questTextPlace.text = questTexts[4];
+            }            
+            else if(data.objectStates == ObjectStates.FrowinAfterAttack)
+            {
+                questTextPlace.text = questTexts[5];
+            }           
+            else if(data.objectStates == ObjectStates.HildaAfterAttack)
+            {
+                questTextPlace.text = questTexts[6];
+            }       
+            else if(data.objectStates == ObjectStates.AfterBossFight)
+            {
+                questTextPlace.text = questTexts[7];
+            }
+
+            GameStateManager.instance.data.objectData = data;
     }
 }

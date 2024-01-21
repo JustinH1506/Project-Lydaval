@@ -40,6 +40,10 @@ public class EnemyManager : MonoBehaviour
     {
         enemyType = type;
         
+        AudioManager.instance.CleanUp();
+        
+        AudioManager.instance.InitializeMusic(FmodEvents.instance.battleMusic);
+        
         SceneManager.LoadScene(2);
     }
     #endregion

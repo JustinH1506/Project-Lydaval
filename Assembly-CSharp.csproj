@@ -49,6 +49,7 @@
      <Compile Include="Assets\Ink\Demos\Basic Demo\Scripts\BasicInkExample.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Audio\FmodEvents.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\SaveAndLoadSystem\SaveManagment\SaveableVector3.cs" />
+     <Compile Include="Assets\+++Workdata\Scripts\Audio\AudioSettings.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Managers\BattleManager.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\Inventory\Items\SelectCharacter.cs" />
      <Compile Include="Assets\+++Workdata\Scripts\UI\UiButtons.cs" />
@@ -380,6 +381,7 @@
      <None Include="Assets\+++Workdata\Assets\Dialogues\BeforeTutorialFight.json" />
      <Folder Include="Assets\+++Workdata\Assets\Ui\UI_Elements\UI Elements\UI_Overworld\Dialogue" />
      <Folder Include="Assets\+++Workdata\Scripts\Managers" />
+     <Folder Include="Assets\StreamingAssets" />
      <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Editor Resources\Shaders\TMP_SDF_SSD.cginc" />
      <Folder Include="Library\PackageCache\com.unity.2d.animation@9.0.3" />
      <Folder Include="Library\PackageCache\com.unity.render-pipelines.universal@14.0.8\Textures\BlueNoise16" />

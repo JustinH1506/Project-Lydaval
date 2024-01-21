@@ -24,5 +24,7 @@ public class TimelineStart : MonoBehaviour
         playerMove.rb.velocity = new Vector2(0f, 0f);
         
         _director.Play();
+        
+        _objectData.ChangeQuestTracker();
     }
 }

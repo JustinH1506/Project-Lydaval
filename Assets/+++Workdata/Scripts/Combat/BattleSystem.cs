@@ -406,6 +406,8 @@ public class BattleSystem : MonoBehaviour
         {
             state = BattleState.Won;
             
+            AudioManager.instance.CleanUp();
+            
             EndBattle();
         }
         else
@@ -482,6 +484,9 @@ public class BattleSystem : MonoBehaviour
         if (deadEnemies == enemyAdder + 1)
         {
             state = BattleState.Won;
+            
+            AudioManager.instance.CleanUp();
+            
             EndBattle();
         }
         else
@@ -709,6 +714,9 @@ public class BattleSystem : MonoBehaviour
         if (deadPlayers == 3)
         {
             state = BattleState.Lost;
+            
+            AudioManager.instance.CleanUp();
+            
             EndBattle();
         }
         else

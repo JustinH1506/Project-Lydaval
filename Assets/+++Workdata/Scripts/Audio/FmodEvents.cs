@@ -6,11 +6,13 @@ using FMOD.Studio;
 
 public class FmodEvents : MonoBehaviour
 {
-    [field: SerializeField] public EventReference ambience { get; private set; }
+    [field: SerializeField] public EventReference villageMusic { get; private set; }
 
-    [field: SerializeField] public EventReference music { get; private set; }
-
-    [field: SerializeField] public EventReference startMusic { get; private set; }  
+    [field: SerializeField] public EventReference mainMenuMusic { get; private set; } 
+    
+    [field: SerializeField] public EventReference forestMusic { get; private set; }  
+    
+    [field: SerializeField] public EventReference battleMusic { get; private set; }  
 
     public static FmodEvents instance { get; private set; }
 
@@ -21,8 +23,10 @@ public class FmodEvents : MonoBehaviour
     {
         if( instance != null)
         {
-            Debug.LogWarning("Found more than one FMODEvents!");
+            Destroy(gameObject);
         }
         instance = this;
+        
+        DontDestroyOnLoad(gameObject);
     }
 }

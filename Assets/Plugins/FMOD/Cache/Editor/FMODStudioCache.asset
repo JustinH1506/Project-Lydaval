@@ -15,10 +15,10 @@ MonoBehaviour:
   Path: ../../../Fmod/Workspace/Project Lydaval/ProjectLydaval_Sounds/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638393767383287896
+  lastModified: 638414748235854504
   FileSizes:
   - Name: Desktop
-    Value: 1146
+    Value: 1180
   Exists: 1
 --- !u!114 &-7375891626764633038
 MonoBehaviour:
@@ -35,30 +35,10 @@ MonoBehaviour:
   Path: ../../../Fmod/Workspace/Project Lydaval/ProjectLydaval_Sounds/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638393765853412936
+  lastModified: 638414747353930005
   FileSizes:
   - Name: Desktop
-    Value: 1231488
-  Exists: 1
---- !u!114 &-6017075809221281388
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Ambience.bank
-  m_EditorClassIdentifier: 
-  Path: ../../../Fmod/Workspace/Project Lydaval/ProjectLydaval_Sounds/Build/Desktop/Ambience.bank
-  Name: Ambience
-  StudioPath: bank:/Ambience
-  lastModified: 638393767413146017
-  FileSizes:
-  - Name: Desktop
-    Value: 2532512
+    Value: 3707648
   Exists: 1
 --- !u!114 &-5329982642793818585
 MonoBehaviour:
@@ -76,12 +56,12 @@ MonoBehaviour:
     Musik.bank
   Name: Start Musik
   StudioPath: bank:/Start Musik
-  lastModified: 638393763584077825
+  lastModified: 638414747354271227
   FileSizes:
   - Name: Desktop
-    Value: 1202
+    Value: 2515392
   Exists: 1
---- !u!114 &-1918027366363845210
+--- !u!114 &-4439090415424344976
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -91,50 +71,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Ambient Sounds/Wind Sounds 2
+  m_Name: event:/Background Musiks/Forest Musik
   m_EditorClassIdentifier: 
-  Path: event:/Ambient Sounds/Wind Sounds 2
+  Path: event:/Background Musiks/Forest Musik
   Guid:
-    Data1: 2008482428
-    Data2: 1337488494
-    Data3: 1089260177
-    Data4: -1767116956
+    Data1: -1470361215
+    Data2: 1287662737
+    Data3: -1209174856
+    Data4: 1457330721
   Banks:
-  - {fileID: -6017075809221281388}
+  - {fileID: -7375891626764633038}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 196104
---- !u!114 &-16779131758184186
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Start Musik/Empty Sound
-  m_EditorClassIdentifier: 
-  Path: event:/Start Musik/Empty Sound
-  Guid:
-    Data1: 1174357383
-    Data2: 1285954571
-    Data3: -1403991624
-    Data4: -1329129659
-  Banks:
-  - {fileID: -5329982642793818585}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
+  Length: 86047
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,49 +102,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: -8851988411137056674}
-  - {fileID: -6017075809221281388}
   - {fileID: 3422015498378189120}
   - {fileID: -7375891626764633038}
   - {fileID: -5329982642793818585}
   EditorEvents:
-  - {fileID: 3569617092399416373}
-  - {fileID: 1600851316174599044}
-  - {fileID: -16779131758184186}
-  - {fileID: -1918027366363845210}
+  - {fileID: 5624356185547789998}
+  - {fileID: 8112052841456784379}
+  - {fileID: -4439090415424344976}
+  - {fileID: 5834678217701480827}
   EditorParameters: []
   MasterBanks:
   - {fileID: 3422015498378189120}
   StringsBanks:
   - {fileID: -8851988411137056674}
-  cacheTime: 638393767413146017
+  cacheTime: 638414748235854504
   cacheVersion: 131603
---- !u!114 &1600851316174599044
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Background Musiks/Background Musik
-  m_EditorClassIdentifier: 
-  Path: event:/Background Musiks/Background Musik
-  Guid:
-    Data1: -1430063025
-    Data2: 1184695492
-    Data3: -678919501
-    Data4: -1956157967
-  Banks:
-  - {fileID: -7375891626764633038}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 85760
 --- !u!114 &3422015498378189120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -207,12 +132,12 @@ MonoBehaviour:
   Path: ../../../Fmod/Workspace/Project Lydaval/ProjectLydaval_Sounds/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638393767383078161
+  lastModified: 638414748235494886
   FileSizes:
   - Name: Desktop
-    Value: 1036
+    Value: 1486
   Exists: 1
---- !u!114 &3569617092399416373
+--- !u!114 &5624356185547789998
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -222,25 +147,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Ambient Sounds/Wind Sound
+  m_Name: event:/Background Musiks/Battle Musik
   m_EditorClassIdentifier: 
-  Path: event:/Ambient Sounds/Wind Sound
+  Path: event:/Background Musiks/Battle Musik
   Guid:
-    Data1: -1791160889
-    Data2: 1280165289
-    Data3: -1317051241
-    Data4: -1290483993
+    Data1: 1642054668
+    Data2: 1215600029
+    Data3: 403717000
+    Data4: -1917610929
   Banks:
-  - {fileID: -6017075809221281388}
+  - {fileID: -7375891626764633038}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
-  Parameters:
-  - {fileID: 3682204574082625279}
+  Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 12000
---- !u!114 &3682204574082625279
+  Length: 35239
+--- !u!114 &5834678217701480827
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -249,18 +173,48 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Wind Sound/Wind_Intensity
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Start Musik/Star Game Musik
   m_EditorClassIdentifier: 
-  Name: Wind_Intensity
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 1659881415
-    data2: 7145509
-  Type: 0
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
+  Path: event:/Start Musik/Star Game Musik
+  Guid:
+    Data1: 1174357383
+    Data2: 1285954571
+    Data3: -1403991624
+    Data4: -1329129659
+  Banks:
+  - {fileID: -5329982642793818585}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 192679
+--- !u!114 &8112052841456784379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Background Musiks/Musik Village
+  m_EditorClassIdentifier: 
+  Path: event:/Background Musiks/Musik Village
+  Guid:
+    Data1: -1430063025
+    Data2: 1184695492
+    Data3: -678919501
+    Data4: -1956157967
+  Banks:
+  - {fileID: -7375891626764633038}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 147722

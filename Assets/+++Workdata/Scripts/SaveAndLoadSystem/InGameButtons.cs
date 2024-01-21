@@ -7,6 +7,10 @@ public class InGameButtons : MonoBehaviour
 {
     public void StartGame()
     {
+        AudioManager.instance.CleanUp();
+        
+        AudioManager.instance.InitializeMusic(FmodEvents.instance.villageMusic);
+        
         GameStateManager.instance.StartNewGame();
     }
     
@@ -15,6 +19,10 @@ public class InGameButtons : MonoBehaviour
         Time.timeScale = 1;
         
         Destroy(GameStateManager.instance.gameObject);
+        
+        AudioManager.instance.CleanUp();
+        
+        AudioManager.instance.InitializeMusic(FmodEvents.instance.mainMenuMusic);
         
         SceneManager.LoadScene(0);
     }

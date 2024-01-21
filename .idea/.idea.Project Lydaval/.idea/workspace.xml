@@ -5,9 +5,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="60fe24dc-a470-438e-9d29-fb3fa2e8b3cf" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Lydaval/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Lydaval/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Enemy/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Enemy/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.Player.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.Player.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Sprites/Enemy/Fire_Boar.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Sprites/Enemy/Fire_Boar.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Sprites/Enemy/Fire_Boar_Big.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Sprites/Enemy/Fire_Boar_Big.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Sprites/Enemy/Kultist.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Sprites/Enemy/Kultist.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Sprites/Enemy/Overworld/Overworld enemy spritesheets/Lydaval_Sprite_ThievEast_PendingFeedback_17.01.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Sprites/Enemy/Overworld/Overworld enemy spritesheets/Lydaval_Sprite_ThievEast_PendingFeedback_17.01.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Sprites/Enemy/Overworld/Overworld enemy spritesheets/Lydaval_Sprite_ThievNorth_PendingFeedback_17.01.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Sprites/Enemy/Overworld/Overworld enemy spritesheets/Lydaval_Sprite_ThievNorth_PendingFeedback_17.01.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Sprites/Enemy/Overworld/Overworld enemy spritesheets/Wormoverworld-sheet.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Sprites/Enemy/Overworld/Overworld enemy spritesheets/Wormoverworld-sheet.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Sprites/Enemy/Thief SpriteSheets/thiefattack.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Sprites/Enemy/Thief SpriteSheets/thiefattack.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Sprites/Enemy/Thief SpriteSheets/thiefhurt.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Sprites/Enemy/Thief SpriteSheets/thiefhurt.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Sprites/Enemy/Thief SpriteSheets/thiefidle.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Sprites/Enemy/Thief SpriteSheets/thiefidle.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Sprites/Enemy/Worm Sprite Sheet/Wormattack-Sheet.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Sprites/Enemy/Worm Sprite Sheet/Wormattack-Sheet.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Sprites/Enemy/Worm Sprite Sheet/WormhurtSheet (1).png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Sprites/Enemy/Worm Sprite Sheet/WormhurtSheet (1).png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Sprites/Enemy/Worm.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Sprites/Enemy/Worm.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Scenes/MainMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Scenes/Overworld Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Scenes/Overworld Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Audio/AudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Audio/AudioManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Audio/FmodEvents.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Audio/FmodEvents.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Combat/BattleSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Combat/BattleSystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Managers/EnemyManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Managers/EnemyManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/SaveAndLoadSystem/GameData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/SaveAndLoadSystem/GameData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/SaveAndLoadSystem/InGameButtons.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/SaveAndLoadSystem/InGameButtons.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Timeline/TimelineStart.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Timeline/TimelineStart.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Timelines/BeforeVillageDuringAttackTimeline.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Timelines/BeforeVillageDuringAttackTimeline.playable" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObjectData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ObjectData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/Resources/FMODStudioSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/Resources/FMODStudioSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/win/lib/x86_64/fmodstudioL.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/win/lib/x86_64/fmodstudioL.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/Ambience.bank" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/Ambience.bank.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/Master.bank" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/Master.bank" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/Master.strings.bank" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/Master.strings.bank" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/Music.bank" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/Music.bank" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/Start Musik.bank" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/Start Musik.bank" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fmod_editor.log" beforeDir="false" afterPath="$PROJECT_DIR$/fmod_editor.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +69,9 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b8c852c145a8456ba2512bf23f96ab0b175400/1a/b4866c1f/BaseVerticalCollectionView.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b8c852c145a8456ba2512bf23f96ab0b175400/64/b7378487/CallbackEventHandler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d44b17e136d09081da1e8fd0e8c83fde60e11818b9f2442d7ed8cb733fae895e/System.Collections.Generic.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../GitStuff/Assets/+++Workdata/Script/Audio/AudioSettings.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/+++Workdata/Scripts/Audio/AudioManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/+++Workdata/Scripts/Audio/AudioSettings.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/+++Workdata/Scripts/Combat/BattleHud.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/+++Workdata/Scripts/Combat/Stats.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/+++Workdata/Scripts/Combat/TargetingSystem.cs" root0="FORCE_HIGHLIGHTING" />
@@ -89,6 +124,14 @@
   }
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../../+++Unity prototypen/Reon´s Rising\Reon's rising.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="D:\Unity Stuff\+++Unity prototypen\Reon´s Rising" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.8f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath &quot;D:\Unity Stuff\Git\Project Lydaval&quot; -debugCodeOptimization" />
@@ -214,6 +257,7 @@
       <workItem from="1705684636776" duration="1986000" />
       <workItem from="1705753743775" duration="16748000" />
       <workItem from="1705835250052" duration="8882000" />
+      <workItem from="1705860801389" duration="11810000" />
     </task>
     <servers />
   </component>

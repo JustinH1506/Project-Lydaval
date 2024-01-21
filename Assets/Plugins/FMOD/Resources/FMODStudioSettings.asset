@@ -509,7 +509,6 @@ MonoBehaviour:
   MasterBanks:
   - Master
   Banks:
-  - Ambience
   - Music
   - Start Musik
   BanksToLoad: []
