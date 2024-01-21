@@ -8652,10 +8652,7 @@ MonoBehaviour:
   - {fileID: 629729383928598970, guid: 782702330dde2ba49960ff82013c68db, type: 3}
   - {fileID: 629729383928598970, guid: 7e3ebe8edb07663468b115fe26c2ce4a, type: 3}
   - {fileID: 629729383928598970, guid: 161dcfb9b51f92a42934c05075e98787, type: 3}
-  enemyBoarList:
-  - {fileID: 629729383928598970, guid: 7d47408ec15da474fbfc879825879124, type: 3}
-  - {fileID: 629729383928598970, guid: d0a2ba3bc99f9414d8800d4535c5bb89, type: 3}
-  - {fileID: 629729383928598970, guid: 209cc94d563dd4d49bddb90ae995b311, type: 3}
+  enemyBossList: []
   characterList: []
   enemyStatsList: []
   playerStatsList: []

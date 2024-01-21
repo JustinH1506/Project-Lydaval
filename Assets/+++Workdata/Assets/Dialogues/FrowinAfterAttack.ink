@@ -1,3 +1,6 @@
+Atal:	“Frowin, are you alright?” 
+
+Frowin:	 “How can you ask about me in these times?! My mother is in there busy saving lives. I tried to help and almost killed a man!”
 
 Witch:		“Don’t you worry about that, I almost killed my first patient. You did incredibly well for your first real one” 
 

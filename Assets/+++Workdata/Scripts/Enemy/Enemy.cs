@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
@@ -8,7 +9,8 @@ public enum EnemyType
 {
     THIEF,
     BOAR,
-    WORM
+    WORM,
+    BOSS
 }
 
 public class Enemy : MonoBehaviour
@@ -23,8 +25,6 @@ public class Enemy : MonoBehaviour
     }
 
     [SerializeField] private Data data;
-    
-    private SpriteRenderer sr;
 
     [SerializeField] private ObjectData _objectData;
     
@@ -33,11 +33,6 @@ public class Enemy : MonoBehaviour
     [SerializeField] private GameObject player;
 
     [SerializeField] private int index;
-
-    private void Awake()
-    {
-        sr = GetComponentInChildren<SpriteRenderer>();
-    }
 
     private void Start()
     {
@@ -61,16 +56,6 @@ public class Enemy : MonoBehaviour
         data.position = transform.position;
     }
 
-    private void Update()
-    {
-        if (transform.position.y < player.transform.position.y)
-            sr.sortingOrder = 10;
-        else
-        {
-            sr.sortingOrder = -10;
-        }
-    }
-
     private void OnValidate()
     {
         if (string.IsNullOrEmpty(gameObject.scene.name))
@@ -87,11 +72,9 @@ public class Enemy : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            EnemyManager.Instance.enemyType = enemyType;
+            StartCoroutine(ChangeEnemyType());
 
-            data.isDead = true;
             
-            SceneManager.LoadScene(index);
         }
     }
 
@@ -99,18 +82,47 @@ public class Enemy : MonoBehaviour
     {
         EnemyManager.Instance.enemyType = enemyType;
 
-        EnemyManager.Instance.combatIndex = 2;
+        if(enemyType == EnemyType.WORM)
+        {
+            _objectData.data.enemies = true;
 
-        _objectData.data.enemies = true;
+            _objectData.data.houses = true;
 
-        _objectData.data.houses = true;
+            _objectData.data.fightWon = true;
+            
+            data.isDead = true;
+        }
+        else if (enemyType == EnemyType.THIEF)
+        {
+            _objectData.data.enemies = true;
 
-        _objectData.data.fightWon = true;
+            _objectData.data.houses = true;
+            
+            data.isDead = true;
+        }
+        else if (enemyType == EnemyType.BOSS)
+        {
+            _objectData.data.enemies = true;
+
+            _objectData.data.houses = true;
+            
+            _objectData.data.bossFightWon = true;
+        }
 
         GameStateManager.instance.data.objectData = _objectData.data;
-
-        data.isDead = true;
             
-        SceneManager.LoadScene(index);  
+        SceneManager.LoadScene(2);  
+    }
+
+    IEnumerator ChangeEnemyType()
+    {
+        EnemyManager.Instance.enemyType = enemyType;
+        
+        if(enemyType != EnemyType.BOSS)
+            data.isDead = true;
+
+        yield return new WaitForSeconds(1f);
+            
+        SceneManager.LoadScene(2);
     }
 }

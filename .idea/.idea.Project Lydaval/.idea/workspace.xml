@@ -7,56 +7,16 @@
     <list default="true" id="60fe24dc-a470-438e-9d29-fb3fa2e8b3cf" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Lydaval/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Lydaval/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Ui/Battle Ui.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Ui/Battle Ui.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Ui/UI_Elements/UI Elements/UI_Combat/UI_Combat_Selected.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Ui/UI_Elements/UI Elements/UI_Combat/UI_Combat_Selected.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Ui/UI_Elements/UI Elements/UI_Combat/Ui-Combat_MainBackground.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Ui/UI_Elements/UI Elements/UI_Combat/Ui-Combat_MainBackground.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Ui/UI_Elements/UI Elements/UI_Combat/Ui_Combat_CharacterIcon_Background.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Ui/UI_Elements/UI Elements/UI_Combat/Ui_Combat_CharacterIcon_Background.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Ui/UI_Elements/UI Elements/UI_Combat/Ui_Combat_HealthBar.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Ui/UI_Elements/UI Elements/UI_Combat/Ui_Combat_HealthBar.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Ui/UI_Elements/UI Elements/UI_Combat/Ui_Combat_HealthBar_Background.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Ui/UI_Elements/UI Elements/UI_Combat/Ui_Combat_HealthBar_Background.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Ui/UI_Elements/UI Elements/UI_Combat/Ui_Combat_Nameplate.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Ui/UI_Elements/UI Elements/UI_Combat/Ui_Combat_Nameplate.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Ui/UI_Elements/UI Elements/UI_Combat/Ui_Combat_PartyBackground.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Ui/UI_Elements/UI Elements/UI_Combat/Ui_Combat_PartyBackground.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Ui/UI_Elements/UI Elements/UI_Combat/Ui_Combat_Party_Background_with_Icon.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Ui/UI_Elements/UI Elements/UI_Combat/Ui_Combat_Party_Background_with_Icon.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Ui/UI_Elements/UI Elements/UI_Ingame_Menu/UI_Inventory/Description_Box.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Ui/UI_Elements/UI Elements/UI_Ingame_Menu/UI_Inventory/Description_Box.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Ui/UI_Elements/UI Elements/UI_Ingame_Menu/UI_Inventory/Inventory_Selected.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Ui/UI_Elements/UI Elements/UI_Ingame_Menu/UI_Inventory/Inventory_Selected.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Ui/UI_Elements/UI Elements/UI_Ingame_Menu/UI_Inventory/Item_Interaction_Background.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Ui/UI_Elements/UI Elements/UI_Ingame_Menu/UI_Inventory/Item_Interaction_Background.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Ui/UI_Elements/UI Elements/UI_Ingame_Menu/UI_Inventory/Item_Interaction_Button.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Ui/UI_Elements/UI Elements/UI_Ingame_Menu/UI_Inventory/Item_Interaction_Button.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Ui/UI_Elements/UI Elements/UI_Ingame_Menu/UI_Inventory/Item_Interaction_Selected.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Ui/UI_Elements/UI Elements/UI_Ingame_Menu/UI_Inventory/Item_Interaction_Selected.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Ui/UI_Elements/UI Elements/UI_Ingame_Menu/UI_Party/Lydaval_Frowin_Party_Icon.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Ui/UI_Elements/UI Elements/UI_Ingame_Menu/UI_Party/Lydaval_Frowin_Party_Icon.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Ui/UI_Elements/UI Elements/UI_Ingame_Menu/UI_Party/Lydaval_Hilda_Party_Icon.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Ui/UI_Elements/UI Elements/UI_Ingame_Menu/UI_Party/Lydaval_Hilda_Party_Icon.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Ui/UI_Elements/UI Elements/UI_Ingame_Menu/UI_Party/Lydaval_Player_Party_Icon.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Ui/UI_Elements/UI Elements/UI_Ingame_Menu/UI_Party/Lydaval_Player_Party_Icon.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Ui/UI_Elements/UI Elements/UI_Ingame_Menu/UI_Party/Ui-InGame-Menu-Part Setup_EXAMPLEy.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Ui/UI_Elements/UI Elements/UI_Ingame_Menu/UI_Party/Ui-InGame-Menu-Part Setup_EXAMPLEy.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Ui/UI_Elements/UI Elements/UI_Ingame_Menu/UI_Party/Ui-InGame-Menu-Part_FULL_Setup.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Ui/UI_Elements/UI Elements/UI_Ingame_Menu/UI_Party/Ui-InGame-Menu-Part_FULL_Setup.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Ui/UI_Elements/UI Elements/UI_Ingame_Menu/UI_System/UI_Save_load_Game/Ui_InGame_Menu_SaveGame_Background.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Ui/UI_Elements/UI Elements/UI_Ingame_Menu/UI_System/UI_Save_load_Game/Ui_InGame_Menu_SaveGame_Background.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Ui/UI_Elements/UI Elements/UI_Ingame_Menu/UI_System/UI_Save_load_Game/Ui_InGame_Menu_SaveGame_Background_Single.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Ui/UI_Elements/UI Elements/UI_Ingame_Menu/UI_System/UI_Save_load_Game/Ui_InGame_Menu_SaveGame_Background_Single.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Ui/UI_Elements/UI Elements/UI_Ingame_Menu/UI_System/UI_Save_load_Game/Ui_InGame_Menu_SaveGame_Background__Single_Selected.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Ui/UI_Elements/UI Elements/UI_Ingame_Menu/UI_System/UI_Save_load_Game/Ui_InGame_Menu_SaveGame_Background__Single_Selected.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Ui/UI_Elements/UI Elements/UI_Ingame_Menu/UI_System/UI_Save_load_Game/Ui_InGame_SaveMenu_Example.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Ui/UI_Elements/UI Elements/UI_Ingame_Menu/UI_System/UI_Save_load_Game/Ui_InGame_SaveMenu_Example.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Ui/UI_Elements/UI Elements/UI_Ingame_Menu/UI_System/Ui-InGame-Menu-System_Background.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Ui/UI_Elements/UI Elements/UI_Ingame_Menu/UI_System/Ui-InGame-Menu-System_Background.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Ui/UI_Elements/UI Elements/UI_Ingame_Menu/UI_System/Ui_InGame_Menu_Arrows_Left.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Ui/UI_Elements/UI Elements/UI_Ingame_Menu/UI_System/Ui_InGame_Menu_Arrows_Left.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Ui/UI_Elements/UI Elements/UI_Ingame_Menu/UI_System/Ui_InGame_Menu_Arrows_Left_Selected.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Ui/UI_Elements/UI Elements/UI_Ingame_Menu/UI_System/Ui_InGame_Menu_Arrows_Left_Selected.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Ui/UI_Elements/UI Elements/UI_Ingame_Menu/UI_System/Ui_InGame_Menu_Misc_Background.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Ui/UI_Elements/UI Elements/UI_Ingame_Menu/UI_System/Ui_InGame_Menu_Misc_Background.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Ui/UI_Elements/UI Elements/UI_Ingame_Menu/Ui-InGame-Menu-Background.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Ui/UI_Elements/UI Elements/UI_Ingame_Menu/Ui-InGame-Menu-Background.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Ui/UI_Elements/UI Elements/UI_Overworld/Dialogue/Ui_Dialouge_Arrow.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Ui/UI_Elements/UI Elements/UI_Overworld/Dialogue/Ui_Dialouge_Arrow.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Ui/UI_Elements/UI Elements/UI_Overworld/Dialogue/Ui_Dialouge_Background.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Ui/UI_Elements/UI Elements/UI_Overworld/Dialogue/Ui_Dialouge_Background.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Ui/Ui-InGame-Menu-Base.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Ui/Ui-InGame-Menu-Base.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Ui/Ui_InGame_Menu_Inventory_BoxSelected_Options_-_EXAMPLE_-_Copy.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Ui/Ui_InGame_Menu_Inventory_BoxSelected_Options_-_EXAMPLE_-_Copy.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Ui/brot.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Ui/brot.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Dialogues/FrowinAfterAttack.ink" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Dialogues/FrowinAfterAttack.ink" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Dialogues/FrowinAfterAttack.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Dialogues/FrowinAfterAttack.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Scenes/Overworld Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Scenes/Overworld Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Dialogue/Dialogues/DialogueManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Dialogue/Dialogues/DialogueManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Timelines/AfterTutorial cutsceneTimeline.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Timelines/AfterTutorial cutsceneTimeline.playable" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Timelines/BeforeVillageDuringAttackTimeline.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Timelines/BeforeVillageDuringAttackTimeline.playable" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Timelines/ReonsKidnappingTimeline.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Timelines/ReonsKidnappingTimeline.playable" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Timelines/TutorialFightTimeline.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Timelines/TutorialFightTimeline.playable" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Unity.Burst.Player.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Unity.Burst.Player.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Unity.Burst.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Unity.Burst.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Unity.PlasticSCM.Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Unity.PlasticSCM.Editor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Unity.RenderPipelines.Core.Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Unity.RenderPipelines.Core.Editor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Unity.RenderPipelines.Core.Runtime.Player.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Unity.RenderPipelines.Core.Runtime.Player.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Unity.RenderPipelines.Core.Runtime.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Unity.RenderPipelines.Core.Runtime.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Unity.RenderPipelines.Universal.Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Unity.RenderPipelines.Universal.Editor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Unity.ShaderGraph.Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Unity.ShaderGraph.Editor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Unity.Timeline.Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Unity.Timeline.Editor.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Scenes/Vertical Slices/Ballte VS.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Scenes/Vertical Slices/Ballte VS.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Combat/BattleSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Combat/BattleSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Enemy/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Enemy/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Timelines/AfterBossFightTimeline.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Timelines/AfterBossFightTimeline.playable" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Timelines/BossFightTimeline.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Timelines/BossFightTimeline.playable" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Timelines/HildaAfterAttackTimeline.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Timelines/HildaAfterAttackTimeline.playable" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObjectData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ObjectData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -165,10 +125,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="23588">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="23588" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -263,7 +223,7 @@
       <workItem from="1705674064548" duration="1427000" />
       <workItem from="1705684636776" duration="1986000" />
       <workItem from="1705753743775" duration="16748000" />
-      <workItem from="1705835250052" duration="1212000" />
+      <workItem from="1705835250052" duration="5430000" />
     </task>
     <servers />
   </component>
@@ -276,6 +236,23 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/+++Workdata/Scripts/Enemy/Enemy.cs</url>
+          <line>121</line>
+          <properties documentPath="D:\Unity Stuff\Git\Project Lydaval\Assets\+++Workdata\Scripts\Enemy\Enemy.cs" initialLine="121" containingFunctionPresentation="Method 'ChangeEnemyType'">
+            <startOffsets>
+              <option value="2745" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2789" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="Type#Items+Data" memberName="itemType" />

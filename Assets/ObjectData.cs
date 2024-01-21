@@ -10,14 +10,14 @@ public class ObjectData : MonoBehaviour
     [System.Serializable]
     public class Data
     {
-        public bool houses, enemies, fightWon;
+        public bool houses, enemies, fightWon, bossFightWon;
     }
 
     public Data data;
 
     [SerializeField] private GameObject houses, burnedHouses, enemy;
 
-    [SerializeField] private PlayableDirector afterTutorialCutscene;
+    [SerializeField] private PlayableDirector afterTutorialCutscene, afterBossFight;
 
     private void Start()
     {
@@ -38,6 +38,9 @@ public class ObjectData : MonoBehaviour
             
             if(data.fightWon)
                 afterTutorialCutscene.Play();
+            
+            if(data.bossFightWon)
+                afterBossFight.Play();
         }
 
         GameStateManager.instance.data.objectData = data;

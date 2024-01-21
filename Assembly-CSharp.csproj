@@ -480,6 +480,7 @@
      <Folder Include="Assets\+++Workdata\Scripts\Inventory\Items" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\API\Vulkan.hlsl" />
      <None Include="Library\PackageCache\com.unity.modules.uielements@1.0.0\package.json" />
+     <None Include="Assets\+++Workdata\Assets\Dialogues\AfterBossFight.json" />
      <None Include="Library\PackageCache\com.unity.burst@1.8.8\package.json" />
      <Folder Include="Assets\+++Workdata\Scripts\Player" />
      <Folder Include="Library\PackageCache\com.unity.modules.unitywebrequesttexture@1.0.0" />

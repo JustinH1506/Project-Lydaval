@@ -78,7 +78,7 @@ public class BattleSystem : MonoBehaviour
     #region Lists
 
     [SerializeField] List<GameObject> playerPrefabList, enemyPrefabList;
-    [SerializeField] private List<GameObject> enemyWormList, enemyThiefList, enemyBoarList;
+    [SerializeField] private List<GameObject> enemyWormList, enemyThiefList, enemyBossList;
     
     [SerializeField] private List<Stats> characterList;
     [SerializeField] public List<Stats> enemyStatsList, playerStatsList;
@@ -180,13 +180,13 @@ public class BattleSystem : MonoBehaviour
             }
         }
 
-        if (enemyManager.enemyType == EnemyType.BOAR)
+        if (enemyManager.enemyType == EnemyType.BOSS)
         {
-            enemyAdder = Random.Range(0, 2);
+            enemyAdder = 0;
 
             for (int i = 0; i <= enemyAdder; i++)
             {
-                enemyPrefabList.Add(enemyBoarList[i]);
+                enemyPrefabList.Add(enemyBossList[i]);
                 targetingButtonsList[i].gameObject.SetActive(true);
                 enemyHpList[i].gameObject.SetActive(true);
             }
