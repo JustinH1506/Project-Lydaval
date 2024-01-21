@@ -231,9 +231,9 @@
      <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.0.7\Editor\PlasticSCM\Views\Changesets\DateFilter.cs" />
      <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.0.7\Editor\PlasticSCM\Views\IncomingChanges\Developer\IncomingChangesSelection.cs" />
      <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.0.7\Editor\PlasticSCM\Views\History\SaveAction.cs" />
-     <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.0.7\Editor\PlasticSCM\NewIncomingChanges.cs" />
      <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.0.7\Editor\PlasticSCM\Views\PendingChanges\PendingChangesTreeHeaderState.cs" />
      <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.0.7\Editor\PlasticSCM\Developer\CheckinProgress.cs" />
+     <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.0.7\Editor\PlasticSCM\NewIncomingChanges.cs" />
      <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.0.7\Editor\PlasticSCM\UI\Progress\DrawProgressForOperations.cs" />
      <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.0.7\Editor\PlasticSCM\Developer\UpdateProgress.cs" />
      <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.0.7\Editor\PlasticSCM\UI\Progress\DrawProgressForViews.cs" />
@@ -289,9 +289,9 @@
      <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.0.7\Editor\PlasticSCM\UI\UIElements\LoadingSpinner.cs" />
      <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.0.7\Editor\PlasticSCM\Help\HelpData.cs" />
      <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.0.7\Editor\PlasticSCM\Views\Welcome\DownloadAndInstallOperation.cs" />
-     <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.0.7\Editor\PlasticSCM\UI\ShowWindow.cs" />
      <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.0.7\Editor\PlasticSCM\UI\Tree\TreeHeaderSettings.cs" />
      <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.0.7\Editor\PlasticSCM\WebApi\TokenExchangeResponse.cs" />
+     <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.0.7\Editor\PlasticSCM\UI\ShowWindow.cs" />
      <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.0.7\Editor\PlasticSCM\WebApi\CurrentUserAdminCheckResponse.cs" />
      <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.0.7\Editor\PlasticSCM\Views\PendingChanges\Dialogs\LaunchDependenciesDialog.cs" />
      <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.0.7\Editor\PlasticSCM\Views\Branch\Dialogs\RenameBranchDialog.cs" />

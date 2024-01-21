@@ -46,7 +46,10 @@ public class DialogueManager : MonoBehaviour
      {
          mainDirector = director;
          
-         director.Pause();
+         if(director != null)
+         {
+             director.Pause();
+         }         
          
          currentStory = new Story(inkJSON.text);
 

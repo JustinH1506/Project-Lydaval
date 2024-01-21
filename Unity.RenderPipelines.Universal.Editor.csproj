@@ -87,8 +87,8 @@
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@14.0.8\Editor\ShaderGraph\AssetCallbacks\CreateFullscreenShaderGraph.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@14.0.8\Editor\2D\ShapeEditor\EditablePath\ISnapping.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@14.0.8\Editor\2D\ShapeEditor\Selection\RectSelector.cs" />
-     <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@14.0.8\Editor\EditorUtils.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@14.0.8\Editor\2D\ShapeEditor\GUIFramework\DefaultControl.cs" />
+     <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@14.0.8\Editor\EditorUtils.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@14.0.8\Editor\2D\Converter\ParametricToFreeformLightUpgrader.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@14.0.8\Editor\2D\PixelPerfectCameraEditor.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@14.0.8\Editor\2D\ShapeEditor\EditorTool\GenericScriptablePathInspector.cs" />
