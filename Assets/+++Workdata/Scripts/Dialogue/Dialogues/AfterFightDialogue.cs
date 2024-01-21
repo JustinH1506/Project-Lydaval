@@ -14,11 +14,11 @@ public class AfterFightDialogue : MonoBehaviour
     [SerializeField] private DialogueManager _dialogueManager;
     private void Awake()
     {
-        if (EnemyManager.Instance.combatIndex == 2)
+        if (EnemyManager.instance.combatIndex == 2)
             StartDialogue(afterTutorial);
-        else if (EnemyManager.Instance.combatIndex == 3)
+        else if (EnemyManager.instance.combatIndex == 3)
             StartDialogue(afterMcHome);
-        else if(EnemyManager.Instance.combatIndex == 4)
+        else if(EnemyManager.instance.combatIndex == 4)
             StartDialogue(afterBoss);
     }
 

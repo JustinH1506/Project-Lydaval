@@ -1,4 +1,3 @@
-
 Hilda:		“My parents definitely showed them where it’s at, what ‘bout your folks?”
 
 Atal:	“They,... they’re dead. But importantly, I couldn’t protect Reon, the attackers took him, and I -”

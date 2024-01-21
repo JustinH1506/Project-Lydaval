@@ -1,16 +1,30 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Playables;
 
+public enum ObjectStates
+{
+    StartCutscene,
+    ForestEntry,
+    AfterTutorialFight,
+    BeforeVillageDuringAttack,
+    ReonsKidnapping,
+    FrowinAfterAttack,
+    HildaAfterAttack,
+    AfterBossFight
+}
 public class ObjectData : MonoBehaviour
 {
 
     [System.Serializable]
     public class Data
     {
-        public bool houses, enemies, fightWon, bossFightWon;
+        public bool fightWon, bossFightWon;
+
+        public ObjectStates objectStates;
     }
 
     public Data data;
@@ -18,6 +32,12 @@ public class ObjectData : MonoBehaviour
     [SerializeField] private GameObject houses, burnedHouses, enemy;
 
     [SerializeField] private PlayableDirector afterTutorialCutscene, afterBossFight;
+
+    [SerializeField] private List<GameObject> timelineCollider;
+
+    [SerializeField] private List<string> questTexts;
+
+    [SerializeField] private TextMeshProUGUI questTextPlace, questTextsInventory;
 
     private void Start()
     {
@@ -27,20 +47,81 @@ public class ObjectData : MonoBehaviour
         {
             data = loadedData;
 
-            if (data.houses)
+            if(data.objectStates == ObjectStates.StartCutscene)
+            {
+                timelineCollider[0].SetActive(true);
+                questTextPlace.text = questTexts[0];
+            }            
+            else if(data.objectStates == ObjectStates.ForestEntry)
+            {
+                timelineCollider[1].SetActive(true);
+                questTextPlace.text = questTexts[1];
+
+            }           
+            else if (data.objectStates == ObjectStates.AfterTutorialFight)
             {
                 houses.SetActive(false);
                 burnedHouses.SetActive(true);
-            }
-            
-            if(data.enemies)
                 enemy.SetActive(true);
+                timelineCollider[2].SetActive(true);
+                questTextPlace.text = questTexts[2];
+
+            }
+            else if(data.objectStates == ObjectStates.BeforeVillageDuringAttack)
+            {
+                houses.SetActive(false);
+                burnedHouses.SetActive(true);
+                enemy.SetActive(true);
+                timelineCollider[3].SetActive(true);
+                questTextPlace.text = questTexts[3];
+
+            }            
+            else if(data.objectStates == ObjectStates.ReonsKidnapping)
+            {
+                houses.SetActive(false);
+                burnedHouses.SetActive(true);
+                enemy.SetActive(true);
+                timelineCollider[4].SetActive(true);
+                questTextPlace.text = questTexts[4];
+            }            
+            else if(data.objectStates == ObjectStates.FrowinAfterAttack)
+            {
+                houses.SetActive(false);
+                burnedHouses.SetActive(true);
+                enemy.SetActive(true);
+                timelineCollider[5].SetActive(true);
+                questTextPlace.text = questTexts[5];
+
+            }           
+            else if(data.objectStates == ObjectStates.HildaAfterAttack)
+            {
+                houses.SetActive(false);
+                burnedHouses.SetActive(true);
+                enemy.SetActive(true);
+                timelineCollider[6].SetActive(true);
+                questTextPlace.text = questTexts[6];
+            }       
+            else if(data.objectStates == ObjectStates.AfterBossFight)
+            {
+                houses.SetActive(false);
+                burnedHouses.SetActive(true);
+                enemy.SetActive(true);
+                questTextPlace.text = questTexts[7];
+            }            
             
             if(data.fightWon)
+            {
+                data.fightWon = false;
+                
                 afterTutorialCutscene.Play();
+            }      
             
             if(data.bossFightWon)
+            {
+                data.bossFightWon = false;
+                
                 afterBossFight.Play();
+            }        
         }
 
         GameStateManager.instance.data.objectData = data;

@@ -170,7 +170,7 @@ public class BattleSystem : MonoBehaviour
     {
         if (enemyManager.enemyType == EnemyType.THIEF)
         {
-            enemyAdder = Random.Range(0, 2);
+            enemyAdder = 0;
 
             for (int i = 0; i <= enemyAdder; i++)
             {
@@ -220,7 +220,7 @@ public class BattleSystem : MonoBehaviour
     /// <summary> Returns if state is not PlayerTurn. Start PlayerAttack Coroutine. </summary>
     public void OnAttackButton(TargetingSystem targetSystem)
     {
-        if (state != BattleState.PlayerTurn && pressed)
+        if (state != BattleState.PlayerTurn || pressed)
             return;
 
         TargetingSystem target = targetSystem;
@@ -235,7 +235,7 @@ public class BattleSystem : MonoBehaviour
 
     public void OnAttackSkillButton(TargetingSystem targetSystem)
     {
-        if (state != BattleState.PlayerTurn && pressed)
+        if (state != BattleState.PlayerTurn || pressed)
             return;
 
         TargetingSystem target = targetSystem;
@@ -250,7 +250,7 @@ public class BattleSystem : MonoBehaviour
 
     public void OnPlayerHealSkillButton()
     {
-        if (state != BattleState.PlayerTurn && pressed)
+        if (state != BattleState.PlayerTurn || pressed)
             return;
         
         pressed = true;
@@ -260,7 +260,7 @@ public class BattleSystem : MonoBehaviour
 
     public void OnPlayerTauntSkillButton()
     {
-        if (state != BattleState.PlayerTurn && pressed)
+        if (state != BattleState.PlayerTurn || pressed)
             return;
 
         pressed = true;

@@ -6,18 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="60fe24dc-a470-438e-9d29-fb3fa2e8b3cf" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Lydaval/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Lydaval/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Dialogues/FrowinAfterAttack.ink" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Dialogues/FrowinAfterAttack.ink" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Dialogues/FrowinAfterAttack.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Assets/Dialogues/FrowinAfterAttack.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Scenes/Overworld Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Scenes/Overworld Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Scenes/Vertical Slices/Ballte VS.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Scenes/Vertical Slices/Ballte VS.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Combat/BattleSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Combat/BattleSystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Enemy/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Enemy/Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Timelines/AfterBossFightTimeline.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Timelines/AfterBossFightTimeline.playable" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Timelines/BossFightTimeline.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Timelines/BossFightTimeline.playable" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Timelines/HildaAfterAttackTimeline.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Timelines/HildaAfterAttackTimeline.playable" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ObjectData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ObjectData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Managers/EnemyManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/+++Workdata/Scripts/Managers/EnemyManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,10 +115,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="23588">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="23588" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -223,7 +213,7 @@
       <workItem from="1705674064548" duration="1427000" />
       <workItem from="1705684636776" duration="1986000" />
       <workItem from="1705753743775" duration="16748000" />
-      <workItem from="1705835250052" duration="5430000" />
+      <workItem from="1705835250052" duration="8882000" />
     </task>
     <servers />
   </component>
@@ -236,23 +226,6 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/+++Workdata/Scripts/Enemy/Enemy.cs</url>
-          <line>121</line>
-          <properties documentPath="D:\Unity Stuff\Git\Project Lydaval\Assets\+++Workdata\Scripts\Enemy\Enemy.cs" initialLine="121" containingFunctionPresentation="Method 'ChangeEnemyType'">
-            <startOffsets>
-              <option value="2745" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2789" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="Type#Items+Data" memberName="itemType" />

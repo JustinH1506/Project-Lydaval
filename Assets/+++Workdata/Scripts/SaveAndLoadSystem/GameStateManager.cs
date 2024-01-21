@@ -14,7 +14,6 @@ public class GameStateManager : MonoBehaviour
    
    public Stats tankStats;
    
-   
    private void Awake()
    {
       if(instance != null)

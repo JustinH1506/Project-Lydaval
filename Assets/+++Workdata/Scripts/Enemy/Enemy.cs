@@ -5,14 +5,6 @@ using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
 using Object = UnityEngine.Object;
 
-public enum EnemyType
-{
-    THIEF,
-    BOAR,
-    WORM,
-    BOSS
-}
-
 public class Enemy : MonoBehaviour
 {
     [SerializeField] private string uniqueGuid;
@@ -29,6 +21,8 @@ public class Enemy : MonoBehaviour
     [SerializeField] private ObjectData _objectData;
     
     public EnemyType enemyType;
+
+    public EnemyManager enemyManager;
 
     [SerializeField] private GameObject player;
 
@@ -54,6 +48,8 @@ public class Enemy : MonoBehaviour
         }
         
         data.position = transform.position;
+
+        enemyManager = EnemyManager.instance;
     }
 
     private void OnValidate()
@@ -72,57 +68,34 @@ public class Enemy : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            StartCoroutine(ChangeEnemyType());
-
+            enemyManager.ChangeEnemyType(enemyType);
             
+            if(enemyType != EnemyType.BOSS)
+                data.isDead = true;
         }
     }
 
     public void StartCombat()
     {
-        EnemyManager.Instance.enemyType = enemyType;
+        enemyManager.ChangeEnemyType(enemyType);
 
         if(enemyType == EnemyType.WORM)
         {
-            _objectData.data.enemies = true;
-
-            _objectData.data.houses = true;
-
             _objectData.data.fightWon = true;
             
             data.isDead = true;
         }
         else if (enemyType == EnemyType.THIEF)
         {
-            _objectData.data.enemies = true;
-
-            _objectData.data.houses = true;
-            
             data.isDead = true;
         }
         else if (enemyType == EnemyType.BOSS)
         {
-            _objectData.data.enemies = true;
-
-            _objectData.data.houses = true;
-            
             _objectData.data.bossFightWon = true;
         }
 
         GameStateManager.instance.data.objectData = _objectData.data;
             
         SceneManager.LoadScene(2);  
-    }
-
-    IEnumerator ChangeEnemyType()
-    {
-        EnemyManager.Instance.enemyType = enemyType;
-        
-        if(enemyType != EnemyType.BOSS)
-            data.isDead = true;
-
-        yield return new WaitForSeconds(1f);
-            
-        SceneManager.LoadScene(2);
     }
 }

@@ -1,11 +1,19 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
+public enum EnemyType
+{
+    THIEF,
+    BOAR,
+    WORM,
+    BOSS
+}
 public class EnemyManager : MonoBehaviour
 {
     public EnemyType enemyType;
     
     #region Instance
-    public static EnemyManager Instance { get; private set; }
+    public static EnemyManager instance { get; private set; }
 
     public int combatIndex;
     
@@ -17,13 +25,22 @@ public class EnemyManager : MonoBehaviour
     /// </summary>
     public void Awake()
     {
-        if(Instance != null)
+        if(instance != null)
         {
             Destroy(gameObject);
+            return;
         }
-        Instance = this;
+        
+        instance = this;
         
         DontDestroyOnLoad(gameObject);
+    }
+
+    public void ChangeEnemyType(EnemyType type)
+    {
+        enemyType = type;
+        
+        SceneManager.LoadScene(2);
     }
     #endregion
 }
