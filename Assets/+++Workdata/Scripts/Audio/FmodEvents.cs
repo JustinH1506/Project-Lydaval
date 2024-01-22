@@ -13,6 +13,14 @@ public class FmodEvents : MonoBehaviour
     [field: SerializeField] public EventReference forestMusic { get; private set; }  
     
     [field: SerializeField] public EventReference battleMusic { get; private set; }  
+    
+    [field: SerializeField] public EventReference footSteps { get; private set; }  
+    
+    [field: SerializeField] public EventReference buttonSound { get; private set; }  
+    
+    [field: SerializeField] public EventReference hurtSound { get; private set; } 
+    
+    [field: SerializeField] public EventReference attackSound { get; private set; } 
 
     public static FmodEvents instance { get; private set; }
 
@@ -23,6 +31,8 @@ public class FmodEvents : MonoBehaviour
     {
         if( instance != null)
         {
+            Debug.LogWarning("There are More");
+
             Destroy(gameObject);
         }
         instance = this;

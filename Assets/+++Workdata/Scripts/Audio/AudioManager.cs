@@ -25,6 +25,7 @@ public class AudioManager : MonoBehaviour
     {
         if(instance != null)
         {
+            Debug.LogWarning("There are More");
             Destroy(gameObject);
         }
         instance = this;
@@ -34,7 +35,7 @@ public class AudioManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    /* /// <summary>
+     /// <summary>
     /// Plays the PlayOneShot sound.
     /// </summary>
     /// <param name="sound"></param>
@@ -42,10 +43,11 @@ public class AudioManager : MonoBehaviour
     public void PlayOneShot(EventReference sound, Vector3 worldPos)
     {
         RuntimeManager.PlayOneShot(sound, worldPos);    
-    }*/
+    }
 
     /// <summary>
-    /// 
+    /// Set local EventInstance equal to runtime manager.
+    /// Give that eventInstance to eventInstances and return the eventInstance.  
     /// </summary>
     /// <param name="eventReference"></param>
     /// <returns></returns>
@@ -59,7 +61,7 @@ public class AudioManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Start the Music, startMusic and Ambience.
+    /// Start the maineMenu Music.
     /// </summary>
     private void Start()
     {

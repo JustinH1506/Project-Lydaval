@@ -142,6 +142,7 @@ public class PlayerMove : MonoBehaviour
     /// <param name="context"></param>
     private void Move(InputAction.CallbackContext context)
     {
+        AudioManager.instance.PlayOneShot(FmodEvents.instance.footSteps, transform.position);
         inputX = context.ReadValue<Vector2>().x;
         inputY = context.ReadValue<Vector2>().y;
     }

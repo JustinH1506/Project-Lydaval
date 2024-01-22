@@ -15,6 +15,8 @@ public class UiButtons : MonoBehaviour
 
     public void ActivateObject()
     {
+        AudioManager.instance.PlayOneShot(FmodEvents.instance.buttonSound, transform.position);
+        
         buttonFunction1.SetActive(true);
         
         buttonFunction2.SetActive(false);

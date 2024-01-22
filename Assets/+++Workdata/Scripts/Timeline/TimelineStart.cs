@@ -14,16 +14,13 @@ public class TimelineStart : MonoBehaviour
  
     public ObjectStates objectStates;
 
-    private void Awake()
-    {
-        _objectData.data.objectStates = objectStates;
-    }
-
     private void OnTriggerEnter2D(Collider2D other)
     {
         playerMove.rb.velocity = new Vector2(0f, 0f);
         
         _director.Play();
+
+        _objectData.data.objectStates = objectStates;
         
         _objectData.ChangeQuestTracker();
     }

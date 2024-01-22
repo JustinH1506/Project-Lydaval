@@ -64,7 +64,6 @@ public class ObjectData : MonoBehaviour
                 enemy.SetActive(true);
                 timelineCollider[2].SetActive(true);
                 questTextPlace.text = questTexts[2];
-
             }
             else if(data.objectStates == ObjectStates.BeforeVillageDuringAttack)
             {
@@ -73,7 +72,6 @@ public class ObjectData : MonoBehaviour
                 enemy.SetActive(true);
                 timelineCollider[3].SetActive(true);
                 questTextPlace.text = questTexts[3];
-
             }            
             else if(data.objectStates == ObjectStates.ReonsKidnapping)
             {

@@ -352,10 +352,14 @@ public class BattleSystem : MonoBehaviour
         attackButton.interactable = false;
         
         characterList[turnId].anim.SetTrigger("Attack");
+        
+        AudioManager.instance.PlayOneShot(FmodEvents.instance.attackSound, transform.position);
 
         yield return new WaitForSeconds(0.5f);
         
         enemyStatsList[enemyId].anim.SetTrigger("Damage");
+        
+        AudioManager.instance.PlayOneShot(FmodEvents.instance.hurtSound, transform.position);
         
         bool isDead = enemyStatsList[enemyId].TakeDamage(characterList[turnId].data.attack);
 
@@ -429,10 +433,14 @@ public class BattleSystem : MonoBehaviour
         skill.interactable = false;
         
         characterList[turnId].anim.SetTrigger("Attack");
+        
+        AudioManager.instance.PlayOneShot(FmodEvents.instance.attackSound, transform.position);
 
         yield return new WaitForSeconds(0.75f);
         
         enemyStatsList[enemyId].anim.SetTrigger("Damage");
+        
+        AudioManager.instance.PlayOneShot(FmodEvents.instance.hurtSound, transform.position);
         
         bool isDead = enemyStatsList[enemyId].TakeDamage(characterList[turnId].data.attack * 2);
 
@@ -486,6 +494,8 @@ public class BattleSystem : MonoBehaviour
             state = BattleState.Won;
             
             AudioManager.instance.CleanUp();
+            
+            AudioManager.instance.InitializeMusic(FmodEvents.instance.villageMusic);
             
             EndBattle();
         }
@@ -658,10 +668,14 @@ public class BattleSystem : MonoBehaviour
         }
 
         characterList[turnId].anim.SetTrigger("Attacking");
+        
+        AudioManager.instance.PlayOneShot(FmodEvents.instance.attackSound, transform.position);
 
         yield return new WaitForSeconds(0.75f);
         
         playerStatsList[playerId].anim.SetTrigger("Damage");
+        
+        AudioManager.instance.PlayOneShot(FmodEvents.instance.hurtSound, transform.position);
 
         bool isDead = playerStatsList[playerId].TakeDamage(characterList[turnId].data.attack);
 

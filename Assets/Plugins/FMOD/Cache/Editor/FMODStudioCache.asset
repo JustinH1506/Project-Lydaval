@@ -15,10 +15,10 @@ MonoBehaviour:
   Path: ../../../Fmod/Workspace/Project Lydaval/ProjectLydaval_Sounds/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638414748235854504
+  lastModified: 638415154226032201
   FileSizes:
   - Name: Desktop
-    Value: 1180
+    Value: 1404
   Exists: 1
 --- !u!114 &-7375891626764633038
 MonoBehaviour:
@@ -35,11 +35,38 @@ MonoBehaviour:
   Path: ../../../Fmod/Workspace/Project Lydaval/ProjectLydaval_Sounds/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638414747353930005
+  lastModified: 638415154765432178
   FileSizes:
   - Name: Desktop
-    Value: 3707648
+    Value: 4401440
   Exists: 1
+--- !u!114 &-6361942991938307085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Hurt
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Hurt
+  Guid:
+    Data1: 1759558167
+    Data2: 1134678179
+    Data3: 1156481184
+    Data4: -752923712
+  Banks:
+  - {fileID: -670286866165509203}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 391
 --- !u!114 &-5329982642793818585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -88,6 +115,80 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 86047
+--- !u!114 &-1823312890819165558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Steps
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Steps
+  Guid:
+    Data1: -1629289836
+    Data2: 1167431764
+    Data3: -643283563
+    Data4: 752913517
+  Banks:
+  - {fileID: -670286866165509203}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 500
+--- !u!114 &-670286866165509203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/SFX.bank
+  m_EditorClassIdentifier: 
+  Path: ../../../Fmod/Workspace/Project Lydaval/ProjectLydaval_Sounds/Build/Desktop/SFX.bank
+  Name: SFX
+  StudioPath: bank:/SFX
+  lastModified: 638415213105141777
+  FileSizes:
+  - Name: Desktop
+    Value: 32448
+  Exists: 1
+--- !u!114 &-525256249449740438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/ButtonSounds
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/ButtonSounds
+  Guid:
+    Data1: 1340055866
+    Data2: 1179867317
+    Data3: -317474116
+    Data4: -259268140
+  Banks:
+  - {fileID: -670286866165509203}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1008
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -105,18 +206,50 @@ MonoBehaviour:
   - {fileID: 3422015498378189120}
   - {fileID: -7375891626764633038}
   - {fileID: -5329982642793818585}
+  - {fileID: -670286866165509203}
   EditorEvents:
   - {fileID: 5624356185547789998}
   - {fileID: 8112052841456784379}
   - {fileID: -4439090415424344976}
   - {fileID: 5834678217701480827}
+  - {fileID: -6361942991938307085}
+  - {fileID: -525256249449740438}
+  - {fileID: -1823312890819165558}
+  - {fileID: 1152980685666302559}
   EditorParameters: []
   MasterBanks:
   - {fileID: 3422015498378189120}
   StringsBanks:
   - {fileID: -8851988411137056674}
-  cacheTime: 638414748235854504
+  cacheTime: 638415213105141777
   cacheVersion: 131603
+--- !u!114 &1152980685666302559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Attack
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Attack
+  Guid:
+    Data1: -1836355369
+    Data2: 1223263009
+    Data3: 1967304084
+    Data4: 299682300
+  Banks:
+  - {fileID: -670286866165509203}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 432
 --- !u!114 &3422015498378189120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -132,7 +265,7 @@ MonoBehaviour:
   Path: ../../../Fmod/Workspace/Project Lydaval/ProjectLydaval_Sounds/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638414748235494886
+  lastModified: 638415154225051181
   FileSizes:
   - Name: Desktop
     Value: 1486
@@ -163,7 +296,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 35239
+  Length: 80065
 --- !u!114 &5834678217701480827
 MonoBehaviour:
   m_ObjectHideFlags: 0

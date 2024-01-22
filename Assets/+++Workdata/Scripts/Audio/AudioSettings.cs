@@ -69,6 +69,8 @@ public class AudioSettings : MonoBehaviour
     public void MasterVolumeLevel(float newMasterVolume)
     {
         data.masterVolume = newMasterVolume;
+        
+        AudioManager.instance.PlayOneShot(FmodEvents.instance.buttonSound, transform.position);
     }
 
     /// <summary>
@@ -78,6 +80,9 @@ public class AudioSettings : MonoBehaviour
     public void MusicVolumeLevel(float newMusicVolume)
     {
         data.musicVolume = newMusicVolume;
+        
+        AudioManager.instance.PlayOneShot(FmodEvents.instance.buttonSound, transform.position);
+
     }
 
     /// <summary>
@@ -87,5 +92,8 @@ public class AudioSettings : MonoBehaviour
     public void SFXVolumeLevel(float newSFXVolume)
     {
         data.SFXVolume = newSFXVolume;
+        
+        AudioManager.instance.PlayOneShot(FmodEvents.instance.buttonSound, transform.position);
+
     }
 }

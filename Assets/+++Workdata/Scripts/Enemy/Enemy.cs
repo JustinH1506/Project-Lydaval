@@ -68,6 +68,8 @@ public class Enemy : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            AudioManager.instance.CleanUp();
+            
             enemyManager.ChangeEnemyType(enemyType);
             
             if(enemyType != EnemyType.BOSS)
@@ -77,6 +79,8 @@ public class Enemy : MonoBehaviour
 
     public void StartCombat()
     {
+        AudioManager.instance.CleanUp();
+        
         enemyManager.ChangeEnemyType(enemyType);
 
         if(enemyType == EnemyType.WORM)
