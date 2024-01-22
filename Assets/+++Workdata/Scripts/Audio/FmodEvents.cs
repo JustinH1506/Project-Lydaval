@@ -25,7 +25,7 @@ public class FmodEvents : MonoBehaviour
     public static FmodEvents instance { get; private set; }
 
     /// <summary>
-    /// We ask if the instance isn´t null it shall give us a warning and we make this gameObject teh instance.
+    /// We ask if the instance isn´t null it shall give us a warning and we make this gameObject the instance.
     /// </summary>
     private void Awake()
     {

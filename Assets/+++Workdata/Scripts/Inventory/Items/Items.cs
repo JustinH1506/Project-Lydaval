@@ -25,11 +25,18 @@ public class Items : MonoBehaviour
 
     public Data data;
 
+    /// <summary>
+    /// Set sr to SpriteRenderer. 
+    /// </summary>
     private void Awake()
     {
         sr = GetComponent<SpriteRenderer>();
     }
 
+    /// <summary>
+    /// If data name is equal to name of setItemActiveList we set data to this data.
+    /// If playerGotIt is true we set gameObject false. 
+    /// </summary>
     private void Start()
     {
         for (int i = 0; i < inventory.data.setItemActiveList.Count; i++)
@@ -44,6 +51,10 @@ public class Items : MonoBehaviour
             gameObject.SetActive(false);
     }
     
+    /// <summary>
+    /// If player trigger this we add data to the list set playerGotIt to true and set gameObject to false. 
+    /// </summary>
+    /// <param name="other"></param>
     public void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))

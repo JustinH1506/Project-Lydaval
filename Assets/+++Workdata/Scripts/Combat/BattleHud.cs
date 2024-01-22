@@ -37,6 +37,9 @@ public class BattleHud : MonoBehaviour
         hpSlider[battleSystem.playerI].value = stats.data.currentHealth;
     }
 
+    /// <summary>
+    /// Remove unitHp and slider from list.
+    /// </summary>
     public void ClearPlayerStats()
     {
         unitHp.Remove(unitHp[battleSystem.playerId]);

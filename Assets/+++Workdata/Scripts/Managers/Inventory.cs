@@ -27,11 +27,19 @@ public class Inventory : MonoBehaviour
 
     public SelectCharacter characterSelect;
 
+    /// <summary>
+    /// call SpawnAfterLoading.
+    /// </summary>
     private void Awake()
     {
         SpawnAfterLoading();
     }
 
+    /// <summary>
+    /// If nam of newItem is equal to item we get the amount higher.
+    /// Else we Instantiate it. 
+    /// </summary>
+    /// <param name="item"></param>
     public void AddItemToList(Items.Data item)
     {
         for (int i = 0; i < data.itemListData.Count; i++)
@@ -66,6 +74,9 @@ public class Inventory : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// If localData is null we set our data else we spawn items with the data from the saved data. 
+    /// </summary>
     private void SpawnAfterLoading()
     {
         Data localData = GameStateManager.instance.data.inventoryData;
@@ -91,6 +102,9 @@ public class Inventory : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// If its selected we set selected to false.
+    /// </summary>
     public void LookForSelected()
     {
         if (characterSelect != null)
@@ -111,6 +125,9 @@ public class Inventory : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// If the Character has not full health the characters current health will get + the heal amount of the item. 
+    /// </summary>
     public void HealPlayer()
     {
         for (int i = 0; i < inventoryEntryList.Count; i++)

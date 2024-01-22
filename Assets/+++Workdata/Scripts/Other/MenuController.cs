@@ -18,6 +18,9 @@ public class MenuController : MonoBehaviour
         menuControllerMap = new MenuControllerMap();
     }
 
+    /// <summary>
+    /// Enable menuControllerMap, subscribe InventoryScreen to performed and canceled. 
+    /// </summary>
     private void OnEnable()
     {
         menuControllerMap.Enable();
@@ -26,6 +29,9 @@ public class MenuController : MonoBehaviour
         menuControllerMap.Pause_Inventory.Inventroy.canceled += InventoryScreen;
     }
 
+    /// <summary>
+    /// disable menuControllerMap, deSubscribe InventoryScreen to performed and canceled. 
+    /// </summary>
     private void OnDisable()
     {
         menuControllerMap.Disable();

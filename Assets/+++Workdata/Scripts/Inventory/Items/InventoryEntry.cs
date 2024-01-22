@@ -19,11 +19,17 @@ public class InventoryEntry : MonoBehaviour
     
     public bool selected;
     
+    /// <summary>
+    /// We find inventory. 
+    /// </summary>
     private void Awake()
     {
         _inventory = GameObject.Find("Inventory").GetComponent<Inventory>();
     }
 
+    /// <summary>
+    /// If slected is false we set selectedButtons false else we set them true.
+    /// </summary>
     private void Update()
     {
         if(selected == false)
@@ -32,6 +38,11 @@ public class InventoryEntry : MonoBehaviour
             selectButtons.SetActive(true);
     }
 
+    
+    /// <summary>
+    /// We set the name and amount depending on the name. 
+    /// </summary>
+    /// <param name="itemData"></param>
     public void Initialize(Items.Data itemData)
     {
         newName.text = itemData.newName;
@@ -53,6 +64,10 @@ public class InventoryEntry : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// If selected is true we set selected to false and start LookForSelected.
+    /// Else we  LookForSlelected and set selecetd to true. 
+    /// </summary>
     public void Select()
     {
         if(selected)

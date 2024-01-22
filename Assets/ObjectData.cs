@@ -39,6 +39,10 @@ public class ObjectData : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI questTextPlace;
 
+    /// <summary>
+    /// Depending on the state we activate certain objects and play afterTutorial cutscene if fight won is true.
+    /// If bossFightWon is true we play afterBossFight timeline. 
+    /// </summary>
     private void Start()
     {
         var loadedData = GameStateManager.instance.data.objectData;
@@ -124,6 +128,9 @@ public class ObjectData : MonoBehaviour
         GameStateManager.instance.data.objectData = data;
     }
 
+    /// <summary>
+    /// We get the text for our questTracker depending on the State we are in and save it to the GameStateManager. 
+    /// </summary>
     public void ChangeQuestTracker()
     {
             if(data.objectStates == ObjectStates.StartCutscene)

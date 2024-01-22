@@ -7,6 +7,10 @@ public class PlayerSkills : MonoBehaviour
 
     [SerializeField] private BattleSystem _battleSystem;
 
+    /// <summary>
+    /// If select is active we set select off and inBetweenText on;
+    /// Else we set select on and inBetweenText off. 
+    /// </summary>
    public void Select()
    {
       if(select.activeSelf)
@@ -23,11 +27,17 @@ public class PlayerSkills : MonoBehaviour
       }   
    }
 
+    /// <summary>
+    /// Deselect is not active. 
+    /// </summary>
    public void Deselect()
    {
       deselect.SetActive(false);
    }
 
+    /// <summary>
+    /// attacking is true and inBetweenText is deactivated. 
+    /// </summary>
    public void Attacking()
    {
        _battleSystem.attacking = true;
@@ -35,6 +45,9 @@ public class PlayerSkills : MonoBehaviour
        _battleSystem.inBetweenText.gameObject.SetActive(false);
    }
 
+    /// <summary>
+    /// attacking is false and inBetweenText is deactivated. 
+    /// </summary>
    public void NotAttacking()
    {
        _battleSystem.attacking = false;

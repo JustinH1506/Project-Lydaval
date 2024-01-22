@@ -13,6 +13,9 @@ public class PlayerAnimator : MonoBehaviour
 
     public SpriteRenderer sr;
 
+    /// <summary>
+    /// Set anim to animator and sr to SpriteRenderer. 
+    /// </summary>
     private void Awake()
     {
         anim = GetComponent<Animator>();
@@ -20,6 +23,10 @@ public class PlayerAnimator : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
     }
 
+    /// <summary>
+    /// we Set the walkDirection depending on the walkDirection. 
+    /// </summary>
+    /// <param name="newDirection"></param>
     public void SetWalkDirection(Vector2 newDirection)
     {
         if (newDirection.magnitude <= 0)
@@ -36,12 +43,18 @@ public class PlayerAnimator : MonoBehaviour
         anim.SetFloat("WalkDirectionY", walkDirection.y);
     }
 
+    /// <summary>
+    /// We set the bool isRunning and set is running to true. 
+    /// </summary>
     public void SetRun()
     {
         anim.SetBool("isRunning", isRunning);
         isRunning = true;
     }
 
+    /// <summary>
+    /// We set bool isRunning and isRunning to false. 
+    /// </summary>
     public void SetRunFalse()
     {
         anim.SetBool("isRunning", isRunning);

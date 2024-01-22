@@ -95,12 +95,15 @@ public class BattleSystem : MonoBehaviour
 
     #region Methods
 
+    /// <summary>
+    /// We find the enemyManager.
+    /// </summary>
     private void Awake()
     {
         enemyManager = GameObject.Find("---EnemyManager").GetComponent<EnemyManager>();
     }
 
-    /// <summary> Set Battle State to START and Start Coroutine SetUpBattle </summary>
+    /// <summary> Set Battle State to START, call SetEnemiesToList and Start Coroutine SetUpBattle </summary>
     void Start()
     {
         state = BattleState.Start;
@@ -108,8 +111,8 @@ public class BattleSystem : MonoBehaviour
         StartCoroutine(SetUpBattle());
     }
 
-    /// <summary> If the Battle state is WON ... . 
-    /// else if it´s LOST ... .
+    /// <summary> If the Battle state is WON We go back to the first scene and save the playerStats in the GameStateManager. 
+    /// else if it´s LOST we load scene 0.
     /// </summary>
     private void EndBattle()
     {
@@ -142,7 +145,8 @@ public class BattleSystem : MonoBehaviour
     }
 
     /// <summary>
-    /// 
+    /// We set the Player Name, set inBetweenText active, set it to the name and teh string turnStart,
+    /// set the turn dependend on the charatcerlists turn id and make pressed false.
     /// </summary>
     private void PlayerTurn()
     {
@@ -157,6 +161,9 @@ public class BattleSystem : MonoBehaviour
         pressed = false;
     }
 
+    /// <summary>
+    /// We remove Stats that are null in characterList, playerStatsList and playerHpList.
+    /// </summary>
     private void ClearList()
     {
         characterList.RemoveAll(Stats => Stats == null);
@@ -166,6 +173,9 @@ public class BattleSystem : MonoBehaviour
         playerHpList.RemoveAll(Stats => Stats == null);
     }
 
+    /// <summary>
+    /// Depended on which enemyType it is we add that enemy to the list, make the targetingbuttons active and the enemyHpList active.
+    /// </summary>
     private void SetEnemiesToList()
     {
         if (enemyManager.enemyType == EnemyType.THIEF)
@@ -206,6 +216,9 @@ public class BattleSystem : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// We set the PlayerHud hp. 
+    /// </summary>
     public void SetHp()
     {
         for (int i = 0; i < playerStatsList.Count; i++)
@@ -217,7 +230,11 @@ public class BattleSystem : MonoBehaviour
     }
 
 
-    /// <summary> Returns if state is not PlayerTurn. Start PlayerAttack Coroutine. </summary>
+    /// <summary> Returns if state is not PlayerTurn or the button is pressed.
+    /// Make a local TargetingSystem named target and that equal to targetSystem.
+    /// If attacking is true and targetSystems idChanger is equal to the enemyId pressed is true and
+    /// we Start PlayerAttack courotine.
+    /// Start PlayerAttack Coroutine. </summary>
     public void OnAttackButton(TargetingSystem targetSystem)
     {
         if (state != BattleState.PlayerTurn || pressed)
@@ -233,6 +250,11 @@ public class BattleSystem : MonoBehaviour
         }
     }
 
+    /// <summary> Returns if state is not PlayerTurn or the button is pressed.
+    /// Make a local TargetingSystem named target and that equal to targetSystem.
+    /// If attacking is true and targetSystems idChanger is equal to the enemyId pressed is true and
+    /// we Start PlayerAttackSkill courotine.
+    /// Start PlayerAttack Coroutine. </summary>
     public void OnAttackSkillButton(TargetingSystem targetSystem)
     {
         if (state != BattleState.PlayerTurn || pressed)
@@ -248,6 +270,9 @@ public class BattleSystem : MonoBehaviour
         }
     }
 
+    /// <summary> Returns if state is not PlayerTurn or the button is pressed.
+    /// We make pressed true and Start Courotine PlayerHealSkill. 
+    ///  </summary>
     public void OnPlayerHealSkillButton()
     {
         if (state != BattleState.PlayerTurn || pressed)
@@ -258,6 +283,9 @@ public class BattleSystem : MonoBehaviour
         StartCoroutine(PlayerHealSkill());
     }
 
+    /// <summary> Returns if state is not PlayerTurn or the button is pressed.
+    /// We make pressed true and Start Courotine OnPlayerTauntSkill. 
+    ///  </summary>
     public void OnPlayerTauntSkillButton()
     {
         if (state != BattleState.PlayerTurn || pressed)
@@ -272,7 +300,9 @@ public class BattleSystem : MonoBehaviour
 
     #region IEnumerator
 
-    /// <summary> Instantiate player and enemy prefab and spawning them to the Battlestation´s. Get the Stats. </summary>
+    /// <summary> We Instantiate the Characters, set them in the CharacterTurnList,
+    /// sortTheList dependend on the speed value, reverse the list.
+    /// If the Character in CharacterList with TurnId is enemy we start enemy turn else we start PlayerTurn. </summary>
     IEnumerator SetUpBattle()
     {
         for (int i = 0; i < playerPrefabList.Count; i++)
@@ -327,8 +357,6 @@ public class BattleSystem : MonoBehaviour
                 playerStatsList[i].data = GameStateManager.instance.data.tankStatData;
             }
         }
-        
-        
 
         yield return null;
 
@@ -344,8 +372,11 @@ public class BattleSystem : MonoBehaviour
         }
     }
 
-    /// <summary> Making bool isDead to the Take Damage Method from enemyStats. Set The enemyHud Hp.
-    /// Wait for 0.05 seconds. If isDead is true the Battle is Won and the Battle Ends´else the Enemy´s Turn starts.
+    /// <summary>
+    /// Set buttons, animation and sound when attacking, call SetEnemyHp,
+    /// make a bool equal to enemyStatsLists enemyId and attack that with the damage method from that enemy.
+    /// If won we set the clearUp audio  the audio and Initialize village music call EndBattle.
+    /// else we call change Turn.
     /// </summary>
     IEnumerator PlayerAttack()
     {
@@ -412,6 +443,8 @@ public class BattleSystem : MonoBehaviour
             
             AudioManager.instance.CleanUp();
             
+            AudioManager.instance.InitializeMusic(FmodEvents.instance.villageMusic);
+            
             EndBattle();
         }
         else
@@ -428,6 +461,13 @@ public class BattleSystem : MonoBehaviour
         }
     }
 
+    
+    /// <summary>
+    /// Set buttons, animation and sound when attacking, call SetEnemyHp,
+    /// make a bool equal to enemyStatsLists enemyId and attack that with the damage method from that enemy times 2.
+    /// If won we set the clearUp audio  the audio and Initialize village music call EndBattle.
+    /// else we call change Turn.
+    /// </summary>
     IEnumerator PlayerAttackSkill()
     {
         skill.interactable = false;
@@ -511,6 +551,11 @@ public class BattleSystem : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// If the player isnt at full currentHealth we heal the selected characters hp plus ten.
+    /// If the eny is at full health we return.
+    /// If it healed but the character is over the maximumHealth we set the currentHealth to maximum health.
+    /// </summary>
     IEnumerator PlayerHealSkill()
     {
         heal.interactable = false;
@@ -565,6 +610,11 @@ public class BattleSystem : MonoBehaviour
         yield return null;
     }
 
+    /// <summary>
+    /// Make the taunt true and sets a cooldown to 3.
+    /// Sets the attack animation, call SetTurnFalse for current Character and set call Turn Change.
+    /// </summary>
+    /// <returns></returns>
     IEnumerator PlayerTauntSkill()
     {
         taunt.interactable = false;
@@ -586,17 +636,24 @@ public class BattleSystem : MonoBehaviour
         StartCoroutine(TurnChange());
     }
 
+    
+    /// <summary>
+    /// Set levelUpPanel active waits for 2.5 seconds and sets it inactive.
+    /// </summary>
+    /// <returns></returns>
     public IEnumerator LevelUp()
     {
         levelUpPanel.SetActive(true);
-        
-        
 
         yield return new WaitForSeconds(2.5f);
         
         levelUpPanel.SetActive(false);
     }
 
+    /// <summary>
+    /// turnId gets +1 and dependend on which charatcer is the next in the CharacterList we call enemy or Playerturn.
+    /// </summary>
+    /// <returns></returns>
     IEnumerator TurnChange()
     {
         turnId++;
@@ -646,8 +703,10 @@ public class BattleSystem : MonoBehaviour
         }
     }
 
-    /// <summary> Waits for 2 seconds makes bool isDead to the Take Damage Method from enemyStats. Set The enemyHud Hp.
-    /// Wait for 0.05 seconds. If isDead is true the Battle is Won and the Battle Ends else the Enemy´s Turn starts.
+    /// <summary> Set buttons, animation and sound when attacking, call SetEnemyHp,
+    /// make a bool equal to enemyStatsLists enemyId and attack that with the damage method from that enemy.
+    /// If lost we set the clearUp audio  the audio and Initialize mainMenu music call EndBattle.
+    /// else we call change Turn.
     /// </summary>
     IEnumerator EnemyTurn()
     {
@@ -741,6 +800,9 @@ public class BattleSystem : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Makes the levelUpText to the stats that are getting changed after getting a level up. 
+    /// </summary>
     public void LevelUpText()
     {
         string breakLineHash = "<br>" + "<br>";

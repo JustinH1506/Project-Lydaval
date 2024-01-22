@@ -16,11 +16,17 @@ public class CharacterPartyStats : MonoBehaviour
 
     const string breakLineHash = "<br>" + "<br>";
 
+    /// <summary>
+    /// call ChangeStats. 
+    /// </summary>
     public void Start()
     {
         ChangeStats();
     }
 
+    /// <summary>
+    /// Get the stats from GameStateManager and set them depending on the characterType.
+    /// </summary>
     public void ChangeStats()
     {
         Stats.Data statData = new();
@@ -38,6 +44,11 @@ public class CharacterPartyStats : MonoBehaviour
         statsText.text = StatCollectionString(statData);
     }
 
+    /// <summary>
+    /// return a string that shows all stats in the inventory screen. 
+    /// </summary>
+    /// <param name="statData"></param>
+    /// <returns></returns>
     private static string StatCollectionString(Stats.Data statData)
     {
         return statData.unitName + breakLineHash + "Level: " + statData.level + breakLineHash + "Hp: "+

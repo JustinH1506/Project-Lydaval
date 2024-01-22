@@ -14,6 +14,11 @@ public class TimelineStart : MonoBehaviour
  
     public ObjectStates objectStates;
 
+    /// <summary>
+    /// Set velocity og Player to 0, Play the director, make ObjectStates equal to these objectStates,
+    /// Call ChangeQuestTracker from objectData. 
+    /// </summary>
+    /// <param name="other"></param>
     private void OnTriggerEnter2D(Collider2D other)
     {
         playerMove.rb.velocity = new Vector2(0f, 0f);

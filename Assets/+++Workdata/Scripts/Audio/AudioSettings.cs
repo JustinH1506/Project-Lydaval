@@ -40,6 +40,9 @@ public class AudioSettings : MonoBehaviour
         Master = FMODUnity.RuntimeManager.GetBus("bus:/Master");
     }
 
+    /// <summary>
+    /// We look for data. If ther are any the data are equal to those and we save them in  the GameStaeManager.
+    /// </summary>
     private void Start()
     {
         var loadedData = GameStateManager.instance.data.audioData;

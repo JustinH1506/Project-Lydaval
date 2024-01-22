@@ -21,11 +21,17 @@ public class DialogueManager : MonoBehaviour
 
     [SerializeField] private PlayableDirector mainDirector;
 
+    /// <summary>
+    /// dialogueControllMap is new DialogueControllMap.
+    /// </summary>
     private void Awake()
     {
         dialogueControllMap = new DialogueControllMap();
     }
 
+    /// <summary>
+    /// We enable dialogueControllMap and subscribe it to Submit by performed and canceled. 
+    /// </summary>
     private void OnEnable()
     {
         dialogueControllMap.Enable();
@@ -34,6 +40,9 @@ public class DialogueManager : MonoBehaviour
         dialogueControllMap.Dialogue.Submit.canceled += Submit;
     }
 
+    /// <summary>
+    /// We disable dialogueControllMap and deSubscribe it to Submit by performed and canceled. 
+    /// </summary>
     private void OnDisable()
     {
         dialogueControllMap.Disable();
@@ -42,6 +51,11 @@ public class DialogueManager : MonoBehaviour
         dialogueControllMap.Dialogue.Submit.canceled -= Submit;
     }
 
+    /// <summary>
+    /// We start the dialogue with the given story adn the playable director. 
+    /// </summary>
+    /// <param name="inkJSON"></param>
+    /// <param name="director"></param>
      public void EnterDialogueMode(TextAsset inkJSON, PlayableDirector director)
      {
          mainDirector = director;
@@ -64,6 +78,11 @@ public class DialogueManager : MonoBehaviour
          ContinueStory(director);
      }
      
+    /// <summary>
+    /// We deactivate the panel and Resume the director if its not null.
+    /// </summary>
+    /// <param name="director"></param>
+    /// <returns></returns>
      private IEnumerator ExitDialogueMode(PlayableDirector director)
      {
          yield return null;
@@ -80,6 +99,10 @@ public class DialogueManager : MonoBehaviour
          } 
      }
      
+    /// <summary>
+    /// If the story can continue we call continue else we start the ExitDialogueMode
+    /// </summary>
+    /// <param name="director"></param>
      public void ContinueStory(PlayableDirector director)
      {
          if (currentStory.canContinue)
@@ -92,6 +115,10 @@ public class DialogueManager : MonoBehaviour
          }
      }
      
+    /// <summary>
+    /// If we press while Dialogue is playing we start ContinueStory. 
+    /// </summary>
+    /// <param name="context"></param>
      public void Submit(InputAction.CallbackContext context)
      {
          if (context.performed && dialogueIsPlaying)

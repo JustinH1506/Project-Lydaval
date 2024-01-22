@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class InGameButtons : MonoBehaviour
 {
+    /// <summary>
+    /// Play a sound, CleanUp the Audio, start new Music and Call StartNewGame.
+    /// </summary>
     public void StartGame()
     {
         AudioManager.instance.PlayOneShot(FmodEvents.instance.buttonSound, transform.position);
@@ -16,6 +19,9 @@ public class InGameButtons : MonoBehaviour
         GameStateManager.instance.StartNewGame();
     }
     
+    /// <summary>
+    /// Play a sound, cleanUp Audio, set Time to 1, Destroy the GameStateManager, start new Music, load Scene 0.
+    /// </summary>
     public void BackToMainMenu()
     {
         AudioManager.instance.PlayOneShot(FmodEvents.instance.buttonSound, transform.position);
@@ -31,6 +37,9 @@ public class InGameButtons : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
+    /// <summary>
+    /// Play sound, call SaveGame.
+    /// </summary>
     public void SaveGame()
     {
         AudioManager.instance.PlayOneShot(FmodEvents.instance.buttonSound, transform.position);
@@ -38,6 +47,9 @@ public class InGameButtons : MonoBehaviour
         GameStateManager.instance.SaveGame("SaveGame");
     }
 
+    /// <summary>
+    /// PlaySound, call LoadFromSave.
+    /// </summary>
     public void LoadGame()
     {
         AudioManager.instance.PlayOneShot(FmodEvents.instance.buttonSound, transform.position);
@@ -45,6 +57,9 @@ public class InGameButtons : MonoBehaviour
         GameStateManager.instance.LoadFromSave("SaveGame");
     }
 
+    /// <summary>
+    /// Play sound, Quit the Game.
+    /// </summary>
     public void Quit()
     {
         AudioManager.instance.PlayOneShot(FmodEvents.instance.buttonSound, transform.position);

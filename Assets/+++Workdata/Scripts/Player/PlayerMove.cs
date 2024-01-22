@@ -66,6 +66,13 @@ public class PlayerMove : MonoBehaviour
         playerController = new PlayerController();
     }
 
+    /// <summary>
+    /// We create a local currentPosition which is the positionData from the GameStateManager.
+    /// If currentPosition is not null we set our positionData to currentPositionData.
+    /// We call the Get Position method and if startCutscene is true we set startCutscene off.
+    /// We set the GameStateManagers positionData equal to our positionData.
+    /// if start CutsceneOff is false call play by startCutscene PlayableDirector adn set startCutsceneOff true.
+    /// </summary>
     private void Start()
     {
         var currentPosition = GameStateManager.instance.data.positionData;
@@ -87,6 +94,9 @@ public class PlayerMove : MonoBehaviour
         positionData.startCutsceneOff = true;
     }
 
+    /// <summary>
+    /// We subscribe the Move method to the Movement of the playerController if its performed or canceled.
+    /// </summary>
     private void OnEnable()
     {
         playerController.Enable();
@@ -95,6 +105,9 @@ public class PlayerMove : MonoBehaviour
         playerController.Player.Movement.canceled += Move;
     }
 
+    /// <summary>
+    /// We deSubscribe the Move method to the Movement of the playerController if its performed or canceled.
+    /// </summary>
     private void OnDisable()
     {
         playerController.Disable();
@@ -103,6 +116,9 @@ public class PlayerMove : MonoBehaviour
         playerController.Player.Movement.canceled -= Move;
     }
     
+    /// <summary>
+    /// If the TrygetValue works we set our position to the saveableVector3 position.
+    /// </summary>
     private void GetPosition()
     {
         if (positionData.positionsBySceneName.TryGetValue(gameObject.scene.name, out var position))
@@ -127,6 +143,11 @@ public class PlayerMove : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// We get the scene name.
+    /// If the positionData does not have a key we add the scene name and the position.
+    /// else we set positionData sceneName equal to the position. 
+    /// </summary>
     private void LateUpdate()
     {
         var sceneName = gameObject.scene.name;
@@ -137,7 +158,8 @@ public class PlayerMove : MonoBehaviour
     }
 
     /// <summary>
-    /// We get the x value from context and the y value from context. 
+    /// We get the x value from context and the y value from context.
+    /// We play the footSteps sound. 
     /// </summary>
     /// <param name="context"></param>
     private void Move(InputAction.CallbackContext context)

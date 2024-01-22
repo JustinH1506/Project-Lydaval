@@ -12,6 +12,10 @@ public class AfterFightDialogue : MonoBehaviour
     [SerializeField] private PlayableDirector _director;
 
     [SerializeField] private DialogueManager _dialogueManager;
+    
+    /// <summary>
+    /// Starts Dialogue with certain texts depending on enemy Managers Combat index
+    /// </summary>
     private void Awake()
     {
         if (EnemyManager.instance.combatIndex == 2)
@@ -22,6 +26,10 @@ public class AfterFightDialogue : MonoBehaviour
             StartDialogue(afterBoss);
     }
 
+    /// <summary>
+    /// enters DialogueMode with the story and the director. 
+    /// </summary>
+    /// <param name="story"></param>
     public void StartDialogue(TextAsset story)
     {
         _dialogueManager.EnterDialogueMode(story, _director);

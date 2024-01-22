@@ -36,6 +36,10 @@ public class EnemyManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
+    /// <summary>
+    /// enemyType is equal to type, CleanUp Audio, Initialize BattleMusic and Load scene 2.
+    /// </summary>
+    /// <param name="type"></param>
     public void ChangeEnemyType(EnemyType type)
     {
         enemyType = type;

@@ -59,6 +59,10 @@ public class Stats : MonoBehaviour
     #endregion
 
     #region Methods
+    
+    /// <summary>
+    /// Look which CharacterType this is and sets skillButton and heal button to those. 
+    /// </summary>
     private void Awake()
     {
         anim = GetComponent<Animator>();
@@ -81,8 +85,6 @@ public class Stats : MonoBehaviour
         {
             skillButton = GameObject.Find("Player_Heal_Button");
             healButton = GameObject.Find("Player_Heal_Healer_Button");
-
-            
         }        
         else if(data.types == CharacterTypes.Tank)
         {
@@ -104,6 +106,7 @@ public class Stats : MonoBehaviour
     
     /// <summary>
     /// Gets maxHealth and currentHealth to a string.
+    /// Set Parent from heal and skill button inactive. 
     /// </summary>
     private void Start()
     {
@@ -117,7 +120,10 @@ public class Stats : MonoBehaviour
         }
     }
 
-
+    /// <summary>
+    /// Calls level up if xp are bigger or equal to neededXp.
+    /// Call LevelUpText and LevelUp from battleSystem. 
+    /// </summary>
     public void HasEnoughXp()
     {
       if (data.xp >= data.neededXp)
@@ -141,6 +147,9 @@ public class Stats : MonoBehaviour
         return false;
     }
 
+    /// <summary>
+    /// Set depending on which CharacterType it is the stats between some numbers. 
+    /// </summary>
     public void LevelUp()
     {
         if (data.types == CharacterTypes.Hero)
@@ -209,11 +218,19 @@ public class Stats : MonoBehaviour
         battleSystem.SetHp();
     }
 
+    /// <summary>
+    /// set select to true.
+    /// </summary>
     public void Select()
     {
         select = true;
     }
 
+
+    /// <summary>
+    /// Set skillButton active.
+    /// If cooldwon is higher than 0 the button is not interactable else it is. 
+    /// </summary>
     public void SetTurn()
     {
         skillButton.SetActive(true);
@@ -222,9 +239,11 @@ public class Stats : MonoBehaviour
             skillButton.GetComponent<Button>().interactable = false;
         else
             skillButton.GetComponent<Button>().interactable = true;
-        
     }
 
+    /// <summary>
+    /// Set skill button inactive. 
+    /// </summary>
     public void SetTurnFalse()
     {
         skillButton.SetActive(false);

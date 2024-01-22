@@ -9,6 +9,9 @@ public class TargetingSystem : MonoBehaviour
     
     public int idChanger;
 
+    /// <summary>
+    /// changes enemyId depending on idChanger and sets indicator to that. 
+    /// </summary>
     public void TargetEnemy()
     {
         battleSystem.targetingIndicatorList[battleSystem.enemyId].enabled = false;
