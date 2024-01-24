@@ -114,6 +114,7 @@
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\ExposureHistogram.hlsl" />
      <None Include="Library\PackageCache\com.unity.inputsystem@1.6.3\package.json" />
      <None Include="Library\PackageCache\com.unity.modules.ai@1.0.0\package.json" />
+     <None Include="Assets\+++Workdata\Assets\Dialogues\FrowinStartText.json" />
      <Folder Include="Library\PackageCache\com.unity.2d.tilemap.extras@3.1.1" />
      <None Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections.LowLevel.ILSupport\README.txt" />
      <Folder Include="Library\PackageCache\com.unity.modules.animation@1.0.0" />
@@ -423,6 +424,7 @@
      <Folder Include="Library\PackageCache\com.unity.modules.director@1.0.0" />
      <Folder Include="Library\PackageCache\com.unity.modules.audio@1.0.0" />
      <Folder Include="Assets\+++Workdata\Assets\Sprites\Enemy\Thief SpriteSheets" />
+     <None Include="Assets\+++Workdata\Assets\Dialogues\HildaStartText.json" />
      <Folder Include="Assets\+++Workdata\Assets\Sprites\Player\Combat Sprite Sheet" />
      <None Include="Library\PackageCache\com.unity.modules.terrain@1.0.0\package.json" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\GaussianDownsample.compute" />

@@ -134,13 +134,17 @@ public class PlayerMove : MonoBehaviour
         
         if (rb.velocity.x != 0 || rb.velocity.y != 0)
         {
+            rb.velocity.Normalize();
             playerAnimator.SetRun();
             playerAnimator.SetWalkDirection(rb.velocity);
         }
         else
         {
+            rb.velocity.Normalize();
             playerAnimator.SetRunFalse();
         }
+        
+        rb.velocity.Normalize();
     }
 
     /// <summary>
